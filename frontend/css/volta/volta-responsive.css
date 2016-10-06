@@ -48,6 +48,10 @@
         color: #cccccc;
         background-color: transparent;
     }
+    /**/
+    .covert-mb {
+        display: none !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -366,6 +370,12 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .covert-pt {
+        display: none !important;
+    }
+}
+
 @media (min-width: 992px) {
     .container {
         width: 970px;
@@ -544,6 +554,12 @@
     }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .covert-tb {
+        display: none !important;
+    }
+}
+
 @media (min-width: 1200px) {
     .container {
         width: 1170px;
@@ -715,6 +731,10 @@
     }
     .vol-ds-offset-0 {
         margin-left: 0%;
+    }
+    /**/
+    .covert-ds {
+        display: none !important;
     }
 }
 
