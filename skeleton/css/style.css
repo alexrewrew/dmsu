@@ -1,0 +1,228 @@
+body#index_page {
+    background: url(../img/DMSU_Home_Slide_1.jpg);
+    /*background-size: cover;*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 2889px;
+}
+
+body#service_page {
+    background: url(../img/DMSU_Servise_7_10.jpg);
+    /*background-size: cover;*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 2763px;
+}
+
+.container {
+    width: 992px;
+}
+
+.relative {
+    position: relative;
+}
+
+.relative div {
+    position: absolute;
+    /*background: rgba(255, 0, 0, 0.1);
+    outline: 1px solid red;*/
+}
+
+.red_border{
+    outline: 1px solid red;
+}
+
+.relative div:hover {
+    background-size: cover;
+    cursor: pointer;
+}
+
+.map {
+    width: 43px;
+    height: 43px;
+    top: 59px;
+    right: -98px;
+}
+
+.map:hover {
+    background: url(../img/hovers/01-Map.jpg);
+}
+
+.poshuk {
+    width: 264px;
+    height: 56px;
+    top: 218px;
+    right: -77px;
+}
+
+.poshuk:hover {
+    background: url(../img/hovers/02-Poshuk.jpg);
+}
+
+.allservice {
+    width: 189px;
+    height: 27px;
+    top: 396px;
+    right: -103px;
+}
+
+.allservice:hover {
+    background: url(../img/hovers/03-allservice.jpg);
+}
+
+.checkpass {
+    width: 257px;
+    height: 235px;
+    top: 438px;
+    left: -78px;
+}
+
+.checkpass:hover {
+    background: url(../img/hovers/04-checkpass.jpg);
+}
+
+.showother {
+    width: 244px;
+    height: 57px;
+    top: 863px;
+    right: 361px;
+}
+
+.showother:hover {
+    background: url(../img/hovers/05-showother.jpg);
+}
+
+.allnews {
+    width: 189px;
+    height: 27px;
+    top: 1063px;
+    right: -105px;
+}
+
+.allnews:hover {
+    background: url(../img/hovers/06-allnews.jpg);
+}
+
+.new {
+    width: 630px;
+    height: 220px;
+    top: 1130px;
+    right: -103px;
+}
+
+.new:hover {
+    background: url(../img/hovers/07-new.jpg);
+}
+
+.importantnew {
+    width: 488px;
+    height: 220px;
+    top: 1131px;
+    left: -109px;
+}
+
+.importantnew:hover {
+    background: url(../img/hovers/08-importnatnew.jpg);
+}
+
+.passtab {
+    width: 331px;
+    height: 57px;
+    top: 1752px;
+    right: 376px;
+}
+
+.passtab:hover {
+    background: url(../img/hovers/09-passtab.jpg);
+}
+
+.questtab {
+    width: 268px;
+    height: 57px;
+    top: 1752px;
+    right: 89px;
+}
+
+.questtab:hover {
+    background: url(../img/hovers/10-questtab.jpg);
+}
+
+.dontfind {
+    width: 246px;
+    height: 22px;
+    top: 2040px;
+    left: -86px;
+}
+
+.dontfind:hover {
+    background: url(../img/hovers/11-dontfind.jpg);
+}
+
+.portal {
+    width: 185px;
+    height: 26px;
+    top: 2615px;
+    right: 282px;
+}
+
+.portal:hover {
+    background: url(../img/hovers/12-portal.jpg);
+}
+
+.fb {
+    width: 24px;
+    height: 24px;
+    top: 2644px;
+    left: 238px;
+}
+
+.fb:hover {
+    background: url(../img/hovers/13-fb.jpg);
+}
+
+.office {
+    width: 242px;
+    height: 46px;
+    top: 2719px;
+    left: -79px;
+}
+
+.office:hover {
+    background: url(../img/hovers/14-office.jpg);
+}
+
+.select {
+    width: 408px;
+    height: 205px;
+    top: 218px;
+    left: 348px;
+}
+
+.select:hover {
+    background: url(../img/hovers/15-select.jpg);
+}
+
+.electron {
+    width: 272px;
+    height: 234px;
+    top: 439px;
+    right: 207px;
+}
+
+.electron:hover {
+    background: url(../img/hovers/16-electro.jpg);
+}
+
+#pidkazka {
+    position: fixed;
+    background: red;
+    color:#fff;
+    bottom:15px;
+    right:15px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+#pidkazka:hover {
+     background: blue;
+}
