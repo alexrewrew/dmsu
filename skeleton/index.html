@@ -10,11 +10,12 @@
     <meta name="classification" content="">
     <meta name="robots" content="noindex">
     <meta name="rating" content="GENERAL">
+    <meta name=”viewport” content="user-scalable=no" />
     <meta property="og:title" content="title">
     <meta property="og:type" content="site">
     <meta property="og:url" content="http://">
     <meta property="og:image" content="http://">
-    <title>brbs</title>
+    <title>ДМСУ</title>
     <!--jquery -->
     <script src="jquery/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="css/elusive-icons-2.0.0/css/elusive-icons.min.css">
@@ -31,35 +32,90 @@
 </head>
 
 <body id="index_page">
-    <section class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="relative">
-                    <div class="map"></div>
-                    <div class="poshuk"></div>
-                    <div class="allservice"></div>
-                    <div class="checkpass"></div>
-                    <div class="showother"></div>
-                    <div class="allnews"></div>
-                    <div class="new"></div>
-                    <div class="importantnew"></div>
-                    <div class="passtab"></div>
-                    <div class="questtab"></div>
-                    <div class="dontfind"></div>
-                    <div class="portal"></div>
-                    <div class="fb"></div>
-                    <div class="office"></div>
-                    <div class="select"></div>
-                    <div class="electron"><a href="service.html" style="width:100%;height:234px; display:inline-block"></a></div>
+    <section class="container-fluid first_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="relative">
+                        <div class="map" id="map"></div>
+                        <div class="poshuk"></div>
+                        <div class="allservice"></div>
+                        <div class="checkpass"></div>
+                        <div class="select"></div>
+                        <div class="electron" id="electron">
+                            <a href="service.html" style="width:100%;height:234px; display:inline-block"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <div id="pidkazka"><i class="el el-question-sign"></i> Підказка</div>
+    <section class="container-fluid second_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="relative"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid third_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="relative">
+                        <div class="showother" id="showother"></div>
+                        <div class="allnews"></div>
+                        <div class="allquest"></div>
+                        <div class="new"></div>
+                        <div class="importantnew"></div>
+                        <div class="passtab"></div>
+                        <div class="questtab"></div>
+                        <div class="dontfind"></div>
+                        <div class="portal"></div>
+                        <div class="fb"></div>
+                        <div class="office"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid fourth_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="relative">
+                        <div class="close" id="close"></div>
+                        <div class="search"></div>
+                        <div class="adress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="pidkazka">?</div>
     <script>
         $('#pidkazka').click(function () {
             $('.relative > div').toggleClass('red_border');
         })
+        $('#showother').click(function () {
+            $('.second_section').toggleClass('visible');
+        })
+        $('#map, #close').click(function () {
+            $('.fourth_section').toggleClass('visible');
+        })
+        $('#electron').hover(function () {
+            $('.checkpass').addClass('backcheck');
+        })
+        $('#electron').mouseout(function () {
+            $('.checkpass').removeClass('backcheck');
+        })
+        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+            $(".relative > div").addClass("macpixel");
+        }
+        else {
+            $(".relative > div").removeClass("macpixel");
+        }
     </script>
 </body>
 
