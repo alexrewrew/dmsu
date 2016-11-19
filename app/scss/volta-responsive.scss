@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+
+  .services-box-1,.services-box-2,.services-box-3 {
+    width: 100%;
+    position: static;
+    margin-bottom: 15px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1208px;
+  }
+}

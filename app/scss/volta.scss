@@ -1,0 +1,289 @@
+/*VARIABLES */
+$text: #282828; //regular text color
+$black-text: #161616; //black text
+$font: 'Proxima Nova'; //main font
+$blue: #0183de; //blue color
+$yellow: #efaf03; //yellow color
+$white: #fff;
+$a-gray: #f1f0f0; //light gray
+$b-gray: #e0e0e0; //light middle gray
+$c-gray: #a2a2a2; //hard gray
+$d-gray: #595959; //hard middle gray
+$e-gray: #373737; //dark gray
+
+/* MIXINS */
+@mixin transition { //transition property
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+@mixin regular-text {
+  font: {
+    family: $font;
+    size: 1em;
+    style: normal;
+    stretch: normal;
+  }
+}
+
+@mixin big-text {
+  font: {
+    family: $font;
+    size: 1.5em;
+    style: normal;
+    stretch: normal;
+  }
+}
+
+/* MAIN STYLES */
+body {
+  font: {
+    size: 16px;
+    family: $font;
+  }
+  color: $text;
+  overflow-y: scroll;
+}
+
+/* HEADERS */
+
+/* LINKS */
+a {
+  @include transition;
+}
+
+/* FORMS */
+
+/* SELECT */
+.chosen-container-single .chosen-single { //main select style
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.chosen-container .chosen-drop { //collapsed style
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single { //collapsed main style
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+//MAIN MENU SELECT
+.select-connect {
+  .chosen-container {
+    @include big-text;
+    font-weight: 600;
+    line-height: 0.83;
+  }
+  .chosen-container-single .chosen-single {
+    color: $white;
+  }
+}
+
+//BUTTON
+.button-regular {
+  background: $yellow;
+  border:0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 1.250em;
+  font-weight: 700;
+  text-align: center;
+  width:100%;
+  padding: 17px 0;
+  @include transition;
+  &:hover {
+    background: $blue;
+  }
+}
+
+/* MENU */
+header {
+  background: $blue;
+}
+.back-head {
+  background: $b-gray;
+  padding: 3px 15px;
+}
+
+//small navigation
+.navigation-head {
+  padding: 0;
+  margin: 0;
+  float: right;
+  li {
+    display: inline-block;
+  }
+}
+.link-search {
+  margin-right: 34px;
+}
+.link-lang {
+  margin-left: 5px;
+}
+
+//main navigation
+.back-blue {
+  background: $blue;
+
+}
+
+.navbar-default {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.navbar-right {
+  padding: 30px 0;
+}
+
+.navbar-default .navbar-nav > li > {
+  a.select-connect {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+    margin: {
+      left:0;
+      right:0;
+    };
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding: {
+    bottom:3px;
+    left:0;
+    right:0;
+  };
+  margin: {
+    left:20px;
+    right:20px;
+    bottom:12px;
+  };
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+  &:focus {
+    color: $white;
+  }
+  .nav-name {
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li > a.nav-map {
+  padding-top: 5px;
+  margin-left: 14px;
+  margin-right: 28px;
+}
+
+.menu-link {
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid #fff;
+  }
+}
+
+.navbar-brand {
+  height: 100%;
+  padding: 20px 10px;
+}
+
+.navbar-brand > img {
+  width: 100%;
+}
+
+.nav-name {
+  font: {
+    weight: 600;
+  }
+  @include regular-text;
+  line-height: 1.2;
+  text-align: left;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  padding: 22px 0;
+}
+
+.nav-index {
+  font: {
+    weight: 600;
+  }
+  border-bottom: 2px solid transparent;
+}
+
+/* SEARCH SERVICES */
+.search-row {
+  padding-top: 4px;
+  position: relative;
+  top: 25px;
+  .chosen-container {
+    background: $white;
+    padding: 15px 30px 17px 22px;
+    font-size: 1.125em;
+  }
+}
+.angles-row {
+  padding-left: 29px;
+  padding-right: 29px;
+
+}
+
+/* Services boxes */
+.services-box-1 {
+  float:left;
+  width: 38%;
+  padding: 0 8px;
+ }
+.services-box-2 {
+  float:left;
+  width: 38%;
+  padding: 0 8px;
+ }
+.services-box-3 {
+  float:left;
+  width: 24%;
+  padding: 0 8px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  button{
+    bottom:0;
+    top:auto;
+    left:auto;
+    right:auto;
+  }
+ }
+.search-label {
+  color: $white;
+  font-size: 1.250em;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+
+
+/* FIXES */
+.padding-fix {
+  padding-right: 0;
+  padding-left: 0;
+}
