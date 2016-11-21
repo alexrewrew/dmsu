@@ -15,7 +15,7 @@ $e-gray: #373737; //dark gray
 @mixin transition { //transition property
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
+  /*-ms-transition: all 0.4s ease;*/
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -23,16 +23,16 @@ $e-gray: #373737; //dark gray
 @mixin regular-text {
   font: {
     family: $font;
-    size: 1em;
     style: normal;
     stretch: normal;
   }
 }
 
-@mixin big-text {
+@mixin regular-text($weight, $size) {
   font: {
     family: $font;
-    size: 1.5em;
+    weight: $weight;
+    size: $size;
     style: normal;
     stretch: normal;
   }
@@ -46,13 +46,38 @@ body {
   }
   color: $text;
   overflow-y: scroll;
+  background: $a-gray;
 }
 
 /* HEADERS */
+h2 {
+  @include regular-text(600, 1.625em);
+  margin-bottom: 17px;
+  margin-top: 8px;
+  line-height: 0.8;
+  color: $c-gray;
+}
+
+h3 {
+  @include regular-text(700, 1.250em);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  margin-top: 0;
+  color: $text;
+}
 
 /* LINKS */
 a {
   @include transition;
+  color: $text;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 /* FORMS */
@@ -82,8 +107,7 @@ a {
 //MAIN MENU SELECT
 .select-connect {
   .chosen-container {
-    @include big-text;
-    font-weight: 600;
+    @include regular-text(600, 1.5em);
     line-height: 0.83;
   }
   .chosen-container-single .chosen-single {
@@ -94,13 +118,13 @@ a {
 //BUTTON
 .button-regular {
   background: $yellow;
-  border:0;
+  border: 0;
   border-radius: 0;
   box-shadow: none;
   font-size: 1.250em;
   font-weight: 700;
   text-align: center;
-  width:100%;
+  width: 100%;
   padding: 17px 0;
   @include transition;
   &:hover {
@@ -111,7 +135,9 @@ a {
 /* MENU */
 header {
   background: $blue;
+  max-height: 247px;
 }
+
 .back-head {
   background: $b-gray;
   padding: 3px 15px;
@@ -126,9 +152,11 @@ header {
     display: inline-block;
   }
 }
+
 .link-search {
   margin-right: 34px;
 }
+
 .link-lang {
   margin-left: 5px;
 }
@@ -147,6 +175,7 @@ header {
   margin: 0;
   padding: 0;
 }
+
 .navbar-right {
   padding: 30px 0;
 }
@@ -158,23 +187,26 @@ header {
       right: 0;
     }
     margin: {
-      left:0;
-      right:0;
-    };
+      left: 0;
+      right: 0;
+    }
+  ;
   }
 }
 
 .navbar-default .navbar-nav > li > a {
   padding: {
-    bottom:3px;
-    left:0;
-    right:0;
-  };
+    bottom: 3px;
+    left: 0;
+    right: 0;
+  }
+;
   margin: {
-    left:20px;
-    right:20px;
-    bottom:12px;
-  };
+    left: 20px;
+    right: 20px;
+    bottom: 12px;
+  }
+;
   color: $white;
   &:hover {
     color: $white;
@@ -213,10 +245,7 @@ header {
 }
 
 .nav-name {
-  font: {
-    weight: 600;
-  }
-  @include regular-text;
+  @include regular-text(600, 1em);
   line-height: 1.2;
   text-align: left;
   color: #e0e0e0;
@@ -233,15 +262,16 @@ header {
 
 /* SEARCH SERVICES */
 .search-row {
-  padding-top: 4px;
+  /*padding-top: 4px;*/
   position: relative;
-  top: 25px;
+  top: 4px;
   .chosen-container {
     background: $white;
     padding: 15px 30px 17px 22px;
     font-size: 1.125em;
   }
 }
+
 .angles-row {
   padding-left: 29px;
   padding-right: 29px;
@@ -250,29 +280,32 @@ header {
 
 /* Services boxes */
 .services-box-1 {
-  float:left;
-  width: 38%;
+  float: left;
+  width: 37.9%;
   padding: 0 8px;
- }
+}
+
 .services-box-2 {
-  float:left;
-  width: 38%;
-  padding: 0 8px;
- }
+  float: left;
+  width: 38.4%;
+  padding: 0 11px;
+}
+
 .services-box-3 {
-  float:left;
-  width: 24%;
+  float: left;
+  width: 24.5%;
   padding: 0 8px;
   position: absolute;
   right: 0;
   bottom: 0;
-  button{
-    bottom:0;
-    top:auto;
-    left:auto;
-    right:auto;
+  button {
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: auto;
   }
- }
+}
+
 .search-label {
   color: $white;
   font-size: 1.250em;
@@ -280,10 +313,146 @@ header {
   font-weight: 700;
 }
 
+/* VIEW ALL */
+.view-all {
+  @include regular-text(600, 1.625em);
+  color: $blue;
+  margin-bottom: 17px;
+  margin-top: 0;
+  text-align: right;
+  &:hover {
+    color: $yellow;
+  }
+}
 
+/* SERVICES CONTAINER */
+.services {
+  padding: 115px 38px 50px 50px;
+}
+
+/* SERVICE ITEMS */
+.sevice-item {
+  background: transparent;
+  @include transition;
+  padding: {
+    top: 15px;
+    left: 23px;
+    right: 23px;
+    bottom: 15px;
+  }
+;
+  min-height: 226px;
+  &:hover {
+    background: $white;
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    margin-bottom: 20px;
+    height: 61px;
+  }
+  p {
+    padding-left: 8px;
+    padding-right: 25px;
+  }
+}
+
+/* NEWS */
+.news {
+  padding: {
+    top: 37px;
+  }
+}
+
+.news-head {
+  padding: 0 23px 19px 34px;
+}
+
+.news-row {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.important-item {
+  background: transparent;
+  @include transition;
+  margin-right: 80px;
+  min-height: 220px;
+  position: relative;
+  padding: {
+    top: 26px;
+    left: 30px;
+    right: 85px;
+    bottom: 15px;
+  }
+;
+  &:hover {
+    background: $white;
+  }
+  p {
+    line-height: 1.3;
+  }
+}
+
+.read-next {
+  @include regular-text(400, 0.750em);
+  @include transition;
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  display: none;
+  a {
+    color: #0183de;
+  }
+}
+
+.important-item {
+  &:hover {
+    .read-next {
+      display: block;
+    }
+  }
+}
+
+/* EVENTS */
+.event-item {
+  padding: {
+    left: 30px;
+    top: 26px;
+    right: 15px;
+  }
+  min-height: 220px;;
+  @include transition;
+  img {
+    width: 100%;
+  }
+  &:hover {
+    background: $white;
+  }
+}
+
+.event-date {
+  @include regular-text(400, 0.750em);
+}
 
 /* FIXES */
 .padding-fix {
   padding-right: 0;
   padding-left: 0;
+}
+
+.padding-left-fix {
+  padding-left: 0;
+}
+
+.padding-image-fix {
+  padding-left: 7px;
+  padding-right: 27px;
+}
+
+.padding-event-fix {
+  padding-right: 5px;
 }
