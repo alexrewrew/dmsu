@@ -200,13 +200,11 @@ header {
     left: 0;
     right: 0;
   }
-;
   margin: {
     left: 20px;
     right: 20px;
     bottom: 12px;
   }
-;
   color: $white;
   &:hover {
     color: $white;
@@ -436,6 +434,142 @@ header {
 
 .event-date {
   @include regular-text(400, 0.750em);
+}
+
+/* FAQ */
+.questions {
+  padding: {
+    top: 58px;
+  }
+}
+
+.questions-head {
+  padding: 0 23px 3px 34px;
+}
+
+/* TABS */
+.tab-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 10px solid $yellow;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 10px);
+  @include transition;
+  z-index:-1;
+  opacity: 0;
+
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-tabs > li {
+  position: relative;
+  &:hover {
+    .tab-arrow {
+      bottom:-10px;
+      opacity: 1;
+    }
+  }
+}
+.nav-tabs > li.active {
+  .tab-arrow {
+    bottom: -10px;
+    border-top: 10px solid $c-gray;
+    opacity: 1;
+  }
+}
+
+.nav-tabs > li > a {
+  border-radius: 0;
+  line-height: 0.9;
+  color: $text;
+  background: $white;
+  border: none;
+  cursor: pointer;
+  @include regular-text(400, 1.250em);
+  padding: {
+    top: 19px;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+  }
+  margin-right: 19px;
+  &:hover {
+    background: $yellow;
+  }
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: $white;
+  background: $c-gray;
+  border: none;
+  cursor: default;
+}
+
+/* TAB CONTENT */
+.tab-pane {
+  padding: {
+    top:34px;
+  }
+}
+.panel-group .panel {
+  background: transparent;
+  border-radius: 0;
+  border:none;
+  box-shadow:none;
+  margin-bottom: 25px;
+}
+.panel-default > .panel-heading {
+  background: transparent;
+  border-radius: 0;
+  border:none;
+  padding: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+  background: transparent;
+  border-radius: 0;
+  border:none;
+  padding: {
+    top:20px;
+    left:30px;
+    right:30px;
+  }
+}
+
+.panel-title > a {
+  background: $white;
+  width: 100%;
+  display: inline-block;
+  transition: none;
+  font-weight:700;
+  padding: {
+    top:20px;
+    left:30px;
+    right:25%;
+  }
+}
+
+.panel-title > a.collapsed {
+  font-weight:400;
+  background: transparent;
+
+}
+
+.panel-title {
+  line-height: 1.16;
+}
+
+.panel-collapse {
+  background: $white;
 }
 
 /* FIXES */

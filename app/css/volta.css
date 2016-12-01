@@ -347,6 +347,118 @@ header {
   font-style: normal;
   font-stretch: normal; }
 
+/* FAQ */
+.questions {
+  padding-top: 58px; }
+
+.questions-head {
+  padding: 0 23px 3px 34px; }
+
+/* TABS */
+.tab-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #efaf03;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 10px);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  /*-ms-transition: all 0.4s ease;*/
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: -1;
+  opacity: 0; }
+
+.nav-tabs {
+  border: none; }
+
+.nav-tabs > li {
+  position: relative; }
+  .nav-tabs > li:hover .tab-arrow {
+    bottom: -10px;
+    opacity: 1; }
+
+.nav-tabs > li.active .tab-arrow {
+  bottom: -10px;
+  border-top: 10px solid #a2a2a2;
+  opacity: 1; }
+
+.nav-tabs > li > a {
+  border-radius: 0;
+  line-height: 0.9;
+  color: #282828;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 1.25em;
+  font-style: normal;
+  font-stretch: normal;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-right: 19px; }
+  .nav-tabs > li > a:hover {
+    background: #efaf03; }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background: #a2a2a2;
+  border: none;
+  cursor: default; }
+
+/* TAB CONTENT */
+.tab-pane {
+  padding-top: 34px; }
+
+.panel-group .panel {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 25px; }
+
+.panel-default > .panel-heading {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  padding: 0; }
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px; }
+
+.panel-title > a {
+  background: #fff;
+  width: 100%;
+  display: inline-block;
+  transition: none;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 25%; }
+
+.panel-title > a.collapsed {
+  font-weight: 400;
+  background: transparent; }
+
+.panel-title {
+  line-height: 1.16; }
+
+.panel-collapse {
+  background: #fff; }
+
 /* FIXES */
 .padding-fix {
   padding-right: 0;
