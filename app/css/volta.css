@@ -31,6 +31,15 @@ h3 {
   margin-top: 0;
   color: #282828; }
 
+h5 {
+  margin-bottom: 31px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 1.313em;
+  font-style: normal;
+  font-stretch: normal;
+  color: #fff; }
+
 /* LINKS */
 a {
   -webkit-transition: all 0.4s ease;
@@ -79,6 +88,7 @@ a {
 
 .button-regular {
   background: #efaf03;
+  display: inline-block;
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -94,6 +104,17 @@ a {
   transition: all 0.4s ease; }
   .button-regular:hover {
     background: #0183de; }
+
+.footer-button {
+  background: #a2a2a2;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #161616;
+  width: 96%;
+  padding: 9px 0 11px 0;
+  font-size: 1.150em; }
+  .footer-button:hover {
+    background: #efaf03; }
 
 /* MENU */
 header {
@@ -354,6 +375,11 @@ header {
 .questions-head {
   padding: 0 23px 3px 34px; }
 
+.questions-row {
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 88px; }
+
 /* TABS */
 .tab-arrow {
   width: 0;
@@ -459,6 +485,74 @@ header {
 .panel-collapse {
   background: #fff; }
 
+/* FOOTER */
+footer {
+  padding-top: 32px;
+  padding-bottom: 47px;
+  background: #595959; }
+  footer p {
+    font-size: 0.875em;
+    color: #fff;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 11px; }
+
+.footer-data {
+  padding-left: 52px;
+  padding-right: 52px; }
+
+.footer-side {
+  min-height: 209px; }
+
+.contact-link {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700; }
+  .contact-link:hover {
+    color: #efaf03; }
+
+.skype-link {
+  color: #efaf03;
+  text-decoration: underline; }
+  .skype-link:hover {
+    text-decoration: underline;
+    color: #0183de; }
+
+.social-links {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none; }
+  .social-links li {
+    display: inline-block; }
+  .social-links a {
+    color: #fff;
+    font-size: 1.500em; }
+    .social-links a:hover {
+      color: #efaf03; }
+
+.nav-tabs.organ-partners {
+  margin-top: 30px; }
+
+.nav-tabs.organ-partners > li > a.footer-trident {
+  background: transparent;
+  padding: 0;
+  cursor: default;
+  margin-right: 22px; }
+
+.nav-tabs.organ-partners > li > a {
+  background: transparent;
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 12px;
+  font-size: 1.313em;
+  font-weight: 600; }
+  .nav-tabs.organ-partners > li > a:hover {
+    background: transparent;
+    color: #fff; }
+  .nav-tabs.organ-partners > li > a:focus {
+    background: transparent; }
+
 /* FIXES */
 .padding-fix {
   padding-right: 0;
@@ -473,3 +567,6 @@ header {
 
 .padding-event-fix {
   padding-right: 5px; }
+
+.padding-aside {
+  padding-left: 38px; }

@@ -66,6 +66,12 @@ h3 {
   color: $text;
 }
 
+h5 {
+  margin-bottom: 31px;
+  @include regular-text(600, 1.313em);
+  color: $white;
+}
+
 /* LINKS */
 a {
   @include transition;
@@ -118,6 +124,7 @@ a {
 //BUTTON
 .button-regular {
   background: $yellow;
+  display: inline-block;
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -129,6 +136,19 @@ a {
   @include transition;
   &:hover {
     background: $blue;
+  }
+}
+
+.footer-button {
+  background: $c-gray;
+  line-height: 1.5;
+  font-weight:600;
+  color: $black-text;
+  width: 96%;
+  padding: 9px 0 11px 0;
+  font-size: 1.150em;
+  &:hover {
+    background: $yellow;
   }
 }
 
@@ -447,6 +467,12 @@ header {
   padding: 0 23px 3px 34px;
 }
 
+.questions-row {
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 88px;
+}
+
 /* TABS */
 .tab-arrow {
   width: 0;
@@ -572,6 +598,94 @@ header {
   background: $white;
 }
 
+/* FOOTER */
+footer {
+  padding: {
+    top:32px;
+    bottom:47px;
+  }
+  background: $d-gray;
+  p {
+    font-size:0.875em;
+    color: $white;
+    line-height: 1.3;
+    margin: {
+      top:0;
+      bottom:11px;
+    }
+  }
+}
+.footer-data {
+  padding: {
+    left:52px;
+    right:52px;
+  }
+}
+
+.footer-side {
+  min-height: 209px;
+}
+
+.contact-link {
+  color: $white;
+  cursor: pointer;
+  font-weight:700;
+  &:hover {
+    color: $yellow;
+  }
+}
+.skype-link {
+  color: $yellow;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
+}
+.social-links {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+  a {
+    color: $white;
+    font-size: 1.500em;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+.nav-tabs.organ-partners {
+  margin-top: 30px;
+}
+.nav-tabs.organ-partners > li > a.footer-trident {
+   background: transparent;
+   padding: 0;
+   cursor: default;
+  margin-right: 22px;
+ }
+
+.nav-tabs.organ-partners > li > a {
+  background: transparent;
+  padding: {
+    top:10px;
+    left:0;
+    right:0;
+    bottom:12px;
+  }
+  font-size: 1.313em;
+  font-weight:600;
+  &:hover {
+    background: transparent;
+    color: $white;
+  }
+  &:focus {
+    background: transparent;
+  }
+}
+
 /* FIXES */
 .padding-fix {
   padding-right: 0;
@@ -589,4 +703,7 @@ header {
 
 .padding-event-fix {
   padding-right: 5px;
+}
+.padding-aside {
+  padding-left: 38px;
 }
