@@ -29,6 +29,7 @@
   "devDependencies": {
     "jquery-ui": "^1.12.1",
     "chosen": "^1.6.2",
-    "elusive-icons": "*"
+    "elusive-icons": "*",
+    "font-awesome": "^4.7.0"
   }
 }
