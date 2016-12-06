@@ -74,7 +74,7 @@
     <script src="package/respond/dest/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="page-start">
 
 <header>
     <div class="container-fluid back-head">
@@ -82,10 +82,10 @@
             <div class="col-xs-offset-0 col-sm-offset-7 col-xs-12 col-sm-5 padding-fix">
                 <ul class="navigation-head">
                     <li class="search-relative">
-                        <div class="d6">
+                        <div class="search-head">
                             <form>
-                                <input type="text" placeholder="Искать здесь...">
-                                <button type="submit"></button>
+                                <input type="text" placeholder="Пошук">
+                                <button type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </li>
@@ -100,7 +100,6 @@
                     <li class="link-lang"><a>
                         <form action=""><select>
                             <option value="">UKR</option>
-                            <option value="">RUS</option>
                             <option value="">ENG</option>
                         </select></form>
                     </a></li>
@@ -126,50 +125,225 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" class="nav-index">Головна</a></li>
-                        <li>
+                        <li class="dropdown">
                             <a href="#" class="menu-link dropdown-toggle" data-toggle="dropdown">Послуги<b
                                     class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Набуття громадянства України<br> за народженням</a></li>
-                                <li><a href="#">Набуття громадянства України<br> за територіальним походженням</a></li>
-                                <li><a href="#">Прийняття до громадянства України</a></li>
-                                <li><a href="#">Поновлення у громадянстві України</a></li>
-                                <li>
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu 1.1] <b
-                                            class="caret"></b></a>
-
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action [Menu 1.2]</a></li>
-                                        <li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown [Menu
-                                                1.2]
-                                                <b
-                                                        class="caret"></b></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Action [Menu 1.4]</a></li>
-                                                <li><a href="#">Another action [Menu 1.4]</a></li>
-                                                <li><a href="#">Something else here [Menu 1.4]</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Separated link [Menu 1.4]</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">One more separated link [Menu 1.4]</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><a href="#">Набуття громадянства
+                                    України</a></li>
+                                <li><a href="#">Паспорт громадянина
+                                    України</a></li>
+                                <li><a href="#">Документи для виїзду
+                                    за кордон</a></li>
+                                <li><a href="#">Документування іноземців</a></li>
+                                <li><a href="#">Набуття статусу біженців
+                                    або додаткового захисту</a></li>
                             </ul>
                         </li>
                         <li><a href="#" class="menu-link">Часті питання</a></li>
                         <li><a href="#" class="menu-link">Новини</a></li>
                         <li><a href="#" class="menu-link">Контакти</a></li>
-                        <li><a href="#" class="nav-map"><img src="img/icons/map.png" alt="" title=""></a></li>
-                        <li><a class="select-connect">
-                            <form action=""><select>
-                                <option value="">(044) 123 22 33</option>
-                                <option value="">(044) 123 22 33</option>
-                                <option value="">(044) 123 22 33</option>
-                            </select></form>
-                        </a></li>
+                        <li><a href="#" class="nav-map"><img src="img/icons/map2.png" alt="" title=""></a></li>
+                        <li class="menu-connect dropdown">
+                            <a href="#" class="menu-link select-connect dropdown-toggle" data-toggle="dropdown">(044)
+                                123 22 33<b class="caret"></b></a>
+                            <ul class="dropdown-menu dropdown-connect">
+                                <div class="tab-arrow blue-arrow"></div>
+                                <li class="connect-header"><a>Гарячі лінії територіальних органів ДМС України</a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Автономна республіка Крим</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Вінницька область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Волинська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Дніпропетровська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Донецька область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Житомирська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Закарпатська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Запорізька область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Івано-Франківська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Київська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Кіровоградська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Луганська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Львівська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Миколаївська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Одеська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Полтавська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Рівненська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Сумська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Тернопільська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Харківська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Херсонська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Хмельницька область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Черкаська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Чернівецька область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>Чернігівська область</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>м. Київ</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                                <li><a href="tel:">
+                                    <div class="row">
+                                        <div class="col-xs-7 text-left"><span>м. Севастополь</span></div>
+                                        <div class="col-xs-5 text-right"><span
+                                                class="phone-number">+38 (044) 468-01-01</span></div>
+                                    </div>
+                                </a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -183,14 +357,16 @@
                         <p class="search-label">Я шукаю послуги для</p>
                         <select name="">
                             <option value="">Іноземця</option>
-                            <option value="">Іноземця</option>
+                            <option value="">Українця</option>
                         </select>
                     </div>
                     <div class="services-box-2">
                         <p class="search-label">Тип послуги</p>
                         <select name="">
                             <option value="">Набуття громадянства України</option>
-                            <option value="">Набуття громадянства України</option>
+                            <option value="">Документи для виїзду за кордон</option>
+                            <option value="">Документування іноземців</option>
+                            <option value="">Набуття статусу біженця або додаткового захисту</option>
                         </select>
                     </div>
                     <div class="services-box-3">
@@ -206,26 +382,26 @@
     <div class="container services">
         <div class="row">
             <div class="col-xs-8"><h2>Найпопулярніші сервіси</h2></div>
-            <div class="col-xs-4"><p class="view-all"><a href="">Всі сервіси <img src="img/icons/angle-right.png"
-                                                                                  alt=""></a></p></div>
+            <div class="col-xs-4"><p class="view-all"><a href="">Всі сервіси <i class="el el-chevron-right"></i></a></p>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-3">
-                <div class="sevice-item"><a href=""><img src="img/icons/services/icon1.png" alt="">
+                <div class="service-item"><a href=""><img src="img/icons/services/icon1.png" alt="">
                     <p>Перевірка стану оформлення
                         паспорта </p></a></div>
             </div>
             <div class="col-xs-3">
-                <div class="sevice-item"><a href=""><img src="img/icons/services/icon2.png" alt="">
+                <div class="service-item"><a href=""><img src="img/icons/services/icon2.png" alt="">
                     <p>Онлайн-запис до електронної черги
                         запис online</p></a></div>
             </div>
             <div class="col-xs-3">
-                <div class="sevice-item"><a href=""><img src="img/icons/services/icon3.png" alt="">
+                <div class="service-item"><a href=""><img src="img/icons/services/icon3.png" alt="">
                     <p>Електронна приймальня ДМС</p></a></div>
             </div>
             <div class="col-xs-3">
-                <div class="sevice-item"><a href=""><img src="img/icons/services/icon4.png" alt="">
+                <div class="service-item"><a href=""><img src="img/icons/services/icon4.png" alt="">
                     <p>Платіжні реквізити для оформлення паспорта для виїзду за кордон</p></a></div>
             </div>
         </div>
@@ -234,7 +410,7 @@
         <div class="row news-head">
             <div class="col-xs-6"><h2>Важливо</h2></div>
             <div class="col-xs-3"><h2>Події</h2></div>
-            <div class="col-xs-3"><p class="view-all"><a href="">Всі новини <img src="img/icons/angle-right.png" alt=""></a>
+            <div class="col-xs-3"><p class="view-all"><a href="">Всі новини <i class="el el-chevron-right"></i></a>
             </p></div>
         </div>
         <div class="row news-row">
@@ -250,7 +426,7 @@
                     <h3>Проведено Дев’яте засідання Спільного комітету з питань реадмісії</h3>
                     <p>3 серпня відбулося чергове 9-те засідання Спільного Комітету. 3 серпня відбулося чергове 9-те
                         засідання Спільного Комітету [...]</p>
-                    <span class="read-next"><a href="">Читать далее</a></span>
+                    <span class="read-next"><a href="">Читати більше</a></span>
                 </div>
             </div>
             <div class="col-xs-6 padding-fix">
@@ -261,7 +437,8 @@
                             питань реадмісії</h3>
                             <p>3 серпня відбулося чергове 9-те засідання Спільного Комітету. 3 серпня відбулося чергове
                                 9-те засідання Спільного Комітету [...]</p>
-                            <span class="event-date">03.082016</span></div>
+                            <span class="event-date">03.08.2016</span><span class="read-next"><a href="">Читати більше</a></span>
+                        </div>
                     </div>
                 </div>
                 <div class="event-item">
@@ -271,7 +448,8 @@
                             питань реадмісії</h3>
                             <p>3 серпня відбулося чергове 9-те засідання Спільного Комітету. 3 серпня відбулося чергове
                                 9-те засідання Спільного Комітету [...]</p>
-                            <span class="event-date">03.082016</span></div>
+                            <span class="event-date">03.08.2016</span><span class="read-next"><a href="">Читати більше</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -280,11 +458,11 @@
     <div class="container questions">
         <div class="row questions-head">
             <div class="col-xs-8"><h2>Найчастіші запитання</h2></div>
-            <div class="col-xs-4"><p class="view-all"><a href="">Всі запитання <img src="img/icons/angle-right.png"
-                                                                                    alt=""></a></p></div>
+            <div class="col-xs-4"><p class="view-all"><a href="">Всі запитання <i class="el el-chevron-right"></i></a>
+            </p></div>
         </div>
         <div class="row questions-row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 padding-right-fix">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#first-tab" aria-controls="home" role="tab"
@@ -314,6 +492,7 @@
                                            aria-controls="collapseOne">
                                             З якого віку можна оформити паспорт громадянина України для виїзду за
                                             кордон?
+                                            <div class="caret-down"><i class="el el-caret-down"></i></div>
                                         </a>
                                     </h4>
                                 </div>
@@ -327,7 +506,7 @@
                                         <p>Відповідальність за порушення міграційного законодавства України. Стаття 197
                                             Кодексу України «Про адміністративні правопорушення»
                                             Проживання без паспорта.</p>
-                                        <p><a href="#">Я не знайшов відповідь</a></p>
+                                        <p><a href="#" class="no-answer">Я не знайшов відповідь <i class="el el-chevron-right"></i></a></p>
 
 
                                     </div>
@@ -342,6 +521,7 @@
                                             З якого віку неповнолітня особа може особисто звернутись стосовно видачі
                                             паспорта громадянина
                                             України для виїзду за кордон?
+                                            <div class="caret-down"><i class="el el-caret-down"></i></div>
                                         </a>
                                     </h4>
                                 </div>
@@ -355,7 +535,7 @@
                                         <p>Відповідальність за порушення міграційного законодавства України. Стаття 197
                                             Кодексу України «Про адміністративні правопорушення»
                                             Проживання без паспорта.</p>
-                                        <p><a href="#">Я не знайшов відповідь</a></p>
+                                        <p><a href="#" class="no-answer">Я не знайшов відповідь <i class="el el-chevron-right"></i></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -366,7 +546,7 @@
                                            data-parent="#accordion" href="#collapseThree" aria-expanded="false"
                                            aria-controls="collapseThree">
                                             Скільки коштує оформлення паспорта громадянина України для виїзду за кордон
-                                            і чим передбачено платежі?
+                                            і чим передбачено платежі?<div class="caret-down"><i class="el el-caret-down"></i></div>
                                         </a>
                                     </h4>
                                 </div>
@@ -380,7 +560,7 @@
                                         <p>Відповідальність за порушення міграційного законодавства України. Стаття 197
                                             Кодексу України «Про адміністративні правопорушення»
                                             Проживання без паспорта.</p>
-                                        <p><a href="#">Я не знайшов відповідь</a></p>
+                                        <p><a href="#" class="no-answer">Я не знайшов відповідь <i class="el el-chevron-right"></i></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -391,7 +571,7 @@
                                            data-parent="#accordion" href="#collapseFour" aria-expanded="false"
                                            aria-controls="collapseFour">
                                             З якого віку можна оформити паспорт громадянина України для виїзду за
-                                            кордон?
+                                            кордон?<div class="caret-down"><i class="el el-caret-down"></i></div>
                                         </a>
                                     </h4>
                                 </div>
@@ -405,7 +585,7 @@
                                         <p>Відповідальність за порушення міграційного законодавства України. Стаття 197
                                             Кодексу України «Про адміністративні правопорушення»
                                             Проживання без паспорта.</p>
-                                        <p><a href="#">Я не знайшов відповідь</a></p>
+                                        <p><a href="#" class="no-answer">Я не знайшов відповідь <i class="el el-chevron-right"></i></a></p>
                                     </div>
                                 </div>
                             </div>
@@ -522,6 +702,8 @@
         </div>
     </div>
 </section>
+
+<div class="button-up"><a href="#page-start" class="smooth"><i class="el el-chevron-up"></i></a></div>
 
 
 <!-- jQuery -->
