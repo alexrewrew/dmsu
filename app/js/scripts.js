@@ -62,5 +62,10 @@ $(document).ready(function() {
         $(this).next('.chosen-container').children('.chosen-drop').slideUp(400);
     });
 
+
+    $('.select-connect').click(function() {
+        $('.blue-arrow').toggle('normal');
+    });
+
 });
 

@@ -54,7 +54,7 @@ p {
 a {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   color: #282828; }
@@ -143,7 +143,7 @@ input {
   padding: 14px 0 15px 0;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .button-regular:hover {
@@ -334,11 +334,11 @@ header {
   white-space: normal;
   margin-bottom: 10px; }
   .dropdown-menu > li > a:hover {
-    background: transparent;
-    color: #00548f; }
+    background: #33abff;
+    color: #fff; }
   .dropdown-menu > li > a:focus {
-    background: transparent;
-    color: #00548f; }
+    background: #33abff;
+    color: #fff; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background: transparent;
@@ -362,11 +362,6 @@ header {
       padding-bottom: 12px;
       margin-bottom: 0;
       font-size: 0.875em; }
-      .navbar-nav > li.menu-connect > .dropdown-connect li a:hover {
-        background: #33abff;
-        color: #fff; }
-      .navbar-nav > li.menu-connect > .dropdown-connect li a:focus {
-        color: #fff; }
   .navbar-nav > li.menu-connect > .dropdown-connect .connect-header {
     width: 100%; }
     .navbar-nav > li.menu-connect > .dropdown-connect .connect-header a {
@@ -381,62 +376,6 @@ header {
   display: inline-block;
   width: 100%; }
 
-/*.navbar-nav > li.menu-connect > .dropdown-connect {
-  margin: 0;
-  padding: {
-    top: 16px;
-    left: 8px
-  }
-  min-width: 1178px;
-  position: absolute;
-  left: -999px;
-  right: 0;
-
-  top: 115%;
-  li {
-    float: left;
-    width: 33.33333333%;
-    padding: {
-      left: 22px;
-      right: 5px;
-      top:10px;
-      bottom:12px;
-    }
-    margin-bottom: 12px;
-    line-height: 1.2;
-    &:hover {
-      background: #33abff;
-    }
-    a {
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      &:hover {
-        color:$white;
-      }
-      &:focus {
-        color:$white;
-      }
-    }
-  }
-  .connect-header {
-    width: 100%;
-      &:hover {
-        background: transparent;
-    }&:focus {
-        background: transparent;
-    }
-    a {
-      font-size: 1.125em;
-      font-weight: 700;
-      padding: 0;
-      &:hover {
-        color: $white;
-        background: transparent;
-      }
-    }
-  }
-}*/
 /* logo */
 .navbar-brand {
   height: 100%;
@@ -467,7 +406,7 @@ header {
 .search-row {
   /*padding-top: 4px;*/
   position: relative;
-  top: 24px; }
+  top: 28px; }
   .search-row .chosen-container {
     background: #fff;
     padding: 15px 30px 17px 22px;
@@ -533,10 +472,11 @@ header {
 
 /* SERVICE ITEMS */
 .service-item {
+  position: relative;
   background: transparent;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   padding-top: 15px;
@@ -546,6 +486,8 @@ header {
   min-height: 226px; }
   .service-item:hover {
     background: #fff; }
+    .service-item:hover .sprite-top {
+      opacity: 1; }
   .service-item a {
     display: inline-block;
     width: 100%;
@@ -556,6 +498,18 @@ header {
   .service-item p {
     padding-left: 7px;
     padding-right: 25px; }
+
+/* ICON SPRITE */
+.sprite-top {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
 
 /* NEWS */
 .news {
@@ -572,12 +526,11 @@ header {
   background: transparent;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   margin-right: 80px;
   min-height: 220px;
-  position: relative;
   padding-top: 25px;
   padding-left: 31px;
   padding-right: 85px;
@@ -587,6 +540,12 @@ header {
   .important-item p {
     line-height: 1.2; }
 
+.content-item {
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  display: block; }
+
 .read-next {
   font-family: "Proxima Nova";
   font-weight: 400;
@@ -595,7 +554,7 @@ header {
   font-stretch: normal;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: absolute;
@@ -620,12 +579,12 @@ header {
   min-height: 220px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: relative; }
   .event-item .read-next {
-    bottom: -49px; }
+    bottom: -30px; }
   .event-item img {
     width: 100%;
     margin-top: 5px; }
@@ -644,7 +603,7 @@ header {
   font-style: normal;
   font-stretch: normal;
   position: absolute;
-  bottom: -49px;
+  bottom: -30px;
   left: 12px; }
 
 /* FAQ */
@@ -671,7 +630,7 @@ header {
   left: calc(50% - 10px);
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   z-index: -1;
@@ -684,7 +643,8 @@ header {
   border-bottom: 10px solid #0096ff;
   border-top: 0;
   left: auto;
-  right: 75px; }
+  right: 75px;
+  display: none; }
 
 .nav-tabs {
   border: none; }
@@ -900,7 +860,7 @@ footer {
     line-height: 1.2;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
-    /*-ms-transition: all 0.4s ease;*/
+    -ms-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
     .footer-links li:hover {
@@ -948,7 +908,7 @@ footer {
   text-align: center;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   position: fixed;
@@ -996,7 +956,7 @@ footer {
   right: -8px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 

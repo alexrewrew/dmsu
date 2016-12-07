@@ -21,7 +21,7 @@ $select: #8c8b8b;
 @mixin transition { //transition property
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-  /*-ms-transition: all 0.4s ease;*/
+  -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -460,12 +460,12 @@ header {
   white-space: normal;
   margin-bottom: 10px;
   &:hover {
-    background: transparent;
-    color: $blue-dark;
+    background: #33abff;
+    color: $white;
   }
   &:focus {
-    background: transparent;
-    color: $blue-dark;
+    background: #33abff;
+    color: $white;
   }
 }
 
@@ -498,13 +498,6 @@ header {
       }
       margin-bottom: 0;
       font-size: 0.875em;
-      &:hover {
-        background: #33abff;
-        color: $white;
-      }
-      &:focus {
-        color: $white;
-      }
     }
   }
   .connect-header {
@@ -527,63 +520,6 @@ header {
   display: inline-block;
   width: 100%;
 }
-
-/*.navbar-nav > li.menu-connect > .dropdown-connect {
-  margin: 0;
-  padding: {
-    top: 16px;
-    left: 8px
-  }
-  min-width: 1178px;
-  position: absolute;
-  left: -999px;
-  right: 0;
-
-  top: 115%;
-  li {
-    float: left;
-    width: 33.33333333%;
-    padding: {
-      left: 22px;
-      right: 5px;
-      top:10px;
-      bottom:12px;
-    }
-    margin-bottom: 12px;
-    line-height: 1.2;
-    &:hover {
-      background: #33abff;
-    }
-    a {
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      &:hover {
-        color:$white;
-      }
-      &:focus {
-        color:$white;
-      }
-    }
-  }
-  .connect-header {
-    width: 100%;
-      &:hover {
-        background: transparent;
-    }&:focus {
-        background: transparent;
-    }
-    a {
-      font-size: 1.125em;
-      font-weight: 700;
-      padding: 0;
-      &:hover {
-        color: $white;
-        background: transparent;
-      }
-    }
-  }
-}*/
 
 /* logo */
 .navbar-brand {
@@ -622,7 +558,7 @@ header {
 .search-row {
   /*padding-top: 4px;*/
   position: relative;
-  top: 24px;
+  top: 28px;
   .chosen-container {
     background: $white;
     padding: 15px 30px 17px 22px;
@@ -698,6 +634,7 @@ header {
 
 /* SERVICE ITEMS */
 .service-item {
+  position: relative;
   background: transparent;
   @include transition;
   padding: {
@@ -710,6 +647,9 @@ header {
   min-height: 226px;
   &:hover {
     background: $white;
+    .sprite-top {
+      opacity: 1;
+    }
   }
   a {
     display: inline-block;
@@ -719,11 +659,21 @@ header {
   img {
     margin-bottom: 36px;
     height: 61px;
+
   }
   p {
     padding-left: 7px;
     padding-right: 25px;
   }
+}
+
+/* ICON SPRITE */
+.sprite-top {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  opacity: 0;
+  @include transition;
 }
 
 /* NEWS */
@@ -747,7 +697,6 @@ header {
   @include transition;
   margin-right: 80px;
   min-height: 220px;
-  position: relative;
   padding: {
     top: 25px;
     left: 31px;
@@ -761,6 +710,13 @@ header {
   p {
     line-height: 1.2;
   }
+}
+
+.content-item {
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  display: block;
 }
 
 .read-next {
@@ -798,7 +754,7 @@ header {
   @include transition;
   position: relative;
   .read-next {
-    bottom: -49px;
+    bottom: -30px;
   }
   img {
     width: 100%;
@@ -819,7 +775,7 @@ header {
 .event-date {
   @include regular-text(400, 0.750em);
   position: absolute;
-  bottom: -49px;
+  bottom: -30px;
   left: 12px;
 }
 
@@ -864,6 +820,7 @@ header {
   border-top: 0;
   left: auto;
   right: 75px;
+  display: none;
 }
 
 .nav-tabs {
@@ -1067,10 +1024,10 @@ footer {
   li {
     display: inline-block;
     padding: {
-      top:3px;
-      left:1px;
-      right:1px;
-      bottom:3px;
+      top: 3px;
+      left: 1px;
+      right: 1px;
+      bottom: 3px;
     }
     margin-right: 7px;
     a {
@@ -1206,7 +1163,7 @@ footer {
   width: 46px;
   height: 46px;
   text-align: center;
-@include transition;
+  @include transition;
   position: fixed;
   right: 39px;
   bottom: 94px;

@@ -9,7 +9,8 @@
 
 var gulp = require('gulp'), //ініціалізація gulp
     sass = require('gulp-sass'), //ініціалізація sass
-    browserSync = require('browser-sync'); //ініціалізація browser-sync
+    browserSync = require('browser-sync'),
+    uncss = require('gulp-uncss'); //ініціалізація browser-sync
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
@@ -28,6 +29,16 @@ gulp.task('browserSync', function () {
             baseDir: 'app' //робоча папка для перезавантаження сторінки
         }
     })
+});
+
+//
+
+gulp.task('default', function () {
+    return gulp.src(['app/css/volta.css', 'app/css/bootstrap.css'])
+        .pipe(uncss({
+            html: ['app/**/*.html']
+        }))
+        .pipe(gulp.dest('dist/css'));
 });
 
 //слідкування за змінами у проекті
