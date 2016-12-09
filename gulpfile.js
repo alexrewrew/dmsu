@@ -14,7 +14,7 @@ var gulp = require('gulp'), //ініціалізація gulp
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
-    return gulp.src('app/scss/*.scss') //пошук файлів з розширенням scss
+    return gulp.src('app/scss/volta.scss') //пошук файлів з розширенням scss
         .pipe(sass().on('error', sass.logError)) //вивід помилок
         .pipe(gulp.dest('app/css')) //вивід зкомпільованого файлу до теки css
         .pipe(browserSync.reload({ // перезавантажувати синхронізатор при кожній зміні
@@ -33,13 +33,13 @@ gulp.task('browserSync', function () {
 
 //
 
-gulp.task('default', function () {
+/*gulp.task('default', function () {
     return gulp.src(['app/css/volta.css', 'app/css/bootstrap.css'])
         .pipe(uncss({
-            html: ['app/**/*.html']
+            html: ['app/!**!/!*.html']
         }))
         .pipe(gulp.dest('dist/css'));
-});
+});*/
 
 //слідкування за змінами у проекті
 gulp.task('watch', ['browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів

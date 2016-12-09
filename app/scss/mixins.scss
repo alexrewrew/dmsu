@@ -1,0 +1,26 @@
+/* MIXINS */
+@mixin transition { //transition property
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+@mixin regular-text {
+  font: {
+    family: $font;
+    style: normal;
+    stretch: normal;
+  }
+}
+
+@mixin regular-text($weight, $size) {
+  font: {
+    family: $font;
+    weight: $weight;
+    size: $size;
+    style: normal;
+    stretch: normal;
+  }
+}

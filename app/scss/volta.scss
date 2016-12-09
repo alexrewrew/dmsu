@@ -1,48 +1,7 @@
-/*VARIABLES */
-$text: #282828; //regular text color
-$black-text: #161616; //black text
-$font: 'Proxima Nova'; //main font
-$blue: #0183de; //blue color
-$blue-hover: #0096ff;
-$blue-dark: #00548f;
-$yellow: #efaf03; //yellow color
-$white: #fff;
-$a-gray: #f1f0f0; //light gray
-$b-gray: #e0e0e0; //light middle gray
-$c-gray: #a2a2a2; //hard gray
-$d-gray: #595959; //hard middle gray
-$e-gray: #373737; //dark gray
-$f-gray: #a3a3a3; //dark gray
-$g-gray: #909090;
-$icon: #606060;
-$select: #8c8b8b;
-
-/* MIXINS */
-@mixin transition { //transition property
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-@mixin regular-text {
-  font: {
-    family: $font;
-    style: normal;
-    stretch: normal;
-  }
-}
-
-@mixin regular-text($weight, $size) {
-  font: {
-    family: $font;
-    weight: $weight;
-    size: $size;
-    style: normal;
-    stretch: normal;
-  }
-}
+@import "fonts";
+@import "bootstrap";
+@import "vars";
+@import "mixins";
 
 /* MAIN STYLES */
 body {
@@ -66,7 +25,7 @@ body {
 /* HEADERS */
 h2 {
   @include regular-text(600, 1.625em);
-  margin-bottom: 17px;
+  margin-bottom: 26px;
   margin-top: 8px;
   line-height: 0.8;
   color: $c-gray;
@@ -95,6 +54,7 @@ p {
 a {
   @include transition;
   color: $text;
+  cursor: pointer;
   &:hover {
     text-decoration: none;
     color: inherit;
@@ -165,6 +125,10 @@ input {
   cursor: pointer;
 }
 
+.chosen-container .chosen-results li.result-selected {
+  display: none;
+}
+
 .chosen-container .chosen-results {
   padding: {
     left: 0;
@@ -180,12 +144,7 @@ input {
   }
 }
 
-//MAIN MENU SELECT
-.select-connect {
-  @include regular-text(600, 1.5em);
-  line-height: 0.83;
-  color: $white;
-}
+
 
 //BUTTON
 .button-regular {
@@ -221,7 +180,7 @@ input {
 /* MENU */
 header {
   background: $blue;
-  max-height: 247px;
+  min-height: 271px;
 }
 
 .back-head {
@@ -370,8 +329,14 @@ header {
   padding: 31px 0;
 }
 
+//MAIN MENU SELECT
+
+
 .navbar-default .navbar-nav > li > {
   a.select-connect {
+    @include regular-text(600, 1.5em);
+    line-height: 0.83;
+    color: $white;
     padding: {
       left: 0;
       right: 0;
@@ -397,6 +362,8 @@ header {
 }
 
 .navbar-default .navbar-nav > li > a {
+  cursor: pointer;
+  @include regular-text(300, 1em);
   padding: {
     bottom: 3px;
     left: 0;
@@ -414,17 +381,13 @@ header {
   &:focus {
     color: $white;
   }
-  .nav-name {
-    &:hover {
-      color: #fff;
-    }
-  }
 }
 
 .navbar-default .navbar-nav > li > a.nav-map {
   padding-top: 4px;
-  margin-left: 20px;
-  margin-right: 40px;
+  margin-top: 7px;
+  margin-left: 23px;
+  margin-right: 48px;
   &:hover {
     opacity: .5;
   }
@@ -487,7 +450,7 @@ header {
   width: 1178px;
   right: 0;
   left: auto;
-  top: 115%;
+  top: 160%;
   li {
     width: 33.333333%;
     float: left;
@@ -528,10 +491,11 @@ header {
 }
 
 .navbar-brand > img {
+  max-width: 68px;
   width: 100%;
 }
 
-.nav-name {
+.navbar-default .navbar-nav.nav-name {
   @include regular-text(600, 1em);
   line-height: 1.2;
   text-align: left;
@@ -540,14 +504,16 @@ header {
   padding: 23px 0;
   li {
     a {
+      font-weight: 600;
       &:hover {
+        color: $white;
         opacity: .5;
       }
     }
   }
 }
 
-.nav-index {
+.navbar-default .navbar-nav > li > a.nav-index {
   font: {
     weight: 600;
   }
@@ -558,7 +524,7 @@ header {
 .search-row {
   /*padding-top: 4px;*/
   position: relative;
-  top: 28px;
+  top: 50px;
   .chosen-container {
     background: $white;
     padding: 15px 30px 17px 22px;
@@ -604,24 +570,30 @@ header {
   color: $white;
   font-size: 1.250em;
   margin-bottom: 15px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 /* VIEW ALL */
 .view-all {
-  @include regular-text(600, 1.625em);
-  padding-right: 3px;
+  @include regular-text(600, 1em);
+  padding-right: 13px;
   margin-bottom: 17px;
   margin-top: 0;
   text-align: right;
+  text-transform: lowercase;
+  position: relative;
+  top:10px;
   a {
     color: $blue;
     &:hover {
       color: $yellow;
     }
     &:hover .el-chevron-right {
-      right: -34px;
+      right: -38px;
       color: $yellow;
+    }
+    i {
+      font-size: 12px;
     }
   }
 
@@ -629,7 +601,7 @@ header {
 
 /* SERVICES CONTAINER */
 .services {
-  padding: 115px 38px 50px 50px;
+  padding: 144px 38px 50px 50px;
 }
 
 /* SERVICE ITEMS */
@@ -638,12 +610,12 @@ header {
   background: transparent;
   @include transition;
   padding: {
-    top: 15px;
-    left: 25px;
-    right: 25px;
-    bottom: 15px;
+    top: 26px;
+    left: 32px;
+    right: 32px;
+    bottom: 26px;
   }
-;
+
   min-height: 226px;
   &:hover {
     background: $white;
@@ -662,7 +634,6 @@ header {
 
   }
   p {
-    padding-left: 7px;
     padding-right: 25px;
   }
 }
@@ -670,8 +641,8 @@ header {
 /* ICON SPRITE */
 .sprite-top {
   position: absolute;
-  top: 15px;
-  left: 25px;
+  top: 26px;
+  left: 32px;
   opacity: 0;
   @include transition;
 }
@@ -679,7 +650,7 @@ header {
 /* NEWS */
 .news {
   padding: {
-    top: 37px;
+    top: 66px;
   }
 }
 
@@ -782,7 +753,7 @@ header {
 /* FAQ */
 .questions {
   padding: {
-    top: 58px;
+    top: 115px;
   }
 }
 
@@ -793,7 +764,8 @@ header {
 .questions-row {
   padding-left: 6px;
   padding-right: 6px;
-  padding-bottom: 84px;
+  padding-bottom: 96px;
+
 }
 
 /* TABS */
@@ -887,6 +859,7 @@ header {
   border: none;
   box-shadow: none;
   position: relative;
+  margin-bottom: 15px;
 }
 
 .panel-default > .panel-heading {
@@ -1076,6 +1049,10 @@ footer {
   padding: 0;
   cursor: default;
   margin-right: 22px;
+  img {
+    max-width: 23px;
+    width: 100%;
+  }
 }
 
 .footer-pane {
@@ -1225,3 +1202,4 @@ footer {
 }
 
 /* */
+@import "volta-responsive";
