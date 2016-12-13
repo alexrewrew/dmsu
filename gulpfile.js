@@ -33,13 +33,22 @@ gulp.task('browserSync', function () {
 
 //
 
-/*gulp.task('default', function () {
-    return gulp.src(['app/css/volta.css', 'app/css/bootstrap.css'])
+gulp.task('default', function () {
+    return gulp.src(['app/css/volta.css'])
         .pipe(uncss({
-            html: ['app/!**!/!*.html']
+            html: ['app/**/*.html']
         }))
-        .pipe(gulp.dest('dist/css'));
-});*/
+        .pipe(gulp.dest('app/css/volta'));
+});
+
+//
+var concat = require('gulp-concat');
+
+gulp.task('scripts', function() {
+    return gulp.src(['app/package/chosen/chosen.jquery.js', 'app/js/bootstrap.js'])
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('app/js'));
+});
 
 //слідкування за змінами у проекті
 gulp.task('watch', ['browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів

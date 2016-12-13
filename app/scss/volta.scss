@@ -1,7 +1,11 @@
 @import "fonts";
+@import "../package/elusive-icons/css/elusive-icons";
+@import "../package/font-awesome/css/font-awesome";
+@import "../package/chosen/chosen";
 @import "bootstrap";
 @import "vars";
 @import "mixins";
+
 
 /* MAIN STYLES */
 body {
