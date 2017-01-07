@@ -7,22 +7,59 @@
 
  });*/
 
+
 $(document).ready(function () {
-    $("select").chosen({disable_search: true, width: "100%", scroll_to_highlighted: false});
-    //
-    /* $('.navbar a.dropdown-toggle').on('click', function(e) {
-     var $el = $(this);
-     var $parent = $(this).offsetParent(".dropdown-menu");
-     $(this).parent("li").toggleClass('open');
 
-     if(!$parent.parent().hasClass('nav')) {
-     $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
-     }
+    $(window).on('load resize', function () {
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            $('.navbar-default').addClass('navbar-fixed-top');
+            $('#news-slider').slick({
+                arrows: false,
+                variableWidth: true,
+                infinite: false,
+                dots: true
+            });
+            $('#event-slider').slick({
+                arrows: false,
+                variableWidth: true,
+                infinite: false,
+                dots: true
+            });
+            $('#accordion-slider').slick({
+                arrows: false,
+                variableWidth: true,
+                infinite: false,
+                dots: true
+            });
+        };
+        if (window.matchMedia('(min-width: 768px)').matches) {
+            $("select").chosen({disable_search: true, width: "100%", scroll_to_highlighted: false});
 
-     $('.nav li.open').not($(this).parents("li")).removeClass("open");
 
-     return false;
-     });*/
+            // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+            $('.dropdown').on('show.bs.dropdown', function (e) {
+                $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+            });
+
+            // ADD SLIDEUP ANIMATION TO DROPDOWN //
+            $('.dropdown').on('hide.bs.dropdown', function (e) {
+                $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+            });
+            $('.navbar-default').removeClass('navbar-fixed-top');
+           /* $('#news-slider').slick('unslick');*/
+           /* $('#event-slider').slick('unslick');*/
+        };
+    });
+
+
+    $('.tab-div').click(function () {
+        $('.tab-div').parent('div').removeClass('active');
+        $(this).parent('div').toggleClass('active');
+    })
+
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('overflow-body');
+    });
 
     $('.smooth').click(function () {
         var target = $(this).attr('href');
@@ -45,22 +82,13 @@ $(document).ready(function () {
         $('.search-container').show('fast');
     });
 
-    // ADD SLIDEDOWN ANIMATION TO DROPDOWN //
-    $('.dropdown').on('show.bs.dropdown', function (e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-    });
 
-    // ADD SLIDEUP ANIMATION TO DROPDOWN //
-    $('.dropdown').on('hide.bs.dropdown', function (e) {
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-    });
+    /*$('.chosen-container').on('chosen:showing_dropdown', function () {
+     $(this).next('.chosen-container').children('.chosen-drop').slideDown(400);
+     }).on('chosen:hiding_dropdown', function () {
+     $(this).next('.chosen-container').children('.chosen-drop').slideUp(400);
+     });*/
 
-
-    $('.chosen-container').on('chosen:showing_dropdown', function () {
-        $(this).next('.chosen-container').children('.chosen-drop').slideDown(400);
-    }).on('chosen:hiding_dropdown', function () {
-        $(this).next('.chosen-container').children('.chosen-drop').slideUp(400);
-    });
 
 
     $('.select-connect').click(function () {

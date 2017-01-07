@@ -1,18 +1,351 @@
 @media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+    padding-top: 45px;
+  }
+  h2 {
+    font-size: 1.375em;
+  }
+  h3 {
+    font-size: 1.125em;
+    margin-bottom: 30px;
+  }
+  .indent {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .row-indent {
+    padding-left: 0;
+    padding-bottom: 9px;
+  }
+  /**/
+  .back-head {
+    display: none;
+  }
+  .back-blue {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+  /*NAVIGATION*/
+  .search-relative.mobile-search {
+    display: block;
+    width: 75%;
+    height: 45px;
+  }
+  .navbar {
+    min-height: 45px;
+  }
+  .navbar-default {
+    background: $a-gray;
+    .navbar-brand {
+      display: none;
+    }
+  }
+  .navbar-right {
+    padding-top: 0;
+  }
+  .navbar-default .navbar-toggle {
+    padding: 7.5px 10px;
+    border: none;
+    border-radius: 0;
+    z-index: 10;
+    .icon-bar {
+      background: #3c3c3c;
+      @include transition;
+    }
+    &:hover {
+      background: transparent;
+      .icon-bar {
+        background: $blue-hover;
+      }
+    }
+  }
+  .nav-name {
+    display: none;
+  }
+  .navbar-fixed-top .navbar-collapse {
+    min-height: 110vh;
+    background: $blue;
+    border: none;
+    overflow-y: scroll;
+  }
+  .navbar-default .navbar-nav.nav-mobile {
+    display: block;
+  }
+  .navbar-default .navbar-nav > li > a {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-  .services-box-1,.services-box-2,.services-box-3 {
+  /*VIEW ALL */
+  .row-view-all {
+    display: block;
+  }
+
+  /*SERVICES*/
+  .mobile-logo {
+    display: block;
+
+  }
+  .angles-row {
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .search-row {
+    position: static;
+  }
+  .services-box-1, .services-box-2, .services-box-3 {
     width: 100%;
     position: static;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .services-box-1 {
+    margin-bottom: 29px;
+  }
+
+  /*SERVICES BLOCK*/
+  .services {
+    padding: {
+      top: 68px;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+    }
+  }
+  .service-item {
+    padding-left: 0;
+    padding-right: 0;
+    p {
+      padding-right: 0;
+      font-size: .875em;
+    }
+    &:hover {
+      background: transparent;
+    }
+  }
+  .sprite-top {
+    left: 0;
+    opacity: 1;
+  }
+  /*NEWS*/
+  #news-slider {
+    margin-right: -15px;
+  }
+  .important-item {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin-right: 0;
+    min-height: 390px;
+    background: $white;
+    width: 240px;
+    margin-left: 15px;
+    .content-item {
+      height: 293px;
+    }
+  }
+
+  .read-next {
+    display: block;
+    bottom: 35px;
+    right: 30px;
+    font-size: .875em;
+  }
+  .event-item {
+    min-height: 380px;
+    background: $white;
+    padding-top: 34px;
+    padding-right: 30px;
+    margin-bottom: 31px;
+    width: 240px;
+    margin-left: 15px;
+    margin-right: 0;
+    img {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .content-item {
+      height: 196px;
+    }
+    .event-date {
+      right: 15px;
+    }
+  }
+
+  /* button up */
+  .button-up {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /*FIXES*/
+  .padding-fix {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding-image-fix {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .padding-event-fix {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /*SLIDERS*/
+  #news-slider {
+    min-height: 520px;
+  }
+  #event-slider {
+    min-height: 444px;
+    margin-left: 0;
+    .slick-dots {
+      bottom:20px;
+    }
   }
 
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  header {
+    min-height: 246px;
+  }
+  /*NAVIGATION*/
+  .container .navbar-header {
+    margin-left: 15px;
+  }
+  .navbar-default .navbar-nav.nav-name li a {
+    display: none;
+  }
+  /* NAVIGATION ELEMENTS */
+  .navbar-brand {
+    width: 65px;
+  }
+  .navbar-right {
+    padding: 18px 0;
+  }
+  .navbar-default .navbar-nav > li > a {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .navbar-default .navbar-nav > li > a.nav-map {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+  .caret {
+    margin-left: 8px;
+  }
+  /* PHONES DROPDOWN */
+  .navbar-nav > li.menu-connect > .dropdown-connect li {
+    width: 50%;
+  }
+  .navbar-nav > li.menu-connect > .dropdown-connect {
+    width: 725px;
+  }
+  /* IMPORTNAT ITEM */
+  .important-item {
+    margin-right: 0;
+    padding-left: 29px;
+    min-height: 200px;
+  }
+  .padding-fix {
+    padding-left: 15px;
+    padding-right: 15px;
+    .row-indent {
+      padding-top: 20px;
+
+    }
+  }
+  .padding-fix .view-all {
+    padding-right: 20px;
+  }
+  .padding-image-fix {
+    padding-left: 15px;
+  }
+  .event-item img {
+    width: 92%;
+    margin-top: 0;
+  }
+
+  /*TABS*/
+  .nav-tabs > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 227px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  .panel-title > a {
+    padding-right: 50px;
+  }
+  /* FOOTER */
+  .bottom-links li {
+    margin-right: 12px;
+  }
 
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .container .navbar-header {
+    margin-left: 15px;
+  }
+  h3 {
+    font-size: 1.1250em;
+  }
+  /* NAVIGATION ELEMENTS */
+  .navbar-default .navbar-nav > li > a {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .navbar-default .navbar-nav > li > a.nav-map {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+  .caret {
+    margin-left: 8px;
+  }
+  /* PHONES DROPDOWN */
+  .navbar-nav > li.menu-connect > .dropdown-connect {
+    width: 940px;
+  }
+  .dropdown-menu > li > a {
+    padding: {
+      left: 9px;
+      right: 9px;
+    }
+  }
+  /* SERVICES */
+  .service-item {
+    padding-right: 10px;
+    p {
+      padding-right: 0;
+    }
+  }
+  /* IMPORTANT ITEM */
+  .important-item {
+    margin-right: 0;
+    padding-right: 25px;
+  }
+  /* TABS */
+  .nav-tabs > li > a {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .panel-title > a {
+    padding-right: 80px;
+  }
+  /*FOOTER*/
+  .footer-button {
+    font-size: .875em;
+  }
+  .footer-side {
+    min-height: 225px;
+  }
 
 }
 

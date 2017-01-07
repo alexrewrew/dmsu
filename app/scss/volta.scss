@@ -6,7 +6,6 @@
 @import "vars";
 @import "mixins";
 
-
 /* MAIN STYLES */
 body {
   font: {
@@ -14,8 +13,13 @@ body {
     family: $font;
   }
   color: $text;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   background: $a-gray;
+}
+
+.overflow-body {
+  overflow-y: hidden !important;
+  /*position: fixed !important;*/
 }
 
 .text-right {
@@ -24,6 +28,10 @@ body {
 
 .text-left {
   text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 /* HEADERS */
@@ -79,6 +87,41 @@ input {
   }
 }
 
+.custom-select {
+  background: $white;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: $text;
+  padding: {
+    top: 17px;
+    left: 25px;
+    right: 25px;
+    bottom: 17px;
+  }
+  line-height: 1.14;
+  width: 100%;
+  font-size: 1.125em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -webkit-border-radius: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.lang-select {
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
 /* SELECT */
 .chosen-container-single .chosen-single { //main select style
   background: transparent;
@@ -121,6 +164,7 @@ input {
     right: 30px;
     bottom: 12px;
   }
+  line-height: 1.3;
 }
 
 .chosen-container .chosen-results li.result-selected, .chosen-container .chosen-results li.highlighted {
@@ -147,8 +191,6 @@ input {
     padding-left: 8px;
   }
 }
-
-
 
 //BUTTON
 .button-regular {
@@ -178,6 +220,25 @@ input {
   font-size: 1.150em;
   &:hover {
     background: $yellow;
+  }
+}
+
+/* INDENTS */
+.indent {
+  padding: {
+    top: 71px;
+    bottom: 44px;
+    left: 22px;
+    right: 31px;
+  }
+}
+
+.row-indent {
+  padding: {
+    top: 0;
+    bottom: 19px;
+    left: 27px;
+    right: 0;
   }
 }
 
@@ -277,13 +338,13 @@ header {
   width: 0;
   padding: 0 42px 0 15px;
   border: none;
-  /*border-bottom: 2px solid transparent;*/
   outline: none;
   background: transparent;
   transition: .4s cubic-bezier(0, 0.8, 0, 1);
   position: absolute;
   top: 0;
   right: 0;
+  left: auto;
   z-index: 3;
   margin: 2px 0;
   &:hover {
@@ -291,7 +352,6 @@ header {
   }
   &:focus {
     width: 215px;
-
     background: $white;
     right: 30px;
   }
@@ -305,12 +365,42 @@ header {
   position: absolute;
   top: 0;
   right: 0;
+  left: auto;
   cursor: pointer;
   outline: none;
   z-index: 2;
   color: $icon;
   &:hover {
     color: $blue;
+  }
+}
+
+/*SEARCH MOBILE*/
+.search-relative.mobile-search {
+  display: none;
+  .search-head form {
+    height: 24px;
+    position: relative;
+    top: 6px;
+    left: 15px;
+    width: 75%;
+  }
+
+  .search-head input {
+    height: 29px;
+    left: 0;
+    right: auto;
+    &:focus {
+      width: 180px;
+      left: 35px;
+      right: auto;
+    }
+  }
+
+  .search-head button {
+    left: 0;
+    right: auto;
+    font-size: 24px;
   }
 }
 
@@ -329,12 +419,15 @@ header {
   padding: 0;
 }
 
+.navbar-header {
+  margin-left: 15px;
+}
+
 .navbar-right {
   padding: 31px 0;
 }
 
 //MAIN MENU SELECT
-
 
 .navbar-default .navbar-nav > li > {
   a.select-connect {
@@ -483,6 +576,43 @@ header {
   }
 }
 
+.navbar-nav.nav-mobile > li.menu-connect > .dropdown-connect {
+  padding: {
+    left: 8px;
+    right: 8px;
+    top: 13px;
+    bottom: 13px;
+  }
+  width: 100%;
+  li {
+    width: 50%;
+    a {
+      padding: {
+        top: 11px;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+      }
+      margin-bottom: 0;
+      font-size: 0.875em;
+    }
+  }
+  .connect-header {
+    width: 100%;
+
+    a {
+      font-weight: 700;
+      font-size: 1.125em;
+      &:hover {
+        background: transparent;
+      }
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
+}
+
 .phone-number {
   display: inline-block;
   width: 100%;
@@ -492,10 +622,11 @@ header {
 .navbar-brand {
   height: 100%;
   padding: 20px 10px;
+  width: 88px;
 }
 
 .navbar-brand > img {
-  max-width: 68px;
+
   width: 100%;
 }
 
@@ -503,17 +634,28 @@ header {
   @include regular-text(600, 1em);
   line-height: 1.2;
   text-align: left;
-  color: $b-gray;
   text-transform: uppercase;
   padding: 23px 0;
   li {
     a {
       font-weight: 600;
+      color: $white;
       &:hover {
         color: $white;
         opacity: .5;
       }
     }
+  }
+}
+
+.navbar-default .navbar-nav.nav-mobile {
+  display: none;
+  a {
+    cursor: auto;
+  }
+  select {
+    background: transparent;
+    border: none;
   }
 }
 
@@ -526,7 +668,6 @@ header {
 
 /* SEARCH SERVICES */
 .search-row {
-  /*padding-top: 4px;*/
   position: relative;
   top: 50px;
   .chosen-container {
@@ -542,6 +683,31 @@ header {
 }
 
 /* Services boxes */
+.mobile-logo {
+  display: none;
+  padding: 26px 0 30px;
+  margin: 0;
+  img {
+    max-width: 67px;
+    width: 100%;
+  }
+}
+
+.mobile-head {
+  @include regular-text(600, 1em);
+  line-height: 1.2;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 21px 0 9px 0;
+  font-weight: 600;
+  color: $white;
+  display: inline-block;
+  &:hover {
+    color: $white;
+    opacity: .5;
+  }
+}
+
 .services-box-1 {
   float: left;
   width: 37.9%;
@@ -586,7 +752,7 @@ header {
   text-align: right;
   text-transform: lowercase;
   position: relative;
-  top:10px;
+  top: 10px;
   a {
     color: $blue;
     &:hover {
@@ -600,12 +766,39 @@ header {
       font-size: 12px;
     }
   }
+}
+
+.padding-fix {
+  .view-all {
+    padding-right: 28px;
+  }
+}
+
+.row-view-all {
+  display: none;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+.view-all-mobile {
+  font-size: 1.125em;
+  text-transform: none;
+  text-align: center;
+  padding-right: 0;
+  @include transition;
+  a {
+    color: $blue-black;
+    border-bottom: 2px solid $blue-black;
+    &:hover {
+      border-bottom: 2px solid $yellow;
+    }
+  }
 
 }
 
 /* SERVICES CONTAINER */
 .services {
-  padding: 144px 38px 50px 50px;
+  padding: 144px 38px 45px 50px;
 }
 
 /* SERVICE ITEMS */
@@ -652,26 +845,13 @@ header {
 }
 
 /* NEWS */
-.news {
-  padding: {
-    top: 66px;
-  }
-}
-
-.news-head {
-  padding: 0 23px 19px 34px;
-}
-
-.news-row {
-  padding-left: 6px;
-  padding-right: 6px;
-}
 
 .important-item {
   background: transparent;
   @include transition;
-  margin-right: 80px;
+  margin-right: 74px;
   min-height: 220px;
+  outline: none;
   padding: {
     top: 25px;
     left: 31px;
@@ -754,24 +934,6 @@ header {
   left: 12px;
 }
 
-/* FAQ */
-.questions {
-  padding: {
-    top: 115px;
-  }
-}
-
-.questions-head {
-  padding: 0 23px 2px 34px;
-}
-
-.questions-row {
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-bottom: 96px;
-
-}
-
 /* TABS */
 .tab-arrow {
   width: 0;
@@ -801,6 +963,7 @@ header {
 
 .nav-tabs {
   border: none;
+  margin-top: 0;
 }
 
 .nav-tabs > li {
@@ -844,6 +1007,61 @@ header {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
+  color: $white;
+  background: $c-gray;
+  border: none;
+  cursor: default;
+}
+
+/**/
+
+.nav-tabs {
+  border: none;
+  margin-top: 0;
+}
+
+.nav-tabs > div {
+  position: relative;
+  float: left;
+  &:hover {
+    .tab-arrow {
+      bottom: -30px;
+      opacity: 1;
+    }
+  }
+}
+
+.nav-tabs > div.active {
+  .tab-arrow {
+    bottom: -30px;
+    border-top: 10px solid $c-gray;
+    opacity: 1;
+  }
+}
+
+.nav-tabs > div > a {
+  border-radius: 0;
+  line-height: 0.9;
+  color: $text;
+  background: $white;
+  border: none;
+  cursor: pointer;
+  @include regular-text(400, 1.250em);
+  padding: {
+    top: 19px;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+  }
+  margin-right: 19px;
+  &:hover {
+    background: $yellow;
+  }
+}
+
+.nav-tabs > div.active > a,
+.nav-tabs > div.active > a:hover,
+.nav-tabs > div.active > a:focus {
   color: $white;
   background: $c-gray;
   border: none;
@@ -1149,6 +1367,7 @@ footer {
   right: 39px;
   bottom: 94px;
   display: none;
+  z-index: 30;
   a {
     display: inline-block;
     width: 100%;
@@ -1203,6 +1422,20 @@ footer {
 
 .el-caret-down {
   font-size: 8px;
+}
+
+/*SLIDERS*/
+
+
+.slick-dots {
+  bottom: 87px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.slick-dots li button::before {
+  font-size: 10px;
 }
 
 /* */
