@@ -13,13 +13,14 @@ body {
     family: $font;
   }
   color: $text;
+  /*overflow-x: hidden;*/
   /*overflow-y: scroll;*/
   background: $a-gray;
 }
 
 .overflow-body {
   overflow-y: hidden !important;
-  /*position: fixed !important;*/
+  position: fixed !important;
 }
 
 .text-right {
@@ -207,6 +208,9 @@ input {
   @include transition;
   &:hover {
     background: $blue-hover;
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -434,6 +438,7 @@ header {
     @include regular-text(600, 1.5em);
     line-height: 0.83;
     color: $white;
+
     padding: {
       left: 0;
       right: 0;
@@ -943,7 +948,7 @@ header {
 
   border-top: 10px solid $yellow;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: calc(50% - 10px);
   @include transition;
   z-index: -1;
@@ -961,7 +966,7 @@ header {
   display: none;
 }
 
-.nav-tabs {
+/*.nav-tabs {
   border: none;
   margin-top: 0;
 }
@@ -1011,7 +1016,7 @@ header {
   background: $c-gray;
   border: none;
   cursor: default;
-}
+}*/
 
 /**/
 
@@ -1020,26 +1025,27 @@ header {
   margin-top: 0;
 }
 
-.nav-tabs > div {
+.nav-tabs .item-tab {
   position: relative;
   float: left;
   &:hover {
     .tab-arrow {
-      bottom: -30px;
+      bottom: -10px;
       opacity: 1;
     }
   }
 }
 
-.nav-tabs > div.active {
+.nav-tabs div.active {
   .tab-arrow {
-    bottom: -30px;
+    bottom: -10px;
     border-top: 10px solid $c-gray;
     opacity: 1;
   }
 }
 
-.nav-tabs > div > a {
+.nav-tabs div a {
+  display: block;
   border-radius: 0;
   line-height: 0.9;
   color: $text;
@@ -1059,9 +1065,9 @@ header {
   }
 }
 
-.nav-tabs > div.active > a,
-.nav-tabs > div.active > a:hover,
-.nav-tabs > div.active > a:focus {
+.nav-tabs div.active a,
+.nav-tabs div.active a:hover,
+.nav-tabs div.active a:focus {
   color: $white;
   background: $c-gray;
   border: none;
@@ -1071,7 +1077,7 @@ header {
 /* TAB CONTENT */
 .tab-pane {
   padding: {
-    top: 34px;
+    top: 33px;
   }
 }
 
@@ -1111,7 +1117,6 @@ header {
 }
 
 .panel-title > a.collapsed {
-  font-weight: 400;
   background: transparent;
   &:hover {
     background: $white;
@@ -1122,7 +1127,7 @@ header {
   background: $white;
   width: 100%;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   line-height: 1.16;
   padding: {
@@ -1245,7 +1250,7 @@ footer {
   background: transparent;
   color: $f-gray;
   padding: {
-    top: 10px;
+    top: 4px;
     left: 0;
     right: 0;
     bottom: 12px;
@@ -1253,6 +1258,7 @@ footer {
   margin-right: 6px;
   font-size: 1.313em;
   font-weight: 600;
+  border: none;
   &:hover {
     background: transparent;
     color: $white;
@@ -1264,13 +1270,15 @@ footer {
 
 .nav-tabs.organ-partners > li.active > a {
   color: $white;
+  border: none;
 }
 
-.nav-tabs.organ-partners > li > a.footer-trident {
+.nav-tabs.organ-partners > li.footer-trident > a {
   background: transparent;
   padding: 0;
   cursor: default;
   margin-right: 22px;
+  width: 20px;
   img {
     max-width: 23px;
     width: 100%;
@@ -1279,7 +1287,7 @@ footer {
 
 .footer-pane {
   padding: {
-    top: 26px;
+    top: 20px;
     left: 15px;
   }
 }
@@ -1292,9 +1300,8 @@ footer {
   li {
     float: left;
     width: 48%;
-    /*list-style: url('../img/icons/list.gif') outside;*/
     list-style: none;
-    background: url('../img/icons/list.gif') no-repeat left 40%;
+    background: url('../img/icons/list.gif') no-repeat left 49%;
     padding: {
       left: 31px;
       right: 5px;
@@ -1426,6 +1433,9 @@ footer {
 
 /*SLIDERS*/
 
+.slick-list {
+  overflow-y: visible;
+}
 
 .slick-dots {
   bottom: 87px;
@@ -1436,6 +1446,12 @@ footer {
 }
 .slick-dots li button::before {
   font-size: 10px;
+}
+
+#accordion-slider {
+  .slick-dots {
+    bottom: 0;
+  }
 }
 
 /* */

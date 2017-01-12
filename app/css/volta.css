@@ -6780,12 +6780,13 @@ body {
   font-size: 16px;
   font-family: "Proxima Nova", sans-serif;
   color: #282828;
+  /*overflow-x: hidden;*/
   /*overflow-y: scroll;*/
   background: #f1f0f0; }
 
 .overflow-body {
   overflow-y: hidden !important;
-  /*position: fixed !important;*/ }
+  position: fixed !important; }
 
 .text-right {
   text-align: right !important; }
@@ -6955,6 +6956,8 @@ input {
   transition: all 0.4s ease; }
   .button-regular:hover {
     background: #0096ff; }
+  .button-regular:focus {
+    outline: none; }
 
 .footer-button {
   background: #a2a2a2;
@@ -7552,7 +7555,7 @@ header {
   border-right: 10px solid transparent;
   border-top: 10px solid #efaf03;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: calc(50% - 10px);
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -7572,67 +7575,76 @@ header {
   right: 75px;
   display: none; }
 
-.nav-tabs {
+/*.nav-tabs {
   border: none;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
 .nav-tabs > li {
-  position: relative; }
-  .nav-tabs > li:hover .tab-arrow {
-    bottom: -10px;
-    opacity: 1; }
+  position: relative;
+  &:hover {
+    .tab-arrow {
+      bottom: -10px;
+      opacity: 1;
+    }
+  }
+}
 
-.nav-tabs > li.active .tab-arrow {
-  bottom: -10px;
-  border-top: 10px solid #a2a2a2;
-  opacity: 1; }
+.nav-tabs > li.active {
+  .tab-arrow {
+    bottom: -10px;
+    border-top: 10px solid $c-gray;
+    opacity: 1;
+  }
+}
 
 .nav-tabs > li > a {
   border-radius: 0;
   line-height: 0.9;
-  color: #282828;
-  background: #fff;
+  color: $text;
+  background: $white;
   border: none;
   cursor: pointer;
-  font-family: "Proxima Nova", sans-serif;
-  font-weight: 400;
-  font-size: 1.25em;
-  font-style: normal;
-  font-stretch: normal;
-  padding-top: 19px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-right: 19px; }
-  .nav-tabs > li > a:hover {
-    background: #efaf03; }
+  @include regular-text(400, 1.250em);
+  padding: {
+    top: 19px;
+    bottom: 20px;
+    left: 30px;
+    right: 30px;
+  }
+  margin-right: 19px;
+  &:hover {
+    background: $yellow;
+  }
+}
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #fff;
-  background: #a2a2a2;
+  color: $white;
+  background: $c-gray;
   border: none;
-  cursor: default; }
-
+  cursor: default;
+}*/
 /**/
 .nav-tabs {
   border: none;
   margin-top: 0; }
 
-.nav-tabs > div {
+.nav-tabs .item-tab {
   position: relative;
   float: left; }
-  .nav-tabs > div:hover .tab-arrow {
-    bottom: -30px;
+  .nav-tabs .item-tab:hover .tab-arrow {
+    bottom: -10px;
     opacity: 1; }
 
-.nav-tabs > div.active .tab-arrow {
-  bottom: -30px;
+.nav-tabs div.active .tab-arrow {
+  bottom: -10px;
   border-top: 10px solid #a2a2a2;
   opacity: 1; }
 
-.nav-tabs > div > a {
+.nav-tabs div a {
+  display: block;
   border-radius: 0;
   line-height: 0.9;
   color: #282828;
@@ -7649,12 +7661,12 @@ header {
   padding-left: 30px;
   padding-right: 30px;
   margin-right: 19px; }
-  .nav-tabs > div > a:hover {
+  .nav-tabs div a:hover {
     background: #efaf03; }
 
-.nav-tabs > div.active > a,
-.nav-tabs > div.active > a:hover,
-.nav-tabs > div.active > a:focus {
+.nav-tabs div.active a,
+.nav-tabs div.active a:hover,
+.nav-tabs div.active a:focus {
   color: #fff;
   background: #a2a2a2;
   border: none;
@@ -7662,7 +7674,7 @@ header {
 
 /* TAB CONTENT */
 .tab-pane {
-  padding-top: 34px; }
+  padding-top: 33px; }
 
 .panel-group .panel {
   background: transparent;
@@ -7692,7 +7704,6 @@ header {
   margin-bottom: 23px; }
 
 .panel-title > a.collapsed {
-  font-weight: 400;
   background: transparent; }
   .panel-title > a.collapsed:hover {
     background: #fff; }
@@ -7701,7 +7712,7 @@ header {
   background: #fff;
   width: 100%;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
   line-height: 1.16;
   padding-top: 18px;
@@ -7790,13 +7801,14 @@ footer {
 .nav-tabs.organ-partners > li > a {
   background: transparent;
   color: #a3a3a3;
-  padding-top: 10px;
+  padding-top: 4px;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 12px;
   margin-right: 6px;
   font-size: 1.313em;
-  font-weight: 600; }
+  font-weight: 600;
+  border: none; }
   .nav-tabs.organ-partners > li > a:hover {
     background: transparent;
     color: #fff; }
@@ -7804,19 +7816,21 @@ footer {
     background: transparent; }
 
 .nav-tabs.organ-partners > li.active > a {
-  color: #fff; }
+  color: #fff;
+  border: none; }
 
-.nav-tabs.organ-partners > li > a.footer-trident {
+.nav-tabs.organ-partners > li.footer-trident > a {
   background: transparent;
   padding: 0;
   cursor: default;
-  margin-right: 22px; }
-  .nav-tabs.organ-partners > li > a.footer-trident img {
+  margin-right: 22px;
+  width: 20px; }
+  .nav-tabs.organ-partners > li.footer-trident > a img {
     max-width: 23px;
     width: 100%; }
 
 .footer-pane {
-  padding-top: 26px;
+  padding-top: 20px;
   padding-left: 15px; }
 
 /* FOOTER LINKS */
@@ -7826,9 +7840,8 @@ footer {
   .footer-links li {
     float: left;
     width: 48%;
-    /*list-style: url('../img/icons/list.gif') outside;*/
     list-style: none;
-    background: url("../img/icons/list.gif") no-repeat left 40%;
+    background: url("../img/icons/list.gif") no-repeat left 49%;
     padding-left: 31px;
     padding-right: 5px;
     margin-bottom: 12px;
@@ -7941,6 +7954,9 @@ footer {
   font-size: 8px; }
 
 /*SLIDERS*/
+.slick-list {
+  overflow-y: visible; }
+
 .slick-dots {
   bottom: 87px; }
 
@@ -7949,6 +7965,9 @@ footer {
 
 .slick-dots li button::before {
   font-size: 10px; }
+
+#accordion-slider .slick-dots {
+  bottom: 0; }
 
 /* */
 @media (max-width: 767px) {
@@ -7960,6 +7979,8 @@ footer {
   h3 {
     font-size: 1.125em;
     margin-bottom: 30px; }
+  h5 {
+    margin-bottom: 40px; }
   .indent {
     padding-left: 0;
     padding-right: 0;
@@ -8008,7 +8029,8 @@ footer {
     min-height: 110vh;
     background: #0183de;
     border: none;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    max-height: none; }
   .navbar-default .navbar-nav.nav-mobile {
     display: block; }
   .navbar-default .navbar-nav > li > a {
@@ -8084,6 +8106,25 @@ footer {
       height: 196px; }
     .event-item .event-date {
       right: 15px; }
+  /*TABS*/
+  .nav-tabs div {
+    float: none; }
+  .nav-tabs div a {
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    display: inline-block;
+    height: 70px;
+    width: 240px;
+    line-height: 1; }
+  .tab-arrow {
+    display: none; }
+  .nav-tabs div.slick-slide {
+    max-width: 240px;
+    margin-left: 15px; }
+  .panel-title > a {
+    padding-right: 30px; }
   /* button up */
   .button-up {
     bottom: 15px;
@@ -8091,11 +8132,19 @@ footer {
   /*FIXES*/
   .padding-fix {
     padding-left: 15px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    /*
+    margin-right: -15px;*/ }
   .padding-image-fix {
     padding-left: 15px;
     padding-right: 15px; }
   .padding-event-fix {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .padding-right-fix {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .padding-footer-fix {
     padding-left: 15px;
     padding-right: 15px; }
   /*SLIDERS*/
@@ -8103,9 +8152,100 @@ footer {
     min-height: 520px; }
   #event-slider {
     min-height: 444px;
-    margin-left: 0; }
+    margin-left: 0;
+    margin-right: -15px;
+    overflow: hidden; }
     #event-slider .slick-dots {
-      bottom: 20px; } }
+      bottom: 20px; }
+  #accordion-slider {
+    margin-left: 0;
+    margin-right: -15px;
+    min-height: 130px;
+    overflow: hidden; }
+  #footer-slider {
+    min-height: 115px; }
+    #footer-slider .slick-dots {
+      bottom: 5px; }
+  /* FOOTER */
+  footer {
+    margin-top: 45px; }
+  .footer-data {
+    padding-left: 0;
+    padding-right: 0; }
+  .nav > li.footer-trident, .nav > li.footer-separator {
+    display: none; }
+  /*
+  .nav .footer-trident, .nav .footer-separator {
+    display: none;
+  }*/
+  .footer-side {
+    min-height: 245px; }
+  .padding-aside .footer-side {
+    padding-top: 26px;
+    min-height: 300px; }
+  .padding-aside p {
+    margin-bottom: 43px; }
+  .padding-aside {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .footer-button {
+    width: 100%; }
+  .bottom-row {
+    padding-right: 0;
+    padding-left: 0; }
+  .bottom-menu {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 35px; }
+    .bottom-menu p {
+      display: inline-block;
+      font-size: 1.125em; }
+  .bottom-links li {
+    float: left;
+    width: 50%;
+    margin-right: 0; }
+    .bottom-links li a {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 0;
+      padding-right: 0; }
+  .footer-pane {
+    padding-left: 0; }
+  .footer-links li {
+    display: block;
+    width: 100%;
+    background: #a2a2a2 none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0; }
+    .footer-links li a {
+      display: inline-block;
+      width: 100%;
+      min-height: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 19px;
+      padding-bottom: 18px;
+      font-size: 1em;
+      color: #161616; }
+      .footer-links li a:hover {
+        color: #fff; }
+  .nav-tabs.organ-partners {
+    margin-right: -15px; }
+  .nav-tabs.organ-partners li a {
+    background: #676767;
+    color: #fff;
+    text-align: center;
+    height: 49px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    line-height: 1;
+    font-size: 1.125em;
+    font-weight: 600; }
+  .nav-tabs.organ-partners li.active a {
+    background: #efaf03; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   header {
@@ -8151,7 +8291,7 @@ footer {
     width: 92%;
     margin-top: 0; }
   /*TABS*/
-  .nav-tabs > li > a {
+  .nav-tabs div a {
     padding-left: 10px;
     padding-right: 10px;
     max-width: 227px;
@@ -8193,7 +8333,7 @@ footer {
     margin-right: 0;
     padding-right: 25px; }
   /* TABS */
-  .nav-tabs > li > a {
+  .nav-tabs div a {
     padding-left: 18px;
     padding-right: 18px; }
   .panel-title > a {
