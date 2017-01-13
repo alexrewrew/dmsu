@@ -33,7 +33,40 @@
     }
   }
   /*NAVIGATION*/
-  .search-relative.mobile-search {
+  .nav-logo {
+    display: none ;
+  }
+  .cd-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: $b-gray;
+  }
+  .cd-header-buttons {
+    margin: 0;
+    right:5px;
+  }
+
+  .cd-primary-nav, .cd-secondary-nav {
+    margin-top: 0;
+    padding-left: 0;
+    background: $blue-hover;
+    /*z-index: 100;
+    width: 275px;*/
+  }
+  .cd-primary-nav ul {
+    background: $blue-hover;width: 100%;
+  }
+  .cd-primary-nav a, .cd-primary-nav ul a {
+    border-bottom: 0;
+    font-size: 1em;
+  }
+  .cd-primary-nav {
+    /*right: -1000px;*/
+  }
+ /* .search-relative.mobile-search {
     display: block;
     width: 75%;
     height: 45px;
@@ -82,7 +115,7 @@
   .navbar-default .navbar-nav > li > a {
     margin-left: 0;
     margin-right: 0;
-  }
+  }*/
 
   /*VIEW ALL */
   .row-view-all {

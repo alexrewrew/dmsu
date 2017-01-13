@@ -115,7 +115,6 @@ $(document).ready(function () {
 
     $('.active-result').click(function (e) {
         $(this).trigger('blur');
-    })
-
+    });
 });
 
