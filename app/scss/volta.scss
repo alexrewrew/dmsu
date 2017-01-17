@@ -49,8 +49,6 @@
   }
 }
 
-
-
 .services-box-1 {
   float: left;
   width: 37.9%;
@@ -339,6 +337,7 @@
   border: none;
   cursor: pointer;
   @include regular-text(400, 1.250em);
+  outline: none;
   padding: {
     top: 19px;
     bottom: 20px;
@@ -349,6 +348,7 @@
   &:hover {
     background: $yellow;
   }
+
 }
 
 .nav-tabs div.active a,
@@ -559,6 +559,15 @@ footer {
   }
 }
 
+.nav-tabs.organ-partners > li.footer-separator {
+  a {
+    cursor: default;
+    &:hover {
+      color: $f-gray;
+    }
+  }
+}
+
 .nav-tabs.organ-partners > li.active > a {
   color: $white;
   border: none;
@@ -663,7 +672,7 @@ footer {
   @include transition;
   position: fixed;
   right: 39px;
-  bottom: 94px;
+  bottom: 46px; /*94px*/
   display: none;
   z-index: 3000;
   a {

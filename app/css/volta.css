@@ -5012,7 +5012,7 @@ input {
 .search-head input {
   height: 27px;
   width: 0;
-  padding: 0 42px 0 15px;
+  padding: 0 31px 0 15px;
   border: none;
   outline: none;
   background: transparent;
@@ -5022,7 +5022,7 @@ input {
   right: 0;
   left: auto;
   z-index: 3;
-  margin: 2px 0; }
+  margin: 2px 0 2px 0; }
   .search-head input:hover {
     cursor: pointer; }
   .search-head input:focus {
@@ -6749,6 +6749,7 @@ header {
   font-size: 1.25em;
   font-style: normal;
   font-stretch: normal;
+  outline: none;
   padding-top: 19px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -6912,6 +6913,11 @@ footer {
   .nav-tabs.organ-partners > li > a:focus {
     background: transparent; }
 
+.nav-tabs.organ-partners > li.footer-separator a {
+  cursor: default; }
+  .nav-tabs.organ-partners > li.footer-separator a:hover {
+    color: #a3a3a3; }
+
 .nav-tabs.organ-partners > li.active > a {
   color: #fff;
   border: none; }
@@ -6999,7 +7005,8 @@ footer {
   transition: all 0.4s ease;
   position: fixed;
   right: 39px;
-  bottom: 94px;
+  bottom: 46px;
+  /*94px*/
   display: none;
   z-index: 3000; }
   .button-up a {

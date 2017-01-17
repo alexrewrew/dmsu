@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $(".footer-slide-item").click(function () {
+        $(".footer-slide-item").removeClass("active");
+    });
 
     //  $(window).on('load resize', function () {
     if (window.matchMedia('(max-width: 768px)').matches) {
@@ -41,6 +44,11 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
             $(".button-up").fadeIn('slow');
+            if($(window).scrollTop()+$(window).height()>=$(document).height()){
+                $(".button-up").css("bottom", "94px");
+            } else {
+                $(".button-up").css("bottom", "46px");
+            }
         } else {
             $(".button-up").fadeOut('fast');
         }
