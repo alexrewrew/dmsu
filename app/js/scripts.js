@@ -54,6 +54,13 @@ $(document).ready(function () {
         }
     });
 
+    $("#cd-primary-nav").scroll(function () {
+        $(this).css("z-index", "5000");
+        $(".cd-primary-nav").css("z-index", "5000");
+        $(this).css("background-color", "#0096ff");
+        $(".cd-primary-nav").css("background-color", "#0096ff");
+    });
+
 
     // });
 
