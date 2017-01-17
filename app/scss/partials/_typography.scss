@@ -1,0 +1,45 @@
+/*TYPOGRAPHY STYLES */
+
+/* headers */
+h2 {
+  @include regular-text(600, 1.625em);
+  margin-bottom: 26px;
+  margin-top: 8px;
+  line-height: 0.8;
+  color: $c-gray;
+}
+
+h3 {
+  @include regular-text(700, 1.250em);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: $text;
+}
+
+h5 {
+  margin-bottom: 31px;
+  @include regular-text(600, 1.313em);
+  color: $white;
+}
+
+/* paragraph */
+
+p {
+  margin: 0;
+}
+
+/* links */
+a {
+  @include transition;
+  color: $text;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}

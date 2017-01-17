@@ -3,6 +3,21 @@
     overflow-x: hidden;
     padding-top: 45px;
   }
+  body.overflow-hidden {
+    overflow: hidden !important;
+    height: 100%;
+    max-height: 100vh;
+    -webkit-overflow-scrolling: auto;
+    .cd-main-content {
+      height: 100%;
+      max-height: 100vh;
+      overflow: hidden !important;
+      -webkit-overflow-scrolling: auto;
+    }
+    .button-up {
+      display: none;
+    }
+  }
   h2 {
     font-size: 1.375em;
   }
@@ -13,6 +28,13 @@
   h5 {
     margin-bottom: 40px;
   }
+  /**/
+  .select-caret {
+    .caret-down {
+      display: block;
+    }
+  }
+  /**/
   .indent {
     padding-left: 0;
     padding-right: 0;
@@ -34,7 +56,7 @@
   }
   /*NAVIGATION*/
   .nav-logo {
-    display: none ;
+    display: none;
   }
   .cd-main-header {
     position: fixed;
@@ -42,80 +64,63 @@
     left: 0;
     right: 0;
     height: 45px;
-    background: $b-gray;
+    background: $a-gray;
   }
   .cd-header-buttons {
     margin: 0;
-    right:5px;
+    right: 5px;
   }
 
   .cd-primary-nav, .cd-secondary-nav {
     margin-top: 0;
     padding-left: 0;
-    background: $blue-hover;
+    background: $blue-hover !important;
+    z-index: 198;
     /*z-index: 100;
     width: 275px;*/
   }
   .cd-primary-nav ul {
-    background: $blue-hover;width: 100%;
+    background: $blue-hover !important;
+    width: 100%;
+    /*min-height: 100vh;*/
   }
   .cd-primary-nav a, .cd-primary-nav ul a {
     border-bottom: 0;
-    font-size: 1em;
+    font-size: 1.125em;
   }
-  .cd-primary-nav {
-    /*right: -1000px;*/
-  }
- /* .search-relative.mobile-search {
-    display: block;
-    width: 75%;
-    height: 45px;
-  }
-  .navbar {
-    min-height: 45px;
-  }
-  .navbar-default {
-    background: $a-gray;
-    .navbar-brand {
-      display: none;
-    }
-  }
-  .navbar-right {
-    padding-top: 0;
-  }
-  .navbar-default .navbar-toggle {
-    padding: 7.5px 10px;
-    border: none;
-    border-radius: 0;
-    z-index: 10;
-    .icon-bar {
-      background: #3c3c3c;
-      @include transition;
-    }
-    &:hover {
-      background: transparent;
-      .icon-bar {
-        background: $blue-hover;
-      }
-    }
-  }
-  .nav-name {
-    display: none;
-  }
-  .navbar-fixed-top .navbar-collapse {
-    min-height: 110vh;
-    background: $blue;
-    border: none;
-    overflow-y: scroll;
-    max-height: none;
-  }
-  .navbar-default .navbar-nav.nav-mobile {
+  .cd-header-search {
     display: block;
   }
-  .navbar-default .navbar-nav > li > a {
-    margin-left: 0;
-    margin-right: 0;
-  }*/
+  .cd-secondary-nav {
+    span {
+      width: 100%;
+    }
+    .phone-number {
+      width: 100%;
+    }
+  }
+  .cd-primary-nav > li > a.nav-map {
+    .icon-text {
+      display: inline-block;
+      font-size: 1.111em;
+      font-weight: 600;
+      line-height: 1.2;
+      position: relative;
+      top: 3px;
+      left: 9px;
+    }
+  }
+
+  .cd-primary-nav > li.nav-number > a {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .cd-primary-nav > li.mobile-lang {
+    display: block;
+  }
+  .cd-primary-nav > li.mobile-social {
+    display: block;
+  }
 
   /*VIEW ALL */
   .row-view-all {
@@ -252,8 +257,9 @@
   /*FIXES*/
   .padding-fix {
     padding-left: 15px;
-    padding-right: 15px;/*
-    margin-right: -15px;*/
+    padding-right: 15px;
+    /*
+        margin-right: -15px;*/
   }
   .padding-image-fix {
     padding-left: 15px;
@@ -354,8 +360,8 @@
       padding: {
         top: 4px;
         bottom: 4px;
-        left:0;
-        right:0;
+        left: 0;
+        right: 0;
       }
     }
   }
@@ -368,8 +374,8 @@
     width: 100%;
     background: $c-gray none;
     margin: {
-      left:0;
-      right:0;
+      left: 0;
+      right: 0;
     }
     padding: 0;
 
@@ -378,15 +384,15 @@
       width: 100%;
       min-height: 50px;
       padding: {
-        left:30px;
-        right:30px;
-        top:19px;
-        bottom:18px;
+        left: 30px;
+        right: 30px;
+        top: 19px;
+        bottom: 18px;
       }
       font-size: 1em;
       color: $black-text;
       &:hover {
-        color:$white;
+        color: $white;
       }
     }
   }
@@ -399,14 +405,14 @@
     text-align: center;
     height: 49px;
     padding: {
-      left:0;
-      right:0;
-      top:16px;
-      bottom:16px;
+      left: 0;
+      right: 0;
+      top: 16px;
+      bottom: 16px;
     }
     line-height: 1;
     font-size: 1.125em;
-    font-weight:600;
+    font-weight: 600;
   }
   .nav-tabs.organ-partners li.active a {
     background: $yellow;
@@ -425,30 +431,44 @@
     display: none;
   }
   /* NAVIGATION ELEMENTS */
-  .navbar-brand {
-    width: 65px;
+  .nav-logo .nav-logo-text a {
+    font-size: .750em;
+    padding-left: 5px;
+    padding-right: 5px;
+
   }
-  .navbar-right {
-    padding: 18px 0;
+  .cd-primary-nav > li > a {
+    font-size: .750em;
+    margin: {
+      left: 4px;
+      right: 4px;
+    }
   }
-  .navbar-default .navbar-nav > li > a {
-    margin-left: 6px;
-    margin-right: 6px;
+  .cd-primary-nav > li.nav-number > a {
+    margin: {
+      left: 4px;
+      right: 4px;
+      top: 23px;
+      bottom: 25px;
+    }
+
   }
-  .navbar-default .navbar-nav > li > a.nav-map {
-    margin-left: 10px;
-    margin-right: 15px;
+  .cd-primary-nav > li.nav-number > a.selected {
+    span {
+      bottom: -38px;
+    }
   }
-  .caret {
-    margin-left: 8px;
+  .cd-primary-nav > li > a.selected span {
+    bottom: -25px;
   }
-  /* PHONES DROPDOWN */
-  .navbar-nav > li.menu-connect > .dropdown-connect li {
-    width: 50%;
+  .nav-arrow {
+    bottom: -30px;
   }
-  .navbar-nav > li.menu-connect > .dropdown-connect {
-    width: 725px;
+  .cd-primary-nav > li > a.nav-map {
+    padding-left: 0;
+    padding-right: 0;
   }
+
   /* IMPORTNAT ITEM */
   .important-item {
     margin-right: 0;
@@ -501,26 +521,22 @@
     font-size: 1.1250em;
   }
   /* NAVIGATION ELEMENTS */
-  .navbar-default .navbar-nav > li > a {
-    margin-left: 6px;
-    margin-right: 6px;
+  .nav-logo .nav-logo-text a {
+    padding-right: 5px;
+    padding-left: 10px;
   }
-  .navbar-default .navbar-nav > li > a.nav-map {
-    margin-left: 10px;
-    margin-right: 15px;
-  }
-  .caret {
+  .cd-primary-nav > li > a {
     margin-left: 8px;
+    margin-right: 8px;
+    padding-left: 0;
+    padding-right: 0;
   }
-  /* PHONES DROPDOWN */
-  .navbar-nav > li.menu-connect > .dropdown-connect {
-    width: 940px;
+  .cd-primary-nav > li > a.nav-map {
+    padding-left: 0;
+    padding-right: 0;
   }
-  .dropdown-menu > li > a {
-    padding: {
-      left: 9px;
-      right: 9px;
-    }
+  .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery {
+    width: 145%;
   }
   /* SERVICES */
   .service-item {

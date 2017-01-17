@@ -1,0 +1,47 @@
+/* MAIN CSS STYLES */
+body {
+  font: {
+    size: 16px;
+    family: $font;
+  }
+  color: $text;
+  background: $a-gray;
+}
+
+/* fixed position when menu is opened */
+.overflow-body {
+  overflow-y: hidden !important;
+  position: fixed !important;
+}
+
+/* text aligns */
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* INDENTS */
+.indent {
+  padding: {
+    top: 71px;
+    bottom: 44px;
+    left: 22px;
+    right: 31px;
+  }
+}
+
+.row-indent {
+  padding: {
+    top: 0;
+    bottom: 19px;
+    left: 27px;
+    right: 0;
+  }
+}
