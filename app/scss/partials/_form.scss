@@ -20,6 +20,23 @@ input {
   form {
     height: 21px;
   }
+  button {
+    background: transparent;
+    border: none;
+    height: 31px;
+    width: 31px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    cursor: pointer;
+    outline: none;
+    z-index: 2;
+    color: $icon;
+    &:hover {
+      color: $blue;
+    }
+  }
   input {
     height: 27px;
     width: 0;
@@ -44,23 +61,7 @@ input {
       z-index: 0;
     }
   }
-  button {
-    background: transparent;
-    border: none;
-    height: 31px;
-    width: 31px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: auto;
-    cursor: pointer;
-    outline: none;
-    z-index: 2;
-    color: $icon;
-    &:hover {
-      color: $blue;
-    }
-  }
+
 }
 
 /*SEARCH MOBILE*/

@@ -550,6 +550,7 @@ footer {
   font-size: 1.313em;
   font-weight: 600;
   border: none;
+  outline: none;
   &:hover {
     background: transparent;
     color: $white;
@@ -616,7 +617,7 @@ footer {
     a {
       font-size: .836em;
       color: $white;
-
+      outline: none;
     }
   }
 }
