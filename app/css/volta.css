@@ -5028,7 +5028,8 @@ input {
   .search-head input:focus {
     width: 215px;
     background: #fff;
-    right: 30px; }
+    right: 30px;
+    z-index: 0; }
 
 .search-head button {
   background: transparent;
