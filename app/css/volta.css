@@ -4945,6 +4945,18 @@ section {
 /*typography*/
 /*TYPOGRAPHY STYLES */
 /* headers */
+h1 {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  font-style: normal;
+  font-stretch: normal;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+  margin-top: 9px;
+  margin-bottom: 12px; }
+
 h2 {
   font-family: "Proxima Nova", sans-serif;
   font-weight: 600;
@@ -6553,7 +6565,33 @@ support for no js
 /* PAGE HEADERS */
 .head-row {
   padding-left: 36px;
-  padding-right: 36px; }
+  padding-right: 36px;
+  padding-top: 21px; }
+
+.filter-links {
+  padding: 0;
+  margin: 0 0 0 63px; }
+  .filter-links li {
+    float: left;
+    list-style: none; }
+    .filter-links li a {
+      line-height: 1.0;
+      font-size: 1.125em;
+      color: #fff;
+      display: inline-block;
+      background: #1d94e7;
+      text-align: center;
+      padding-top: 10px;
+      padding-Bottom: 13px;
+      padding-left: 27px;
+      padding-right: 27px;
+      margin: 0; }
+      .filter-links li a:hover {
+        background: #efaf03;
+        color: #282828; }
+    .filter-links li a.active-link {
+      background: #efaf03;
+      color: #282828; }
 
 /* VIEW ALL */
 .view-all {

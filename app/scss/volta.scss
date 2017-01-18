@@ -75,6 +75,38 @@
 .head-row {
   padding-left: 36px;
   padding-right: 36px;
+  padding-top: 21px;
+}
+.filter-links {
+  padding: 0;
+  margin: 0 0 0 63px;
+  li {
+    float: left;
+    list-style: none;
+    a {
+      line-height: 1.0;
+      font-size: 1.125em;
+      color: $white;
+      display: inline-block;
+      background: $filter;
+      text-align: center;
+      padding: {
+        top:10px;
+        Bottom:13px;
+        left:27px;
+        right:27px;
+      }
+      margin: 0;
+      &:hover {
+        background: $yellow;
+        color: $text;
+      }
+    }
+    a.active-link {
+      background: $yellow;
+      color: $text;
+    }
+  }
 }
 
 /* VIEW ALL */
