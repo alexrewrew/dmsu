@@ -133,11 +133,12 @@
     display: block;
   }
   .phone-number {
-    display: block;
+    display: inline-block;
     float: right;
     font-weight: 300;
     font-size: 1.143em;
     width: 51%;
+    text-align: right;
   }
 }
 

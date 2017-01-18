@@ -6456,11 +6456,12 @@ support for no js
   display: block; }
 
 .cd-secondary-nav .phone-number {
-  display: block;
+  display: inline-block;
   float: right;
   font-weight: 300;
   font-size: 1.143em;
-  width: 51%; }
+  width: 51%;
+  text-align: right; }
 
 .has-children a {
   position: relative; }
@@ -6506,8 +6507,6 @@ support for no js
     display: inline-block;
     font-size: 30px; }
 
-/*GIT IGNORE*/
-/*SUCK*/
 /* SEARCH SERVICES */
 .search-row {
   position: relative;

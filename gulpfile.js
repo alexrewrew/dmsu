@@ -63,5 +63,6 @@ gulp.task('rigger', function () {
 gulp.task('watch', ['rigger','browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
     gulp.watch('app/scss/**/*.scss', ['sass']); //пошук scss файлів
     gulp.watch('app/*.html', browserSync.reload); //пошук html файлів
+    gulp.watch('app/html/*.html', browserSync.reload); //пошук html файлів
     gulp.watch('app/js/**/*.js', browserSync.reload); //пошук js файлів
 });
