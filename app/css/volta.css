@@ -6593,6 +6593,28 @@ support for no js
       background: #efaf03;
       color: #282828; }
 
+.breadcrumbs {
+  padding: 0;
+  margin: 0; }
+  .breadcrumbs li {
+    float: left;
+    list-style: none;
+    border-right: 1px solid #90d1ff;
+    margin-top: 4px;
+    margin-bottom: 6px; }
+    .breadcrumbs li a {
+      display: inline-block;
+      color: #90d1ff;
+      font-size: .875em;
+      padding-left: 15px;
+      padding-right: 16px;
+      padding-top: 3px;
+      padding-bottom: 1px; }
+      .breadcrumbs li a:hover {
+        color: #fff; }
+  .breadcrumbs li:last-child {
+    border: none; }
+
 /* VIEW ALL */
 .view-all {
   font-family: "Proxima Nova", sans-serif;
@@ -6706,7 +6728,7 @@ support for no js
     line-height: 1.2; }
 
 .content-item {
-  height: 140px;
+  height: 143px;
   overflow: hidden;
   position: relative;
   display: block; }
@@ -6770,6 +6792,28 @@ support for no js
   position: absolute;
   bottom: -30px;
   left: 12px; }
+
+/* news width*/
+.item-width {
+  padding-bottom: 56px; }
+  .item-width .important-item {
+    width: 42.3%;
+    float: left;
+    margin-right: 64px; }
+    .item-width .important-item:nth-child(even) {
+      float: right; }
+  .item-width .event-item {
+    width: 47%;
+    margin: 0;
+    float: left; }
+    .item-width .event-item:nth-child(even) {
+      float: right; }
+    .item-width .event-item .padding-image-fix {
+      padding-right: 9px; }
+    .item-width .event-item .padding-event-fix {
+      padding-left: 31px; }
+    .item-width .event-item .event-date {
+      left: 31px; }
 
 /* TABS */
 .tab-arrow {
@@ -7143,6 +7187,8 @@ footer {
       -webkit-overflow-scrolling: auto; }
     body.overflow-hidden .button-up {
       display: none; }
+  h1 {
+    margin-bottom: 0; }
   h2 {
     font-size: 1.375em; }
   h3 {
@@ -7232,6 +7278,32 @@ footer {
     padding: 0; }
   .services-box-1 {
     margin-bottom: 29px; }
+  .head-row {
+    padding-left: 0;
+    padding-right: 0; }
+  .filter-links {
+    display: block;
+    margin: 0; }
+    .filter-links li {
+      /*a {
+        padding: {
+          left: 0;
+          right: 0;
+        }
+        width: 100%;
+        text-align: center;
+
+      }
+    */ }
+      .filter-links li a {
+        width: 244px;
+        margin-right: 15px; }
+  #filter-slider {
+    margin-right: -15px;
+    padding-bottom: 40px;
+    padding-left: 15px; }
+    #filter-slider .slick-dots {
+      bottom: 12px; }
   /*SERVICES BLOCK*/
   .services {
     padding-top: 68px;
@@ -7282,6 +7354,17 @@ footer {
       height: 192px; }
     .event-item .event-date {
       right: 15px; }
+  /*NEWS WIDTH*/
+  .item-width .important-item, .item-width .event-item {
+    width: 244px;
+    margin-right: 15px; }
+    .item-width .important-item:nth-child(even), .item-width .event-item:nth-child(even) {
+      float: left; }
+  .item-width .event-item .padding-event-fix {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .item-width .event-item .event-date {
+    left: 15px; }
   /*TABS*/
   .nav-tabs div {
     float: none; }
@@ -7434,6 +7517,11 @@ footer {
 @media (min-width: 768px) and (max-width: 991px) {
   header {
     min-height: 246px; }
+  .filter-links {
+    margin: 0; }
+    .filter-links li a {
+      padding-left: 16px;
+      padding-right: 16px; }
   /*NAVIGATION*/
   .container .navbar-header {
     margin-left: 15px; }
@@ -7479,6 +7567,13 @@ footer {
   .event-item img {
     width: 92%;
     margin-top: 0; }
+  /*NEWS WIDTH*/
+  .item-width .important-item {
+    padding-right: 29px;
+    width: 50%;
+    margin-right: 0; }
+  .item-width .event-item {
+    width: 100%; }
   /*TABS*/
   .nav-tabs div a {
     padding-left: 10px;
@@ -7520,6 +7615,9 @@ footer {
   .important-item {
     margin-right: 0;
     padding-right: 25px; }
+  /*NEWS WIDTH*/
+  .content-item {
+    height: 153px; }
   /* TABS */
   .nav-tabs div a {
     padding-left: 18px;
