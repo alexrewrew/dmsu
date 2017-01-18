@@ -3,8 +3,6 @@
 /*icons*/
 @import "../package/elusive-icons/css/elusive-icons";
 @import "../package/font-awesome/css/font-awesome";
-/*chosen*/
-/*@import "../package/chosen/chosen";*/
 /*bootstrap*/
 @import "bootstrap";
 /*variables*/
@@ -16,6 +14,7 @@
 /*typography*/
 @import "partials/typography";
 /*forms*/
+@import "../package/chosen/chosen";
 @import "partials/form";
 @import "partials/button";
 /*menu*/
@@ -26,16 +25,13 @@
 .search-row {
   position: relative;
   top: 50px;
+  padding-left: 29px;
+  padding-right: 29px;
   .chosen-container {
     background: $white;
     padding: 15px 30px 17px 22px;
     font-size: 1.125em;
   }
-}
-
-.angles-row {
-  padding-left: 29px;
-  padding-right: 29px;
 }
 
 /* Services boxes */
@@ -48,23 +44,21 @@
     width: 100%;
   }
 }
-
-.services-box-1 {
+.services-box-1, .services-box-2, .services-box-3 {
   float: left;
-  width: 37.9%;
   padding: 0 8px;
+}
+.services-box-1 {
+  width: 37.9%;
 }
 
 .services-box-2 {
-  float: left;
   width: 38.4%;
   padding: 0 11px;
 }
 
 .services-box-3 {
-  float: left;
   width: 24.5%;
-  padding: 0 8px;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -75,13 +69,6 @@
     right: auto;
     color: $white;
   }
-}
-
-.search-label {
-  color: $white;
-  font-size: 1.250em;
-  margin-bottom: 15px;
-  font-weight: 500;
 }
 
 /* VIEW ALL */
@@ -153,7 +140,6 @@
     right: 32px;
     bottom: 26px;
   }
-
   min-height: 226px;
   &:hover {
     background: $white;
@@ -281,7 +267,6 @@
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-
   border-top: 10px solid $yellow;
   position: absolute;
   bottom: 10px;
@@ -316,6 +301,7 @@
     .tab-arrow {
       bottom: -10px;
       opacity: 1;
+      z-index: 1;
     }
   }
 }
@@ -325,6 +311,7 @@
     bottom: -10px;
     border-top: 10px solid $c-gray;
     opacity: 1;
+    z-index: 1;
   }
 }
 
@@ -344,6 +331,8 @@
     left: 30px;
     right: 30px;
   }
+  z-index: 2;
+  position: relative;
   margin-right: 19px;
   &:hover {
     background: $yellow;
@@ -405,12 +394,15 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1em;
 }
 
 .panel-title > a.collapsed {
   background: transparent;
+  color: $text;
   &:hover {
     background: $white;
+    color: $text;
   }
 }
 
@@ -426,6 +418,12 @@
     bottom: 20px;
     left: 30px;
     right: 25%;
+  }
+  &:hover {
+    color: $text;
+  }
+  &:focus {
+    color: $text;
   }
 }
 
@@ -623,7 +621,7 @@ footer {
 }
 
 /* BOTTOM MENU */
-.bottom-menu {
+.navigation-bottom {
   background: $e-gray;
 }
 
@@ -664,61 +662,9 @@ footer {
   }
 }
 
-/* BUTTON UP */
-.button-up {
-  background: $c-gray;
-  width: 46px;
-  height: 46px;
-  text-align: center;
-  @include transition;
-  position: fixed;
-  right: 39px;
-  bottom: 46px; /*94px*/
-  display: none;
-  z-index: 3000;
-  a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    padding-top: 12px;
-  }
-  &:hover {
-    opacity: .2;
-  }
-}
 
-/* FIXES */
-.padding-fix {
-  padding-right: 0;
-  padding-left: 0;
-}
+@import "partials/fixes";
 
-.padding-left-fix {
-  padding-left: 0;
-}
-
-.padding-right-fix {
-  padding-right: 0;
-}
-
-.padding-image-fix {
-  padding-left: 7px;
-  padding-right: 27px;
-}
-
-.padding-footer-fix {
-  padding-left: 7px;
-  padding-right: 0;
-}
-
-.padding-event-fix {
-  padding-right: 5px;
-  padding-left: 13px;
-}
-
-.padding-aside {
-  padding-left: 38px;
-}
 
 /* ICONS */
 .el-chevron-right {
@@ -730,30 +676,6 @@ footer {
 
 .el-caret-down {
   font-size: 8px;
-}
-
-/*SLIDERS*/
-
-.slick-list {
-  overflow-y: visible;
-}
-
-.slick-dots {
-  bottom: 87px;
-}
-
-.slick-dotted.slick-slider {
-  margin-bottom: 0;
-}
-
-.slick-dots li button::before {
-  font-size: 10px;
-}
-
-#accordion-slider {
-  .slick-dots {
-    bottom: 0;
-  }
 }
 
 /* */

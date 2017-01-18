@@ -5,9 +5,7 @@ input {
   -webkit-appearance: none;
   border: none;
   padding: 5px 10px;
-  &:focus {
-    outline: none;
-  }
+  outline: none;
 }
 
 /*search input*/
@@ -41,8 +39,6 @@ input {
     height: 27px;
     width: 0;
     padding: 0 31px 0 15px;
-    border: none;
-    outline: none;
     background: transparent;
     transition: .4s cubic-bezier(0, 0.8, 0, 1);
     position: absolute;
@@ -116,14 +112,9 @@ select {
   -webkit-appearance: none;
   -webkit-box-shadow: none;
   -webkit-border-radius: 0;
-  &:focus {
-    outline: none;
-  }
 }
 
 /*chosen selection*/
-
-@import "../../package/chosen/chosen";
 
 .chosen-container-single .chosen-single { //main select style
   background: transparent;
@@ -237,10 +228,19 @@ select {
   position: relative;
   .caret-down {
     display: none;
-    top:30%;
-    right:5%
+    top: 30%;
+    right: 5%
   }
 }
+
+.mobile-lang.select-caret {
+  .caret-down {
+    right: 62%;
+    color: $white;
+    top: 25%;
+  }
+}
+
 .caret {
   margin-left: 14px;
 }

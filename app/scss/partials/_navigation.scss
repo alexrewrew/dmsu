@@ -1,14 +1,11 @@
 /* MENU STYLES */
-header {
-  background: $blue;
-  min-height: 271px;
-}
 
-.back-head {
+.navigation-top {
   background: $b-gray;
   padding: 0 15px;
 }
-.back-blue {
+
+.navigation-main {
   background: $blue;
 }
 
@@ -26,6 +23,7 @@ header {
     opacity: .5;
   }
 }
+
 /*small navigation*/
 
 .navigation-head {
@@ -109,7 +107,7 @@ header {
   list-style-type: none;
   margin: 0;
   form {
-    height:45px;
+    height: 45px;
     input {
       height: 41px;
       left: -30px;
@@ -127,6 +125,7 @@ header {
     }
   }
 }
+
 .cd-secondary-nav {
   span {
     width: 49%;
@@ -167,11 +166,21 @@ header {
   select {
     background: transparent;
     color: $white;
-    border:none;
+    border: none;
     font-size: 1.111em;
     font-weight: 600;
+    width: 35%;
+    padding: {
+      left: 10px;
+      right: 10px;
+      top: 0px;
+      bottom: 0px;
+    }
+    position: relative;
+    top:2px;
   }
 }
+
 .cd-primary-nav > li.mobile-social {
   display: none;
   text-align: center;

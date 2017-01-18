@@ -8,6 +8,15 @@ body {
   background: $a-gray;
 }
 
+header {
+  background: $blue;
+  min-height: 122px;
+}
+
+section {
+  background: $a-gray;
+}
+
 /* fixed position when menu is opened */
 .overflow-body {
   overflow-y: hidden !important;

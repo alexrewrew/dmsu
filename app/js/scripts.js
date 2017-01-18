@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /*alert('velosiped4');*/
     $(".footer-slide-item").click(function () {
         $(".footer-slide-item").removeClass("active");
     });
@@ -34,8 +35,7 @@ $(document).ready(function () {
             swipeToSlide: true
         });
         $("body").append($("#navigation"));
-    }
-    ;
+    };
     if (window.matchMedia('(min-width: 768px)').matches) {
         $("select").chosen({disable_search: true, width: "100%", scroll_to_highlighted: false});
         $(".back-blue").append($("#navigation"));
@@ -54,24 +54,9 @@ $(document).ready(function () {
         }
     });
 
-    $("#cd-primary-nav").scroll(function () {
-        $(this).css("z-index", "5000");
-        $(".cd-primary-nav").css("z-index", "5000");
-        $(this).css("background-color", "#0096ff");
-        $(".cd-primary-nav").css("background-color", "#0096ff");
-    });
-
-
-    // });
-
-
     $('.tab-div').click(function () {
         $('.tab-div').parent('div').removeClass('active');
         $(this).parent('div').toggleClass('active');
-    });
-
-    $('.navbar-toggle').click(function () {
-        $('body').toggleClass('overflow-body');
     });
 
     $('.smooth').click(function () {

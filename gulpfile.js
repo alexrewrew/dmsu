@@ -10,7 +10,8 @@
 var gulp = require('gulp'), //ініціалізація gulp
     sass = require('gulp-sass'), //ініціалізація sass
     browserSync = require('browser-sync'),
-    uncss = require('gulp-uncss'); //ініціалізація browser-sync
+    uncss = require('gulp-uncss'),
+    rigger = require('gulp-rigger'); //ініціалізація browser-sync
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
@@ -50,8 +51,16 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('app/js'));
 });
 
+/*rigger*/
+
+gulp.task('rigger', function () {
+    gulp.src('app/html/index.html')
+        .pipe(rigger())
+        .pipe(gulp.dest('app/'));
+});
+
 //слідкування за змінами у проекті
-gulp.task('watch', ['browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
+gulp.task('watch', ['rigger','browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
     gulp.watch('app/scss/**/*.scss', ['sass']); //пошук scss файлів
     gulp.watch('app/*.html', browserSync.reload); //пошук html файлів
     gulp.watch('app/js/**/*.js', browserSync.reload); //пошук js файлів
