@@ -71,6 +71,12 @@
   }
 }
 
+/* PAGE HEADERS */
+.head-row {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
 /* VIEW ALL */
 .view-all {
   @include regular-text(600, 1em);

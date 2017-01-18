@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 /*rigger*/
 
 gulp.task('rigger', function () {
-    gulp.src('app/html/index.html')
+    gulp.src(['app/html/index.html', 'app/html/news-all.html'])
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });
@@ -62,7 +62,7 @@ gulp.task('rigger', function () {
 //слідкування за змінами у проекті
 gulp.task('watch', ['rigger','browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
     gulp.watch('app/scss/**/*.scss', ['sass']); //пошук scss файлів
+    gulp.watch('app/html/*.html', ['rigger']); //пошук html файлів
     gulp.watch('app/*.html', browserSync.reload); //пошук html файлів
-    gulp.watch('app/html/*.html', browserSync.reload); //пошук html файлів
     gulp.watch('app/js/**/*.js', browserSync.reload); //пошук js файлів
 });

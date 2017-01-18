@@ -6550,6 +6550,11 @@ support for no js
     right: auto;
     color: #fff; }
 
+/* PAGE HEADERS */
+.head-row {
+  padding-left: 36px;
+  padding-right: 36px; }
+
 /* VIEW ALL */
 .view-all {
   font-family: "Proxima Nova", sans-serif;
