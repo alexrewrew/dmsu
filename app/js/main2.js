@@ -132,7 +132,7 @@ jQuery(document).ready(function($){
 	}
 
 	function moveNavigation(){
-		var navigation = $('.cd-nav');
+		var navigation = $('.nav-main');
   		var desktop = checkWindowWidth();
         if ( desktop ) {
 			navigation.detach();
