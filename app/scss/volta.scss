@@ -293,6 +293,9 @@
   overflow: hidden;
   position: relative;
   display: block;
+  h3 {
+    margin-bottom: 16px;
+  }
 }
 
 .read-next {
@@ -329,6 +332,7 @@
   min-height: 220px;;
   @include transition;
   position: relative;
+
   .read-next {
     bottom: -30px;
   }
@@ -505,13 +509,6 @@
     left: 30px;
     right: 30px;
     bottom: 5px;
-  }
-}
-
-.panel-body {
-  p {
-    line-height: 1.3;
-    margin-bottom: 23px;
   }
 }
 
