@@ -7187,6 +7187,8 @@ footer {
       -webkit-overflow-scrolling: auto; }
     body.overflow-hidden .button-up {
       display: none; }
+  header {
+    overflow-x: hidden; }
   h1 {
     margin-bottom: 0; }
   h2 {
@@ -7284,26 +7286,19 @@ footer {
   .filter-links {
     display: block;
     margin: 0; }
-    .filter-links li {
-      /*a {
-        padding: {
-          left: 0;
-          right: 0;
-        }
-        width: 100%;
-        text-align: center;
-
-      }
-    */ }
-      .filter-links li a {
-        width: 244px;
-        margin-right: 15px; }
+    .filter-links li a {
+      width: 244px;
+      margin-right: 15px; }
   #filter-slider {
     margin-right: -15px;
     padding-bottom: 40px;
-    padding-left: 15px; }
+    padding-left: 15px;
+    padding-top: 8px; }
     #filter-slider .slick-dots {
-      bottom: 12px; }
+      bottom: 12px;
+      margin-left: -5.5%; }
+      #filter-slider .slick-dots li {
+        float: none; }
   /*SERVICES BLOCK*/
   .services {
     padding-top: 68px;

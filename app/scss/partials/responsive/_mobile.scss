@@ -19,6 +19,9 @@
       display: none;
     }
   }
+  header {
+    overflow-x: hidden;
+  }
   h1 {
     margin-bottom: 0;
   }
@@ -160,28 +163,23 @@
     display: block;
     margin: 0;
     li {
-     a {
-       width: 244px;
-       margin-right: 15px;
-     }
-      /*a {
-        padding: {
-          left: 0;
-          right: 0;
-        }
-        width: 100%;
-        text-align: center;
-
+      a {
+        width: 244px;
+        margin-right: 15px;
       }
-    */
     }
   }
   #filter-slider {
     margin-right: -15px;
     padding-bottom: 40px;
     padding-left: 15px;
+    padding-top: 8px;
     .slick-dots {
-      bottom:12px;
+      bottom: 12px;
+      margin-left: -5.5%;
+      li {
+        float: none;
+      }
     }
   }
 
