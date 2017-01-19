@@ -100,7 +100,7 @@
   }
 }
 
-.cd-header-search {
+.header-search {
   display: none;
   position: absolute;
   left: 15px;
@@ -126,7 +126,7 @@
   }
 }
 
-.cd-secondary-nav {
+.secondary-nav {
   span {
     width: 49%;
     float: left;
@@ -162,7 +162,7 @@
   display: none;
 }
 
-.cd-primary-nav > li.mobile-lang {
+.primary-nav > li.mobile-lang {
   display: none;
   select {
     background: transparent;
@@ -182,7 +182,7 @@
   }
 }
 
-.cd-primary-nav > li.mobile-social {
+.primary-nav > li.mobile-social {
   display: none;
   text-align: center;
   a {

@@ -1,4 +1,4 @@
-.cd-main-content, .cd-main-header {
+.main-content, .main-header {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -7,44 +7,44 @@
   will-change: transform;
 }
 
-.cd-main-content, .cd-main-header {
+.main-content, .main-header {
   position: relative;
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
 }
 
-.cd-main-content {
+.main-content {
   /*background: #e2e3df;*/
   background: transparent;
   /*z-index: 2;*/
   z-index: 200;
 }
 
-.cd-main-header {
+.main-header {
   //background: #ffffff;
   /*z-index: 3;*/
   z-index: 201;
 }
-.nav-is-fixed .cd-main-header {
+.nav-is-fixed .main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.cd-header-buttons {
+.header-buttons {
   position: absolute;
   display: inline-block;
   /*top: 3px;*/
   right: 5%;
   height: 45px;
 }
-.cd-header-buttons li {
+.header-buttons li {
   display: inline-block;
 }
 
-.cd-nav-trigger {
+.nav-trigger {
   position: relative;
   display: block;
   width: 44px;
@@ -55,14 +55,14 @@
   z-index: 3;
 }
 
-.cd-nav-trigger span, .cd-nav-trigger span::before, .cd-nav-trigger span::after {
+.nav-trigger span, .nav-trigger span::before, .nav-trigger span::after {
   position: absolute;
   display: inline-block;
   height: 3px;
   width: 24px;
   background: #2e3233;
 }
-.cd-nav-trigger span {
+.nav-trigger span {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -71,7 +71,7 @@
   -moz-transition: background 0.3s 0.3s;
   transition: background 0.3s 0.3s;
 }
-.cd-nav-trigger span::before, .cd-nav-trigger span::after {
+.nav-trigger span::before, .nav-trigger span::after {
   content: '';
   right: 0;
   -webkit-transform: translateZ(0);
@@ -90,26 +90,26 @@
   -moz-transition: -moz-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
 }
-.cd-nav-trigger span::before {
+.nav-trigger span::before {
   top: -6px;
 }
-.cd-nav-trigger span::after {
+.nav-trigger span::after {
   top: 6px;
 }
-.cd-nav-trigger.nav-is-visible span {
+.nav-trigger.nav-is-visible span {
   background: rgba(46, 50, 51, 0);
 }
-.cd-nav-trigger.nav-is-visible span::before, .cd-nav-trigger.nav-is-visible span::after {
+.nav-trigger.nav-is-visible span::before, .nav-trigger.nav-is-visible span::after {
   background: #2e3233;
 }
-.cd-nav-trigger.nav-is-visible span::before {
+.nav-trigger.nav-is-visible span::before {
   -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
   -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
   -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
   -o-transform: translateX(4px) translateY(-3px) rotate(45deg);
   transform: translateX(4px) translateY(-3px) rotate(45deg);
 }
-.cd-nav-trigger.nav-is-visible span::after {
+.nav-trigger.nav-is-visible span::after {
   -webkit-transform: translateX(4px) translateY(2px) rotate(-45deg);
   -moz-transform: translateX(4px) translateY(2px) rotate(-45deg);
   -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
@@ -119,7 +119,7 @@
 
 
 
-.cd-primary-nav, .cd-primary-nav ul {
+.primary-nav, .primary-nav ul {
   position: fixed;
   top: 0;
   right: 0;
@@ -146,18 +146,18 @@
   z-index: 1000;
 }
 
-.cd-primary-nav > li {
+.primary-nav > li {
   list-style: none;
 }
-.cd-primary-nav > li > a:hover {
+.primary-nav > li > a:hover {
   color: rgba(255, 255, 255, .5);
 }
-.cd-primary-nav > li > a:focus {
+.primary-nav > li > a:focus {
   /*opacity: .5;*/
   color: rgba(255, 255, 255, .5);
   outline: none;
 }
-.cd-primary-nav a, .cd-primary-nav ul a {
+.primary-nav a, .primary-nav ul a {
   display: block;
   min-height: 45px;
   padding: 10px 20px 9px;
@@ -178,14 +178,14 @@
   transition: transform 0.3s, opacity 0.3s;
   @include transition;
 }
-.cd-primary-nav.is-hidden, .cd-primary-nav ul.is-hidden {
+.primary-nav.is-hidden, .primary-nav ul.is-hidden {
   -webkit-transform: translateX(100%);
   -moz-transform: translateX(100%);
   -ms-transform: translateX(100%);
   -o-transform: translateX(100%);
   transform: translateX(100%);
 }
-.cd-primary-nav.moves-out > li > a, .cd-primary-nav ul.moves-out > li > a {
+.primary-nav.moves-out > li > a, .primary-nav ul.moves-out > li > a {
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
@@ -195,7 +195,7 @@
 }
 
 
-.cd-primary-nav .see-all a {
+.primary-nav .see-all a {
   color: #69aa6f;
 }
 
@@ -244,10 +244,10 @@
   transform-origin: 9px 50%;
 }
 
-.cd-primary-nav .go-back a {
+.primary-nav .go-back a {
   padding-left: 40px;
 }
-.cd-primary-nav .go-back a::before, .cd-primary-nav .go-back a::after {
+.primary-nav .go-back a::before, .primary-nav .go-back a::after {
   /* arrow goes on the left side - go back button */
   left: 20px;
   -webkit-transform-origin: 1px 50%;
@@ -258,7 +258,7 @@
 }
 
 
-.cd-overlay {
+.overlay {
   /* shadow layer visible when navigation is active */
   position: fixed;
   z-index: 2;
@@ -276,7 +276,7 @@
   -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
 }
-.cd-overlay.is-visible {
+.overlay.is-visible {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s 0s, visibility 0s 0s, -webkit-transform 0.3s 0s;
@@ -290,7 +290,7 @@
 support for no js
 
 -------------------------------- */
-.no-js .cd-primary-nav {
+.no-js .primary-nav {
   position: relative;
   height: auto;
   width: 100%;
@@ -304,7 +304,7 @@ support for no js
 @media only screen and (max-width: 767px) {
 
 
-  .cd-main-content.nav-is-visible, .cd-main-header.nav-is-visible {
+  .main-content.nav-is-visible, .main-header.nav-is-visible {
     -webkit-transform: translateX(-85%);
     -moz-transform: translateX(-85%);
     -ms-transform: translateX(-85%);
@@ -312,45 +312,45 @@ support for no js
     transform: translateX(-85%);
 
   }
-  .nav-on-left .cd-main-content.nav-is-visible, .nav-on-left .cd-main-header.nav-is-visible {
+  .nav-on-left .main-content.nav-is-visible, .nav-on-left .main-header.nav-is-visible {
     -webkit-transform: translateX(85%);
     -moz-transform: translateX(85%);
     -ms-transform: translateX(85%);
     -o-transform: translateX(85%);
     transform: translateX(85%);
   }
-  .nav-on-left .cd-header-buttons {
+  .nav-on-left .header-buttons {
     right: auto;
     left: 5%;
   }
-  .nav-on-left .cd-header-buttons li {
+  .nav-on-left .header-buttons li {
     float: right;
   }
-  .nav-on-left .cd-primary-nav, .nav-on-left .cd-primary-nav ul {
+  .nav-on-left .primary-nav, .nav-on-left .primary-nav ul {
     right: auto;
     left: 0;
   }
-  .cd-primary-nav {
+  .primary-nav {
     visibility: hidden;
     -webkit-transition: visibility 0s 0.3s;
     -moz-transition: visibility 0s 0.3s;
     transition: visibility 0s 0.3s;
   }
-  .cd-primary-nav.nav-is-visible {
+  .primary-nav.nav-is-visible {
     visibility: visible;
     -webkit-transition: visibility 0s 0s;
     -moz-transition: visibility 0s 0s;
     transition: visibility 0s 0s;
   }
 
-  .cd-overlay.is-visible {
+  .overlay.is-visible {
     -webkit-transform: translateX(-85%);
     -moz-transform: translateX(-85%);
     -ms-transform: translateX(-85%);
     -o-transform: translateX(-85%);
     transform: translateX(-85%);
   }
-  .nav-on-left .cd-overlay.is-visible {
+  .nav-on-left .overlay.is-visible {
     -webkit-transform: translateX(85%);
     -moz-transform: translateX(85%);
     -ms-transform: translateX(85%);
@@ -360,19 +360,19 @@ support for no js
 }
 
 @media only screen and (min-width: 768px) {
-  .cd-main-header::after {
+  .main-header::after {
     clear: both;
     content: "";
     display: table;
   }
-  .cd-header-buttons {
+  .header-buttons {
     top: 18px;
     right: 4em;
   }
-  .cd-nav-trigger {
+  .nav-trigger {
     display: none;
   }
-  .cd-primary-nav {
+  .primary-nav {
     position: static;
     padding: 0;/*padding: 0 150px 0 0;*/
     height: auto;
@@ -381,12 +381,12 @@ support for no js
     overflow: visible;
     background: transparent;
   }
-  .cd-primary-nav::after {
+  .primary-nav::after {
     clear: both;
     content: "";
     display: table;
   }
-  .cd-primary-nav.moves-out > li > a {
+  .primary-nav.moves-out > li > a {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -394,7 +394,7 @@ support for no js
     transform: translateX(0);
     opacity: 1;
   }
-  .cd-primary-nav ul {
+  .primary-nav ul {
     position: static;
     height: auto;
     width: auto;
@@ -402,14 +402,14 @@ support for no js
     overflow: visible;
     z-index: 3;
   }
-  .cd-primary-nav ul.is-hidden {
+  .primary-nav ul.is-hidden {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
     transform: translateX(0);
   }
-  .cd-primary-nav ul.moves-out > li > a {
+  .primary-nav ul.moves-out > li > a {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -417,12 +417,12 @@ support for no js
     transform: translateX(0);
     opacity: 1;
   }
-  .cd-primary-nav > li {
+  .primary-nav > li {
     float: left;
     /*margin-left: 3em;*/
   }
-  .cd-primary-nav a, .cd-primary-nav ul a { min-height: 1px; }
-  .cd-primary-nav > li > a {
+  .primary-nav a, .primary-nav ul a { min-height: 1px; }
+  .primary-nav > li > a {
     position: relative;
     display: inline-block;
     /*height: 80px;
@@ -452,11 +452,11 @@ support for no js
     border-bottom: 2px solid transparent;
   }
 
-  .cd-primary-nav > li > a:hover {
+  .primary-nav > li > a:hover {
     border-bottom: 2px solid white;
   }
 
-  .cd-primary-nav > li > a.selected {
+  .primary-nav > li > a.selected {
     /*color: #69aa6f;*/
     /*box-shadow: inset 0 -2px 0 #69aa6f;*/
     border-bottom: 2px solid $white;
@@ -469,7 +469,7 @@ support for no js
     }
   }
 
-  .cd-primary-nav > li > a.nav-map {
+  .primary-nav > li > a.nav-map {
     padding: 2px 18px 0px 8px;
     .icon-text {
       display: none;
@@ -478,10 +478,10 @@ support for no js
       border-color: transparent;
     }
   }
-  .cd-primary-nav > li > a.nav-map.selected {
+  .primary-nav > li > a.nav-map.selected {
     border-color: transparent;
   }
-  .cd-primary-nav > li.nav-number > a {
+  .primary-nav > li.nav-number > a {
     padding-top: 1px;
     padding-bottom: 1px;
     margin-bottom: 21px;
@@ -489,17 +489,17 @@ support for no js
       border-color: transparent;
     }
   }
-  .cd-primary-nav > li.nav-number > a.selected{
+  .primary-nav > li.nav-number > a.selected{
     border-color: transparent;
     span {
       bottom: -21px;
     }
   }
 
-  .cd-primary-nav .go-back, .cd-primary-nav .see-all {
+  .primary-nav .go-back, .primary-nav .see-all {
     display: none;
   }
-  .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery {
+  .primary-nav .secondary-nav, .primary-nav .nav-gallery {
     position: absolute;
     top: 80px;/*width: 100vw;*/
     /*width: 70.56vw;*/
@@ -516,19 +516,19 @@ support for no js
     -moz-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s;
   }
-  .cd-primary-nav .cd-secondary-nav::after, .cd-primary-nav .cd-nav-gallery::after{
+  .primary-nav .secondary-nav::after, .primary-nav .nav-gallery::after{
     clear: both;
     content: "";
     display: table;
   }
-  .cd-primary-nav .cd-secondary-nav.is-hidden, .cd-primary-nav .cd-nav-gallery.is-hidden{
+  .primary-nav .secondary-nav.is-hidden, .primary-nav .nav-gallery.is-hidden{
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
     -moz-transition: opacity .3s 0s, visibility 0s .3s;
     transition: opacity .3s 0s, visibility 0s .3s;
   }
-  .cd-primary-nav .cd-secondary-nav > .see-all, .cd-primary-nav .cd-nav-gallery > .see-all{
+  .primary-nav .secondary-nav > .see-all, .primary-nav .nav-gallery > .see-all{
     display: block;
     position: absolute;
     left: 0;
@@ -539,7 +539,7 @@ support for no js
     margin: 0;
     padding: 0;
   }
-  .cd-primary-nav .cd-secondary-nav > .see-all a, .cd-primary-nav .cd-nav-gallery > .see-all a {
+  .primary-nav .secondary-nav > .see-all a, .primary-nav .nav-gallery > .see-all a {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -558,12 +558,12 @@ support for no js
     -moz-transition: color 0.2s, background 0.2s, border 0.2s;
     transition: color 0.2s, background 0.2s, border 0.2s;
   }
-  .cd-primary-nav .cd-secondary-nav > .see-all a:hover, .cd-primary-nav .cd-nav-gallery > .see-all a:hover {
+  .primary-nav .secondary-nav > .see-all a:hover, .primary-nav .nav-gallery > .see-all a:hover {
     background: #2e3233;
     border-color: #2e3233;
     color: #ffffff;
   }
-  .cd-primary-nav .cd-secondary-nav > li {
+  .primary-nav .secondary-nav > li {
     height:auto;
     width: 33.3333%;
     float: left;
@@ -572,11 +572,11 @@ support for no js
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .cd-primary-nav .cd-secondary-nav > li:nth-child(4n+2) {
+  .primary-nav .secondary-nav > li:nth-child(4n+2) {
     margin-right: 0;
     border-right: none;
   }
-  .cd-primary-nav .cd-secondary-nav > li > a {
+  .primary-nav .secondary-nav > li > a {
     color: $white;
     font-weight: bold;
     /*font-size: 1.6rem;*/
@@ -589,7 +589,7 @@ support for no js
       bottom:18px
     }
   }
-  .cd-primary-nav .cd-secondary-nav a {
+  .primary-nav .secondary-nav a {
     /*height: 30px;*/
     /*line-height: 30px;*/
     padding: 0 18% 0 0;
@@ -597,7 +597,7 @@ support for no js
     border-bottom: none;
     font-size: 0.875em;
   }
-  .cd-primary-nav .cd-secondary-nav h3 {
+  .primary-nav .secondary-nav h3 {
     color: $white;
     font-size: 1.125em;
     font-weight: 600;
@@ -605,69 +605,69 @@ support for no js
     margin-bottom: 6px;
   }
 
-  .cd-primary-nav .cd-secondary-nav a:hover {
+  .primary-nav .secondary-nav a:hover {
     opacity: .5;
     background: rgba(255,255,255,0.2);
   }
-  .cd-primary-nav .cd-secondary-nav ul {
+  .primary-nav .secondary-nav ul {
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
   }
-  .cd-primary-nav .cd-secondary-nav ul ul {
+  .primary-nav .secondary-nav ul ul {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
   }
-  .cd-primary-nav .cd-secondary-nav ul ul.is-hidden {
+  .primary-nav .secondary-nav ul ul.is-hidden {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
   }
-  .cd-primary-nav .cd-secondary-nav ul ul .go-back {
+  .primary-nav .secondary-nav ul ul .go-back {
     display: block;
   }
-  .cd-primary-nav .cd-secondary-nav ul ul .go-back a {
+  .primary-nav .secondary-nav ul ul .go-back a {
     color: transparent;
   }
-  .cd-primary-nav .cd-secondary-nav ul ul .see-all {
+  .primary-nav .secondary-nav ul ul .see-all {
     display: block;
   }
-  .cd-primary-nav .cd-secondary-nav .moves-out > li > a {
+  .primary-nav .secondary-nav .moves-out > li > a {
     -webkit-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
   }
-  .cd-primary-nav .cd-nav-gallery li {
+  .primary-nav .nav-gallery li {
     width: 22%;
     float: left;
     margin: 0 4% 40px 0;
   }
-  .cd-primary-nav .cd-nav-gallery li:nth-child(4n+2) {
+  .primary-nav .nav-gallery li:nth-child(4n+2) {
     margin-right: 0;
   }
-  .cd-primary-nav .cd-nav-gallery .cd-nav-item {
+  .primary-nav .nav-gallery .nav-item {
     border-bottom: none;
     padding: 0;
     height: auto;
     line-height: 1.2;
   }
-  .cd-primary-nav .cd-nav-gallery .cd-nav-item img {
+  .primary-nav .nav-gallery .nav-item img {
     position: static;
     margin-top: 0;
     height: auto;
     width: 100%;
     margin-bottom: .6em;
   }
-  .cd-primary-nav .cd-nav-gallery .cd-nav-item h3 {
+  .primary-nav .nav-gallery .nav-item h3 {
     color: #69aa6f;
     font-weight: bold;
     padding: 0 .4em;
@@ -683,10 +683,10 @@ support for no js
     right: 15%;
   }
 
-  /*.cd-primary-nav > .has-children > a {
+  /*.primary-nav > .has-children > a {
     padding-right: 30px !important;
   }*/
-  .cd-primary-nav > .has-children > a::before, .cd-primary-nav > .has-children > a::after {
+  .primary-nav > .has-children > a::before, .primary-nav > .has-children > a::after {
     width: 9px;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -701,27 +701,27 @@ support for no js
     transition: width 0.3s, transform 0.3s;
   }
 
-  .cd-primary-nav > .has-children > a.nav-map::before, .cd-primary-nav > .has-children > a.nav-map::after {
+  .primary-nav > .has-children > a.nav-map::before, .primary-nav > .has-children > a.nav-map::after {
     display: none;
   }
 
-  .cd-primary-nav > .has-children > a::before {
+  .primary-nav > .has-children > a::before {
     right: -7px;
   }
-  .cd-primary-nav > .has-children > a::after {
+  .primary-nav > .has-children > a::after {
     right: -12px;
   }
-  .cd-primary-nav > .has-children > a.selected::before, .cd-primary-nav > .has-children > a.selected::after {
+  .primary-nav > .has-children > a.selected::before, .primary-nav > .has-children > a.selected::after {
     width: 14px;
   }
-  .cd-primary-nav > .has-children > a.selected::before {
+  .primary-nav > .has-children > a.selected::before {
     -webkit-transform: translateX(5px) rotate(-45deg);
     -moz-transform: translateX(5px) rotate(-45deg);
     -ms-transform: translateX(5px) rotate(-45deg);
     -o-transform: translateX(5px) rotate(-45deg);
     transform: translateX(5px) rotate(-45deg);
   }
-  .cd-primary-nav > .has-children > a.selected::after {
+  .primary-nav > .has-children > a.selected::after {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -729,21 +729,21 @@ support for no js
     transform: rotate(45deg);
   }
 
-  .cd-secondary-nav > .has-children > a::before, .cd-secondary-nav > .has-children > a::after {
+  .secondary-nav > .has-children > a::before, .secondary-nav > .has-children > a::after {
     display: none;
   }
 
-  .cd-primary-nav .go-back a {
+  .primary-nav .go-back a {
     padding-left: 20px;
   }
-  .cd-primary-nav .go-back a::before, .cd-primary-nav .go-back a::after {
+  .primary-nav .go-back a::before, .primary-nav .go-back a::after {
     left: 1px;
   }
 }
 
 
 @media only screen and (max-width: 768px) {
-  header.cd-main-header {
+  header.main-header {
     position: fixed;
     top:0;
     left:0;
@@ -751,7 +751,7 @@ support for no js
   }
 }
 @media only screen and (min-width: 1170px) {
-  .no-js .cd-primary-nav {
+  .no-js .primary-nav {
     position: absolute;
     z-index: 3;
     display: inline-block;
@@ -761,7 +761,7 @@ support for no js
     padding: 0;
   }
 
-  .no-js .nav-is-fixed .cd-primary-nav {
+  .no-js .nav-is-fixed .primary-nav {
     position: fixed;
   }
 }
