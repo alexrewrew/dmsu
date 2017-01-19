@@ -74,7 +74,7 @@
 /* PAGE HEADERS */
 .head-row {
   padding-left: 36px;
-  padding-right: 36px;
+  /*padding-right: 36px;*/
   padding-top: 21px;
 }
 .filter-links {
@@ -139,7 +139,30 @@
   li:last-child {
     border:none;
   }
-
+}
+.breadcrumbs.right-panel {
+  float: right;
+  margin-right: 30px;
+  li {
+    border: none;
+    .news-date {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    a {
+      padding-left: 5px;
+      padding-right: 5px;
+      i {
+        margin-left: 6px;
+        margin-right: 6px;
+        font-size: 19px;
+      }
+      .views-number {
+        position: relative;
+        top:-3px;
+      }
+    }
+  }
 }
 
 /* VIEW ALL */

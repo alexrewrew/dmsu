@@ -6565,7 +6565,7 @@ support for no js
 /* PAGE HEADERS */
 .head-row {
   padding-left: 36px;
-  padding-right: 36px;
+  /*padding-right: 36px;*/
   padding-top: 21px; }
 
 .filter-links {
@@ -6614,6 +6614,25 @@ support for no js
         color: #fff; }
   .breadcrumbs li:last-child {
     border: none; }
+
+.breadcrumbs.right-panel {
+  float: right;
+  margin-right: 30px; }
+  .breadcrumbs.right-panel li {
+    border: none; }
+    .breadcrumbs.right-panel li .news-date {
+      padding-left: 24px;
+      padding-right: 24px; }
+    .breadcrumbs.right-panel li a {
+      padding-left: 5px;
+      padding-right: 5px; }
+      .breadcrumbs.right-panel li a i {
+        margin-left: 6px;
+        margin-right: 6px;
+        font-size: 19px; }
+      .breadcrumbs.right-panel li a .views-number {
+        position: relative;
+        top: -3px; }
 
 /* VIEW ALL */
 .view-all {
