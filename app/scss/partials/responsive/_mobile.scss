@@ -22,6 +22,10 @@
   header {
     overflow-x: hidden;
   }
+  article.indent {
+    padding-left: 0;
+    padding-right: 0;
+  }
   h1 {
     margin-bottom: 0;
   }
@@ -154,10 +158,20 @@
     margin-bottom: 29px;
   }
   .head-row {
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
   }
-  .breadcrumbs {
+  /**/
+  .breadcrumbs.right-panel {
+    margin-right: 0;
+    float: left;
+    li {
+      .news-date {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
   }
   .filter-links {
     display: block;
@@ -296,7 +310,15 @@
     margin-left: 15px;
   }
   .panel-title > a {
+    padding-left: 20px;
     padding-right: 30px;
+    .caret-down {
+      right: 7%;
+    }
+  }
+  .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* button up */

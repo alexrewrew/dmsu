@@ -21,7 +21,7 @@ section {
 article.indent {
   padding: {
     left: 13.6%;
-    right: 11%;
+    right: 12.8%;
   }
   a {
     color:$blue;
@@ -30,6 +30,16 @@ article.indent {
     &:hover {
       color: $yellow;
     }
+  }
+  .blue-button {
+    color: $white;
+    text-decoration: none;
+    margin-top: 64px;
+    margin-bottom: 30px;
+    &:hover {
+      color: $white;
+    }
+
   }
   ul {
     padding-left: 0;
@@ -46,19 +56,6 @@ article.indent {
       color: $yellow;
     }
   }
-}
-
-.video-big{
-  width: 100%;
-  margin-top: 66px;
-  margin-bottom: 63px;
-}.video-small{
-   width: 48%;
-   margin-top: 41px;
-   margin-bottom: 41px;
-   &:nth-child(even) {
-     float: right;
-   }
 }
 
 
@@ -101,10 +98,11 @@ article.indent {
   }
 }
 
+/*images*/
 .img-big {
   width: 100%;
   display: inline-block;
-  margin-top: 66px;
+  margin-top: 43px;
   margin-bottom: 63px;
 }
 
@@ -120,3 +118,17 @@ article.indent {
 .img-small:after {
   clear: both;
 }
+
+/*video*/
+.video-big{
+  width: 100%;
+  margin-top: 43px;
+  margin-bottom: 51px;
+}.video-small{
+   width: 48%;
+   margin-top: 41px;
+   margin-bottom: 41px;
+   &:nth-child(even) {
+     float: right;
+   }
+ }

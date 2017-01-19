@@ -93,8 +93,8 @@ ol {
 /*quote*/
 blockquote{
   display:block;
-  padding: 52px 38px;
-  margin: 40px 0;
+  padding: 48px 38px 34px;
+  margin: 44px 0 35px;
   position: relative;
 }
 
@@ -114,5 +114,5 @@ blockquote::before{
 blockquote::after{
   content: "\201D";
   right: 0;
-  bottom:auto;
+  bottom:-20px;
 }
