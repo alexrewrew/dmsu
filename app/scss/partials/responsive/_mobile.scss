@@ -399,6 +399,7 @@
   /* FOOTER */
   footer {
     margin-top: 45px;
+    max-height: inherit;
   }
   .footer-data {
     padding-left: 0;
@@ -408,9 +409,9 @@
     display: none;
   }
 
-  .footer-side {
+  /*.footer-side {
     min-height: 245px;
-  }
+  }*/
   .padding-aside {
     .footer-side {
       padding-top: 26px;
@@ -425,7 +426,7 @@
     padding-right: 15px;
   }
   .footer-button {
-    width: 100%;
+    display: none;
   }
   .bottom-row {
     padding-right: 0;

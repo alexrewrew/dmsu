@@ -110,4 +110,10 @@
   .bottom-links li {
     margin-right: 12px;
   }
+  footer {
+    max-height: inherit;
+  }
+  .footer-button {
+    display: none;
+  }
 }
