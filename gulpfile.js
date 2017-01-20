@@ -54,7 +54,8 @@ gulp.task('scripts', function() {
 /*rigger*/
 
 gulp.task('rigger', function () {
-    gulp.src(['app/html/index.html', 'app/html/news-all.html', 'app/html/news.html', 'app/html/questions.html'])
+    gulp.src(['app/html/*.html'])
+    /*gulp.src(['app/html/about.html'])*/
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });

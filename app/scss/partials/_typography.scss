@@ -90,6 +90,48 @@ ol {
   }
 }
 
+/*size panel*/
+.size-panel {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  right: 37px;
+  li {
+    display: inline-block;
+    user-select: none;
+    &:before {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      background: #dfdddd;
+      color: #727272;
+      font-weight: 700;
+      width: 25px;
+      height: 25px;
+      font-size: 1.25em;
+      user-select: none;
+      &:hover {
+        background: $yellow;
+        color: $white;
+      }
+    }
+    a.size-disabled {
+      opacity: .5;
+      cursor: default;
+      &:hover {
+        background: #dfdddd;
+        color: #727272;
+      }
+    }
+  }
+}
+
 /*quote*/
 blockquote{
   display:block;

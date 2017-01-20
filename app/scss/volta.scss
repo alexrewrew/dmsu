@@ -44,10 +44,12 @@
     width: 100%;
   }
 }
+
 .services-box-1, .services-box-2, .services-box-3 {
   float: left;
   padding: 0 8px;
 }
+
 .services-box-1 {
   width: 37.9%;
 }
@@ -77,6 +79,7 @@
   /*padding-right: 36px;*/
   padding-top: 21px;
 }
+
 .filter-links {
   padding: 0;
   margin: 0 0 0 63px;
@@ -91,10 +94,10 @@
       background: $filter;
       text-align: center;
       padding: {
-        top:10px;
-        Bottom:13px;
-        left:27px;
-        right:27px;
+        top: 10px;
+        Bottom: 13px;
+        left: 27px;
+        right: 27px;
       }
       margin: 0;
       &:hover {
@@ -114,20 +117,20 @@
   margin: 0;
   li {
     float: left;
-    list-style: none;border-right: 1px solid $crumbs;
+    list-style: none;
+    border-right: 1px solid $crumbs;
     margin-top: 4px;
     margin-bottom: 6px;
-
     a {
       display: inline-block;
       color: $crumbs;
 
-      font-size:.875em;
+      font-size: .875em;
       padding: {
-        left:15px;
+        left: 15px;
         right: 16px;
-        top:3px;
-        bottom:1px;
+        top: 3px;
+        bottom: 1px;
       }
 
       &:hover {
@@ -137,9 +140,10 @@
 
   }
   li:last-child {
-    border:none;
+    border: none;
   }
 }
+
 .breadcrumbs.right-panel {
   float: right;
   margin-right: 30px;
@@ -159,7 +163,7 @@
       }
       .views-number {
         position: relative;
-        top:-3px;
+        top: -3px;
       }
     }
   }
@@ -336,10 +340,7 @@
   .read-next {
     bottom: -30px;
   }
-  img {
-    width: 100%;
-    margin-top: 5px;
-  }
+
   &:hover {
     background: $white;
     .read-next {
@@ -349,6 +350,18 @@
   p {
     line-height: 1.2;
     margin-top: 15px;
+  }
+}
+
+.img-container {
+  overflow: hidden;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: auto;
+    height: 158px;
   }
 }
 
@@ -372,7 +385,7 @@
   }
   .event-item {
     width: 47%;
-    margin:0;
+    margin: 0;
     float: left;
     &:nth-child(even) {
       float: right;
@@ -384,7 +397,7 @@
       padding-left: 31px;
     }
     .event-date {
-      left:31px;
+      left: 31px;
     }
   }
 }
@@ -475,6 +488,16 @@
   background: $c-gray;
   border: none;
   cursor: default;
+}
+
+.nav-tabs.small-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div a {
+    font-size: 1.125em;
+    padding: 10px 28px 14px;
+  }
 }
 
 /* TAB CONTENT */
@@ -583,6 +606,7 @@
 
 /* FOOTER */
 footer {
+  max-height: 379px;
   padding: {
     top: 32px;
     bottom: 46px;
@@ -784,9 +808,7 @@ footer {
   }
 }
 
-
 @import "partials/fixes";
-
 
 /* ICONS */
 .el-chevron-right {

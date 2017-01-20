@@ -18,7 +18,20 @@ section {
   background: $a-gray;
 }
 
+section.indent {
+  padding: {
+    left: 9.2%;
+    right: 9.2%;
+  }
+}
+
+article {
+  position: relative;
+  font-size: 1em;
+}
+
 article.indent {
+
   padding: {
     left: 13.6%;
     right: 12.8%;
@@ -45,7 +58,7 @@ article.indent {
     padding-left: 0;
     margin-top: 13px;
     margin-bottom: 18px;
-    list-style-type: none;
+    list-style: none;
     li {
       margin-bottom: 1px;
     }
@@ -118,6 +131,8 @@ article.indent {
 .img-small:after {
   clear: both;
 }
+
+
 
 /*video*/
 .video-big{

@@ -4915,6 +4915,14 @@ header {
 section {
   background: #f1f0f0; }
 
+section.indent {
+  padding-left: 9.2%;
+  padding-right: 9.2%; }
+
+article {
+  position: relative;
+  font-size: 1em; }
+
 article.indent {
   padding-left: 13.6%;
   padding-right: 12.8%; }
@@ -4935,7 +4943,7 @@ article.indent {
     padding-left: 0;
     margin-top: 13px;
     margin-bottom: 18px;
-    list-style-type: none; }
+    list-style: none; }
     article.indent ul li {
       margin-bottom: 1px; }
     article.indent ul li:before {
@@ -5103,6 +5111,41 @@ ol {
       width: 1.2em;
       text-align: center;
       display: inline-block; }
+
+/*size panel*/
+.size-panel {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  right: 37px; }
+  .size-panel li {
+    display: inline-block;
+    user-select: none; }
+    .size-panel li:before {
+      display: none; }
+    .size-panel li a {
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      background: #dfdddd;
+      color: #727272;
+      font-weight: 700;
+      width: 25px;
+      height: 25px;
+      font-size: 1.25em;
+      user-select: none; }
+      .size-panel li a:hover {
+        background: #efaf03;
+        color: #fff; }
+    .size-panel li a.size-disabled {
+      opacity: .5;
+      cursor: default; }
+      .size-panel li a.size-disabled:hover {
+        background: #dfdddd;
+        color: #727272; }
 
 /*quote*/
 blockquote {
@@ -6913,9 +6956,6 @@ support for no js
   position: relative; }
   .event-item .read-next {
     bottom: -30px; }
-  .event-item img {
-    width: 100%;
-    margin-top: 5px; }
   .event-item:hover {
     background: #fff; }
     .event-item:hover .read-next {
@@ -6923,6 +6963,16 @@ support for no js
   .event-item p {
     line-height: 1.2;
     margin-top: 15px; }
+
+.img-container {
+  overflow: hidden;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .img-container img {
+    width: auto;
+    height: 158px; }
 
 .event-date {
   font-family: "Proxima Nova", sans-serif;
@@ -7035,6 +7085,14 @@ support for no js
   border: none;
   cursor: default; }
 
+.nav-tabs.small-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .nav-tabs.small-tabs div a {
+    font-size: 1.125em;
+    padding: 10px 28px 14px; }
+
 /* TAB CONTENT */
 .tab-pane {
   padding-top: 33px; }
@@ -7118,6 +7176,7 @@ support for no js
 
 /* FOOTER */
 footer {
+  max-height: 379px;
   padding-top: 32px;
   padding-bottom: 46px;
   background: #595959; }
@@ -7780,4 +7839,7 @@ footer {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1208px; } }
+    width: 1208px; }
+  /*size panel*/
+  .size-panel {
+    display: block; } }
