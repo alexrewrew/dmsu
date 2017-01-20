@@ -49,6 +49,7 @@ jQuery(document).ready(function ($) {
         closeNav();
         toggleSearch('close')
         $('.overlay').removeClass('is-visible');
+        $(".dropdown-footer-block").fadeOut('fast');
     });
 
 
@@ -76,6 +77,15 @@ jQuery(document).ready(function ($) {
             $(".mobile-social").hide();
         }
         toggleSearch('close');
+    });
+
+    //open submenu in footer
+    $('.has-children-footer').on('click', function (event) {
+        event.preventDefault();
+        var selected = $(this);
+        $('.overlay').addClass('is-visible');
+        //desktop version only
+        $(".dropdown-footer-block").fadeIn('fast');
     });
 
     //submenu items - go back link

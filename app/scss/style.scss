@@ -1,3 +1,36 @@
+/*max code*/
+
+.dropdown-footer-block {
+  background: red;
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
+  bottom: 250px;
+  z-index: 2;
+  display: none;
+}
+
+.dropdown-footer-block > ul {
+  list-style-type: none;
+}
+
+.dropdown-footer-block > ul > li {
+  width: 33.3333%;
+  float: left;
+}
+
+.dropdown-footer-block > ul > li > a {
+  color: $white;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/*end max code*/
+
 .main-content, .main-header {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
