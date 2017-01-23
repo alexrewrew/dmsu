@@ -65,7 +65,6 @@ gulp.task('minify-html', function () {
 
 //build
 gulp.task('build', ['compress', 'minify-css', 'minify-html'], function () {
-
 });
 
 
