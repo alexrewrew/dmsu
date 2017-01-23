@@ -304,6 +304,9 @@
   h3 {
     margin-bottom: 16px;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .read-next {
@@ -684,6 +687,11 @@ footer {
 
 .nav-tabs.organ-partners {
   margin-top: 30px;
+  li {
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .nav-tabs.organ-partners > li > a {
@@ -706,6 +714,7 @@ footer {
   }
   &:focus {
     background: transparent;
+    outline: none;
   }
 }
 
