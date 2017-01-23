@@ -3521,7 +3521,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
@@ -4713,9 +4712,9 @@ tbody.collapse.in {
 .affix {
   position: fixed; }
 
-@-ms-viewport {
-  width: device-width; }
-
+/*@-ms-viewport {
+  width: device-width;
+}*/
 .visible-xs,
 .visible-sm,
 .visible-md,
