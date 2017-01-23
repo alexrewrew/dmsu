@@ -61,20 +61,17 @@ jQuery(document).ready(function ($) {
     $('.has-children').children('a').on('click', function (event) {
         if (!checkWindowWidth()) event.preventDefault();
         var selected = $(this);
+        $(".mobile-lang").hide();
+        $(".mobile-social").hide();
         if (selected.next('ul').hasClass('is-hidden')) {
             //desktop version only
             selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
             selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
             $('.overlay').addClass('is-visible');
 
-            $(".mobile-lang").hide();
-            $(".mobile-social").hide();
         } else {
             selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
             $('.overlay').removeClass('is-visible');
-
-            $(".mobile-lang").hide();
-            $(".mobile-social").hide();
         }
         toggleSearch('close');
     });
