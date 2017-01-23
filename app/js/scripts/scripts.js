@@ -49,7 +49,7 @@ $(document).ready(function () {
     }
 
     if (window.matchMedia('(min-width: 768px)').matches) {
-        $("select").chosen({disable_search: true, width: "100%", scroll_to_highlighted: false});
+        $("select").selection({disable_search: true, width: "100%", scroll_to_highlighted: false});
         $(".back-blue").append($("#navigation"));
     }
     
