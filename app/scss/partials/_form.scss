@@ -116,7 +116,7 @@ select {
 
 /*chosen selection*/
 
-.chosen-container-single .chosen-single { //main select style
+.selection-container-single .selection-single { //main select style
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -124,7 +124,7 @@ select {
   outline: none;
 }
 
-.chosen-container .chosen-drop { //collapsed style
+.selection-container .selection-drop { //collapsed style
   background: $white;
   border: 0;
   border-radius: 0;
@@ -132,20 +132,20 @@ select {
   padding-bottom: 15px;
 }
 
-.chosen-container-active.chosen-with-drop {
+.selection-container-active.selection-with-drop {
   background: $white;
-  .chosen-single { //collapsed main style
+  .selection-single { //collapsed main style
     background: $white;
     border: 0;
     border-radius: 0;
     box-shadow: none;
   }
-  .chosen-drop {
+  .selection-drop {
     background: $white;
   }
 }
 
-.chosen-container .chosen-results li.active-result {
+.selection-container .selection-results li.active-result {
   color: $select;
   padding: {
     top: 12px;
@@ -156,17 +156,17 @@ select {
   line-height: 1.3;
 }
 
-.chosen-container .chosen-results li.result-selected, .chosen-container .chosen-results li.highlighted {
+.selection-container .selection-results li.result-selected, .selection-container .selection-results li.highlighted {
   background: $white;
   color: $text;
   cursor: pointer;
 }
 
-.chosen-container .chosen-results li.result-selected {
+.selection-container .selection-results li.result-selected {
   display: none;
 }
 
-.chosen-container .chosen-results {
+.selection-container .selection-results {
   padding: {
     left: 0;
     right: 0;
@@ -191,23 +191,23 @@ select {
       outline: none;
     }
   }
-  .chosen-container {
+  .selection-container {
     padding: 0;
-    .chosen-drop {
+    .selection-drop {
       padding-bottom: 0;
     }
   }
-  .chosen-container-active.chosen-with-drop {
+  .selection-container-active.selection-with-drop {
     background: $white;
-    .chosen-drop {
+    .selection-drop {
       background: $b-gray;
     }
   }
-  .chosen-container .chosen-results li.result-selected, .chosen-container .chosen-results li.highlighted {
+  .selection-container .selection-results li.result-selected, .selection-container .selection-results li.highlighted {
     background: $white;
     color: $text;
   }
-  .chosen-container .chosen-results {
+  .selection-container .selection-results {
     padding: {
       left: 0;
       right: 0;

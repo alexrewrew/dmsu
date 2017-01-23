@@ -581,18 +581,18 @@
     Chosen.prototype.setup = function() {
       this.form_field_jq = $(this.form_field);
       this.current_selectedIndex = this.form_field.selectedIndex;
-      return this.is_rtl = this.form_field_jq.hasClass("chosen-rtl");
+      return this.is_rtl = this.form_field_jq.hasClass("selection-rtl");
     };
 
     Chosen.prototype.set_up_html = function() {
       var container_classes, container_props;
-      container_classes = ["chosen-container"];
-      container_classes.push("chosen-container-" + (this.is_multiple ? "multi" : "single"));
+      container_classes = ["selection-container"];
+      container_classes.push("selection-container-" + (this.is_multiple ? "multi" : "single"));
       if (this.inherit_select_classes && this.form_field.className) {
         container_classes.push(this.form_field.className);
       }
       if (this.is_rtl) {
-        container_classes.push("chosen-rtl");
+        container_classes.push("selection-rtl");
       }
       container_props = {
         'class': container_classes.join(' '),
@@ -604,22 +604,22 @@
       }
       this.container = $("<div />", container_props);
       if (this.is_multiple) {
-        this.container.html('<ul class="chosen-choices"><li class="search-field"><input type="text" value="' + this.default_text + '" class="default" autocomplete="off" style="width:25px;" /></li></ul><div class="chosen-drop"><ul class="chosen-results"></ul></div>');
+        this.container.html('<ul class="selection-choices"><li class="search-field"><input type="text" value="' + this.default_text + '" class="default" autocomplete="off" style="width:25px;" /></li></ul><div class="selection-drop"><ul class="selection-results"></ul></div>');
       } else {
-        this.container.html('<a class="chosen-single chosen-default"><span>' + this.default_text + '</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" /></div><ul class="chosen-results"></ul></div>');
+        this.container.html('<a class="selection-single selection-default"><span>' + this.default_text + '</span><div><b></b></div></a><div class="selection-drop"><div class="selection-search"><input type="text" autocomplete="off" /></div><ul class="selection-results"></ul></div>');
       }
       this.form_field_jq.hide().after(this.container);
-      this.dropdown = this.container.find('div.chosen-drop').first();
+      this.dropdown = this.container.find('div.selection-drop').first();
       this.search_field = this.container.find('input').first();
-      this.search_results = this.container.find('ul.chosen-results').first();
+      this.search_results = this.container.find('ul.selection-results').first();
       this.search_field_scale();
       this.search_no_results = this.container.find('li.no-results').first();
       if (this.is_multiple) {
-        this.search_choices = this.container.find('ul.chosen-choices').first();
+        this.search_choices = this.container.find('ul.selection-choices').first();
         this.search_container = this.container.find('li.search-field').first();
       } else {
-        this.search_container = this.container.find('div.chosen-search').first();
-        this.selected_item = this.container.find('.chosen-single').first();
+        this.search_container = this.container.find('div.selection-search').first();
+        this.selected_item = this.container.find('.selection-single').first();
       }
       this.results_build();
       this.set_tab_index();
@@ -729,14 +729,14 @@
     Chosen.prototype.search_field_disabled = function() {
       this.is_disabled = this.form_field_jq[0].disabled;
       if (this.is_disabled) {
-        this.container.addClass('chosen-disabled');
+        this.container.addClass('selection-disabled');
         this.search_field[0].disabled = true;
         if (!this.is_multiple) {
           this.selected_item.unbind("focus.chosen", this.activate_action);
         }
         return this.close_field();
       } else {
-        this.container.removeClass('chosen-disabled');
+        this.container.removeClass('selection-disabled');
         this.search_field[0].disabled = false;
         if (!this.is_multiple) {
           return this.selected_item.bind("focus.chosen", this.activate_action);
@@ -756,7 +756,7 @@
             }
             $(this.container[0].ownerDocument).bind('click.chosen', this.click_test_action);
             this.results_show();
-          } else if (!this.is_multiple && evt && (($(evt.target)[0] === this.selected_item[0]) || $(evt.target).parents("a.chosen-single").length)) {
+          } else if (!this.is_multiple && evt && (($(evt.target)[0] === this.selected_item[0]) || $(evt.target).parents("a.selection-single").length)) {
             evt.preventDefault();
             this.results_toggle();
           }
@@ -786,7 +786,7 @@
     };
 
     Chosen.prototype.blur_test = function(evt) {
-      if (!this.active_field && this.container.hasClass("chosen-container-active")) {
+      if (!this.active_field && this.container.hasClass("selection-container-active")) {
         return this.close_field();
       }
     };
@@ -795,14 +795,14 @@
       $(this.container[0].ownerDocument).unbind("click.chosen", this.click_test_action);
       this.active_field = false;
       this.results_hide();
-      this.container.removeClass("chosen-container-active");
+      this.container.removeClass("selection-container-active");
       this.clear_backstroke();
       this.show_search_field_default();
       return this.search_field_scale();
     };
 
     Chosen.prototype.activate_field = function() {
-      this.container.addClass("chosen-container-active");
+      this.container.addClass("selection-container-active");
       this.active_field = true;
       this.search_field.val(this.search_field.val());
       return this.search_field.focus();
@@ -810,7 +810,7 @@
 
     Chosen.prototype.test_active_click = function(evt) {
       var active_container;
-      active_container = $(evt.target).closest('.chosen-container');
+      active_container = $(evt.target).closest('.selection-container');
       if (active_container.length && this.container[0] === active_container[0]) {
         return this.active_field = true;
       } else {
@@ -828,10 +828,10 @@
         this.single_set_selected_text();
         if (this.disable_search || this.form_field.options.length <= this.disable_search_threshold) {
           this.search_field[0].readOnly = true;
-          this.container.addClass("chosen-container-single-nosearch");
+          this.container.addClass("selection-container-single-nosearch");
         } else {
           this.search_field[0].readOnly = false;
-          this.container.removeClass("chosen-container-single-nosearch");
+          this.container.removeClass("selection-container-single-nosearch");
         }
       }
       this.update_results_content(this.results_option_build({
@@ -876,7 +876,7 @@
         });
         return false;
       }
-      this.container.addClass("chosen-with-drop");
+      this.container.addClass("selection-with-drop");
       this.results_showing = true;
       this.search_field.focus();
       this.search_field.val(this.search_field.val());
@@ -893,7 +893,7 @@
     Chosen.prototype.results_hide = function() {
       if (this.results_showing) {
         this.result_clear_highlight();
-        this.container.removeClass("chosen-with-drop");
+        this.container.removeClass("selection-with-drop");
         this.form_field_jq.trigger("chosen:hiding_dropdown", {
           chosen: this
         });
@@ -1064,10 +1064,10 @@
         text = this.default_text;
       }
       if (text === this.default_text) {
-        this.selected_item.addClass("chosen-default");
+        this.selected_item.addClass("selection-default");
       } else {
         this.single_deselect_control_build();
-        this.selected_item.removeClass("chosen-default");
+        this.selected_item.removeClass("selection-default");
       }
       return this.selected_item.find("span").html(text);
     };
@@ -1100,7 +1100,7 @@
       if (!this.selected_item.find("abbr").length) {
         this.selected_item.find("span").first().after("<abbr class=\"search-choice-close\"></abbr>");
       }
-      return this.selected_item.addClass("chosen-single-with-deselect");
+      return this.selected_item.addClass("selection-single-with-deselect");
     };
 
     Chosen.prototype.get_search_text = function() {
