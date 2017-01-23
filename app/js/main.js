@@ -1,14 +1,3 @@
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2017 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-/*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=0d5082d20557dd13ed19c9f408797f12)
- * Config saved to config.json and https://gist.github.com/0d5082d20557dd13ed19c9f408797f12
- */
-
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
 }
@@ -19,15 +8,6 @@ if (typeof jQuery === 'undefined') {
     throw new Error('Bootstrap\'s JavaScript requires jQuery version 1.9.1 or higher, but lower than version 4')
   }
 }(jQuery);
-
-/* ========================================================================
- * Bootstrap: dropdown.js v3.3.7
- * http://getbootstrap.com/javascript/#dropdowns
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
 
 +function ($) {
   'use strict';
@@ -186,15 +166,6 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: tab.js v3.3.7
- * http://getbootstrap.com/javascript/#tabs
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
 +function ($) {
   'use strict';
 
@@ -341,16 +312,6 @@ if (typeof jQuery === 'undefined') {
     .on('click.bs.tab.data-api', '[data-toggle="pill"]', clickHandler)
 
 }(jQuery);
-
-/* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-/* jshint latedef: false */
 
 +function ($) {
   'use strict';
@@ -555,20 +516,11 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-/* ========================================================================
- * Bootstrap: transition.js v3.3.7
- * http://getbootstrap.com/javascript/#transitions
- * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * ======================================================================== */
-
-
 +function ($) {
   'use strict';
 
-  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
-  // ============================================================
+  // CSS TRANSITION SUPPORT
+  // ======================
 
   function transitionEnd() {
     var el = document.createElement('bootstrap')
@@ -586,10 +538,9 @@ if (typeof jQuery === 'undefined') {
       }
     }
 
-    return false // explicit for ie8 (  ._.)
+    return false; // explicit for ie8 (  ._.)
   }
 
-  // http://blog.alexmaccaw.com/css-transitions
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
@@ -1873,23 +1824,6 @@ if (typeof jQuery === 'undefined') {
 
 }).call(this);
 
-/*
-     _ _      _       _
- ___| (_) ___| | __  (_)___
-/ __| | |/ __| |/ /  | / __|
-\__ \ | | (__|   < _ | \__ \
-|___/_|_|\___|_|\_(_)/ |___/
-                   |__/
-
- Version: 1.6.0
-  Author: Ken Wheeler
- Website: http://kenwheeler.github.io
-    Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
-
- */
-/* global window, document, define, jQuery, setInterval, clearInterval */
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -3871,19 +3805,6 @@ if (typeof jQuery === 'undefined') {
 
     Slider.prototype.setOption =
     Slider.prototype.sliderSetOption = function() {
-
-        /**
-         * accepts arguments in format of:
-         *
-         *  - for changing a single option's value:
-         *     .slider("setOption", option, value, refresh )
-         *
-         *  - for changing a set of responsive options:
-         *     .slider("setOption", 'responsive', [{}, ...], refresh )
-         *
-         *  - for updating multiple values at once (not responsive)
-         *     .slider("setOption", { 'option': value, ... }, refresh )
-         */
 
         var _ = this, l, item, option, value, refresh = false, type;
 

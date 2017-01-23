@@ -1,20 +1,3 @@
-/*
-     _ _      _       _
- ___| (_) ___| | __  (_)___
-/ __| | |/ __| |/ /  | / __|
-\__ \ | | (__|   < _ | \__ \
-|___/_|_|\___|_|\_(_)/ |___/
-                   |__/
-
- Version: 1.6.0
-  Author: Ken Wheeler
- Website: http://kenwheeler.github.io
-    Docs: http://kenwheeler.github.io/slick
-    Repo: http://github.com/kenwheeler/slick
-  Issues: http://github.com/kenwheeler/slick/issues
-
- */
-/* global window, document, define, jQuery, setInterval, clearInterval */
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -1996,19 +1979,6 @@
 
     Slider.prototype.setOption =
     Slider.prototype.sliderSetOption = function() {
-
-        /**
-         * accepts arguments in format of:
-         *
-         *  - for changing a single option's value:
-         *     .slider("setOption", option, value, refresh )
-         *
-         *  - for changing a set of responsive options:
-         *     .slider("setOption", 'responsive', [{}, ...], refresh )
-         *
-         *  - for updating multiple values at once (not responsive)
-         *     .slider("setOption", { 'option': value, ... }, refresh )
-         */
 
         var _ = this, l, item, option, value, refresh = false, type;
 
