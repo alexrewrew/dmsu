@@ -5,6 +5,9 @@
 @import "../package/font-awesome/css/font-awesome";
 /*bootstrap*/
 @import "bootstrap";
+/*slider*/
+@import "../package/slick-carousel/slick/slick.css";
+@import "../package/slick-carousel/slick/slick-theme.css";
 /*variables*/
 @import "vars";
 /*mixins*/
@@ -20,6 +23,7 @@
 /*menu*/
 @import "style";
 @import "partials/navigation";
+
 
 /* SEARCH SERVICES */
 .search-row {

@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /*fonts*/
 /* italic */
+@import url(../package/slick-carousel/slick/slick.css);
+@import url(../package/slick-carousel/slick/slick-theme.css);
 @font-face {
   font-family: 'Proxima Nova';
   src: url("../fonts/Proxima_Nova/ProximaNova-ThinIt.eot");
@@ -4890,6 +4892,7 @@ tbody.collapse.in {
     display: none !important;
   }
 }*/
+/*slider*/
 /*variables*/
 /*VARIABLES */
 /*mixins*/

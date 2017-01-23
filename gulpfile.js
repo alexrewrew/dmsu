@@ -1,17 +1,11 @@
-/**
- * Created by alexrewrew on 15.11.16.
- */
-/* команди npm для gulp
- npm install gulp-sass --save-dev
- npm install browser-sync --save-dev
- */
-
-
-var gulp = require('gulp'), //ініціалізація gulp
-    sass = require('gulp-sass'), //ініціалізація sass
-    browserSync = require('browser-sync'),
-    uncss = require('gulp-uncss'),
-    rigger = require('gulp-rigger'); //ініціалізація browser-sync
+var gulp = require('gulp'); //ініціалізація gulp
+var sass = require('gulp-sass'); //ініціалізація sass
+var browserSync = require('browser-sync'); //автоматичне перезавантаження сторінки
+var rigger = require('gulp-rigger');
+var concat = require('gulp-concat'); //конкатинація
+var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-html-minifier');
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
@@ -32,38 +26,54 @@ gulp.task('browserSync', function () {
     })
 });
 
-//
-
-gulp.task('default', function () {
-    return gulp.src(['app/css/volta.css'])
-        .pipe(uncss({
-            html: ['app/**/*.html']
-        }))
-        .pipe(gulp.dest('app/css/volta'));
-});
-
-//
-var concat = require('gulp-concat');
-
-gulp.task('scripts', function() {
-    return gulp.src(['app/package/chosen/chosen.jquery.js', 'app/js/bootstrap.js'])
+//concat
+gulp.task('scripts', function () {
+    return gulp.src(['app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/js/scripts/scripts.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
 });
 
-/*rigger*/
-
+//rigger
 gulp.task('rigger', function () {
     gulp.src(['app/html/*.html'])
-    /*gulp.src(['app/html/about.html'])*/
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });
 
+/////////////////
+
+//uglify
+gulp.task('compress', function () {
+    return gulp.src('app/js/main.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
+
+//minify
+gulp.task('minify-css', function () {
+    return gulp.src('app/css/volta.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('dist/css'));
+});
+
+//html minify
+gulp.task('minify-html', function () {
+    gulp.src('app/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist'))
+});
+
+//build
+gulp.task('build', ['compress', 'minify-css', 'minify-html'], function () {
+
+});
+
+
 //слідкування за змінами у проекті
-gulp.task('watch', ['rigger','browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
+gulp.task('watch', ['scripts', 'rigger', 'browserSync', 'sass'], function () { //запуск browser-sync та sass відслідковувачів
     gulp.watch('app/scss/**/*.scss', ['sass']); //пошук scss файлів
     gulp.watch('app/html/*.html', ['rigger']); //пошук html файлів
+    gulp.watch(['app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/js/scripts/scripts.js'], ['scripts']); //пошук html файлів
     gulp.watch('app/*.html', browserSync.reload); //пошук html файлів
-    gulp.watch('app/js/**/*.js', browserSync.reload); //пошук js файлів
+    gulp.watch('app/js/*.js', browserSync.reload); //пошук js файлів
 });
