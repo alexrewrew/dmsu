@@ -7516,10 +7516,10 @@ footer {
     padding-bottom: 40px;
     padding-left: 15px;
     padding-top: 8px; }
-    #filter-slider .slick-dots {
+    #filter-slider .slider-dots {
       bottom: 12px;
       margin-left: -5.5%; }
-      #filter-slider .slick-dots li {
+      #filter-slider .slider-dots li {
         float: none; }
   /*SERVICES BLOCK*/
   .services {
@@ -7596,7 +7596,7 @@ footer {
     line-height: 1; }
   .tab-arrow {
     display: none; }
-  .nav-tabs div.slick-slide {
+  .nav-tabs div.slider-slide {
     max-width: 240px;
     margin-left: 15px; }
   .panel-title > a {
@@ -7638,26 +7638,26 @@ footer {
     margin-left: 0;
     margin-right: -15px;
     overflow: hidden; }
-    #event-slider .slick-dots {
+    #event-slider .slider-dots {
       bottom: 20px; }
   #accordion-slider {
     margin-left: 0;
     margin-right: -15px;
     min-height: 130px;
     overflow: hidden; }
-    #accordion-slider .slick-dots {
+    #accordion-slider .slider-dots {
       bottom: 0; }
   #footer-slider {
     min-height: 115px; }
-    #footer-slider .slick-dots {
+    #footer-slider .slider-dots {
       bottom: 5px; }
-  .slick-list {
+  .slider-list {
     overflow-y: visible; }
-  .slick-dots {
+  .slider-dots {
     bottom: 87px; }
-  .slick-dotted.slick-slider {
+  .slider-dotted.slider-slider {
     margin-bottom: 0; }
-  .slick-dots li button::before {
+  .slider-dots li button::before {
     font-size: 10px; }
   /* FOOTER */
   footer {
