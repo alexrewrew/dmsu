@@ -1,3 +1,19 @@
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*!
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=0d5082d20557dd13ed19c9f408797f12)
+ * Config saved to config.json and https://gist.github.com/0d5082d20557dd13ed19c9f408797f12
+ */
+/*!
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -995,7 +1011,7 @@ tbody.collapse.in {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
-/*.dropup,
+.dropup,
 .dropdown {
   position: relative;
 }
@@ -1126,7 +1142,7 @@ tbody.collapse.in {
     left: 0;
     right: auto;
   }
-}*/
+}
 .nav {
   margin-bottom: 0;
   padding-left: 0;
@@ -1535,7 +1551,7 @@ tbody.collapse.in {
     display: none !important;
   }
 }
-/*.visible-print {
+.visible-print {
   display: none !important;
 }
 @media print {
@@ -1581,4 +1597,4 @@ tbody.collapse.in {
   .hidden-print {
     display: none !important;
   }
-}*/
+}

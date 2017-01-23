@@ -10,7 +10,7 @@
   display: none;
   margin: 0 auto;
   width: 1170px;
-  padding: 12px 8px 30px;
+  padding: 11px 8px 11px;
   h3 {
     color: $white;
     margin-bottom: 15px;
@@ -547,7 +547,7 @@
   .primary-nav .go-back, .primary-nav .see-all {
     display: none;
   }
-  .primary-nav .secondary-nav, .primary-nav .nav-gallery {
+  .primary-nav .secondary-nav {
     position: absolute;
     top: 80px;
     width: 145%;
@@ -560,20 +560,26 @@
     -webkit-transition: opacity .3s 0s, visibility 0s 0s;
     -moz-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s;
+    padding: {
+      left:8px;
+      right:8px;
+      top:28px;
+      bottom:10px;
+    }
   }
-  .primary-nav .secondary-nav::after, .primary-nav .nav-gallery::after {
+  .primary-nav .secondary-nav::after {
     clear: both;
     content: "";
     display: table;
   }
-  .primary-nav .secondary-nav.is-hidden, .primary-nav .nav-gallery.is-hidden {
+  .primary-nav .secondary-nav.is-hidden {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
     -moz-transition: opacity .3s 0s, visibility 0s .3s;
     transition: opacity .3s 0s, visibility 0s .3s;
   }
-  .primary-nav .secondary-nav > .see-all, .primary-nav .nav-gallery > .see-all {
+  .primary-nav .secondary-nav > .see-all {
     display: block;
     position: absolute;
     left: 0;
@@ -584,7 +590,7 @@
     margin: 0;
     padding: 0;
   }
-  .primary-nav .secondary-nav > .see-all a, .primary-nav .nav-gallery > .see-all a {
+  .primary-nav .secondary-nav > .see-all a {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -602,7 +608,7 @@
     -moz-transition: color 0.2s, background 0.2s, border 0.2s;
     transition: color 0.2s, background 0.2s, border 0.2s;
   }
-  .primary-nav .secondary-nav > .see-all a:hover, .primary-nav .nav-gallery > .see-all a:hover {
+  .primary-nav .secondary-nav > .see-all a:hover {
     background: #2e3233;
     border-color: #2e3233;
     color: #ffffff;
@@ -685,32 +691,6 @@
     -ms-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     transform: translateX(-100%);
-  }
-  .primary-nav .nav-gallery li {
-    width: 22%;
-    float: left;
-    margin: 0 4% 40px 0;
-  }
-  .primary-nav .nav-gallery li:nth-child(4n+2) {
-    margin-right: 0;
-  }
-  .primary-nav .nav-gallery .nav-item {
-    border-bottom: none;
-    padding: 0;
-    height: auto;
-    line-height: 1.2;
-  }
-  .primary-nav .nav-gallery .nav-item img {
-    position: static;
-    margin-top: 0;
-    height: auto;
-    width: 100%;
-    margin-bottom: .6em;
-  }
-  .primary-nav .nav-gallery .nav-item h3 {
-    color: #69aa6f;
-    font-weight: bold;
-    padding: 0 .4em;
   }
 
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {

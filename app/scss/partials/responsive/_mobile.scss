@@ -264,6 +264,14 @@
     }
   }
 
+  .img-container {
+    width: 75px;
+    img {
+      width: auto;
+      height: 75px;
+    }
+  }
+
   /*NEWS WIDTH*/
   .item-width {
     .important-item, .event-item {

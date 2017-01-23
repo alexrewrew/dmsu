@@ -183,12 +183,12 @@
     color: $blue;
     &:hover {
       color: $yellow;
+      .el-chevron-right {
+        @include transform(translateX(38px));
+        color: $yellow;
+      }
     }
-    &:hover .el-chevron-right {
-      right: -38px;
-      color: $yellow;
-    }
-    i {
+    .el-chevron-right {
       font-size: 12px;
     }
   }
@@ -336,6 +336,7 @@
   min-height: 220px;;
   @include transition;
   position: relative;
+  outline: none;
 
   .read-next {
     bottom: -30px;
@@ -808,8 +809,6 @@ footer {
   }
 }
 
-@import "partials/fixes";
-
 /* ICONS */
 .el-chevron-right {
   font-size: 18px;
@@ -823,6 +822,7 @@ footer {
 }
 
 /* */
+@import "partials/fixes";
 @import "partials/responsive/mobile";
 @import "partials/responsive/portrait";
 @import "partials/responsive/tablet";
