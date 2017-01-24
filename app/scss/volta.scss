@@ -83,19 +83,22 @@
   /*padding-right: 36px;*/
   padding-top: 21px;
 }
-
+.filter-indent {
+  padding-bottom: 0px;
+}
 .filter-links {
   padding: 0;
-  margin: 0 0 0 63px;
+  margin: 0;
+  display: inline-block;
   li {
     float: left;
     list-style: none;
     a {
       line-height: 1.0;
       font-size: 1.125em;
-      color: $white;
+      color: $text;
       display: inline-block;
-      background: $filter;
+      background:$b-gray;
       text-align: center;
       padding: {
         top: 10px;

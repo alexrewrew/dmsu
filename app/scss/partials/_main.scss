@@ -16,6 +16,11 @@ header {
 
 section {
   background: $a-gray;
+
+}
+
+section:nth-last-child(2) {
+  padding-bottom: 4000px;
 }
 
 section.indent {
@@ -71,6 +76,13 @@ article.indent {
   }
 }
 
+article.article-tab {
+  padding-left: 12%;
+  padding-right: 13%;
+}
+
+
+
 
 
 /* fixed position when menu is opened */
@@ -99,6 +111,15 @@ article.indent {
     bottom: 44px;
     left: 22px;
     right: 31px;
+  }
+}
+
+.indent-tab {
+  padding: {
+    top: 71px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
   }
 }
 

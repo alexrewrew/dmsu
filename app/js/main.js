@@ -4899,7 +4899,6 @@ $(document).ready(function () {
         });
         
         $("body").append($("#navigation"));
-        $(".head-row").append($("#filter-slider"));
     }
 
     if (window.matchMedia('(min-width: 768px)').matches) {

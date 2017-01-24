@@ -4912,6 +4912,9 @@ header {
 section {
   background: #f1f0f0; }
 
+section:nth-last-child(2) {
+  padding-bottom: 4000px; }
+
 section.indent {
   padding-left: 9.2%;
   padding-right: 9.2%; }
@@ -4949,6 +4952,10 @@ article.indent {
       margin-right: 18px;
       color: #efaf03; }
 
+article.article-tab {
+  padding-left: 12%;
+  padding-right: 13%; }
+
 /* fixed position when menu is opened */
 .overflow-body {
   overflow-y: hidden !important;
@@ -4970,6 +4977,12 @@ article.indent {
   padding-bottom: 44px;
   padding-left: 22px;
   padding-right: 31px; }
+
+.indent-tab {
+  padding-top: 71px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0; }
 
 .row-indent {
   padding-top: 0;
@@ -5098,7 +5111,9 @@ ol {
   margin-bottom: 23px; }
   ol li {
     counter-increment: item;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    padding-left: 37px;
+    position: relative; }
     ol li:before {
       margin-right: 19px;
       content: counter(item);
@@ -5107,7 +5122,13 @@ ol {
       color: #fff;
       width: 1.2em;
       text-align: center;
-      display: inline-block; }
+      display: inline-block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      font-size: .875em; }
 
 /*size panel*/
 .size-panel {
@@ -6698,18 +6719,22 @@ select {
   /*padding-right: 36px;*/
   padding-top: 21px; }
 
+.filter-indent {
+  padding-bottom: 0px; }
+
 .filter-links {
   padding: 0;
-  margin: 0 0 0 63px; }
+  margin: 0;
+  display: inline-block; }
   .filter-links li {
     float: left;
     list-style: none; }
     .filter-links li a {
       line-height: 1.0;
       font-size: 1.125em;
-      color: #fff;
+      color: #282828;
       display: inline-block;
-      background: #1d94e7;
+      background: #e0e0e0;
       text-align: center;
       padding-top: 10px;
       padding-Bottom: 13px;
@@ -7468,6 +7493,8 @@ footer {
     .breadcrumbs.right-panel li .news-date {
       padding-left: 15px;
       padding-right: 15px; }
+  .filter-indent {
+    padding-top: 60px; }
   .filter-links {
     display: block;
     margin: 0; }
@@ -7535,18 +7562,21 @@ footer {
       width: auto;
       height: 75px; }
   /*NEWS WIDTH*/
-  .item-width .important-item, .item-width .event-item {
-    width: 244px;
-    margin-right: 0px; }
-    .item-width .important-item:nth-child(even), .item-width .event-item:nth-child(even) {
-      float: left; }
-  .item-width .event-item {
-    margin-right: 15px; }
-    .item-width .event-item .padding-event-fix {
-      padding-left: 15px;
-      padding-right: 15px; }
-    .item-width .event-item .event-date {
-      left: 15px; }
+  .item-width {
+    padding-bottom: 0; }
+    .item-width .important-item, .item-width .event-item {
+      width: 244px;
+      margin-right: 0px; }
+      .item-width .important-item:nth-child(even), .item-width .event-item:nth-child(even) {
+        float: left; }
+    .item-width .event-item {
+      margin-right: 15px;
+      margin-bottom: 10px; }
+      .item-width .event-item .padding-event-fix {
+        padding-left: 15px;
+        padding-right: 15px; }
+      .item-width .event-item .event-date {
+        left: 15px; }
   /*TABS*/
   .nav-tabs div {
     float: none; }
@@ -7566,6 +7596,8 @@ footer {
   .nav-tabs div.slider-slide {
     max-width: 240px;
     margin-left: 15px; }
+  .nav-tabs.small-tabs div a {
+    height: auto; }
   .panel-title > a {
     padding-left: 20px;
     padding-right: 30px; }
@@ -7603,11 +7635,16 @@ footer {
   .slider-dots li button::before {
     font-size: 10px; }
   #filter-slider {
-    margin-right: -15px;
+    /*margin-right: -15px;
     padding-bottom: 40px;
     padding-left: 15px;
     padding-top: 8px;
-    margin-bottom: 0; }
+    margin-bottom: 0;*/ }
+    #filter-slider .slider-dots {
+      bottom: -34px;
+      text-align: center;
+      display: inline-block;
+      margin-left: -20%; }
   /*  #news-slider {
     min-height: 520px;
     margin-right: -15px;
@@ -7688,6 +7725,8 @@ footer {
       padding-bottom: 4px;
       padding-left: 0;
       padding-right: 0; }
+  .bottom-row .portrait-9 {
+    z-index: 200; }
   .footer-pane {
     padding-left: 0; }
   .footer-links li {
@@ -7854,4 +7893,6 @@ footer {
     width: 1208px; }
   /*size panel*/
   .size-panel {
-    display: block; } }
+    display: block; }
+  footer {
+    margin-top: 30px; } }
