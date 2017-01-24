@@ -33,6 +33,14 @@ section.indent {
 article {
   position: relative;
   font-size: 1em;
+  a {
+    color: $blue;
+    text-decoration: underline;
+    font-weight: bold;
+    &:hover {
+      color: $yellow;
+    }
+  }
 }
 
 article.indent {
@@ -41,14 +49,7 @@ article.indent {
     left: 13.6%;
     right: 12.8%;
   }
-  a {
-    color:$blue;
-    text-decoration: underline;
-    font-weight: bold;
-    &:hover {
-      color: $yellow;
-    }
-  }
+
   .blue-button {
     color: $white;
     text-decoration: none;
@@ -79,11 +80,8 @@ article.indent {
 article.article-tab {
   padding-left: 12%;
   padding-right: 13%;
+  padding-bottom: 61px;
 }
-
-
-
-
 
 /* fixed position when menu is opened */
 .overflow-body {
@@ -132,6 +130,16 @@ article.article-tab {
   }
 }
 
+.chief-row {
+  padding-top: 19px;
+  padding-bottom: 51px;
+  .img-container {
+    img {
+      height: 250px;
+    }
+  }
+}
+
 /*images*/
 .img-big {
   width: 100%;
@@ -149,22 +157,23 @@ article.article-tab {
     float: right;
   }
 }
+
 .img-small:after {
   clear: both;
 }
 
-
-
 /*video*/
-.video-big{
+.video-big {
   width: 100%;
   margin-top: 43px;
   margin-bottom: 51px;
-}.video-small{
-   width: 48%;
-   margin-top: 41px;
-   margin-bottom: 41px;
-   &:nth-child(even) {
-     float: right;
-   }
- }
+}
+
+.video-small {
+  width: 48%;
+  margin-top: 41px;
+  margin-bottom: 41px;
+  &:nth-child(even) {
+    float: right;
+  }
+}

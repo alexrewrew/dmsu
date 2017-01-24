@@ -1,0 +1,85 @@
+table {
+  width: 100%;
+  margin-bottom: 21px;
+}
+
+caption {
+  text-align: left;
+  @include regular-text(600, 1.250em);
+  color: $c-gray;
+  line-height: 1.04;
+  border-bottom: 3px solid $white;
+  padding-bottom: 8px;
+  margin-bottom: 17px;
+}
+
+td {
+  text-align: left;
+  padding: {
+    top: 11px;
+    bottom: 11px;
+    right: 11px;
+  }
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  padding: {
+    top: 4px;
+    bottom: 4px;
+    right: 11px;
+  }
+  vertical-align: top;
+}
+
+.chief-table {
+  margin-left: 20px;
+  tr, th {
+    width: 33.333333%;
+  }
+}
+
+.chief-contacts {
+  margin-left: 20px;
+  a {
+    color: $black-text;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+      color: $black-text;
+    }
+  }
+}
+
+.big-table {
+  font-size: 1.125em;
+
+  td {
+    border-bottom: 2px solid $white;
+    border-right: 30px solid $a-gray;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    line-height: 1;
+  }
+  th {
+    border-bottom: 3px solid $white;
+    border-right: 30px solid $a-gray;
+    font-size: 1.111em;
+  }
+  th:nth-child(1) {
+    width: 6.9%;
+
+  }
+  th:nth-child(2) {
+    width: 29%;
+  }
+  th:nth-child(3) {
+    width: 33.3333333%;
+  }
+}
+
+.table-surname {
+  font-weight: 600;
+  display: block;
+}
