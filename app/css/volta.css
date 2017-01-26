@@ -4981,7 +4981,7 @@ article.article-tab {
 
 .indent-tab {
   padding-top: 71px;
-  padding-bottom: 10px;
+  padding-bottom: 0;
   padding-left: 0;
   padding-right: 0; }
 
@@ -7188,9 +7188,15 @@ select {
   cursor: default; }
 
 .nav-tabs.small-tabs {
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;*/ }
+  .nav-tabs.small-tabs .tab-arrow {
+    display: none; }
+  .nav-tabs.small-tabs .item-tab {
+    display: inline-block;
+    float: none;
+    margin-bottom: 16px; }
   .nav-tabs.small-tabs div a {
     font-size: 1.125em;
     padding: 10px 28px 14px; }
@@ -7507,7 +7513,9 @@ footer {
   h5 {
     margin-bottom: 40px; }
   .two-col-list {
-    columns: 1; }
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1; }
   /**/
   .select-caret .caret-down {
     display: block; }
@@ -7713,8 +7721,12 @@ footer {
   .nav-tabs div.slider-slide {
     max-width: 240px;
     margin-left: 15px; }
+  .nav-tabs.small-tabs {
+    display: block; }
   .nav-tabs.small-tabs div a {
     height: auto; }
+  .nav-tabs.small-tabs .item-tab {
+    margin-bottom: 0; }
   .panel-title > a {
     padding-left: 20px;
     padding-right: 30px; }
@@ -7804,7 +7816,8 @@ footer {
   /* FOOTER */
   footer {
     margin-top: 45px;
-    max-height: inherit; }
+    max-height: inherit;
+    overflow-x: hidden; }
   .footer-data {
     padding-left: 0;
     padding-right: 0; }

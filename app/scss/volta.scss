@@ -503,9 +503,17 @@
 }
 
 .nav-tabs.small-tabs {
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
+  .tab-arrow {
+    display: none;
+  }
+  .item-tab {
+    display: inline-block;
+    float: none;
+    margin-bottom: 16px;
+  }
   div a {
     font-size: 1.125em;
     padding: 10px 28px 14px;

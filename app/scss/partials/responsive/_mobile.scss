@@ -46,6 +46,8 @@
   }
   .two-col-list {
     columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
   }
   /**/
   .select-caret {
@@ -345,8 +347,15 @@
     max-width: 240px;
     margin-left: 15px;
   }
+  .nav-tabs.small-tabs {
+    display: block;
+  }
   .nav-tabs.small-tabs div a {
     height: auto;
+
+  }
+  .nav-tabs.small-tabs .item-tab {
+    margin-bottom: 0;
   }
   .panel-title > a {
     padding-left: 20px;
@@ -459,6 +468,7 @@
   footer {
     margin-top: 45px;
     max-height: inherit;
+    overflow-x: hidden;
   }
   .footer-data {
     padding-left: 0;
