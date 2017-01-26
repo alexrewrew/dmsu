@@ -83,3 +83,9 @@ th {
 .table-half {
   width: 50%;
 }
+
+.half-cols {
+  th, td {
+    width: 50%;
+  }
+}
