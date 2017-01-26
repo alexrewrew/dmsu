@@ -249,8 +249,13 @@
   min-height: 226px;
   &:hover {
     background: $white;
-    .sprite-top {
+    .icon-show {
+      opacity: 0;
+      @include transition;
+    }
+    .icon-hide {
       opacity: 1;
+      @include transition;
     }
   }
   a {
@@ -259,9 +264,10 @@
     height: 100%;
   }
   img {
-    margin-bottom: 36px;
+    margin-bottom: 48px;
     height: 61px;
-
+    position: relative;
+    top: 12px;
   }
   p {
     padding-right: 25px;
