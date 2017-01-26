@@ -4908,12 +4908,11 @@ body {
 header {
   background: #0183de;
   min-height: 122px; }
+  header .container {
+    position: relative; }
 
 section {
   background: #f1f0f0; }
-
-section:nth-last-child(2) {
-  padding-bottom: 4000px; }
 
 section.indent {
   padding-left: 9.2%;
@@ -5094,7 +5093,11 @@ p {
   line-height: 1.3; }
 
 .bold-text {
-  font-weight: 600; }
+  font-weight: 700;
+  font-size: 1.15em; }
+
+.display-block {
+  display: block; }
 
 .text-underline {
   text-decoration: underline;
@@ -5108,13 +5111,21 @@ a {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
   color: #282828;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
   a:hover {
     text-decoration: none;
     color: inherit; }
   a:focus {
     text-decoration: none;
     color: inherit; }
+
+.phone-link {
+  color: #282828;
+  text-decoration: none;
+  font-weight: 400; }
+  .phone-link:hover {
+    color: #efaf03; }
 
 /*default lists*/
 ol {
@@ -5246,6 +5257,10 @@ td {
   padding-bottom: 11px;
   padding-right: 11px;
   vertical-align: top; }
+  td a {
+    display: block; }
+    td a:hover {
+      color: #efaf03; }
 
 th {
   text-align: left;
@@ -5254,6 +5269,10 @@ th {
   padding-right: 11px;
   vertical-align: top; }
 
+.table-spacer {
+  width: 100%;
+  height: 59px; }
+
 .chief-table {
   margin-left: 20px; }
   .chief-table tr, .chief-table th {
@@ -5261,12 +5280,6 @@ th {
 
 .chief-contacts {
   margin-left: 20px; }
-  .chief-contacts a {
-    color: #161616;
-    font-weight: 400;
-    text-decoration: none; }
-    .chief-contacts a:hover {
-      color: #161616; }
 
 .big-table {
   font-size: 1.125em; }
@@ -5280,16 +5293,15 @@ th {
     border-bottom: 3px solid #fff;
     border-right: 30px solid #f1f0f0;
     font-size: 1.111em; }
-  .big-table th:nth-child(1) {
-    width: 6.9%; }
-  .big-table th:nth-child(2) {
-    width: 29%; }
-  .big-table th:nth-child(3) {
-    width: 33.3333333%; }
+  .big-table th:last-child, .big-table td:last-child {
+    border-right: none; }
 
 .table-surname {
   font-weight: 600;
   display: block; }
+
+.table-half {
+  width: 50%; }
 
 /*forms*/
 .selection-container {
@@ -8466,6 +8478,29 @@ select {
         position: relative;
         top: -3px; }
 
+/*print icon*/
+.print-icon {
+  display: none;
+  width: 29px;
+  height: 29px;
+  color: #0183de;
+  background: #90d1ff;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 4px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: absolute;
+  bottom: 45px;
+  right: 37px; }
+  .print-icon:hover {
+    background: transparent;
+    color: #fff; }
+
 /* VIEW ALL */
 .view-all {
   font-family: "Proxima Nova", sans-serif;
@@ -9609,6 +9644,9 @@ footer {
 @media (min-width: 1200px) {
   .container {
     width: 1208px; }
+  /**/
+  .print-icon {
+    display: block; }
   /*size panel*/
   .size-panel {
     display: block; }

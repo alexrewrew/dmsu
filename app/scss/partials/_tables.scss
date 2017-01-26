@@ -21,6 +21,12 @@ td {
     right: 11px;
   }
   vertical-align: top;
+  a{
+    display: block;
+    &:hover {
+      color: $yellow;
+    }
+  }
 }
 
 th {
@@ -33,6 +39,11 @@ th {
   vertical-align: top;
 }
 
+.table-spacer {
+  width: 100%;
+  height: 59px;
+}
+
 .chief-table {
   margin-left: 20px;
   tr, th {
@@ -42,14 +53,6 @@ th {
 
 .chief-contacts {
   margin-left: 20px;
-  a {
-    color: $black-text;
-    font-weight: 400;
-    text-decoration: none;
-    &:hover {
-      color: $black-text;
-    }
-  }
 }
 
 .big-table {
@@ -67,19 +70,16 @@ th {
     border-right: 30px solid $a-gray;
     font-size: 1.111em;
   }
-  th:nth-child(1) {
-    width: 6.9%;
-
-  }
-  th:nth-child(2) {
-    width: 29%;
-  }
-  th:nth-child(3) {
-    width: 33.3333333%;
+  th:last-child, td:last-child{
+    border-right: none;
   }
 }
 
 .table-surname {
   font-weight: 600;
   display: block;
+}
+
+.table-half {
+  width: 50%;
 }

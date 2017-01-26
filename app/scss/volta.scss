@@ -25,7 +25,6 @@
 @import "style";
 @import "partials/navigation";
 
-
 /* SEARCH SERVICES */
 .search-row {
   position: relative;
@@ -84,9 +83,11 @@
   /*padding-right: 36px;*/
   padding-top: 21px;
 }
+
 .filter-indent {
   padding-bottom: 0px;
 }
+
 .filter-links {
   padding: 0;
   margin: 0;
@@ -99,7 +100,7 @@
       font-size: 1.125em;
       color: $text;
       display: inline-block;
-      background:$b-gray;
+      background: $b-gray;
       text-align: center;
       padding: {
         top: 10px;
@@ -174,6 +175,27 @@
         top: -3px;
       }
     }
+  }
+}
+
+/*print icon*/
+.print-icon {
+  display: none;
+  width: 29px;
+  height: 29px;
+  color: $blue;
+  background: $crumbs;
+  text-align: center;
+  border-radius: 50%;
+  padding-top: 4px;
+  @include transition;
+  cursor: pointer;
+  position: absolute;
+  bottom: 45px;
+  right: 37px;
+  &:hover {
+    background: transparent;
+    color: $white;
   }
 }
 
