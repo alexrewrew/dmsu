@@ -80,6 +80,9 @@
       font-weight: 600;
       line-height: 1.18;
       color: $white;
+      &:hover {
+        opacity: .5;
+      }
     }
   }
   .nav-logo-img {

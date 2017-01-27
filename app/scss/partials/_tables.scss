@@ -57,7 +57,6 @@ th {
 
 .big-table {
   font-size: 1.125em;
-
   td {
     border-bottom: 2px solid $white;
     border-right: 30px solid $a-gray;
@@ -75,6 +74,7 @@ th {
   }
 }
 
+
 .table-surname {
   font-weight: 600;
   display: block;
@@ -87,5 +87,11 @@ th {
 .half-cols {
   th, td {
     width: 50%;
+  }
+}
+
+.quoter-cols {
+  th, td {
+    width: 25%;
   }
 }
