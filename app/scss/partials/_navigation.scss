@@ -90,6 +90,15 @@
       padding-left: 11px;
       padding-top: 19px;
       padding-bottom: 30px;
+      position: relative;
+    }
+    a img {
+    }
+    a svg {
+      float: left;
+      position: absolute;
+      top: 19px;
+      left: 11px;
     }
   }
 }
