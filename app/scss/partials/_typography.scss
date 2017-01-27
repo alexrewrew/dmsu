@@ -18,7 +18,7 @@ h2 {
   color: $c-gray;
 }
 
-.tab-name{
+.tab-name {
   margin-bottom: 35px;
 }
 
@@ -56,6 +56,10 @@ p {
   font-size: 1.15em;
 }
 
+.red-text {
+  color: $red;
+}
+
 .display-block {
   display: block;
 }
@@ -80,14 +84,16 @@ a {
     color: inherit;
   }
 }
+
 .phone-link {
   color: $text;
   text-decoration: none;
-  font-weight:400;
+  font-weight: 400;
   &:hover {
     color: $yellow;
   }
 }
+
 .authority-link {
   color: $blue;
 }
@@ -115,8 +121,8 @@ ol {
       text-align: center;
       display: inline-block;
       position: absolute;
-      top:2px;
-      left:0;
+      top: 2px;
+      left: 0;
       width: 20px;
       height: 20px;
       font-size: .875em;
@@ -137,8 +143,6 @@ ol {
     margin-bottom: 12px;
   }
 }
-
-
 
 .two-col-list {
   padding: 0 0 0 11px;
@@ -194,28 +198,28 @@ ol {
 }
 
 /*quote*/
-blockquote{
-  display:block;
+blockquote {
+  display: block;
   padding: 48px 38px 34px;
   margin: 44px 0 35px;
   position: relative;
 }
 
-blockquote::before,blockquote::after {
+blockquote::before, blockquote::after {
   font-size: 60px;
   font-weight: bold;
   color: $yellow;
   position: absolute;
 }
 
-blockquote::before{
+blockquote::before {
   content: "\201C";
   left: 0;
-  top:0;
+  top: 0;
 }
 
-blockquote::after{
+blockquote::after {
   content: "\201D";
   right: 0;
-  bottom:-20px;
+  bottom: -20px;
 }

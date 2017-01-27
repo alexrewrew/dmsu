@@ -605,6 +605,7 @@
   background: $white;
   width: 100%;
   display: inline-block;
+  text-decoration: none;
   font-weight: 600;
   position: relative;
   line-height: 1.16;
@@ -864,12 +865,146 @@ footer {
   }
 }
 
+/*SEARCH*/
+.search-result {
+  background: transparent;
+  @include transition;
+  border-bottom: 2px solid $white;
+  padding: {
+    top: 22px;
+    bottom: 20px;
+    left: 30px;
+    right: 20px;
+  }
+  &:hover {
+    background: $white;
+    .el-chevron-right {
+      @include transform(translateX(70px));
+      color: $blue-hover;
+      opacity: 1;
+    }
+  }
+  .content-item {
+    max-height: 52px;
+    overflow: hidden;
+    line-height: 1.1;
+  }
+  span {
+    display: block;
+    width: 100%;
+    color: $select;
+    padding-left: 14px;
+    min-height: 50%;
+    font-size: .875em;
+    &:first-child {
+      border-left: 1px solid $select;
+      margin-bottom: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .el-chevron-right {
+      font-size: 12px;
+      opacity: 0;
+      @include transition;
+    }
+  }
+}
+
+/*PAGINATION*/
+.pagination {
+  text-align: center;
+  padding-top: 64px;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        font-size: 1.250em;
+        font-weight: 600;
+        line-height: 1.2;
+        padding-left: 15px;
+        padding-right: 15px;
+        &:hover {
+          color: $yellow;
+        }
+      }
+      a.pag-current {
+        cursor: default;
+        color: $select;
+        &:hover {
+          color: $select;
+        }
+      }
+      i {
+        font-size: 17px;
+        color: $blue-hover;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+/*services list*/
+article.indent .services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    &:before {
+      display: none;
+    }
+    a {
+      line-height: 1.11;
+      position: relative;
+      font-weight: 400;
+      color: $text;
+      text-decoration: none;
+      border-bottom: 2px solid $white;
+      display: block;
+      width: 100%;
+      padding: {
+        top: 21px;
+        bottom: 20px;
+        right: 31px;
+        left: 31px;
+      }
+      margin: 0;
+      .el-chevron-right {
+        font-size: 17px;
+        position: absolute;
+        top: 45%;
+        right: 68px;
+        opacity: 0;
+        color: $blue-hover;
+      }
+      &:hover {
+        background: $white;
+        .el-chevron-right {
+          @include transform(translateX(38px));
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 /* ICONS */
+.el, .fa {
+  @include transition;
+}
+
 .el-chevron-right {
   font-size: 18px;
   position: relative;
   right: -8px;
-  @include transition;
 }
 
 .el-caret-down {

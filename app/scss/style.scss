@@ -21,7 +21,7 @@
       width: 33.3333%;
       float: left;
       a {
-        height: 56px;
+        height: 62px;
         font-weight: 600;
         transition: all 0.4s ease;
         padding: 18px 20px;
@@ -29,12 +29,11 @@
         padding: {
           left: 20px;
           right: 20px;
-          top: 0;
-          bottom: 0;
+          top: 10px;
+          bottom: 10px;
         }
         font-size: 0.875em;
-        display: flex;
-        align-items: center;
+        display: block;
         &:hover {
           background: #b5b5b5;
           opacity: .5;
@@ -631,9 +630,11 @@
     padding: {
       left: 20px;
       right: 20px;
-      top: 18px;
-      bottom: 18px
+      top: 10px;
+      bottom: 10px;
     }
+
+    height: 62px;
   }
   .primary-nav .secondary-nav a {
     padding: 0 18% 0 0;

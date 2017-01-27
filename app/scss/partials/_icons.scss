@@ -1682,14 +1682,26 @@
 }
 
 .nav-map:hover .ico {
-  -webkit-animation: planet 2s infinite; /* Safari 4+ */
-  -moz-animation: planet 2s infinite; /* Fx 5+ */
-  -o-animation: planet 2s infinite; /* Opera 12+ */
-  animation: planet 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: planet 1s infinite; /* Safari 4+ */
+  -moz-animation: planet 1s infinite; /* Fx 5+ */
+  -o-animation: planet 1s infinite; /* Opera 12+ */
+  animation: planet 1s infinite; /* IE 10+, Fx 29+ */
   fill:#EFAF03;
 }
 
 .nav-map:hover .planet-image {
+  opacity: 0;
+}
+
+.nav-map.selected .ico {
+  -webkit-animation: planet 1s infinite; /* Safari 4+ */
+  -moz-animation: planet 1s infinite; /* Fx 5+ */
+  -o-animation: planet 1s infinite; /* Opera 12+ */
+  animation: planet 1s infinite; /* IE 10+, Fx 29+ */
+  fill:#EFAF03;
+}
+
+.nav-map.selected .planet-image {
   opacity: 0;
 }
 /*icons end*/
