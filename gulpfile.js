@@ -1,11 +1,13 @@
 var gulp = require('gulp'); //ініціалізація gulp
 var sass = require('gulp-sass'); //ініціалізація sass
 var browserSync = require('browser-sync'); //автоматичне перезавантаження сторінки
-var rigger = require('gulp-rigger');
+var rigger = require('gulp-rigger'); //склеювання html
 var concat = require('gulp-concat'); //конкатинація
-var uglify = require('gulp-uglify');
-var cleanCSS = require('gulp-clean-css');
-var htmlmin = require('gulp-html-minifier');
+var uglify = require('gulp-uglify'); //мініфікація js
+var cleanCSS = require('gulp-clean-css'); //мініфікація css
+var htmlmin = require('gulp-html-minifier'); //мініфікація html
+var autoprefixer = require('gulp-autoprefixer'); //розстановка автопрефіксів
+var clean = require('gulp-clean'); //очищення папки dist
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
@@ -26,45 +28,53 @@ gulp.task('browserSync', function () {
     })
 });
 
-//concat
+//конкатинація js
 gulp.task('scripts', function () {
     return gulp.src(['app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/js/scripts/scripts.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
 });
 
-//rigger
+//конкатинація html
 gulp.task('rigger', function () {
     gulp.src(['app/html/*.html'])
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });
 
-/////////////////
-
-//uglify
+//мініфікація js
 gulp.task('compress', function () {
     return gulp.src('app/js/main.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
-//minify
+//мініфікація та автопрефікси для css
 gulp.task('minify-css', function () {
     return gulp.src('app/css/volta.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
 
-//html minify
+//мініфікація html
 gulp.task('minify-html', function () {
     gulp.src('app/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'))
 });
 
+//очищення папки dist
+gulp.task('clean', function () {
+    return gulp.src('dist', {read: false})
+        .pipe(clean());
+});
+
 //build
-gulp.task('build', ['compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['clean', 'compress', 'minify-css', 'minify-html'], function () {
 });
 
 
