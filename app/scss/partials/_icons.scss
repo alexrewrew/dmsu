@@ -267,10 +267,18 @@
 }
 
 .loop {
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%;
 }
 
 .people {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 
@@ -726,6 +734,10 @@
 
 .door {
   transform: rotateY(90deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
   transform-origin: 0% 100%;
 }
 
@@ -1366,6 +1378,11 @@
 }
 
 .card {
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 
@@ -1519,6 +1536,11 @@
 }
 
 .arrows {
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 47% 49%;
+  -moz-transform-origin: 47% 49%;
+  -o-transform-origin: 47% 49%;
+  -ms-transform-origin: 47% 49%;
   transform-origin: 47% 49%;
 }
 
@@ -1678,6 +1700,11 @@
 }
 
 .ico {
+  transform: rotateY(90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
 
