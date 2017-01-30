@@ -893,7 +893,7 @@
     Selection.prototype.results_hide = function() {
       if (this.results_showing) {
         this.result_clear_highlight();
-        this.container.removeClass("selection-with-drop");
+        //this.container.removeClass("selection-with-drop");
         this.form_field_jq.trigger("selection:hiding_dropdown", {
           selection: this
         });

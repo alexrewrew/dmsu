@@ -1,8 +1,8 @@
 $(document).ready(function () {
     $("select").on('selection:showing_dropdown', function() {
-        $(this).next('.selection-container').children('.selection-drop').slideDown();
+        $(this).next('.selection-container').children('.selection-drop').slideDown(300);
     }).on('selection:hiding_dropdown', function () {
-        $(this).next('.selection-container').children('.selection-drop').slideUp();
+        $(this).next('.selection-container').children('.selection-drop').slideUp(300);
     });
 
     $(".footer-slide-item").click(function () {

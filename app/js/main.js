@@ -11682,7 +11682,7 @@ if (typeof jQuery === 'undefined') {
     Selection.prototype.results_hide = function() {
       if (this.results_showing) {
         this.result_clear_highlight();
-        this.container.removeClass("selection-with-drop");
+        //this.container.removeClass("selection-with-drop");
         this.form_field_jq.trigger("selection:hiding_dropdown", {
           selection: this
         });
@@ -15065,9 +15065,9 @@ jQuery(document).ready(function ($) {
 });
 $(document).ready(function () {
     $("select").on('selection:showing_dropdown', function() {
-        $(this).next('.selection-container').children('.selection-drop').slideDown();
+        $(this).next('.selection-container').children('.selection-drop').slideDown(300);
     }).on('selection:hiding_dropdown', function () {
-        $(this).next('.selection-container').children('.selection-drop').slideUp();
+        $(this).next('.selection-container').children('.selection-drop').slideUp(300);
     });
 
     $(".footer-slide-item").click(function () {
