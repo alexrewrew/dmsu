@@ -8,6 +8,11 @@ var cleanCSS = require('gulp-clean-css'); //мініфікація css
 var htmlmin = require('gulp-html-minifier'); //мініфікація html
 var autoprefixer = require('gulp-autoprefixer'); //розстановка автопрефіксів
 var clean = require('gulp-clean'); //очищення папки dist
+var csscomb = require('gulp-csscomb'); //компановка css
+var rimraf = require('rimraf');
+var imagemin = require('gulp-imagemin');
+var scsslint = require('gulp-scss-lint');
+
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
@@ -17,6 +22,13 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({ // перезавантажувати синхронізатор при кожній зміні
             stream: true
         }))
+});
+
+//lint для sass
+gulp.task('lint', function () {
+    return gulp.src('app/scss/volta.scss')
+        .pipe(scsslint())
+        .pipe(gulp.dest('app/reports'))
 });
 
 //завдання для browser-sync
@@ -49,13 +61,14 @@ gulp.task('compress', function () {
         .pipe(gulp.dest('dist/js'));
 });
 
-//мініфікація та автопрефікси для css
+//мініфікація, комбінування та автопрефікси для css
 gulp.task('minify-css', function () {
     return gulp.src('app/css/volta.css')
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(csscomb())
         .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
@@ -67,14 +80,20 @@ gulp.task('minify-html', function () {
         .pipe(gulp.dest('dist'))
 });
 
+//мініфікація зображень
+gulp.task('imagemin', function () {
+    gulp.src('app/img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+});
+
 //очищення папки dist
-gulp.task('clean', function () {
-    return gulp.src('dist', {read: false})
-        .pipe(clean());
+gulp.task('clean', function (cb) {
+    rimraf('./dist/*', cb);
 });
 
 //build
-gulp.task('build', ['clean', 'compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['clean', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
 });
 
 

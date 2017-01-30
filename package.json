@@ -11,14 +11,17 @@
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
     "gulp-csso": "^2.0.0",
     "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^3.1.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.3.2",
+    "gulp-scss-lint": "^0.4.0",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
-    "gulp-watch": "^4.3.10"
+    "gulp-watch": "^4.3.10",
+    "rimraf": "^2.5.4"
   },
   "dependencies": {
     "imagemin-pngquant": "^5.0.0"

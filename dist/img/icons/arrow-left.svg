@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="24" viewBox="0 0 48 24">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #212fba;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <path id="Rectangle_54_copy" data-name="Rectangle 54 copy" class="cls-1" d="M270,2007.23l-1.772,1.77L256,1997l2.775-1ZM258.775,1998L256,1997l12.225-12,1.772,1.77Zm0.225,0v-2h45v2H259Z" transform="translate(-256 -1985)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="24" viewBox="0 0 48 24"><defs><style>.cls-1{fill:#212fba;fill-rule:evenodd}</style></defs><path id="Rectangle_54_copy" data-name="Rectangle 54 copy" class="cls-1" d="M270 2007.23l-1.772 1.77L256 1997l2.775-1zm-11.225-9.23l-2.775-1 12.225-12 1.772 1.77zm.225 0v-2h45v2h-45z" transform="translate(-256 -1985)"/></svg>
