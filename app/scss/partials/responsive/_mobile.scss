@@ -576,6 +576,13 @@
       }
     }
   }
+  .search-form-main {
+    position: static;
+    width: 100%;
+    button {
+      right:25px;
+    }
+  }
   /*services*/
   article.indent .services-list li a {
     padding-left: 0;

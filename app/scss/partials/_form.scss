@@ -90,6 +90,43 @@ input {
   }
 }
 
+//search result
+.search-form-main {
+  position: relative;
+  top: -15px;
+  left: -50px;
+  width: 300px;
+  display: inline-block;
+  input {
+    @include regular-text(700, 1.250em);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 43px;
+    color: $text;
+    width: 100%;
+    padding: {
+      left: 17px;
+      right: 50px;
+      bottom: 18px;
+      top: 15px;
+    }
+  }
+  button {
+    position: absolute;
+    right: 0;
+    color: $blue-hover;
+    font-size: 24px;
+    right: 17px;
+    top: 9px;
+    background: transparent;
+    border: none;
+    &:hover {
+      color: $yellow;
+    }
+
+  }
+}
+
 /*select*/
 
 select {
