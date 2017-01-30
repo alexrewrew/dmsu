@@ -1,5 +1,10 @@
 $(document).ready(function () {
-    /*alert('velosiped4');*/
+    $("select").on('selection:showing_dropdown', function() {
+        $(this).next('.selection-container').children('.selection-drop').slideDown();
+    }).on('selection:hiding_dropdown', function () {
+        $(this).next('.selection-container').children('.selection-drop').slideUp();
+    });
+
     $(".footer-slide-item").click(function () {
         $(".footer-slide-item").removeClass("active");
     });
