@@ -8974,6 +8974,8 @@ article.indent .services-list {
   padding-left: 38px; }
 
 @media (max-width: 767px) {
+  html {
+    overflow-x: hidden; }
   body {
     overflow-x: hidden;
     padding-top: 45px; }

@@ -42,7 +42,7 @@ gulp.task('browserSync', function () {
 
 //конкатинація js
 gulp.task('scripts', function () {
-    return gulp.src(['app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/js/scripts/scripts.js'])
+    return gulp.src(['app/package/jquery/dist/jquery.js', 'app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/js/scripts/scripts.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
 });
