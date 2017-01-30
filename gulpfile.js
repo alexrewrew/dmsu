@@ -92,8 +92,20 @@ gulp.task('clean', function (cb) {
     rimraf('./dist/*', cb);
 });
 
+//копіювання шрифтів
+gulp.task('fonts', function() {
+    return gulp.src('app/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'))
+})
+
+//копіювання jquery
+/*gulp.task('fonts', function() {
+    return gulp.src('app/package/jquery/dist/jquery.js')
+        .pipe(gulp.dest('dist/js'))
+})*/
+
 //build
-gulp.task('build', ['clean', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['clean', 'fonts', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
 });
 
 
