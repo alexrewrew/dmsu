@@ -5217,18 +5217,17 @@ tbody.collapse.in {
     /** Firefox **/ } }
 
 .loop {
-  -webkit-transform-origin: 100% 100%;
-  -moz-transform-origin: 100% 100%;
-  -o-transform-origin: 100% 100%;
-  -ms-transform-origin: 100% 100%;
-  transform-origin: 100% 100%; }
+  -webkit-transform-origin: 56px 37px;
+  -moz-transform-origin: 58px 23px;
+  -o-transform-origin: 58px 23px;
+  -ms-transform-origin: 58px 23px; }
 
 .people {
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%; }
+  -webkit-transform-origin: 42px 20px;
+  -moz-transform-origin: 42px 20px;
+  -o-transform-origin: 42px 20px;
+  -ms-transform-origin: 42px 20px;
+  transform-origin: 42px 20px; }
 
 .service-item1:hover .loop {
   -webkit-animation: transforming 2s infinite;
@@ -5792,11 +5791,25 @@ tbody.collapse.in {
 
 .door {
   transform: rotateY(90deg);
-  -webkit-transform-origin: 0% 100%;
-  -moz-transform-origin: 0% 100%;
-  -o-transform-origin: 0% 100%;
-  -ms-transform-origin: 0% 100%;
-  transform-origin: 0% 100%; }
+  -webkit-transform-origin: 45px 0px;
+  -moz-transform-origin: 45px 0px;
+  -o-transform-origin: 45px 0px;
+  -ms-transform-origin: 45px 0px;
+  transform-origin: 45px 0px; }
+
+.people3 {
+  -webkit-transform-origin: 45px 0px;
+  -moz-transform-origin: 45px 0px;
+  -o-transform-origin: 45px 0px;
+  -ms-transform-origin: 45px 0px;
+  transform-origin: 45px 0px; }
+
+.peoples {
+  -webkit-transform-origin: 45px 0px;
+  -moz-transform-origin: 45px 0px;
+  -o-transform-origin: 45px 0px;
+  -ms-transform-origin: 45px 0px;
+  transform-origin: 45px 0px; }
 
 .service-item2:hover .door {
   -webkit-animation: doorOpen 2s infinite;
@@ -6491,7 +6504,8 @@ tbody.collapse.in {
 
 /*logo*/
 .logo {
-  opacity: 0; }
+  opacity: 0;
+  width: 87.5%; }
 
 .logo-cls-1, .logo-cls-2 {
   fill: none;
@@ -6627,11 +6641,11 @@ tbody.collapse.in {
 
 .arrows {
   transform: rotateY(90deg);
-  -webkit-transform-origin: 47% 49%;
-  -moz-transform-origin: 47% 49%;
-  -o-transform-origin: 47% 49%;
-  -ms-transform-origin: 47% 49%;
-  transform-origin: 47% 49%; }
+  -webkit-transform-origin: 200px 213px;
+  -moz-transform-origin: 200px 213px;
+  -o-transform-origin: 200px 213px;
+  -ms-transform-origin: 200px 213px;
+  transform-origin: 200px 213px; }
 
 .nav-logo:hover .arrows {
   -webkit-animation: rotateArrows 2s infinite;
@@ -6659,7 +6673,9 @@ tbody.collapse.in {
 #planet {
   position: absolute;
   top: -11px;
-  left: 8px; }
+  left: 8px;
+  z-index: -1;
+  width: 52%; }
 
 @-webkit-keyframes planet {
   0% {
@@ -6831,11 +6847,11 @@ tbody.collapse.in {
 
 .ico {
   transform: rotateY(90deg);
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%; }
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
 
 .nav-map:hover .ico {
   -webkit-animation: planet 1s infinite;
