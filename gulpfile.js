@@ -49,7 +49,7 @@ gulp.task('scripts', function () {
 
 //конкатинація html
 gulp.task('rigger', function () {
-    gulp.src(['app/html/*.html'])
+    gulp.src(['app/html/*.html', '!app/html/footer.html', '!app/html/header.html'])
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });

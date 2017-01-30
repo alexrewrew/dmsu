@@ -6,8 +6,8 @@
 /*bootstrap*/
 @import "bootstrap";
 /*slider*/
-@import "../package/slick-carousel/slick/slick.css";
-@import "../package/slick-carousel/slick/slick-theme.css";
+@import "../package/slick-carousel/slick/slick";
+@import "../package/slick-carousel/slick/slick-theme";
 /*variables*/
 @import "vars";
 /*mixins*/
@@ -27,7 +27,7 @@
 @import "style";
 @import "partials/navigation";
 
-/* SEARCH SERVICES */
+// SEARCH SERVICES
 .search-row {
   position: relative;
   top: 50px;
