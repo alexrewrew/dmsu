@@ -15070,6 +15070,38 @@ $(document).ready(function () {
         $(this).next('.selection-container').children('.selection-drop').slideUp(300);
     });
 
+    $(".select-caret").mousemove(function (e) {
+        // положение элемента
+        var pos = $(this).offset();
+        var width = $(this).width();
+        var elem_left = pos.left;
+        //var elem_top = pos.top;
+        var elem_right = pos.right;
+        //var elem_bottom = pos.bottom;
+        // положение курсора внутри элемента
+        var Xinner = e.pageX - elem_left;
+        var Xright = e.pageX - elem_right;
+        if (Xinner > 50) {
+            Xinner = e.pageX - elem_left - 50;
+        } else {
+            Xinner = e.pageX - elem_left - Xinner;
+        }
+
+        if (Xinner > width - 100) {
+            Xinner = width - 100;
+        }
+
+        //var Yinner = e.pageY - elem_top;
+
+        $(this).find(".effect").fadeIn("fast");
+
+        $(this).find(".effect").css("left", Xinner);
+    });
+
+    $(".select-caret").mouseleave(function (e) {
+        $(this).find(".effect").fadeOut("fast");
+    });
+
     $(".footer-slide-item").click(function () {
         $(".footer-slide-item").removeClass("active");
     });
