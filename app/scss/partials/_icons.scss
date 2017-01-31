@@ -201,17 +201,17 @@
 }
 
 .service-item1:hover .loop {
-  -webkit-animation: transforming 2s infinite; /* Safari 4+ */
-  -moz-animation: transforming 2s infinite; /* Fx 5+ */
-  -o-animation: transforming 2s infinite; /* Opera 12+ */
-  animation: transforming 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: transforming 2s; /* Safari 4+ */
+  -moz-animation: transforming 2s; /* Fx 5+ */
+  -o-animation: transforming 2s; /* Opera 12+ */
+  animation: transforming 2s; /* IE 10+, Fx 29+ */
 }
 
 .service-item1:hover .people {
-  -webkit-animation: scaling 2s infinite; /* Safari 4+ */
-  -moz-animation: scaling 2s infinite; /* Fx 5+ */
-  -o-animation: scaling 2s infinite; /* Opera 12+ */
-  animation: scaling 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: scaling 2s; /* Safari 4+ */
+  -moz-animation: scaling 2s; /* Fx 5+ */
+  -o-animation: scaling 2s; /* Opera 12+ */
+  animation: scaling 2s; /* IE 10+, Fx 29+ */
 }
 
 /*ICON 2 STYLE*/
@@ -511,24 +511,24 @@
 }
 
 .service-item2:hover .door {
-  -webkit-animation: doorOpen 2s infinite; /* Safari 4+ */
-  -moz-animation: doorOpen 2s infinite; /* Fx 5+ */
-  -o-animation: doorOpen 2s infinite; /* Opera 12+ */
-  animation: doorOpen 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: doorOpen 2s; /* Safari 4+ */
+  -moz-animation: doorOpen 2s; /* Fx 5+ */
+  -o-animation: doorOpen 2s; /* Opera 12+ */
+  animation: doorOpen 2s; /* IE 10+, Fx 29+ */
 }
 
 .service-item2:hover .people3 {
-  -webkit-animation: peopleGo 2s infinite; /* Safari 4+ */
-  -moz-animation: peopleGo 2s infinite; /* Fx 5+ */
-  -o-animation: peopleGo 2s infinite; /* Opera 12+ */
-  animation: peopleGo 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: peopleGo 2s; /* Safari 4+ */
+  -moz-animation: peopleGo 2s; /* Fx 5+ */
+  -o-animation: peopleGo 2s; /* Opera 12+ */
+  animation: peopleGo 2s; /* IE 10+, Fx 29+ */
 }
 
 .service-item2:hover .peoples {
-  -webkit-animation: peoplesGo 2s infinite; /* Safari 4+ */
-  -moz-animation: peoplesGo 2s infinite; /* Fx 5+ */
-  -o-animation: peoplesGo 2s infinite; /* Opera 12+ */
-  animation: peoplesGo 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: peoplesGo 2s; /* Safari 4+ */
+  -moz-animation: peoplesGo 2s; /* Fx 5+ */
+  -o-animation: peoplesGo 2s; /* Opera 12+ */
+  animation: peoplesGo 2s; /* IE 10+, Fx 29+ */
 }
 
 /*ICON 3 STYLE*/
@@ -733,17 +733,17 @@
 }
 
 .service-item3:hover .message {
-  -webkit-animation: transformingMessage 2s infinite; /* Safari 4+ */
-  -moz-animation: transformingMessage 2s infinite; /* Fx 5+ */
-  -o-animation: transformingMessage 2s infinite; /* Opera 12+ */
-  animation: transformingMessage 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: transformingMessage 2s; /* Safari 4+ */
+  -moz-animation: transformingMessage 2s; /* Fx 5+ */
+  -o-animation: transformingMessage 2s; /* Opera 12+ */
+  animation: transformingMessage 2s; /* IE 10+, Fx 29+ */
 }
 
 .service-item3:hover .nonedisplay {
-  -webkit-animation: nonedisplay 2s infinite; /* Safari 4+ */
-  -moz-animation: nonedisplay 2s infinite; /* Fx 5+ */
-  -o-animation: nonedisplay 2s infinite; /* Opera 12+ */
-  animation: nonedisplay 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: nonedisplay 2s; /* Safari 4+ */
+  -moz-animation: nonedisplay 2s; /* Fx 5+ */
+  -o-animation: nonedisplay 2s; /* Opera 12+ */
+  animation: nonedisplay 2s; /* IE 10+, Fx 29+ */
 }
 
 /*ICON 4 STYLE*/
@@ -1041,24 +1041,24 @@
 }
 
 .service-item4:hover .card {
-  -webkit-animation: transformingCard 2s infinite; /* Safari 4+ */
-  -moz-animation: transformingCard 2s infinite; /* Fx 5+ */
-  -o-animation: transformingCard 2s infinite; /* Opera 12+ */
-  animation: transformingCard 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: transformingCard 2s forwards; /* Safari 4+ */
+  -moz-animation: transformingCard 2s forwards; /* Fx 5+ */
+  -o-animation: transformingCard 2s forwards; /* Opera 12+ */
+  animation: transformingCard 2s forwards; /* IE 10+, Fx 29+ */
 }
 
 .service-item4:hover .front {
-  -webkit-animation: front 2s infinite; /* Safari 4+ */
-  -moz-animation: front 2s infinite; /* Fx 5+ */
-  -o-animation: front 2s infinite; /* Opera 12+ */
-  animation: front 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: front 2s forwards; /* Safari 4+ */
+  -moz-animation: front 2s forwards; /* Fx 5+ */
+  -o-animation: front 2s forwards; /* Opera 12+ */
+  animation: front 2s forwards; /* IE 10+, Fx 29+ */
 }
 
 .service-item4:hover .back {
-  -webkit-animation: back 2s infinite; /* Safari 4+ */
-  -moz-animation: back 2s infinite; /* Fx 5+ */
-  -o-animation: back 2s infinite; /* Opera 12+ */
-  animation: back 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: back 2s forwards; /* Safari 4+ */
+  -moz-animation: back 2s forwards; /* Fx 5+ */
+  -o-animation: back 2s forwards; /* Opera 12+ */
+  animation: back 2s forwards; /* IE 10+, Fx 29+ */
 }
 
 /*logo*/
@@ -1167,10 +1167,10 @@
 }
 
 .nav-logo:hover .arrows {
-  -webkit-animation: rotateArrows 2s infinite; /* Safari 4+ */
-  -moz-animation: rotateArrows 2s infinite; /* Fx 5+ */
-  -o-animation: rotateArrows 2s infinite; /* Opera 12+ */
-  animation: rotateArrows 2s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: rotateArrows 2s forwards; /* Safari 4+ */
+  -moz-animation: rotateArrows 2s forwards; /* Fx 5+ */
+  -o-animation: rotateArrows 2s forwards; /* Opera 12+ */
+  animation: rotateArrows 2s forwards; /* IE 10+, Fx 29+ */
 }
 
 .nav-logo:hover img {
@@ -1280,10 +1280,10 @@
 }
 
 .nav-map:hover .ico {
-  -webkit-animation: planet 1s infinite; /* Safari 4+ */
-  -moz-animation: planet 1s infinite; /* Fx 5+ */
-  -o-animation: planet 1s infinite; /* Opera 12+ */
-  animation: planet 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: planet 1s forwards; /* Safari 4+ */
+  -moz-animation: planet 1s forwards; /* Fx 5+ */
+  -o-animation: planet 1s forwards; /* Opera 12+ */
+  animation: planet 1s forwards; /* IE 10+, Fx 29+ */
   fill:#EFAF03;
 }
 
@@ -1292,10 +1292,10 @@
 }
 
 .nav-map.selected .ico {
-  -webkit-animation: planet 1s infinite; /* Safari 4+ */
-  -moz-animation: planet 1s infinite; /* Fx 5+ */
-  -o-animation: planet 1s infinite; /* Opera 12+ */
-  animation: planet 1s infinite; /* IE 10+, Fx 29+ */
+  -webkit-animation: planet 1s forwards; /* Safari 4+ */
+  -moz-animation: planet 1s forwards; /* Fx 5+ */
+  -o-animation: planet 1s forwards; /* Opera 12+ */
+  animation: planet 1s forwards; /* IE 10+, Fx 29+ */
   fill:#EFAF03;
 }
 
