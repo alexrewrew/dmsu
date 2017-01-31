@@ -802,7 +802,7 @@
     };
 
     Selection.prototype.activate_field = function() {
-      this.container.addClass("selection-container-active");
+      //this.container.addClass("selection-container-active");
       this.active_field = true;
       this.search_field.val(this.search_field.val());
       return this.search_field.focus();
