@@ -98,14 +98,14 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest('dist/fonts'))
 })
 
-//копіювання jquery
-/*gulp.task('fonts', function() {
-    return gulp.src('app/package/jquery/dist/jquery.js')
-        .pipe(gulp.dest('dist/js'))
-})*/
+//копіювання відео
+gulp.task('video', function() {
+    return gulp.src('app/video/**/*')
+        .pipe(gulp.dest('dist/video'))
+})
 
 //build
-gulp.task('build', ['clean', 'fonts', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['clean', 'fonts', 'video', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
 });
 
 
