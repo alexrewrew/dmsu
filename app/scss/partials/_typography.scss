@@ -18,6 +18,12 @@ h2 {
   color: $c-gray;
 }
 
+.service-header {
+  color: $c-gray;
+  padding-bottom: 8px;
+  border-bottom: 3px solid $white;
+}
+
 .tab-name {
   margin-bottom: 35px;
 }

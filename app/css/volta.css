@@ -5140,11 +5140,11 @@ tbody.collapse.in {
   position: absolute;
   top: 15px;
   left: 32px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .service-item2 .icon-hide {
   left: 27px; }
@@ -6587,6 +6587,11 @@ h2 {
   line-height: 0.8;
   color: #a2a2a2; }
 
+.service-header {
+  color: #a2a2a2;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #fff; }
+
 .tab-name {
   margin-bottom: 35px; }
 
@@ -6642,11 +6647,11 @@ p {
 
 /* links */
 a {
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   color: #282828;
   cursor: pointer;
   text-decoration: none; }
@@ -7493,11 +7498,11 @@ select {
   text-align: center;
   width: 100%;
   padding: 14px 0 15px 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .button-regular:hover {
     background: #0096ff; }
   .button-regular:focus {
@@ -7532,11 +7537,11 @@ select {
   width: 46px;
   height: 46px;
   text-align: center;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   position: fixed;
   right: 39px;
   bottom: 46px;
@@ -7768,11 +7773,11 @@ select {
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .primary-nav.is-hidden, .primary-nav ul.is-hidden {
   -webkit-transform: translateX(100%);
@@ -7980,11 +7985,11 @@ select {
     display: inline-block;
     overflow: visible;
     border-bottom: none;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     margin-bottom: 15px;
     margin-top: 23px;
     margin-left: 14px;
@@ -8096,11 +8101,11 @@ select {
   .primary-nav .secondary-nav > li > a {
     color: #fff;
     font-weight: bold;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -8348,11 +8353,11 @@ select {
   position: absolute;
   bottom: -25px;
   left: calc(50% - 10px);
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   z-index: -1;
   opacity: 0;
   display: none; }
@@ -8489,7 +8494,10 @@ select {
       padding-right: 24px; }
     .breadcrumbs.right-panel li a {
       padding-left: 5px;
-      padding-right: 5px; }
+      padding-right: 5px;
+      cursor: default; }
+      .breadcrumbs.right-panel li a:hover {
+        color: #90d1ff; }
       .breadcrumbs.right-panel li a i {
         margin-left: 6px;
         margin-right: 6px;
@@ -8497,6 +8505,11 @@ select {
       .breadcrumbs.right-panel li a .views-number {
         position: relative;
         top: -3px; }
+    .breadcrumbs.right-panel li .news-repost {
+      cursor: pointer;
+      transition: none; }
+      .breadcrumbs.right-panel li .news-repost:hover {
+        color: #fff; }
 
 /*print icon*/
 .print-icon {
@@ -8508,11 +8521,11 @@ select {
   text-align: center;
   border-radius: 50%;
   padding-top: 4px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   position: absolute;
   bottom: 45px;
@@ -8562,11 +8575,11 @@ select {
   text-transform: none;
   text-align: center;
   padding-right: 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .view-all-mobile a {
     color: #212fba;
     border-bottom: 2px solid #212fba; }
@@ -8581,11 +8594,11 @@ select {
 .service-item {
   position: relative;
   background: transparent;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   padding-top: 26px;
   padding-left: 32px;
   padding-right: 32px;
@@ -8595,18 +8608,18 @@ select {
     background: #fff; }
     .service-item:hover .icon-show {
       opacity: 0;
-      -webkit-transition: all 0.4s ease;
-      -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-      -o-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
     .service-item:hover .icon-hide {
       opacity: 1;
-      -webkit-transition: all 0.4s ease;
-      -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-      -o-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
   .service-item a {
     display: inline-block;
     width: 100%;
@@ -8625,20 +8638,20 @@ select {
   top: 26px;
   left: 32px;
   opacity: 0;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 /* NEWS */
 .important-item {
   background: transparent;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   margin-right: 74px;
   min-height: 220px;
   outline: none;
@@ -8667,11 +8680,11 @@ select {
   font-size: 0.75em;
   font-style: normal;
   font-stretch: normal;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   position: absolute;
   right: 27px;
   bottom: 25px;
@@ -8692,11 +8705,11 @@ select {
   padding-top: 25px;
   padding-right: 15px;
   min-height: 220px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
   outline: none; }
   .event-item .read-next {
@@ -8761,11 +8774,11 @@ select {
   position: absolute;
   bottom: 10px;
   left: calc(50% - 10px);
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   z-index: -1;
   opacity: 0; }
 
@@ -9038,11 +9051,11 @@ footer {
     margin-bottom: 12px;
     margin-right: 2%;
     line-height: 1.2;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     .footer-links li:hover {
       background: #efaf03; }
     .footer-links li a {
@@ -9084,11 +9097,11 @@ footer {
 /*SEARCH*/
 .search-result {
   background: transparent;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   border-bottom: 2px solid #fff;
   padding-top: 22px;
   padding-bottom: 20px;
@@ -9124,11 +9137,11 @@ footer {
     .search-result span .el-chevron-right {
       font-size: 12px;
       opacity: 0;
-      -webkit-transition: all 0.4s ease;
-      -moz-transition: all 0.4s ease;
-      -ms-transition: all 0.4s ease;
-      -o-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
 
 /*PAGINATION*/
 .pagination {
@@ -9202,11 +9215,11 @@ article.indent .services-list {
 
 /* ICONS */
 .el, .fa {
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .el-chevron-right {
   font-size: 18px;
