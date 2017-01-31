@@ -147,6 +147,13 @@ article.article-tab {
 }
 
 /*images*/
+.img-big, .img-small, .img-middle {
+  cursor: pointer;
+  @include transition;
+  &:before {
+    
+  }
+}
 .img-big {
   width: 100%;
   display: inline-block;
@@ -154,7 +161,7 @@ article.article-tab {
   margin-bottom: 63px;
 }
 
-.img-small {
+.img-middle {
   display: inline;
   width: 48%;
   margin-top: 41px;
@@ -164,7 +171,19 @@ article.article-tab {
   }
 }
 
-.img-small:after {
+.img-small {
+  display: inline;
+  width: 24%;
+  margin-right: 1%;
+  margin-top: 41px;
+  margin-bottom: 41px;
+  &:last-child {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+.img-middle:after {
   clear: both;
 }
 
