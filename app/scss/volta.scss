@@ -205,6 +205,9 @@
   position: absolute;
   bottom: 45px;
   right: 37px;
+  i {
+    transition: none;
+  }
   &:hover {
     background: transparent;
     color: $white;

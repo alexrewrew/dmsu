@@ -6702,15 +6702,17 @@ ol {
       padding-top: 1px; }
 
 /* rounded ul */
-.rounded-list {
+ul.rounded-list, article.indent ul.rounded-list {
   padding: 0 0 0 31px;
   margin-top: 23px;
   margin-bottom: 23px;
   list-style: url("../img/icons/rounded_li.png"); }
-  .rounded-list li {
+  ul.rounded-list li, article.indent ul.rounded-list li {
     padding-left: 6px;
     line-height: 1.25;
     margin-bottom: 12px; }
+    ul.rounded-list li:before, article.indent ul.rounded-list li:before {
+      display: none; }
 
 .two-col-list {
   padding: 0 0 0 11px;
@@ -8530,6 +8532,8 @@ select {
   position: absolute;
   bottom: 45px;
   right: 37px; }
+  .print-icon i {
+    transition: none; }
   .print-icon:hover {
     background: transparent;
     color: #fff; }
