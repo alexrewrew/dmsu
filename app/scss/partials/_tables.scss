@@ -7,7 +7,7 @@ caption {
   text-align: left;
   @include regular-text(600, 1.250em);
   color: $c-gray;
-  line-height: 1.04;
+  line-height: normal;
   border-bottom: 3px solid $white;
   padding-bottom: 8px;
   margin-bottom: 17px;

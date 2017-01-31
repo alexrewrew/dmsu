@@ -6786,7 +6786,7 @@ caption {
   font-style: normal;
   font-stretch: normal;
   color: #a2a2a2;
-  line-height: 1.04;
+  line-height: normal;
   border-bottom: 3px solid #fff;
   padding-bottom: 8px;
   margin-bottom: 17px; }
