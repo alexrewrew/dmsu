@@ -1,33 +1,40 @@
-/*fonts*/
-@import "fonts";
-/*icons*/
-@import "../package/elusive-icons/css/elusive-icons";
-@import "../package/font-awesome/css/font-awesome";
-/*bootstrap*/
-@import "bootstrap";
+//fonts
+@import 'fonts';
+//font icons
+@import '../package/elusive-icons/css/elusive-icons';
+@import '../package/font-awesome/css/font-awesome';
+//grid
+@import 'grid';
 /*slider*/
-@import "../package/slick-carousel/slick/slick.css";
-@import "../package/slick-carousel/slick/slick-theme.css";
+@import '../package/slick-carousel/slick/slick';
+@import '../package/slick-carousel/slick/slick-theme';
 /*variables*/
-@import "vars";
+@import 'vars';
 /*mixins*/
-@import "mixins";
+@import 'mixins';
 /*icon animate*/
-@import "partials/icons";
+@import 'partials/icons/icons';
+@import 'partials/icons/icon1';
+@import 'partials/icons/icon2';
+@import 'partials/icons/icon3';
+@import 'partials/icons/icon4';
+@import 'partials/icons/logo';
+@import 'partials/icons/map';
 /*main styles*/
-@import "partials/main";
+@import 'partials/main';
 /*typography*/
-@import "partials/typography";
-@import "partials/tables";
+@import 'partials/typography';
+@import 'partials/tables';
 /*forms*/
-@import "../package/chosen/chosen";
-@import "partials/form";
-@import "partials/button";
+@import '../package/chosen/chosen';
+@import 'partials/form';
+@import 'partials/button';
 /*menu*/
-@import "style";
-@import "partials/navigation";
+@import 'style';
+@import 'partials/navigation';
 
-/* SEARCH SERVICES */
+
+// SEARCH SERVICES
 .search-row {
   position: relative;
   top: 50px;
@@ -135,7 +142,6 @@
     a {
       display: inline-block;
       color: $crumbs;
-
       font-size: .875em;
       padding: {
         left: 15px;
@@ -167,6 +173,10 @@
     a {
       padding-left: 5px;
       padding-right: 5px;
+      cursor: default;
+      &:hover {
+        color:$crumbs;
+      }
       i {
         margin-left: 6px;
         margin-right: 6px;
@@ -175,6 +185,13 @@
       .views-number {
         position: relative;
         top: -3px;
+      }
+    }
+    .news-repost {
+      cursor: pointer;
+      transition: none;
+      &:hover {
+        color: $white;
       }
     }
   }
@@ -195,6 +212,9 @@
   position: absolute;
   bottom: 45px;
   right: 37px;
+  i {
+    transition: none;
+  }
   &:hover {
     background: transparent;
     color: $white;
@@ -1012,8 +1032,8 @@ article.indent .services-list {
 }
 
 /* */
-@import "partials/fixes";
-@import "partials/responsive/mobile";
-@import "partials/responsive/portrait";
-@import "partials/responsive/tablet";
-@import "partials/responsive/xlarge";
+@import 'partials/fixes';
+@import 'partials/responsive/mobile';
+@import 'partials/responsive/portrait';
+@import 'partials/responsive/tablet';
+@import 'partials/responsive/xlarge';

@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*fonts*/
+/*VARIABLES */
+/* MIXINS */
 /* italic */
 @font-face {
   font-family: 'Proxima Nova';
@@ -93,7 +94,6 @@
   font-weight: 900;
   font-style: normal; }
 
-/*icons*/
 /*!
  *  Elusive Icons 2.0.0 by @ReduxFramework - http://elusiveicons.com - @reduxframework
  *  License - http://elusiveicons.com/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3505,7 +3505,6 @@
   overflow: visible;
   clip: auto; }
 
-/*bootstrap*/
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -4890,7 +4889,6 @@ tbody.collapse.in {
     display: none !important;
   }
 }*/
-/*slider*/
 /* Slider */
 .slider-slider {
   position: relative;
@@ -5127,13 +5125,6 @@ tbody.collapse.in {
   opacity: .75;
   color: black; }
 
-/*variables*/
-/*VARIABLES */
-/*mixins*/
-/* MIXINS */
-/*icon animate*/
-/*max code*/
-/*icons start*/
 .icon-hide {
   opacity: 0;
   height: 99px;
@@ -6424,8 +6415,6 @@ tbody.collapse.in {
 .nav-map.selected .planet-image {
   opacity: 0; }
 
-/*icons end*/
-/*main styles*/
 /* MAIN CSS STYLES */
 body {
   font-size: 16px;
@@ -6561,7 +6550,6 @@ article.article-tab {
   .video-small:nth-child(even) {
     float: right; }
 
-/*typography*/
 /*TYPOGRAPHY STYLES */
 /* headers */
 h1 {
@@ -6856,7 +6844,6 @@ th {
 .quoter-cols th, .quoter-cols td {
   width: 25%; }
 
-/*forms*/
 .selection-container {
   position: relative;
   display: inline-block;
@@ -7558,56 +7545,6 @@ select {
   .button-up:hover {
     opacity: .2; }
 
-/*menu*/
-/*max code*/
-.chosen-drop {
-  display: none; }
-
-/*end max code*/
-.dropdown-footer-block {
-  background: #a2a2a2;
-  position: absolute;
-  right: -6px;
-  left: 0;
-  bottom: 180px;
-  z-index: 2;
-  display: none;
-  margin: 0 auto;
-  width: 1170px;
-  padding: 11px 8px 11px; }
-  .dropdown-footer-block .tab-arrow {
-    z-index: 2;
-    bottom: -10px;
-    opacity: 1;
-    border-top: 10px solid #a2a2a2;
-    left: calc(13% - 10px); }
-  .dropdown-footer-block h3 {
-    color: #fff;
-    margin-bottom: 15px;
-    margin-left: 22px; }
-  .dropdown-footer-block ul {
-    list-style-type: none;
-    padding: 0; }
-    .dropdown-footer-block ul li {
-      width: 33.3333%;
-      float: left; }
-      .dropdown-footer-block ul li a {
-        height: 62px;
-        font-weight: 600;
-        transition: all 0.4s ease;
-        padding: 18px 20px;
-        color: #fff;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 0.875em;
-        display: block; }
-        .dropdown-footer-block ul li a:hover {
-          background: #b5b5b5;
-          opacity: .5; }
-
-/*end max code*/
 .main-content, .main-header {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -8644,7 +8581,6 @@ select {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
-/* NEWS */
 .important-item {
   background: transparent;
   -webkit-transition: all 0.3s ease;
@@ -9062,6 +8998,49 @@ footer {
       font-size: .836em;
       color: #fff;
       outline: none; }
+
+.dropdown-footer-block {
+  background: #a2a2a2;
+  position: absolute;
+  right: -6px;
+  left: 0;
+  bottom: 180px;
+  z-index: 2;
+  display: none;
+  margin: 0 auto;
+  width: 1170px;
+  padding: 11px 8px 11px; }
+  .dropdown-footer-block .tab-arrow {
+    z-index: 2;
+    bottom: -10px;
+    opacity: 1;
+    border-top: 10px solid #a2a2a2;
+    left: calc(13% - 10px); }
+  .dropdown-footer-block h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    margin-left: 22px; }
+  .dropdown-footer-block ul {
+    list-style-type: none;
+    padding: 0; }
+    .dropdown-footer-block ul li {
+      width: 33.3333%;
+      float: left; }
+      .dropdown-footer-block ul li a {
+        height: 62px;
+        font-weight: 600;
+        transition: all 0.4s ease;
+        padding: 18px 20px;
+        color: #fff;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.875em;
+        display: block; }
+        .dropdown-footer-block ul li a:hover {
+          background: #b5b5b5;
+          opacity: .5; }
 
 /* BOTTOM MENU */
 .navigation-bottom {

@@ -1,0 +1,216 @@
+
+
+/*ICON 3 STYLE*/
+.icon3-st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.icon3-st1 {
+  fill: #FFFFFF;
+}
+
+.icon3-st2 {
+  fill: none;
+  stroke: #F3B81A;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+@-webkit-keyframes transformingMessage {
+  0% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+  }
+  10% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+  }
+  40% {
+    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+  }
+  60% {
+    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+  }
+  90% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+  }
+  100% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+  }
+}
+
+@-moz-keyframes transformingMessage {
+  0% {
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  10% {
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  40% {
+    -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
+  }
+  60% {
+    -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
+  }
+  90% {
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  100% {
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+}
+
+@-o-keyframes transformingMessage {
+  0% {
+    -o-transform: rotate(0deg); /** Opera **/
+  }
+  10% {
+    -o-transform: rotate(0deg); /** Opera **/
+  }
+  40% {
+    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+  }
+  60% {
+    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+  }
+  90% {
+    -o-transform: rotate(0deg); /** Opera **/
+  }
+  100% {
+    -o-transform: rotate(0deg); /** Opera **/
+  }
+}
+
+@keyframes transformingMessage {
+  0% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+    -o-transform: rotate(0deg); /** Opera **/
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  10% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+    -o-transform: rotate(0deg); /** Opera **/
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  40% {
+    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
+  }
+  60% {
+    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
+  }
+  90% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+    -o-transform: rotate(0deg); /** Opera **/
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+  100% {
+    -webkit-transform: rotate(0deg); /** Chrome & Safari **/
+    -o-transform: rotate(0deg); /** Opera **/
+    -moz-transform: rotate(0deg); /** Firefox **/
+  }
+}
+
+@-webkit-keyframes nonedisplay {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes nonedisplay {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes nonedisplay {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nonedisplay {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.service-item3:hover .message {
+  -webkit-animation: transformingMessage 2s; /* Safari 4+ */
+  -moz-animation: transformingMessage 2s; /* Fx 5+ */
+  -o-animation: transformingMessage 2s; /* Opera 12+ */
+  animation: transformingMessage 2s; /* IE 10+, Fx 29+ */
+}
+
+.service-item3:hover .nonedisplay {
+  -webkit-animation: nonedisplay 2s; /* Safari 4+ */
+  -moz-animation: nonedisplay 2s; /* Fx 5+ */
+  -o-animation: nonedisplay 2s; /* Opera 12+ */
+  animation: nonedisplay 2s; /* IE 10+, Fx 29+ */
+}

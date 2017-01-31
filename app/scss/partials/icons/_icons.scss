@@ -1,0 +1,22 @@
+.icon-hide {
+  opacity: 0;
+  height: 99px;
+  position: absolute;
+  top: 15px;
+  left: 32px;
+  @include transition;
+}
+
+.service-item2 .icon-hide {
+  left: 27px;
+}
+
+.service-item3 .icon-hide {
+  top: -2px;
+  height: 118px;
+}
+
+.service-item4 .icon-hide {
+  top: 0;
+  height: 117px;
+}

@@ -1,0 +1,122 @@
+/*planet*/
+.planet-st0{fill:#FFFFFF;}
+.planet-st1{fill:#010101;}
+#planet {
+  position: absolute;
+  top: -11px;
+  left: 8px;
+  z-index: -1;
+  width: 52%;
+}
+
+@-webkit-keyframes planet {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  5% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  50% {
+    -webkit-transform: translate(0, -30%); /** Chrome & Safari **/
+  }
+  95% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  100% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+}
+
+@-moz-keyframes planet {
+  0% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  5% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -moz-transform: translate(0, -130px); /** Firefox **/
+  }
+  95% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  100% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+}
+
+@-o-keyframes planet {
+  0% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  5% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  50% {
+    -o-transform: translate(0, -30%); /** Opera **/
+  }
+  95% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  100% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+}
+
+@keyframes planet {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  5% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -webkit-transform: translate(0, -30%); /** Chrome & Safari **/
+    -o-transform: translate(0, -30%); /** Opera **/
+    -moz-transform: translate(0, -130px); /** Firefox **/
+  }
+  95% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  100% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+}
+
+.ico {
+  -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+  -o-transform: rotateY(90deg); /** Opera **/
+  -moz-transform: rotateY(90deg); /** Firefox **/
+}
+
+.nav-map:hover .ico {
+  -webkit-animation: planet 1s forwards; /* Safari 4+ */
+  -moz-animation: planet 1s forwards; /* Fx 5+ */
+  -o-animation: planet 1s forwards; /* Opera 12+ */
+  animation: planet 1s forwards; /* IE 10+, Fx 29+ */
+  fill:#EFAF03;
+}
+
+.nav-map:hover .planet-image {
+  opacity: 0;
+}
+
+.nav-map.selected .ico {
+  -webkit-animation: planet 1s forwards; /* Safari 4+ */
+  -moz-animation: planet 1s forwards; /* Fx 5+ */
+  -o-animation: planet 1s forwards; /* Opera 12+ */
+  animation: planet 1s forwards; /* IE 10+, Fx 29+ */
+  fill:#EFAF03;
+}
+
+.nav-map.selected .planet-image {
+  opacity: 0;
+}

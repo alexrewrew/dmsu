@@ -1,0 +1,316 @@
+/*ICON 2 STYLE*/
+.icon2-st0 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1.5;
+  stroke-miterlimit: 10;
+}
+
+.icon2-st1 {
+  fill: none;
+  stroke: #F3B81A;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon2-st2 {
+  fill: #FFFFFF;
+  stroke: #F3B81A;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon2-st3 {
+  fill: #F3B81B;
+}
+
+@-webkit-keyframes doorOpen {
+  0% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+  }
+  30% {
+    -webkit-transform: rotateY(0deg); /** Chrome & Safari **/
+  }
+  50% {
+    -webkit-transform: rotateY(0deg); /** Chrome & Safari **/
+  }
+  80% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+  }
+  100% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+  }
+}
+
+@-moz-keyframes doorOpen {
+  0% {
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+  30% {
+    -moz-transform: rotateY(0deg); /** Firefox **/
+  }
+  50% {
+    -moz-transform: rotateY(0deg); /** Firefox **/
+  }
+  80% {
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+  100% {
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+}
+
+@-o-keyframes doorOpen {
+  0% {
+    -o-transform: rotateY(90deg); /** Opera **/
+  }
+  30% {
+    -o-transform: rotateY(0deg); /** Opera **/
+  }
+  50% {
+    -o-transform: rotateY(0deg); /** Opera **/
+  }
+  80% {
+    -o-transform: rotateY(90deg); /** Opera **/
+  }
+  100% {
+    -o-transform: rotateY(90deg); /** Opera **/
+  }
+}
+
+@keyframes doorOpen {
+  0% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+    -o-transform: rotateY(90deg); /** Opera **/
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+  30% {
+    -webkit-transform: rotateY(0deg); /** Chrome & Safari **/
+    -o-transform: rotateY(0deg); /** Opera **/
+    -moz-transform: rotateY(0deg); /** Firefox **/
+  }
+  50% {
+    -webkit-transform: rotateY(0deg); /** Chrome & Safari **/
+    -o-transform: rotateY(0deg); /** Opera **/
+    -moz-transform: rotateY(0deg); /** Firefox **/
+  }
+  80% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+    -o-transform: rotateY(90deg); /** Opera **/
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+  100% {
+    -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+    -o-transform: rotateY(90deg); /** Opera **/
+    -moz-transform: rotateY(90deg); /** Firefox **/
+  }
+}
+
+@-webkit-keyframes peopleGo {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  20% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  50% {
+    -webkit-transform: translate(200%, 0); /** Chrome & Safari **/
+    visibility: hidden;
+  }
+  80% {
+    -webkit-transform: translate(-500%, 0); /** Chrome & Safari **/
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: translate(-275%, 0); /** Chrome & Safari **/
+    visibility: visible;
+  }
+}
+
+@-moz-keyframes peopleGo {
+  0% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  20% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -moz-transform: translate(20px, 0); /** Firefox **/
+    visibility: hidden;
+  }
+  80% {
+    -moz-transform: translate(-50px, 0); /** Firefox **/
+    visibility: hidden;
+  }
+  100% {
+    -moz-transform: translate(-29px, 0); /** Firefox **/
+    visibility: visible;
+  }
+}
+
+@-o-keyframes peopleGo {
+  0% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  20% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  50% {
+    -o-transform: translate(200%, 0); /** Opera **/
+    visibility: hidden;
+  }
+  80% {
+    -o-transform: translate(-500%, 0); /** Opera **/
+    visibility: hidden;
+  }
+  100% {
+    -o-transform: translate(-275%, 0); /** Opera **/
+    visibility: visible;
+  }
+}
+
+@keyframes peopleGo {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  20% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -webkit-transform: translate(200%, 0); /** Chrome & Safari **/
+    -o-transform: translate(200%, 0); /** Opera **/
+    -moz-transform: translate(20px, 0); /** Firefox **/
+    visibility: hidden;
+  }
+  80% {
+    -webkit-transform: translate(-500%, 0); /** Chrome & Safari **/
+    -o-transform: translate(-500%, 0); /** Opera **/
+    -moz-transform: translate(-50px, 0); /** Firefox **/
+    visibility: hidden;
+  }
+  100% {
+    -webkit-transform: translate(-275%, 0); /** Chrome & Safari **/
+    -o-transform: translate(-275%, 0); /** Opera **/
+    -moz-transform: translate(-29px, 0); /** Firefox **/
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes peoplesGo {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  20% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+  }
+  50% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+  }
+  70% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+  }
+  100% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+  }
+}
+
+@-moz-keyframes peoplesGo {
+  0% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  20% {
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+  70% {
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+  100% {
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+}
+
+@-o-keyframes peoplesGo {
+  0% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  20% {
+    -o-transform: translate(0, 0); /** Opera **/
+  }
+  50% {
+    -o-transform: translate(57%, 0); /** Opera **/
+  }
+  70% {
+    -o-transform: translate(57%, 0); /** Opera **/
+  }
+  100% {
+    -o-transform: translate(57%, 0); /** Opera **/
+  }
+}
+
+@keyframes peoplesGo {
+  0% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  20% {
+    -webkit-transform: translate(0, 0); /** Chrome & Safari **/
+    -o-transform: translate(0, 0); /** Opera **/
+    -moz-transform: translate(0, 0); /** Firefox **/
+  }
+  50% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+    -o-transform: translate(57%, 0); /** Opera **/
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+  70% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+    -o-transform: translate(57%, 0); /** Opera **/
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+  100% {
+    -webkit-transform: translate(57%, 0); /** Chrome & Safari **/
+    -o-transform: translate(57%, 0); /** Opera **/
+    -moz-transform: translate(13.5px, 0); /** Firefox **/
+  }
+}
+
+.door {
+  -webkit-transform: rotateY(90deg); /** Chrome & Safari **/
+  -o-transform: rotateY(90deg); /** Opera **/
+  -moz-transform: rotateY(90deg); /** Firefox **/
+  -webkit-transform-origin: 45px 0px;
+  -moz-transform-origin: 45px 0px;
+  -o-transform-origin: 45px 0px;
+  -ms-transform-origin: 45px 0px;
+}
+
+.service-item2:hover .door {
+  -webkit-animation: doorOpen 2s; /* Safari 4+ */
+  -moz-animation: doorOpen 2s; /* Fx 5+ */
+  -o-animation: doorOpen 2s; /* Opera 12+ */
+  animation: doorOpen 2s; /* IE 10+, Fx 29+ */
+}
+
+.service-item2:hover .people3 {
+  -webkit-animation: peopleGo 2s; /* Safari 4+ */
+  -moz-animation: peopleGo 2s; /* Fx 5+ */
+  -o-animation: peopleGo 2s; /* Opera 12+ */
+  animation: peopleGo 2s; /* IE 10+, Fx 29+ */
+}
+
+.service-item2:hover .peoples {
+  -webkit-animation: peoplesGo 2s; /* Safari 4+ */
+  -moz-animation: peoplesGo 2s; /* Fx 5+ */
+  -o-animation: peoplesGo 2s; /* Opera 12+ */
+  animation: peoplesGo 2s; /* IE 10+, Fx 29+ */
+}
