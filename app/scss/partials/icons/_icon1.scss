@@ -145,9 +145,9 @@
     -moz-transform: rotate(0deg); /** Firefox **/
   }
   50% {
-    -webkit-transform: translate(20%, 20%) rotate(45deg); /** Chrome & Safari **/
-    -o-transform: translate(20%, 20%) rotate(45deg); /** Opera **/
-    -moz-transform: translate(20%, 20%) rotate(45deg); /** Firefox **/
+    -webkit-transform: translate(17px, 17px) rotate(45deg); /** Chrome & Safari **/
+    -o-transform: translate(17px, 17px) rotate(45deg); /** Opera **/
+    -moz-transform: translate(17px, 17px) rotate(45deg); /** Firefox **/
   }
   80% {
     -webkit-transform: rotate(0deg); /** Chrome & Safari **/
@@ -162,10 +162,10 @@
 }
 
 .loop {
-  -webkit-transform-origin: 56px 37px;
-  -moz-transform-origin: 58px 23px;
-  -o-transform-origin: 58px 23px;
-  -ms-transform-origin: 58px 23px;
+  -webkit-transform-origin: 64px 18px;
+  -moz-transform-origin: 64px 18px;
+  -o-transform-origin: 64px 18px;
+  -ms-transform-origin: 64px 18px;
 }
 
 .people {

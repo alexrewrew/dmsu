@@ -29,10 +29,10 @@
     -webkit-transform: rotate(0deg); /** Chrome & Safari **/
   }
   40% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+    -webkit-transform: rotateX(180deg) translate(0, -3px); /** Chrome & Safari **/
   }
   60% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
+    -webkit-transform: rotateX(180deg) translate(0, -3px); /** Chrome & Safari **/
   }
   90% {
     -webkit-transform: rotate(0deg); /** Chrome & Safari **/
@@ -71,10 +71,10 @@
     -o-transform: rotate(0deg); /** Opera **/
   }
   40% {
-    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -o-transform: rotateX(180deg) translate(0, -3px); /** Opera **/
   }
   60% {
-    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -o-transform: rotateX(180deg) translate(0, -3px); /** Opera **/
   }
   90% {
     -o-transform: rotate(0deg); /** Opera **/
@@ -96,13 +96,13 @@
     -moz-transform: rotate(0deg); /** Firefox **/
   }
   40% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
-    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -webkit-transform: rotateX(180deg) translate(0, -3px); /** Chrome & Safari **/
+    -o-transform: rotateX(180deg) translate(0, -3px); /** Opera **/
     -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
   }
   60% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%); /** Chrome & Safari **/
-    -o-transform: rotateX(180deg) translate(0, -15%); /** Opera **/
+    -webkit-transform: rotateX(180deg) translate(0, -3px); /** Chrome & Safari **/
+    -o-transform: rotateX(180deg) translate(0, -3px); /** Opera **/
     -moz-transform: rotateX(180deg) translate(0, -3px); /** Firefox **/
   }
   90% {

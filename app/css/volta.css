@@ -5292,11 +5292,11 @@ tbody.collapse.in {
     -moz-transform: rotate(0deg);
     /** Firefox **/ }
   50% {
-    -webkit-transform: translate(20%, 20%) rotate(45deg);
+    -webkit-transform: translate(17px, 17px) rotate(45deg);
     /** Chrome & Safari **/
-    -o-transform: translate(20%, 20%) rotate(45deg);
+    -o-transform: translate(17px, 17px) rotate(45deg);
     /** Opera **/
-    -moz-transform: translate(20%, 20%) rotate(45deg);
+    -moz-transform: translate(17px, 17px) rotate(45deg);
     /** Firefox **/ }
   80% {
     -webkit-transform: rotate(0deg);
@@ -5314,10 +5314,10 @@ tbody.collapse.in {
     /** Firefox **/ } }
 
 .loop {
-  -webkit-transform-origin: 56px 37px;
-  -moz-transform-origin: 58px 23px;
-  -o-transform-origin: 58px 23px;
-  -ms-transform-origin: 58px 23px; }
+  -webkit-transform-origin: 64px 18px;
+  -moz-transform-origin: 64px 18px;
+  -o-transform-origin: 64px 18px;
+  -ms-transform-origin: 64px 18px; }
 
 .people {
   -webkit-transform-origin: 42px 20px;
@@ -5713,10 +5713,10 @@ tbody.collapse.in {
     -webkit-transform: rotate(0deg);
     /** Chrome & Safari **/ }
   40% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%);
+    -webkit-transform: rotateX(180deg) translate(0, -3px);
     /** Chrome & Safari **/ }
   60% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%);
+    -webkit-transform: rotateX(180deg) translate(0, -3px);
     /** Chrome & Safari **/ }
   90% {
     -webkit-transform: rotate(0deg);
@@ -5753,10 +5753,10 @@ tbody.collapse.in {
     -o-transform: rotate(0deg);
     /** Opera **/ }
   40% {
-    -o-transform: rotateX(180deg) translate(0, -15%);
+    -o-transform: rotateX(180deg) translate(0, -3px);
     /** Opera **/ }
   60% {
-    -o-transform: rotateX(180deg) translate(0, -15%);
+    -o-transform: rotateX(180deg) translate(0, -3px);
     /** Opera **/ }
   90% {
     -o-transform: rotate(0deg);
@@ -5781,16 +5781,16 @@ tbody.collapse.in {
     -moz-transform: rotate(0deg);
     /** Firefox **/ }
   40% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%);
+    -webkit-transform: rotateX(180deg) translate(0, -3px);
     /** Chrome & Safari **/
-    -o-transform: rotateX(180deg) translate(0, -15%);
+    -o-transform: rotateX(180deg) translate(0, -3px);
     /** Opera **/
     -moz-transform: rotateX(180deg) translate(0, -3px);
     /** Firefox **/ }
   60% {
-    -webkit-transform: rotateX(180deg) translate(0, -15%);
+    -webkit-transform: rotateX(180deg) translate(0, -3px);
     /** Chrome & Safari **/
-    -o-transform: rotateX(180deg) translate(0, -15%);
+    -o-transform: rotateX(180deg) translate(0, -3px);
     /** Opera **/
     -moz-transform: rotateX(180deg) translate(0, -3px);
     /** Firefox **/ }
@@ -7395,7 +7395,8 @@ select {
   border: 0;
   border-radius: 0;
   box-shadow: none;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  display: none; }
 
 .selection-container-active.selection-with-drop {
   background: #fff; }
@@ -8321,10 +8322,10 @@ select {
     font-size: 30px; }
 
 .search-row {
-  position: relative;
-  top: 50px;
   padding-left: 29px;
-  padding-right: 29px; }
+  padding-right: 29px;
+  position: relative;
+  top: 50px; }
   .search-row .selection-container {
     background: #fff;
     padding: 15px 30px 17px 22px;
@@ -8781,8 +8782,8 @@ select {
 
 .nav-tabs.small-tabs {
   /*display: flex;
-  justify-content: center;
-  align-items: center;*/ }
+     justify-content: center;
+     align-items: center;*/ }
   .nav-tabs.small-tabs .tab-arrow {
     display: none; }
   .nav-tabs.small-tabs .item-tab {
@@ -8856,7 +8857,6 @@ select {
 .panel-collapse {
   background: #fff; }
 
-/* no answer */
 .no-answer {
   color: #0183de; }
   .no-answer .el-chevron-right {
@@ -8868,14 +8868,12 @@ select {
     .no-answer:hover .el-chevron-right {
       left: 44px; }
 
-/* caret */
 .caret-down {
   position: absolute;
   left: auto;
   right: 2.7%;
   top: 34%; }
 
-/* FOOTER */
 footer {
   max-height: 379px;
   padding-top: 32px;
