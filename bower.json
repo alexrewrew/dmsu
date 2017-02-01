@@ -25,6 +25,7 @@
     "jquery-ui": "^1.12.1",
     "chosen": "^1.6.2",
     "elusive-icons": "*",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "magnific-popup": "Magnific-Popup#^1.1.0"
   }
 }

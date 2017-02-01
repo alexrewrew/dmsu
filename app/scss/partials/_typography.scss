@@ -18,6 +18,23 @@ h2 {
   color: $c-gray;
 }
 
+.error404-header {
+  position: relative;
+  top:-15px;
+  text-align: center;
+  h2 {
+    @include regular-text(600, 15.625em);
+    line-height: 0.08;
+    color: $error;
+    display: inline-block;
+
+  }
+  p {
+    font-size: 1.25em;
+    margin-top: 40px;
+  }
+}
+
 .service-header {
   color: $c-gray;
   padding-bottom: 8px;

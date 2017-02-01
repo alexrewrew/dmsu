@@ -50,7 +50,7 @@ gulp.task('scripts', function () {
 //конкатинація html
 //'app/html/*.html'
 gulp.task('rigger', function () {
-    gulp.src(['app/html/services-template.html', '!app/html/footer.html', '!app/html/header.html'])
+    gulp.src(['app/html/*.html','app/html/services-template.html', '!app/html/footer.html', '!app/html/header.html'])
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });

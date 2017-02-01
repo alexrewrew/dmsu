@@ -8,13 +8,14 @@ input {
   outline: none;
 }
 
+button {
+  @include transition;
+}
+
 /*search input*/
 .search-relative {
   position: relative;
   right: 17px;
-}
-
-.search-head {
   form {
     height: 21px;
   }
@@ -31,6 +32,9 @@ input {
     outline: none;
     z-index: 2;
     color: $icon;
+    i {
+      font-size: 13px;
+    }
     &:hover {
       color: $blue;
     }
@@ -63,7 +67,7 @@ input {
 /*SEARCH MOBILE*/
 .search-relative.mobile-search {
   display: none;
-  .search-head form {
+  form {
     height: 24px;
     position: relative;
     top: 6px;
@@ -71,23 +75,22 @@ input {
     width: 75%;
   }
 
-  .search-head {
-    input {
-      height: 29px;
-      left: 0;
+  input {
+    height: 29px;
+    left: 0;
+    right: auto;
+    &:focus {
+      width: 180px;
+      left: 35px;
       right: auto;
-      &:focus {
-        width: 180px;
-        left: 35px;
-        right: auto;
-      }
-    }
-    button {
-      left: 0;
-      right: auto;
-      font-size: 24px;
     }
   }
+  button {
+    left: 0;
+    right: auto;
+    font-size: 24px;
+  }
+
 }
 
 //search result
