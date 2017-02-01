@@ -652,7 +652,8 @@
     padding-right: 30px !important;
   }*/
   .primary-nav > .has-children > a::before, .primary-nav > .has-children > a::after {
-    width: 9px;
+    /*width: 9px;*/
+    width: 7px;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
@@ -671,20 +672,22 @@
   }
 
   .primary-nav > .has-children > a::before {
-    right: -7px;
+    /*right: -7px;*/
+    right: -8px;
   }
   .primary-nav > .has-children > a::after {
     right: -12px;
   }
   .primary-nav > .has-children > a.selected::before, .primary-nav > .has-children > a.selected::after {
-    width: 14px;
+    /*width: 14px;*/
+    width: 8px;
   }
   .primary-nav > .has-children > a.selected::before {
-    -webkit-transform: translateX(5px) rotate(-45deg);
-    -moz-transform: translateX(5px) rotate(-45deg);
-    -ms-transform: translateX(5px) rotate(-45deg);
-    -o-transform: translateX(5px) rotate(-45deg);
-    transform: translateX(5px) rotate(-45deg);
+    -webkit-transform: translateX(4px) rotate(-45deg);
+    -moz-transform: translateX(4px) rotate(-45deg);
+    -ms-transform: translateX(4px) rotate(-45deg);
+    -o-transform: translateX(4px) rotate(-45deg);
+    transform: translateX(4px) rotate(-45deg);
   }
   .primary-nav > .has-children > a.selected::after {
     -webkit-transform: rotate(45deg);
@@ -714,7 +717,6 @@
     right: 0
   }
 }
-
 
 @media only screen and (min-width: 1170px) {
   .no-js .primary-nav {

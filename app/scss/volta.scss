@@ -3,7 +3,7 @@
 //mixins
 @import 'mixins';
 //fonts
-@import 'fonts';
+@import 'partials/fonts';
 //font icons
 @import '../package/font-awesome/css/font-awesome';
 //grid
@@ -29,8 +29,9 @@
 @import 'partials/form';
 @import 'partials/button';
 //menu
-@import 'menu';
+@import 'partials/menu';
 @import 'partials/navigation';
+
 
 // SEARCH SERVICES
 .search-row {
