@@ -1,4 +1,36 @@
 /*TYPOGRAPHY STYLES */
+b,
+strong {
+  font-weight: bold;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
 
 /* headers */
 h1 {
@@ -98,13 +130,19 @@ a {
   color: $text;
   cursor: pointer;
   text-decoration: none;
+  background-color: transparent;
   &:hover {
     text-decoration: none;
     color: inherit;
+    outline: 0;
   }
   &:focus {
     text-decoration: none;
     color: inherit;
+    outline: 0;
+  }
+  &:active {
+    outline: 0;
   }
 }
 

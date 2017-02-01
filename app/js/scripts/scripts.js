@@ -11,32 +11,7 @@ $(document).ready(function () {
         $(".footer-slide-item").removeClass("active");
     });
 
-    //  $(window).on('load resize', function () {
     if (window.matchMedia('(max-width: 767px)').matches) {
-        /*$('#news-slider').slider({
-            arrows: false,
-            variableWidth: true,
-            infinite: false,
-            slide: '.important-item',
-            dots: true
-        });
-        $('#event-slider').slider({
-            arrows: false,
-            variableWidth: true,
-            infinite: false,
-            slide: '.event-item',
-            dots: true
-        });
-        $('#accordion-slider').slider({
-            arrows: false,
-            variableWidth: true,
-            infinite: false,
-            dots: true,
-            slide: '.item-tab',
-            swipeToSlide: true
-        });
-
-        */
         $('.slider').slider({
             arrows: false,
             variableWidth: true,

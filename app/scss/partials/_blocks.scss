@@ -1,0 +1,268 @@
+/* MAIN CSS STYLES */
+article,
+figure,
+footer,
+header,
+main,
+nav,
+section{
+  display: block;
+}
+figure {
+  margin: 0;
+}
+audio,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+header {
+  background: $blue;
+  min-height: 122px;
+  .container {
+    position: relative;
+  }
+}
+
+section {
+  background: $a-gray;
+
+}
+
+section.indent {
+  padding: {
+    left: 9.2%;
+    right: 9.2%;
+  }
+}
+
+article {
+  position: relative;
+  font-size: 1em;
+  a {
+    color: $blue;
+    text-decoration: underline;
+    font-weight: bold;
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+article.indent {
+
+  padding: {
+    left: 13.6%;
+    right: 12.8%;
+  }
+
+  .blue-button {
+    color: $white;
+    text-decoration: none;
+    margin-top: 64px;
+    margin-bottom: 30px;
+    &:hover {
+      color: $white;
+    }
+
+  }
+  ul {
+    padding-left: 0;
+    margin-top: 13px;
+    margin-bottom: 18px;
+    list-style: none;
+    li {
+      margin-bottom: 1px;
+    }
+    li:before {
+      content: "—";
+      font-size: 23px;
+      margin-right: 18px;
+      color: $yellow;
+    }
+  }
+}
+
+article.article-tab {
+  padding-left: 12%;
+  padding-right: 13%;
+  padding-bottom: 61px;
+}
+
+/* fixed position when menu is opened */
+.overflow-body {
+  overflow-y: hidden !important;
+  position: fixed !important;
+}
+
+/* text aligns */
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* INDENTS */
+.indent {
+  padding: {
+    top: 71px;
+    bottom: 44px;
+    left: 22px;
+    right: 31px;
+  }
+}
+
+.indent-tab {
+  padding: {
+    top: 71px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.indent-services {
+  padding-bottom: 0;
+}
+
+.indent-article-services {
+  padding-top: 0;
+}
+
+.row-indent {
+  padding: {
+    top: 0;
+    bottom: 19px;
+    left: 27px;
+    right: 0;
+  }
+}
+
+.chief-row {
+  padding-top: 19px;
+  padding-bottom: 51px;
+  .img-container {
+    img {
+      height: 250px;
+    }
+  }
+}
+
+/*IMAGES*/
+
+img {
+  vertical-align: middle;
+}
+
+.gallery {
+  position: relative;
+  &:after {
+    content: "";
+    position: relative;
+    display: block;
+    clear: both;
+  }
+  a {
+    float: left;
+    display: block;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-box-shadow: inset 1000px 1200px 1300px 1200px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: inset 1000px 1200px 1300px 1200px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 1000px 1200px 1300px 1200px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      @include transition;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.img-big {
+  width: 100%;
+  margin-top: 43px;
+  margin-bottom: 63px;
+}
+
+.img-middle {
+  width: 48%;
+  margin-top: 41px;
+  margin-bottom: 41px;
+  &:nth-child(even) {
+    float: right;
+  }
+}
+
+.img-small {
+  width: 24%;
+  margin-right: 1.3333333%;
+  margin-top: 41px;
+  margin-bottom: 41px;
+  &:nth-child(4n+4) {
+    margin-right: 0;
+  }
+}
+
+/**/
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/*video*/
+.video-big {
+  width: 100%;
+  margin-top: 43px;
+  margin-bottom: 51px;
+}
+
+.video-small {
+  width: 48%;
+  margin-top: 41px;
+  margin-bottom: 41px;
+  &:nth-child(even) {
+    float: right;
+  }
+}

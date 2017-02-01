@@ -1,26 +1,3 @@
-// CSS3MultiColumn - a javascript implementation of the CSS3 multi-column module
-// v1.02 beta - Jan 08 2008
-// Copyright (c) 2005 Cdric Savarese <pro@4213miles.com>
-// Copyright (c) 2012 Gabriel Saldana <gabriel@gabrielsaldana.org>
-// This software is licensed under the CC-GNU LGPL <http://creativecommons.org/licenses/LGPL/2.1/>
-
-// For additional information, see : http://www.csscripting.com/
-
-// Supported Properties:
-// column-count
-// column-width
-// column-gap
-// column-rule
-
-// Unsupported Properties:
-// column-rule-width (use column-rule instead)
-// column-rule-style (use column-rule instead)
-// column-rule-color (use column-rule instead)
-// column-span
-// column-width-policy
-// column-space-distribution
-
-
 function CSS3MultiColumn() {
 	//alert('Development Version');
 	var cssCache = new Object();

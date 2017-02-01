@@ -6,8 +6,13 @@
 @import 'partials/fonts';
 //font icons
 @import '../package/font-awesome/css/font-awesome';
+@import 'partials/main';
+//main styles
+@import 'partials/blocks';
 //grid
 @import 'grid';
+//tabs
+@import 'partials/tabs';
 //slider
 @import '../package/slick-carousel/slick/slick';
 @import '../package/slick-carousel/slick/slick-theme';
@@ -19,8 +24,6 @@
 @import 'partials/icons/icon4';
 @import 'partials/icons/logo';
 @import 'partials/icons/map';
-//main styles
-@import 'partials/main';
 //typography
 @import 'partials/typography';
 @import 'partials/tables';
@@ -104,7 +107,6 @@
 /* PAGE HEADERS */
 .head-row {
      padding-left: 36px;
-     /*padding-right: 36px;*/
      padding-top: 21px;
 }
 
@@ -474,111 +476,7 @@
      }
 }
 
-/* TABS */
-.tab-arrow {
-     width: 0;
-     height: 0;
-     border-left: 10px solid transparent;
-     border-right: 10px solid transparent;
-     border-top: 10px solid $yellow;
-     position: absolute;
-     bottom: 10px;
-     left: calc(50% - 10px);
-     @include transition;
-     z-index: -1;
-     opacity: 0;
-}
 
-.blue-arrow {
-     bottom: auto;
-     top: -10px;
-     opacity: 1;
-     border-bottom: 10px solid $blue-hover;
-     border-top: 0;
-     left: auto;
-     right: 75px;
-     display: none;
-}
-
-/**/
-
-.nav-tabs {
-     border: none;
-     margin-top: 0;
-}
-
-.nav-tabs .item-tab {
-     position: relative;
-     float: left;
-     &:hover {
-          .tab-arrow {
-               bottom: -10px;
-               opacity: 1;
-               z-index: 1;
-          }
-     }
-}
-
-.nav-tabs div.active {
-     .tab-arrow {
-          bottom: -10px;
-          border-top: 10px solid $c-gray;
-          opacity: 1;
-          z-index: 1;
-     }
-}
-
-.nav-tabs div a {
-     display: block;
-     border-radius: 0;
-     line-height: 0.9;
-     color: $text;
-     background: $white;
-     border: none;
-     cursor: pointer;
-     @include regular-text(400, 1.250em);
-     outline: none;
-     padding: {
-          top: 19px;
-          bottom: 20px;
-          left: 30px;
-          right: 30px;
-     }
-     z-index: 2;
-     position: relative;
-     margin-right: 19px;
-     &:hover {
-          background: $yellow;
-     }
-
-}
-
-.nav-tabs div.active a,
-.nav-tabs div.active a:hover,
-.nav-tabs div.active a:focus {
-     color: $white;
-     background: $c-gray;
-     border: none;
-     cursor: default;
-}
-
-.nav-tabs.small-tabs {
-     /*display: flex;
-     justify-content: center;
-     align-items: center;*/
-     .tab-arrow {
-          display: none;
-     }
-     .item-tab {
-          display: inline-block;
-          float: none;
-          margin-bottom: 16px;
-     }
-     div a {
-          font-size: 1.125em;
-          padding: 10px 28px 14px;
-     }
-}
 
 /* TAB CONTENT */
 .tab-pane {

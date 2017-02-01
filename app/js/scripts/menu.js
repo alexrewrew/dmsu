@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
-    //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+
     var MqL = 768;
-    //move nav element position according to window width
+
     moveNavigation();
     $(window).on('resize', function () {
         (!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
@@ -57,6 +57,7 @@ jQuery(document).ready(function ($) {
     $('.primary-nav').children('.has-children').children('a').on('click', function (event) {
         event.preventDefault();
     });
+    
     //open submenu
     $('.has-children').children('a').on('click', function (event) {
         if (!checkWindowWidth()) event.preventDefault();
