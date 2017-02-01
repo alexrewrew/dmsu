@@ -5258,10 +5258,7 @@ select {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  padding-top: 26px;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-bottom: 26px;
+  padding: 26px 32px;
   min-height: 226px; }
   .service-item:hover {
     background: #fff; }

@@ -299,12 +299,7 @@
      position: relative;
      background: transparent;
      @include transition;
-     padding: {
-          top: 26px;
-          left: 32px;
-          right: 32px;
-          bottom: 26px;
-     }
+     padding: 26px 32px;
      min-height: 226px;
      &:hover {
           background: $white;
