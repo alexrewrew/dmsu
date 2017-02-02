@@ -526,6 +526,9 @@
           background: $white;
           color: $text;
      }
+     &:after {
+          transform:rotate(0deg);
+     }
 }
 
 .panel-title > a {
@@ -548,6 +551,26 @@
      }
      &:focus {
           color: $text;
+     }
+     &:after {
+          content: "";
+          position: absolute;
+          left: auto;
+          right: 2.7%;
+          top: 45%;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $text;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -ms-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+          z-index: 2;
+          opacity: 1;
+          transform:rotate(-180deg);
      }
 }
 
@@ -575,13 +598,7 @@
      }
 }
 
-//caret
-.caret-down {
-     position: absolute;
-     left: auto;
-     right: 2.7%;
-     top: 34%;
-}
+
 
 //FOOTER
 footer {

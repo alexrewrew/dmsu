@@ -55,12 +55,6 @@
     padding-left: 10px;
   }
   /**/
-  .select-caret {
-    .caret-down {
-      display: block;
-    }
-  }
-  /**/
   .indent {
     padding-left: 0;
     padding-right: 0;
@@ -69,6 +63,10 @@
   .row-indent {
     padding-left: 0;
     padding-bottom: 9px;
+  }
+  .container.big-tab-content {
+    padding-left: 0;
+    padding-right: 0;
   }
   /*images*/
   .img-big, .img-middle, .img-small {
@@ -89,6 +87,14 @@
       float: left;
     }
   }
+
+  /**/
+  .select-wrapper {
+    &:after {
+      display: block;
+    }
+  }
+
 
   /**/
   .navigation-top {
@@ -163,6 +169,13 @@
   }
   .primary-nav > li.mobile-lang {
     display: block;
+    .select-wrapper {
+      &:after {
+        right:auto;
+        left:35%;
+        border-top: 5px solid $white;
+      }
+    }
   }
   .primary-nav > li.mobile-social {
     display: block;
@@ -245,10 +258,19 @@
     table {
       margin-left: 15px;
     }
+    .big-table {
+      margin-left: 0;
+      margin-right: -15px;
+    }
   }
-.table-half {
-  width: 100%;
-}
+  .big-tab-content .overflow-table {
+    table {
+      margin-left: 15px;
+    }
+  }
+  .table-half {
+    width: 100%;
+  }
 
   /*SERVICES BLOCK*/
   .services {
@@ -278,6 +300,8 @@
   /* 404 services */
   .error404-container {
     padding-bottom: 50px;
+    margin-left: -15px;
+    margin-right: -15px;
     .search-row {
       position: static;
     }
@@ -407,8 +431,8 @@
   .panel-title > a {
     padding-left: 20px;
     padding-right: 30px;
-    .caret-down {
-      right: 7%;
+    &:after {
+      right: 6%;
     }
   }
   .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
@@ -613,7 +637,7 @@
     position: static;
     width: 100%;
     button {
-      right:25px;
+      right: 25px;
     }
   }
   /*services*/
@@ -622,7 +646,7 @@
     padding-right: 35px;
     .fa-chevron-right {
       opacity: 1;
-      right:15px;
+      right: 15px;
     }
   }
 }

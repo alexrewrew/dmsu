@@ -206,7 +206,7 @@ select {
   padding: {
     top: 17px;
     left: 25px;
-    right: 25px;
+    right: 35px;
     bottom: 17px;
   }
   line-height: 1.14;
@@ -216,6 +216,30 @@ select {
   -webkit-appearance: none;
   -webkit-box-shadow: none;
   -webkit-border-radius: 0;
+}
+
+.select-wrapper {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 6%;
+    top: 45%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $text;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 2;
+    opacity: 1;
+    display: none;
+  }
 }
 
 /*chosen selection*/
@@ -331,26 +355,3 @@ select {
 .selection-container-single.selection-container-single-nosearch .selection-search {
   display: none;
 }
-
-/*slect carets*/
-.select-caret {
-  position: relative;
-  .caret-down {
-    display: none;
-    top: 30%;
-    right: 5%
-  }
-}
-
-.mobile-lang.select-caret {
-  .caret-down {
-    right: 62%;
-    color: $white;
-    top: 25%;
-  }
-}
-
-.caret {
-  margin-left: 14px;
-}
-
