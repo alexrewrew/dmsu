@@ -1147,7 +1147,6 @@ tbody.collapse.in {
 .tab-content > .active {
   display: block; }
 
-/* TABS */
 .nav-tabs {
   border: none;
   margin-top: 0; }

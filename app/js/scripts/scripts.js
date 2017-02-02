@@ -69,10 +69,6 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.select-connect').click(function () {
-        $('.blue-arrow').toggle('normal');
-    });
-
     $('.active-result').click(function (e) {
         $(this).trigger('blur');
     });
