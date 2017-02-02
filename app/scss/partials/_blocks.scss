@@ -173,10 +173,11 @@ img {
     display: block;
     clear: both;
   }
-  a {
+  span {
     float: left;
     display: block;
     position: relative;
+    cursor: pointer;
     &::after {
       content: "";
       position: absolute;
@@ -195,6 +196,7 @@ img {
     }
     img {
       width: 100%;
+      display: inline-block;
     }
   }
 }

@@ -385,10 +385,9 @@
     width: 244px;
     line-height: 1;
     margin-bottom: 10px;
-  }
-
-  .tab-arrow {
-    display: none;
+    &:after {
+      display: none;
+    }
   }
 
   .nav-tabs div.slider-slide {

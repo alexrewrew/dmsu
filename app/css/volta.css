@@ -265,11 +265,12 @@ img {
     position: relative;
     display: block;
     clear: both; }
-  .gallery a {
+  .gallery span {
     float: left;
     display: block;
-    position: relative; }
-    .gallery a::after {
+    position: relative;
+    cursor: pointer; }
+    .gallery span::after {
       content: "";
       position: absolute;
       top: 0;
@@ -285,10 +286,11 @@ img {
       -ms-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
       transition: all 0.4s ease; }
-    .gallery a:hover::after {
+    .gallery span:hover::after {
       opacity: 1; }
-    .gallery a img {
-      width: 100%; }
+    .gallery span img {
+      width: 100%;
+      display: inline-block; }
 
 .img-big {
   width: 100%;
@@ -5766,8 +5768,8 @@ article.indent .services-list {
     width: 244px;
     line-height: 1;
     margin-bottom: 10px; }
-  .tab-arrow {
-    display: none; }
+    .nav-tabs div a:after {
+      display: none; }
   .nav-tabs div.slider-slide {
     max-width: 240px;
     margin-left: 15px; }
