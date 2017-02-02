@@ -3788,6 +3788,9 @@ select {
     .link-lang .selection-container .selection-results li {
       padding: 5px 8px; }
 
+.selection-container-single.selection-container-single-nosearch .selection-search {
+  display: none; }
+
 /*slect carets*/
 .select-caret {
   position: relative; }

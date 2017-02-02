@@ -328,6 +328,10 @@ select {
   }
 }
 
+.selection-container-single.selection-container-single-nosearch .selection-search {
+  display: none;
+}
+
 /*slect carets*/
 .select-caret {
   position: relative;

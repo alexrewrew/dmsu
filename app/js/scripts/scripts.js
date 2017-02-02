@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $("select").on('selection:showing_dropdown', function() {
         $(this).next('.selection-container').addClass("selection-container-active");
-        $(this).next('.selection-container').children('.selection-drop').slideDown(200);
+        $(this).next('.selection-container').children('.selection-drop').slideDown(300);
     }).on('selection:hiding_dropdown', function () {
         $(this).next('.selection-container').removeClass("selection-container-active");
-        $(this).next('.selection-container').children('.selection-drop').slideUp(200);
+        $(this).next('.selection-container').children('.selection-drop').slideUp(300);
     });
 
     $(".footer-slide-item").click(function () {
