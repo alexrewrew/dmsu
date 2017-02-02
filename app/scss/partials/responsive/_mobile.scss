@@ -54,7 +54,7 @@
     -moz-columns: 1;
     padding-left: 10px;
   }
-  /**/
+  //indents
   .indent {
     padding-left: 0;
     padding-right: 0;
@@ -68,7 +68,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  /*images*/
+  //images
   .img-big, .img-middle, .img-small {
     width: 100%;
     margin-right: 0;
@@ -88,15 +88,14 @@
     }
   }
 
-  /**/
+  //select
   .select-wrapper {
     &:after {
       display: block;
     }
   }
 
-
-  /**/
+  //NAVIGATION
   .navigation-top {
     display: none;
   }
@@ -106,7 +105,6 @@
       right: 0;
     }
   }
-  /*NAVIGATION*/
   .nav-logo {
     display: none;
   }
@@ -128,13 +126,10 @@
     padding-left: 0;
     background: $blue-hover !important;
     z-index: 198;
-    /*z-index: 100;
-    width: 275px;*/
   }
   .primary-nav ul {
     background: $blue-hover !important;
     width: 100%;
-    /*min-height: 100vh;*/
   }
   .primary-nav a, .primary-nav ul a {
     border-bottom: 0;
@@ -181,12 +176,40 @@
     display: block;
   }
 
-  /*VIEW ALL */
+  .header-buttons {
+    display: block;
+  }
+  .has-children > a.nav-map:before {
+    display: block;
+  }
+  .has-children > a:before, .has-children > a.selected:before, .has-children.nav-number > a:before {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid $white;
+    transform:rotate(-90deg);
+    right:10%;
+  }
+  .go-back a {
+    padding-left: 40px !important;
+  }
+  .go-back a:before {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid $white;
+  }
+  .nav-map.selected .planet-image, .nav-map.selected .planet-image:hover {
+    opacity: 1;
+  }
+  .has-children > a::after {
+    display: none;
+  }
+
+  //VIEW ALL
   .row-view-all {
     display: block;
   }
 
-  /*SERVICES*/
+  //SERVICES
   .mobile-logo {
     display: block;
 
@@ -210,7 +233,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  /**/
+  //breadcrumbs
   .breadcrumbs.right-panel {
     margin-right: 0;
     margin-left: 10px;
@@ -236,7 +259,7 @@
     }
   }
 
-  /*TABLES*/
+  //TABLES
   .chief-row {
     .img-container {
       width: 100%;
@@ -272,7 +295,7 @@
     width: 100%;
   }
 
-  /*SERVICES BLOCK*/
+  //SERVICES BLOCK
   .services {
     padding: {
       top: 68px;
@@ -297,7 +320,7 @@
     opacity: 1;
   }
 
-  /* 404 services */
+   //404 services
   .error404-container {
     padding-bottom: 50px;
     margin-left: -15px;
@@ -313,7 +336,7 @@
     }
   }
 
-  /*NEWS*/
+  //NEWS
 
   .important-item {
     padding-left: 30px;
@@ -370,7 +393,7 @@
     }
   }
 
-  /*NEWS WIDTH*/
+  //NEWS WIDTH
   .item-width {
     padding-bottom: 0;
     .important-item, .event-item {
@@ -393,7 +416,7 @@
     }
   }
 
-  /*TABS*/
+  //TABS
   .nav-tabs div {
     float: none;
   }
@@ -440,18 +463,16 @@
     padding-right: 20px;
   }
 
-  /* button up */
+   //button up
   .button-up {
     bottom: 15px;
     right: 15px;
   }
 
-  /*FIXES*/
+  //FIXES
   .padding-fix {
     padding-left: 15px;
     padding-right: 15px;
-    /*
-        margin-right: -15px;*/
   }
   .padding-image-fix {
     padding-left: 15px;
@@ -470,7 +491,7 @@
     padding-right: 15px;
   }
 
-  /*SLIDERS*/
+  //SLIDERS
 
   .slider-list {
     overflow-y: visible;
@@ -482,11 +503,6 @@
   }
 
   #filter-slider {
-    /*margin-right: -15px;
-    padding-bottom: 40px;
-    padding-left: 15px;
-    padding-top: 8px;
-    margin-bottom: 0;*/
     .slider-dots {
       bottom: -34px;
       text-align: center;
@@ -495,7 +511,7 @@
     }
   }
 
-  /* FOOTER */
+   //FOOTER
   footer {
     margin-top: 45px;
     max-height: inherit;
@@ -508,10 +524,6 @@
   .nav > li.footer-trident, .nav > li.footer-separator {
     display: none;
   }
-
-  /*.footer-side {
-    min-height: 245px;
-  }*/
   .padding-aside {
     .footer-side {
       padding-top: 26px;
@@ -613,7 +625,7 @@
   .nav-tabs.organ-partners li.active a {
     background: $yellow;
   }
-  /*search result*/
+  //search result
   .search-result {
     padding-left: 0;
     padding-right: 0;
@@ -640,7 +652,7 @@
       right: 25px;
     }
   }
-  /*services*/
+  //services
   article.indent .services-list li a {
     padding-left: 0;
     padding-right: 35px;

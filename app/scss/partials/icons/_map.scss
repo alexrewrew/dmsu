@@ -1,12 +1,18 @@
 /*planet*/
-.planet-st0{fill:#FFFFFF;}
-.planet-st1{fill:#010101;}
+.planet-st0 {
+  fill: #FFFFFF;
+}
+
+.planet-st1 {
+  fill: #010101;
+}
+
 #planet {
   position: absolute;
   top: -11px;
   left: 8px;
   z-index: -1;
-  width: 52%;
+  width: auto;
 }
 
 @-webkit-keyframes planet {
@@ -102,7 +108,7 @@
   -moz-animation: planet 1s forwards; /* Fx 5+ */
   -o-animation: planet 1s forwards; /* Opera 12+ */
   animation: planet 1s forwards; /* IE 10+, Fx 29+ */
-  fill:#EFAF03;
+  fill: #EFAF03;
 }
 
 .nav-map:hover .planet-image {
@@ -114,7 +120,7 @@
   -moz-animation: planet 1s forwards; /* Fx 5+ */
   -o-animation: planet 1s forwards; /* Opera 12+ */
   animation: planet 1s forwards; /* IE 10+, Fx 29+ */
-  fill:#EFAF03;
+  fill: #EFAF03;
 }
 
 .nav-map.selected .planet-image {

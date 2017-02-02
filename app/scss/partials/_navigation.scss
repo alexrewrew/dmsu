@@ -1,4 +1,4 @@
-/* MENU STYLES */
+ //MENU STYLES
 
 .navigation-top {
   background: $b-gray;
@@ -24,7 +24,7 @@
   }
 }
 
-/*small navigation*/
+//small navigation
 
 .navigation-head {
   padding: 0;
@@ -54,9 +54,9 @@
   margin-right: 29px;
 }
 
-/*MAIN NAVIGATION*/
+//MAIN NAVIGATION
 
-/* logo */
+ //logo
 .nav-logo {
   float: left;
   list-style: none;
@@ -105,7 +105,7 @@
   }
 }
 
-/*menu items*/
+//menu items
 .nav-number {
   a {
     font-size: 1.500em;
@@ -160,22 +160,6 @@
 
 .has-children a {
   position: relative;
-}
-
-.nav-arrow {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-
-  border-bottom: 10px solid $blue-hover;
-  position: absolute;
-  bottom: -25px;
-  left: calc(50% - 10px);
-  @include transition;
-  z-index: -1;
-  opacity: 0;
-  display: none;
 }
 
 .primary-nav > li.mobile-lang {
