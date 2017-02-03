@@ -14808,6 +14808,7 @@ jQuery(document).ready(function ($) {
         toggleSearch('close')
         $('.overlay').removeClass('is-visible');
         $(".dropdown-footer-block").fadeOut('fast');
+        $('.has-children-footer').removeClass('selected-footer')
     });
 
 
@@ -14842,6 +14843,7 @@ jQuery(document).ready(function ($) {
         $('.overlay').addClass('is-visible');
         //desktop version only
         $(".dropdown-footer-block").fadeIn('fast');
+        $(this).addClass('selected-footer');
     });
 
     //submenu items - go back link

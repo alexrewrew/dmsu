@@ -56,9 +56,7 @@
   }
   //indents
   .indent {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 10px;
+    padding: 64px 0 10px;
   }
   .row-indent {
     padding-left: 0;
@@ -239,14 +237,14 @@
     margin-left: 10px;
     float: left;
     li {
-      .news-date {
+      a{
         padding-left: 5px;
         padding-right: 15px;
       }
     }
   }
   .filter-indent {
-    padding-top: 60px;
+    padding-top: 68px;
   }
   .filter-links {
     display: block;
@@ -298,15 +296,14 @@
   //SERVICES BLOCK
   .services {
     padding: {
-      top: 68px;
-      bottom: 10px;
+      top: 55px;
+      bottom: 0;
       left: 0;
       right: 0;
     }
   }
   .service-item {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 29px 0 0;
     p {
       padding-right: 0;
       font-size: .875em;
@@ -347,7 +344,7 @@
     background: $white;
     width: 244px;
     margin-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     .content-item {
       height: 285px;
     }
@@ -364,11 +361,10 @@
     background: $white;
     padding-top: 34px;
     padding-right: 30px;
-    margin-bottom: 31px;
     width: 244px;
     margin-left: 15px;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     img {
       margin-top: 0;
       margin-bottom: 20px;
@@ -431,7 +427,7 @@
     height: 70px;
     width: 244px;
     line-height: 1;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     &:after {
       display: none;
     }
@@ -513,7 +509,7 @@
 
    //FOOTER
   footer {
-    margin-top: 45px;
+    margin-top: 58px;
     max-height: inherit;
     overflow-x: hidden;
   }

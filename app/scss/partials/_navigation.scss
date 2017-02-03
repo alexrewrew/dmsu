@@ -14,8 +14,7 @@
   line-height: 1.2;
   text-align: left;
   text-transform: uppercase;
-  padding: 9px 0 9px 0;
-
+  padding: 17px 0;
   color: $white;
   display: inline-block;
   &:hover {
@@ -115,45 +114,42 @@
 }
 
 .header-search {
-  //display: none;
-  //position: relative;
-  //list-style-type: none;
-  //margin: 0;
-  //padding-left: 0;
-  //float: left;
-  //background: red;
   display: none;
   margin: 0;
+  padding: 0;
   position: static;
   list-style: none;
   position: absolute;
   height: 45px;
-  left:10px;
-  form {
-    //height: 45px;
-    //background: yellow;
-    input {
-      //height: 41px;
-      //left: -30px;
-      //right: auto;
-      //border-radius: 0;
-      //background: green;
-      &:focus {
-        //width: 180px;
-        //left: 15px;
-        //right: auto;
+  left:0;
+  min-width:50px;
+  .search-relative {
+    position: static;
+    height: 45px;
+    display: block;
+    form {
+      height: 45px;
+      input {
+        height: 41px;
+        right: auto;
+        border-radius: 0;
+        &:focus {
+          width: 180px;
+          left: 50px;
+          right: auto;
+        }
       }
-    }
-    button {
-      //height: 45px;
-      //background: aqua;
-      //display: block;
-      //overflow-x: visible;
-      i {
-        font-size: 25px;
+      button {
+        width: auto;
+        height: 45px;
+        position: static;
+        i {
+          font-size: 25px;
+        }
       }
     }
   }
+
 }
 
 .secondary-nav {

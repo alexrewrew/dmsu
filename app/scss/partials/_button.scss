@@ -31,6 +31,27 @@
   &:hover {
     background: $yellow;
   }
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $c-gray;
+    position: absolute;
+    bottom: 37px;
+    left: calc(50% - 10px);
+    @include transition;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+.footer-button.selected-footer {
+  &:after {
+    z-index: 2;
+    opacity: 1;
+    bottom: 47px;
+  }
 }
 
 .blue-button {
