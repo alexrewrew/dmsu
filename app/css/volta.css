@@ -4372,31 +4372,14 @@ select {
 
 .header-search {
   display: none;
-  position: relative;
-  list-style-type: none;
   margin: 0;
-  float: left;
-  /*background: red;*/ }
-  .header-search form {
-    height: 45px;
-    /*background: yellow;*/ }
-    .header-search form input {
-      height: 41px;
-      left: -30px;
-      right: auto;
-      border-radius: 0;
-      /*background: green;*/ }
-      .header-search form input:focus {
-        width: 180px;
-        left: 15px;
-        right: auto; }
-    .header-search form button {
-      height: 45px;
-      /*background: aqua;*/
-      display: block;
-      width: 50px; }
-      .header-search form button i {
-        font-size: 25px; }
+  position: static;
+  list-style: none;
+  position: absolute;
+  height: 45px;
+  left: 10px; }
+  .header-search form button i {
+    font-size: 25px; }
 
 .secondary-nav span {
   width: 49%;
@@ -5820,6 +5803,6 @@ article.indent .services-list {
   .size-panel {
     display: block; }
   footer {
-    margin-top: 30px; }
+    margin-top: 42px; }
   .go-back {
     display: none; } }
