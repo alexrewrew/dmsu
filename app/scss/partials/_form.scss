@@ -79,7 +79,7 @@ input {
 /*search input*/
 .search-relative {
   position: relative;
-  right: 17px;
+  right: 23px;
   form {
     height: 21px;
   }
@@ -95,10 +95,7 @@ input {
     cursor: pointer;
     outline: none;
     z-index: 2;
-    color: $icon;
-    i {
-      font-size: 13px;
-    }
+    color: $icon;font-size: 18px;
     &:hover {
       color: $blue;
     }
@@ -119,7 +116,7 @@ input {
       cursor: pointer;
     }
     &:focus {
-      width: 215px;
+      width: 300px;
       background: $white;
       right: 30px;
       z-index: 0;
@@ -312,7 +309,7 @@ select {
 
 /*language select*/
 
-.link-lang {
+/*.link-lang {
   margin-left: 4px;
   select {
     background: transparent;
@@ -350,7 +347,7 @@ select {
       padding: 5px 8px;
     }
   }
-}
+}*/
 
 .selection-container-single.selection-container-single-nosearch .selection-search {
   display: none;

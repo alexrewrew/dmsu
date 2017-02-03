@@ -53,8 +53,6 @@
 
     <!-- style -->
     <link rel="stylesheet" type="text/css" href="css/volta.css">
-    <link rel="stylesheet" href="package/magnific-popup/dist/magnific-popup.css">
-
 
     <!-- modernizr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -74,25 +72,24 @@
     <!--TOP NAVIGATION-->
     <div class="container-fluid navigation-top">
         <div class="container">
-            <div class="mobile-offset-0 portrait-offset-7 mobile-12 portrait-5 padding-fix">
-                <ul class="navigation-head">
+            <div class="mobile-offset-0 portrait-offset-7 portrait-5 padding-fix">
+                <ul>
                     <li class="search-relative">
-                        <form class="search-form">
+                        <form>
                             <input type="text" placeholder="Пошук">
-                            <button type="submit" class="submit-search-form"><i class="fa fa-search"></i>
+                            <button type="submit"><i class="fa fa-search"></i>
                             </button>
                         </form>
                     </li>
-                    <li><a href="" target="_blank" class="social-head" title="" alt=""><i
+                </ul>
+                <ul>
+                    <li><a href="" target="_blank" title="" alt=""><i
                             class="fa fa-facebook-official"></i></a></li>
-                    <li><a href="" target="_blank" class="social-head" title="" alt=""><i class="fa fa-skype"></i></a>
-                    </li>
-                    <li class="link-lang"><a>
-                        <form action=""><select class="lang-select">
-                            <option value="">UKR</option>
-                            <option value="">ENG</option>
-                        </select></form>
-                    </a></li>
+                    <li><a href="" target="_blank" title="" alt=""><i class="fa fa-skype"></i></a>
+                </ul>
+                <ul>
+                    <li><a href="" alt="" title="" class="active-language">УКР</a></li>
+                    <li><a href="" alt="" title="">ENG</a></li>
                 </ul>
             </div>
         </div>
@@ -1086,23 +1083,4 @@
 
 <!--scripts-->
 <script type="text/javascript" src="js/main.js"></script>
-<script src="package/magnific-popup/dist/jquery.magnific-popup.js"></script>
-<script>
-    $(document).ready(function() {
-
-        $('.gallery > a').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            gallery:{
-                enabled:true
-            },
-            mainClass: 'mfp-img-mobile',
-            image: {
-                verticalFit: true
-            }
-
-        });
-
-    });
-</script>
 </body></html>

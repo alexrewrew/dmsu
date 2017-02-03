@@ -46,7 +46,7 @@
     margin-bottom: 30px;
   }
   h5 {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
   .two-col-list {
     columns: 1;
@@ -512,6 +512,8 @@
     margin-top: 58px;
     max-height: inherit;
     overflow-x: hidden;
+    padding-top: 26px;
+    padding-bottom: 58px;
   }
   .footer-data {
     padding-left: 0;
@@ -522,8 +524,8 @@
   }
   .padding-aside {
     .footer-side {
-      padding-top: 26px;
-      min-height: 300px;
+      padding-top: 0;
+      min-height: 230px;
     }
     p {
       margin-bottom: 43px;

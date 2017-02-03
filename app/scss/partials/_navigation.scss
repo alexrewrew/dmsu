@@ -1,8 +1,58 @@
- //MENU STYLES
+//MENU STYLES
 
 .navigation-top {
   background: $b-gray;
-  padding: 0 15px;
+  padding: 4px 15px;
+  text-align: right;
+  ul {
+    list-style: none;
+    margin: -5px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    &:nth-child(2) {
+      li {
+        a {
+          color: $icon;
+          font-size: 19px;
+          position: relative;
+          top: 2px;
+          padding: 0 1px;
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      margin-left: 28px;
+      li {
+        a {
+          @include regular-text(600, .875em);
+          padding: 5px 9px 4px 9px;
+          color: $blue-hover;
+          &:hover {
+            background: $blue;
+            color: $white;
+          }
+        }
+        .active-language {
+          background: $white;
+          color: $text;
+          &:hover {
+            background: $blue;
+            color: $white;
+          }
+        }
+      }
+    }
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        line-height: 1;
+      }
+    }
+  }
 }
 
 .navigation-main {
@@ -23,39 +73,9 @@
   }
 }
 
-//small navigation
-
-.navigation-head {
-  padding: 0;
-  margin: 0;
-  float: right;
-  li {
-    display: inline-block;
-    a {
-      display: inline-block;
-      color: $icon;
-      &:hover {
-        color: $blue;
-      }
-    }
-  }
-}
-
-.social-head {
-  font-size: 0.813em;
-  padding: 8px 2px 5px 2px;
-  i {
-    font-size: 13px;
-  }
-}
-
-.link-search {
-  margin-right: 29px;
-}
-
 //MAIN NAVIGATION
 
- //logo
+//logo
 .nav-logo {
   float: left;
   list-style: none;
@@ -121,8 +141,8 @@
   list-style: none;
   position: absolute;
   height: 45px;
-  left:0;
-  min-width:50px;
+  left: 9px;
+  min-width: 50px;
   .search-relative {
     position: static;
     height: 45px;
@@ -188,7 +208,7 @@
       bottom: 0px;
     }
     position: relative;
-    top:2px;
+    top: 2px;
   }
 }
 

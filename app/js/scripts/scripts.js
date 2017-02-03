@@ -119,6 +119,18 @@ $(document).ready(function () {
         $('#size-default').addClass('size-disabled');
         $('#size-plus').removeClass('size-disabled');
     });
+    $('.gallery > a').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        gallery:{
+            enabled:true
+        },
+        mainClass: 'mfp-img-mobile',
+        image: {
+            verticalFit: true
+        }
+
+    });
 
     
 });
