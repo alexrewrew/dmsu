@@ -105,7 +105,7 @@ gulp.task('video', function() {
 })
 
 //build
-gulp.task('build', ['clean', 'fonts', 'video', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['fonts', 'video', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
 });
 
 

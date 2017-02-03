@@ -1,0 +1,12 @@
+<!--<link rel="stylesheet" href="package/magnific-popup/dist/magnific-popup.css">-->
+
+<!--<script src="package/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<script>
+    $('#22').magnificPopup({
+        delegate: 'a', // the selector for gallery item
+        type: 'image',
+        gallery: {
+            enabled:true
+        }
+    });
+</script>-->
