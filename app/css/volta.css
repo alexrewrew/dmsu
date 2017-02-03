@@ -4376,10 +4376,10 @@ select {
   list-style-type: none;
   margin: 0;
   float: left;
-  background: red; }
+  /*background: red;*/ }
   .header-search form {
     height: 45px;
-    background: yellow; }
+    /*background: yellow;*/ }
     .header-search form input {
       height: 41px;
       left: -30px;
@@ -4392,7 +4392,9 @@ select {
         right: auto; }
     .header-search form button {
       height: 45px;
-      background: purple; }
+      /*background: aqua;*/
+      display: block;
+      width: 50px; }
       .header-search form button i {
         font-size: 25px; }
 
@@ -5818,4 +5820,6 @@ article.indent .services-list {
   .size-panel {
     display: block; }
   footer {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .go-back {
+    display: none; } }
