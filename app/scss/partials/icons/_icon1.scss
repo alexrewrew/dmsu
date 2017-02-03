@@ -188,3 +188,20 @@
   -o-animation: scaling 2s; /* Opera 12+ */
   animation: scaling 2s; /* IE 10+, Fx 29+ */
 }
+
+.icon-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .icon-mobile {
+    display: block;
+  }
+  .icon-show {
+    display: none;
+    @include transition;
+  }
+  .icon-hide {
+    display: none;
+  }
+}

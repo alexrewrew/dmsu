@@ -1551,6 +1551,22 @@ tbody.collapse.in {
   animation: scaling 2s;
   /* IE 10+, Fx 29+ */ }
 
+.icon-mobile {
+  display: none; }
+
+@media only screen and (max-width: 768px) {
+  .icon-mobile {
+    display: block; }
+  .icon-show {
+    display: none;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .icon-hide {
+    display: none; } }
+
 /*ICON 2 STYLE*/
 .icon2-st0 {
   fill: none;
