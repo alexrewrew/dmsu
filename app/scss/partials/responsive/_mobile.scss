@@ -223,6 +223,18 @@
     padding-right: 0;
   }
   //breadcrumbs
+  .breadcrumbs {
+    max-width: 100%;
+    li {
+      max-width: 33.33333333%;
+      a {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+    }
+  }
   .breadcrumbs.right-panel {
     margin-right: 0;
     margin-left: 10px;
@@ -234,6 +246,7 @@
       }
     }
   }
+
   .filter-indent {
     padding-top: 68px;
   }
@@ -509,7 +522,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .nav > li.footer-trident, .nav > li.footer-separator {
+  .nav > li.footer-trident, .nav-tabs.organ-partners .footer-slide-item:after {
     display: none;
   }
   .padding-aside {

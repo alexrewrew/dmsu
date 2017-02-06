@@ -204,9 +204,7 @@ article.indent {
       color: #efaf03; }
 
 article.article-tab {
-  padding-left: 12%;
-  padding-right: 13%;
-  padding-bottom: 61px; }
+  padding: 33px 13% 61px 12%; }
 
 /* fixed position when menu is opened */
 .overflow-body {
@@ -4913,9 +4911,9 @@ select {
   .breadcrumbs li {
     float: left;
     list-style: none;
-    border-right: 1px solid #90d1ff;
     margin-top: 4px;
-    margin-bottom: 6px; }
+    margin-bottom: 6px;
+    position: relative; }
     .breadcrumbs li a {
       display: inline-block;
       color: #90d1ff;
@@ -4926,8 +4924,18 @@ select {
       padding-bottom: 1px; }
       .breadcrumbs li a:hover {
         color: #fff; }
-  .breadcrumbs li:last-child {
-    border: none; }
+    .breadcrumbs li:after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 24px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #90d1ff;
+      transform: rotate(20deg); }
+  .breadcrumbs li:last-child:after {
+    display: none; }
 
 .breadcrumbs.right-panel {
   float: right;
@@ -5332,6 +5340,21 @@ footer {
 
 .nav-tabs.organ-partners {
   margin-top: 30px; }
+  .nav-tabs.organ-partners .footer-slide-item {
+    position: relative;
+    padding-right: 11px; }
+    .nav-tabs.organ-partners .footer-slide-item:after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 15px;
+      position: absolute;
+      top: 11px;
+      right: 7px;
+      background: #a3a3a3;
+      transform: rotate(20deg); }
+    .nav-tabs.organ-partners .footer-slide-item:last-child:after {
+      display: none; }
   .nav-tabs.organ-partners li:focus {
     outline: none; }
 
@@ -5350,11 +5373,6 @@ footer {
   .nav-tabs.organ-partners > li > a:focus {
     background: transparent;
     outline: none; }
-
-.nav-tabs.organ-partners > li.footer-separator a {
-  cursor: default; }
-  .nav-tabs.organ-partners > li.footer-separator a:hover {
-    color: #a3a3a3; }
 
 .nav-tabs.organ-partners > li.active > a {
   color: #fff;
@@ -5781,6 +5799,15 @@ article.indent .services-list {
     padding-top: 0;
     padding-left: 0;
     padding-right: 0; }
+  .breadcrumbs {
+    max-width: 100%; }
+    .breadcrumbs li {
+      max-width: 33.33333333%; }
+      .breadcrumbs li a {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden; }
   .breadcrumbs.right-panel {
     margin-right: 0;
     margin-left: 10px;
@@ -5964,7 +5991,7 @@ article.indent .services-list {
   .footer-data {
     padding-left: 0;
     padding-right: 0; }
-  .nav > li.footer-trident, .nav > li.footer-separator {
+  .nav > li.footer-trident, .nav-tabs.organ-partners .footer-slide-item:after {
     display: none; }
   .padding-aside .footer-side {
     padding-top: 0;

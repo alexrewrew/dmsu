@@ -154,9 +154,9 @@
   li {
     float: left;
     list-style: none;
-    border-right: 1px solid $crumbs;
     margin-top: 4px;
     margin-bottom: 6px;
+    position: relative;
     a {
       display: inline-block;
       color: $crumbs;
@@ -167,15 +167,27 @@
         top: 3px;
         bottom: 1px;
       }
-
       &:hover {
         color: $white;
       }
     }
+    &:after {
+      content:"";
+      display: block;
+      width:1px;
+      height:24px;
+      position: absolute;
+      top:0;
+      right:0;
+      background: $crumbs;
+      transform: rotate(20deg);
+    }
 
   }
   li:last-child {
-    border: none;
+    &:after {
+      display: none;
+    }
   }
 }
 
@@ -638,6 +650,26 @@ footer {
 
 .nav-tabs.organ-partners {
   margin-top: 30px;
+  .footer-slide-item {
+    position: relative;
+    padding-right: 11px;
+    &:after {
+      content:"";
+      display: block;
+      width:2px;
+      height:15px;
+      position: absolute;
+      top:11px;
+      right:7px;
+      background: $f-gray;
+      transform: rotate(20deg);
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
   li {
     &:focus {
       outline: none;
@@ -661,15 +693,6 @@ footer {
   &:focus {
     background: transparent;
     outline: none;
-  }
-}
-
-.nav-tabs.organ-partners > li.footer-separator {
-  a {
-    cursor: default;
-    &:hover {
-      color: $f-gray;
-    }
   }
 }
 
