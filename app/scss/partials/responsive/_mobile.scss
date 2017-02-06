@@ -155,25 +155,16 @@
       left: 9px;
     }
   }
-
   .primary-nav > li.nav-number > a {
     font-size: 1.5em;
     font-weight: 600;
   }
   .primary-nav > li.mobile-lang {
     display: block;
-    .select-wrapper {
-      &:after {
-        right:auto;
-        left:35%;
-        border-top: 5px solid $white;
-      }
-    }
   }
   .primary-nav > li.mobile-social {
     display: block;
   }
-
   .header-buttons {
     display: block;
   }
@@ -280,7 +271,6 @@
       margin-left: 15px;
     }
     .big-table {
-      margin-left: 0;
       margin-right: -15px;
     }
   }

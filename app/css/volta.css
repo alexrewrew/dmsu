@@ -1746,48 +1746,6 @@ img.mfp-img {
 .icon1-cls-5 {
   fill: #f3b81a; }
 
-@-webkit-keyframes scaling {
-  0% {
-    -webkit-transform: scale(1);
-    /** Chrome & Safari **/ }
-  25% {
-    -webkit-transform: scale(0.7);
-    /** Chrome & Safari **/ }
-  60% {
-    -webkit-transform: scale(0.7);
-    /** Chrome & Safari **/ }
-  100% {
-    -webkit-transform: scale(1);
-    /** Chrome & Safari **/ } }
-
-@-moz-keyframes scaling {
-  0% {
-    -moz-transform: scale(1);
-    /** Firefox **/ }
-  25% {
-    -moz-transform: scale(0.7);
-    /** Firefox **/ }
-  60% {
-    -moz-transform: scale(0.7);
-    /** Firefox **/ }
-  100% {
-    -moz-transform: scale(1);
-    /** Firefox **/ } }
-
-@-o-keyframes scaling {
-  0% {
-    -o-transform: scale(1);
-    /** Opera **/ }
-  25% {
-    -o-transform: scale(0.7);
-    /** Opera **/ }
-  60% {
-    -o-transform: scale(0.7);
-    /** Opera **/ }
-  100% {
-    -o-transform: scale(1);
-    /** Opera **/ } }
-
 @keyframes scaling {
   0% {
     -webkit-transform: scale(1);
@@ -1795,11 +1753,19 @@ img.mfp-img {
     -o-transform: scale(1);
     /** Opera **/
     -moz-transform: scale(1);
+    /** Firefox **/
+    transform: scale(1);
+    /** Firefox **/
+    -ms-transform: scale(1);
     /** Firefox **/ }
   25% {
     -webkit-transform: scale(0.7);
     /** Chrome & Safari **/
     -o-transform: scale(0.7);
+    /** Opera **/
+    transform: scale(0.7);
+    /** Opera **/
+    -ms-transform: scale(0.7);
     /** Opera **/
     -moz-transform: scale(0.7);
     /** Firefox **/ }
@@ -1809,55 +1775,21 @@ img.mfp-img {
     -o-transform: scale(0.7);
     /** Opera **/
     -moz-transform: scale(0.7);
-    /** Firefox **/ }
+    /** Firefox **/
+    transform: scale(0.7);
+    /** Opera **/
+    -ms-transform: scale(0.7);
+    /** Opera **/ }
   100% {
     -webkit-transform: scale(1);
     /** Chrome & Safari **/
     -o-transform: scale(1);
     /** Opera **/
     -moz-transform: scale(1);
-    /** Firefox **/ } }
-
-@-webkit-keyframes transforming {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /** Chrome & Safari **/ }
-  50% {
-    -webkit-transform: translate(20%, 20%) rotate(45deg);
-    /** Chrome & Safari **/ }
-  80% {
-    -webkit-transform: rotate(0deg);
-    /** Chrome & Safari **/ }
-  100% {
-    -webkit-transform: rotate(0deg);
-    /** Chrome & Safari **/ } }
-
-@-moz-keyframes transforming {
-  0% {
-    -moz-transform: rotate(0deg);
-    /** Firefox **/ }
-  50% {
-    -moz-transform: translate(20%, 20%) rotate(45deg);
-    /** Firefox **/ }
-  80% {
-    -moz-transform: rotate(0deg);
-    /** Firefox **/ }
-  100% {
-    -moz-transform: rotate(0deg);
-    /** Firefox **/ } }
-
-@-o-keyframes transforming {
-  0% {
-    -o-transform: rotate(0deg);
-    /** Opera **/ }
-  50% {
-    -o-transform: translate(20%, 20%) rotate(45deg);
-    /** Opera **/ }
-  80% {
-    -o-transform: rotate(0deg);
-    /** Opera **/ }
-  100% {
-    -o-transform: rotate(0deg);
+    /** Firefox **/
+    transform: scale(1);
+    /** Opera **/
+    -ms-transform: scale(1);
     /** Opera **/ } }
 
 @keyframes transforming {
@@ -1867,6 +1799,10 @@ img.mfp-img {
     -o-transform: rotate(0deg);
     /** Opera **/
     -moz-transform: rotate(0deg);
+    /** Firefox **/
+    -ms-transform: rotate(0deg);
+    /** Firefox **/
+    transform: rotate(0deg);
     /** Firefox **/ }
   50% {
     -webkit-transform: translate(17px, 17px) rotate(45deg);
@@ -1874,6 +1810,10 @@ img.mfp-img {
     -o-transform: translate(17px, 17px) rotate(45deg);
     /** Opera **/
     -moz-transform: translate(17px, 17px) rotate(45deg);
+    /** Firefox **/
+    -ms-transform: translate(17px, 17px) rotate(45deg);
+    /** Firefox **/
+    transform: translate(17px, 17px) rotate(45deg);
     /** Firefox **/ }
   80% {
     -webkit-transform: rotate(0deg);
@@ -1881,6 +1821,10 @@ img.mfp-img {
     -o-transform: rotate(0deg);
     /** Opera **/
     -moz-transform: rotate(0deg);
+    /** Firefox **/
+    -ms-transform: rotate(0deg);
+    /** Firefox **/
+    transform: rotate(0deg);
     /** Firefox **/ }
   100% {
     -webkit-transform: rotate(0deg);
@@ -1888,19 +1832,25 @@ img.mfp-img {
     -o-transform: rotate(0deg);
     /** Opera **/
     -moz-transform: rotate(0deg);
+    /** Firefox **/
+    -ms-transform: rotate(0deg);
+    /** Firefox **/
+    transform: rotate(0deg);
     /** Firefox **/ } }
 
 .loop {
   -webkit-transform-origin: 64px 18px;
   -moz-transform-origin: 64px 18px;
   -o-transform-origin: 64px 18px;
-  -ms-transform-origin: 64px 18px; }
+  -ms-transform-origin: 64px 18px;
+  transform-origin: 64px 18px; }
 
 .people {
   -webkit-transform-origin: 42px 20px;
   -moz-transform-origin: 42px 20px;
   -o-transform-origin: 42px 20px;
-  -ms-transform-origin: 42px 20px; }
+  -ms-transform-origin: 42px 20px;
+  transform-origin: 42px 20px; }
 
 .service-item1:hover .loop {
   -webkit-animation: transforming 2s;
@@ -1908,6 +1858,8 @@ img.mfp-img {
   -moz-animation: transforming 2s;
   /* Fx 5+ */
   -o-animation: transforming 2s;
+  /* Opera 12+ */
+  -ms-animation: transforming 2s;
   /* Opera 12+ */
   animation: transforming 2s;
   /* IE 10+, Fx 29+ */ }
@@ -1918,6 +1870,8 @@ img.mfp-img {
   -moz-animation: scaling 2s;
   /* Fx 5+ */
   -o-animation: scaling 2s;
+  /* Opera 12+ */
+  -ms-animation: scaling 2s;
   /* Opera 12+ */
   animation: scaling 2s;
   /* IE 10+, Fx 29+ */ }
@@ -4857,19 +4811,9 @@ select {
 
 .primary-nav > li.mobile-lang {
   display: none; }
-  .primary-nav > li.mobile-lang select {
-    background: transparent;
-    color: #fff;
-    border: none;
-    font-size: 1.111em;
-    font-weight: 600;
-    width: 35%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    position: relative;
-    top: 2px; }
+  .primary-nav > li.mobile-lang a {
+    display: inline-block;
+    font-weight: 600; }
 
 .primary-nav > li.mobile-social {
   display: none;
@@ -5796,10 +5740,6 @@ article.indent .services-list {
     font-weight: 600; }
   .primary-nav > li.mobile-lang {
     display: block; }
-    .primary-nav > li.mobile-lang .select-wrapper:after {
-      right: auto;
-      left: 35%;
-      border-top: 5px solid #fff; }
   .primary-nav > li.mobile-social {
     display: block; }
   .header-buttons {
@@ -5870,7 +5810,6 @@ article.indent .services-list {
     .overflow-table table {
       margin-left: 15px; }
     .overflow-table .big-table {
-      margin-left: 0;
       margin-right: -15px; }
   .big-tab-content .overflow-table table {
     margin-left: 15px; }
