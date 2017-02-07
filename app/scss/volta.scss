@@ -370,8 +370,9 @@
   @include transition;
   position: absolute;
   right: 27px;
-  bottom: 25px;
+  bottom: 27px;
   display: none;
+  z-index: 20;
   a {
     color: #0183de;
     &:hover {
@@ -402,7 +403,7 @@
   outline: none;
 
   .read-next {
-    bottom: -30px;
+    bottom: -25px;
   }
 
   &:hover {
@@ -430,10 +431,11 @@
 }
 
 .event-date {
-  @include regular-text(400, 0.750em);
+  @include regular-text(600, 0.875em);
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   left: 12px;
+  line-height: 0.7;
 }
 
 //news width

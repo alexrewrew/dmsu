@@ -5072,8 +5072,9 @@ select {
   transition: all 0.4s ease;
   position: absolute;
   right: 27px;
-  bottom: 25px;
-  display: none; }
+  bottom: 27px;
+  display: none;
+  z-index: 20; }
   .read-next a {
     color: #0183de; }
     .read-next a:hover {
@@ -5097,7 +5098,7 @@ select {
   position: relative;
   outline: none; }
   .event-item .read-next {
-    bottom: -30px; }
+    bottom: -25px; }
   .event-item:hover {
     background: #fff; }
     .event-item:hover .read-next {
@@ -5118,13 +5119,14 @@ select {
 
 .event-date {
   font-family: "Proxima Nova", sans-serif;
-  font-weight: 400;
-  font-size: 0.75em;
+  font-weight: 600;
+  font-size: 0.875em;
   font-style: normal;
   font-stretch: normal;
   position: absolute;
-  bottom: -30px;
-  left: 12px; }
+  bottom: -20px;
+  left: 12px;
+  line-height: 0.7; }
 
 .item-width {
   padding-bottom: 56px; }
@@ -5852,7 +5854,7 @@ article.indent .services-list {
       right: 15px;
       bottom: -49px; }
     .event-item .read-next {
-      bottom: -50px; }
+      bottom: -49px; }
   .img-container {
     width: 75px; }
     .img-container img {
@@ -6082,6 +6084,11 @@ article.indent .services-list {
   .event-item img {
     width: 92%;
     margin-top: 0; }
+  .read-next {
+    display: block; }
+  .event-date {
+    font-size: 0.625em;
+    bottom: -28px; }
   .item-width .important-item {
     padding-right: 29px;
     width: 50%;
@@ -6133,6 +6140,11 @@ article.indent .services-list {
   .important-item {
     margin-right: 0;
     padding-right: 25px; }
+  .read-next {
+    display: block; }
+  .event-date {
+    font-size: 0.625em;
+    bottom: -28px; }
   .content-item {
     height: 153px; }
   .nav-tabs div a {
