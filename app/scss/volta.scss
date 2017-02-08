@@ -26,6 +26,7 @@
 @import 'partials/icons/icon4';
 @import 'partials/icons/logo';
 @import 'partials/icons/map';
+@import "partials/ukraine";
 //typography
 @import 'partials/typography';
 @import 'partials/tables';
@@ -431,9 +432,9 @@
 }
 
 .event-date {
-  @include regular-text(600, 0.875em);
+  @include regular-text(600, 0.75em);
   position: absolute;
-  bottom: -20px;
+  bottom: -21px;
   left: 12px;
   line-height: 0.7;
 }

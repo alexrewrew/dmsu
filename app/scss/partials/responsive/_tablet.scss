@@ -41,7 +41,11 @@
   }
   .event-date {
     font-size: 0.625em;
-    bottom: -28px;
+    max-width: 50%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: normal;
   }
 
   //NEWS WIDTH

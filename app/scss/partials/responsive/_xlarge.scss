@@ -16,4 +16,10 @@
   .go-back {
     display: none;
   }
+  .tablet-nav {
+    display: none;
+  }
+  .primary-nav .secondary-nav.display-nav {
+    display: block;
+  }
 }

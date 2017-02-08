@@ -278,6 +278,10 @@
   display: none;
 }
 
+.display-nav {
+  display: none;
+}
+
 //
 
 .overlay {
@@ -541,6 +545,84 @@
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
+  .primary-nav .secondary-nav.display-nav {
+    display: none;
+    height: 540px;
+    .big-map {
+      padding-top: 45px;
+    }
+    li {
+      width: 50%;
+      a {
+        height: auto;
+        cursor: default;
+        &:hover {
+          background: transparent;
+          opacity: 1;
+        }
+        svg {
+          g polygon {
+            fill: $white;
+            &:hover {
+              fill: $yellow;
+              stroke: $white;
+              cursor: pointer;
+            }
+          }
+          g circle {
+            fill: $blue-hover;
+            &:hover {
+              fill: $yellow;
+              stroke: $white;
+              cursor: pointer;
+              path {
+                fill: $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+    .authorities {
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+      }
+      ul {
+        list-style: none;
+        overflow-y: scroll;
+        max-height: 420px;
+        li {
+          width: 100%;
+          a {
+            width: 95% !important;
+            padding: 13px 0 12px;
+            font-size: 1.125em;
+            width: 100%;
+            cursor: pointer;
+            color: $white;
+            border-bottom:1px solid transparent;
+            &:hover {
+              border-bottom:1px solid $white;
+            }
+            span {
+              display: block;
+              float:left;
+              &:first-child {
+                width: 40%;
+                font-weight: 600;
+              }
+              &:last-child {
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .primary-nav .secondary-nav > li:nth-child(4n+2) {
     margin-right: 0;
     border-right: none;
