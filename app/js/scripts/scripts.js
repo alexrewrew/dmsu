@@ -150,26 +150,8 @@ $(document).ready(function () {
     $('#ukraine-map g').hover(function () {
         var reg2 = $(this).attr('data-region');
         $(this).toggleClass('region-map');
-        /*$(this).find('.auto-text').toggle();
-        $(this).find('.auto-link').toggle();*/
         $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
     })
-
-
-
-
-
-    // $('#krym').hover(function () {
-    //     $('#krym-svg .st0').toggleClass('region-map');
-    // })
-    // $('#krym-svg').hover(function () {
-    //     $('#krym').toggleClass('region-authority');
-    // })
-
-    /**/
-
-
-    
 });
 
 

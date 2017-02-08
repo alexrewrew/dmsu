@@ -570,11 +570,6 @@
               cursor: pointer;
             }
           }
-          g .st0.region-map {
-            fill: $yellow;
-            stroke: $white;
-            cursor: pointer;
-          }
           g circle.st0 {
             fill: $blue-hover;
             &:hover {
@@ -633,8 +628,6 @@
             span {
               display: block;
               float: left;
-
-
               &:first-child {
                 width: 40%;
                 font-weight: 600;

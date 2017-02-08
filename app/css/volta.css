@@ -4573,10 +4573,6 @@ select {
             fill: #efaf03;
             stroke: #fff;
             cursor: pointer; }
-        .primary-nav .secondary-nav.display-nav li a svg g .st0.region-map {
-          fill: #efaf03;
-          stroke: #fff;
-          cursor: pointer; }
         .primary-nav .secondary-nav.display-nav li a svg g circle.st0 {
           fill: #0096ff; }
           .primary-nav .secondary-nav.display-nav li a svg g circle.st0:hover {
