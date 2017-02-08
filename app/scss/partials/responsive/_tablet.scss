@@ -1,3 +1,5 @@
+/*TABLET*/
+
 @media (min-width: 992px) and (max-width: 1199px) {
 
   .container .navbar-header {
@@ -6,7 +8,7 @@
   h3 {
     font-size: 1.1250em;
   }
-   //NAVIGATION ELEMENTS
+   /*NAVIGATION ELEMENTS*/
   .nav-logo .nav-logo-text a {
     padding-right: 5px;
     padding-left: 10px;
@@ -27,14 +29,18 @@
   .go-back {
     display: none;
   }
-   //SERVICES
+  .primary-nav .secondary-nav h3 {
+    margin-bottom: 20px;
+  }
+   /*SERVICES*/
   .service-item {
     padding-right: 10px;
     p {
       padding-right: 0;
     }
   }
-   //IMPORTANT ITEM
+
+   /*IMPORTANT ITEM*/
   .important-item {
     margin-right: 0;
     padding-right: 25px;
@@ -52,11 +58,17 @@
     line-height: normal;
   }
 
-  //NEWS WIDTH
+  /*NEWS WIDTH*/
   .content-item {
     height: 153px;
   }
-   //TABS
+  .content-item h3 {
+    margin-bottom: 10px;
+  }
+  .event-item p {
+    margin-top: 11px;
+  }
+   /*TABS*/
   .nav-tabs div a {
     padding-left: 18px;
     padding-right: 18px;
@@ -64,18 +76,21 @@
   .panel-title > a {
     padding-right: 80px;
   }
-  //FOOTER
+  /*FOOTER*/
   .footer-button {
     font-size: .875em;
+
+  }
+  .footer-button.selected-footer::after {
+    bottom: 41px;
   }
   .footer-side {
     min-height: 225px;
   }
   .dropdown-footer-block {
     width: 932px;
-    bottom:140px
+    bottom:145px
   }
-  //
   #planet {
     display: none;
   }

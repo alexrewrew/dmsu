@@ -16927,6 +16927,12 @@ $(document).ready(function () {
         $(this).toggleClass('region-map');
         $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
     })
+    
+    $('#ukraine-map g').click(function () {
+        var reg3 = $(this).attr('data-region');
+        var reg4 = $('.authorities a[data-region=' + reg3 + ']').attr('href');
+        window.location = reg4;
+    })
 });
 
 

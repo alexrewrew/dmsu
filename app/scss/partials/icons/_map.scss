@@ -126,3 +126,15 @@
 .nav-map.selected .planet-image {
   opacity: 0;
 }
+
+@media only screen and (max-width: 1199px) {
+  #planet {
+    display: none;
+  }
+  .nav-map:hover .planet-image {
+    opacity: 1;
+  }
+  .nav-map.selected .planet-image {
+    opacity: 1;
+  }
+}

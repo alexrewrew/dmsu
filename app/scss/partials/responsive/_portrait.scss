@@ -1,6 +1,9 @@
- //TABLET PORTRAIT
+/* TABLET PORTRAIT*/
 
 @media (min-width: 768px) and (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
   .filter-links {
     margin: 0;
     li {
@@ -11,16 +14,19 @@
       }
     }
   }
-  //NAVIGATION
+  /*NAVIGATION*/
   .container .navbar-header {
     margin-left: 15px;
   }
-   //NAVIGATION ELEMENTS
+   /*NAVIGATION ELEMENTS*/
   .nav-logo .nav-logo-text a {
     font-size: .750em;
     padding-left: 5px;
     padding-right: 5px;
 
+  }
+  .primary-nav .secondary-nav > li {
+    width: 50%;
   }
   .primary-nav > li > a {
     font-size: .750em;
@@ -43,7 +49,7 @@
     }
   }
   .has-children > a.selected::after {
-    bottom: -30px;
+    bottom: -31px;
   }
   .primary-nav > li > a.nav-map {
     padding-left: 0;
@@ -53,7 +59,7 @@
     display: none;
   }
 
-  //IMPORTNAT ITEM
+  /*IMPORTNAT ITEM*/
   .important-item {
     margin-right: 0;
     padding-left: 29px;
@@ -80,13 +86,14 @@
 
   .read-next {
     display: block;
+    bottom:10px;
   }
   .event-date {
     font-size: 0.625em;
-    bottom: -28px;
+    bottom: -20px;
   }
 
-  //NEWS WIDTH
+  /*NEWS WIDTH*/
 
   .item-width {
     .important-item {
@@ -99,7 +106,7 @@
     }
   }
 
-  //TABS
+ /* TABS*/
   .nav-tabs div a {
     padding-left: 10px;
     padding-right: 10px;
@@ -108,10 +115,13 @@
     margin-right: 10px;
 
   }
+  .padding-right-fix {
+    padding-right: 15px;
+  }
   .panel-title > a {
     padding-right: 50px;
   }
-  // FOOTER
+  /* FOOTER*/
   .bottom-links li {
     margin-right: 12px;
   }

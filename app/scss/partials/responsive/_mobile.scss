@@ -1,3 +1,4 @@
+/*MOBILE*/
 @media (max-width: 767px) {
   html {
     overflow-x: hidden;
@@ -54,7 +55,7 @@
     -moz-columns: 1;
     padding-left: 10px;
   }
-  //indents
+  /*indents*/
   .indent {
     padding: 64px 0 10px;
   }
@@ -66,7 +67,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  //images
+  /*images*/
   .img-big, .img-middle, .img-small {
     width: 100%;
     margin-right: 0;
@@ -86,14 +87,14 @@
     }
   }
 
-  //select
+  /*select*/
   .select-wrapper {
     &:after {
       display: block;
     }
   }
 
-  //NAVIGATION
+  /*NAVIGATION*/
   .navigation-top {
     display: none;
   }
@@ -193,12 +194,12 @@
     display: none;
   }
 
-  //VIEW ALL
+  /*VIEW ALL*/
   .row-view-all {
     display: block;
   }
 
-  //SERVICES
+  /*SERVICES*/
   .mobile-logo {
     display: block;
 
@@ -222,7 +223,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  //breadcrumbs
+  /*breadcrumbs*/
   .breadcrumbs {
     max-width: 100%;
     li {
@@ -261,7 +262,7 @@
     }
   }
 
-  //TABLES
+  /*TABLES*/
   .chief-row {
     .img-container {
       width: 100%;
@@ -296,7 +297,7 @@
     width: 100%;
   }
 
-  //SERVICES BLOCK
+  /*SERVICES BLOCK*/
   .services {
     padding: {
       top: 55px;
@@ -320,7 +321,7 @@
     opacity: 1;
   }
 
-   //404 services
+   /*404 services*/
   .error404-container {
     padding-bottom: 50px;
     margin-left: -15px;
@@ -336,7 +337,7 @@
     }
   }
 
-  //NEWS
+  /*NEWS*/
 
   .important-item {
     padding-left: 30px;
@@ -393,7 +394,7 @@
     }
   }
 
-  //NEWS WIDTH
+  /*NEWS WIDTH*/
   .item-width {
     padding-bottom: 0;
     .important-item, .event-item {
@@ -416,7 +417,7 @@
     }
   }
 
-  //TABS
+  /*TABS*/
   .nav-tabs div {
     float: none;
   }
@@ -463,13 +464,13 @@
     padding-right: 20px;
   }
 
-   //button up
+   /*button up*/
   .button-up {
     bottom: 15px;
     right: 15px;
   }
 
-  //FIXES
+  /*FIXES*/
   .padding-fix {
     padding-left: 15px;
     padding-right: 15px;
@@ -491,7 +492,7 @@
     padding-right: 15px;
   }
 
-  //SLIDERS
+  /*SLIDERS*/
 
   .slider-list {
     overflow-y: visible;
@@ -511,7 +512,7 @@
     }
   }
 
-   //FOOTER
+   /*FOOTER*/
   footer {
     margin-top: 58px;
     max-height: inherit;
@@ -627,7 +628,7 @@
   .nav-tabs.organ-partners li.active a {
     background: $yellow;
   }
-  //search result
+  /*search result*/
   .search-result {
     padding-left: 0;
     padding-right: 0;
@@ -654,7 +655,7 @@
       right: 25px;
     }
   }
-  //services
+  /*services*/
   article.indent .services-list li a {
     padding-left: 0;
     padding-right: 35px;

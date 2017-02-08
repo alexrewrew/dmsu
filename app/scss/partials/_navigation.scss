@@ -1,4 +1,4 @@
-//MENU STYLES
+/*MENU STYLES*/
 
 .navigation-top {
   background: $b-gray;
@@ -73,9 +73,9 @@
   }
 }
 
-//MAIN NAVIGATION
+/*MAIN NAVIGATION*/
 
-//logo
+/*logo*/
 .nav-logo {
   float: left;
   list-style: none;
@@ -86,6 +86,7 @@
   }
   img {
     width: 67px;
+    height: 69px;
   }
   a {
     display: block;
@@ -124,7 +125,7 @@
   }
 }
 
-//menu items
+/*menu items*/
 .nav-number {
   a {
     font-size: 1.500em;

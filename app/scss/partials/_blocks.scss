@@ -113,21 +113,11 @@ article.article-tab {
 
 /* INDENTS */
 .indent {
-  padding: {
-    top: 71px;
-    bottom: 44px;
-    left: 22px;
-    right: 31px;
-  }
+  padding: 71px 31px 44px 22px;
 }
 
 .indent-tab, .container.indent-tab {
-  padding: {
-    top: 71px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  padding: 71px 0 0;
 }
 
 .indent-services {
@@ -139,12 +129,7 @@ article.article-tab {
 }
 
 .row-indent {
-  padding: {
-    top: 0;
-    bottom: 19px;
-    left: 27px;
-    right: 0;
-  }
+  padding: 0 0 19px 27px;
 }
 
 .chief-row {
@@ -224,7 +209,6 @@ img {
   }
 }
 
-//
 hr {
   margin-top: 20px;
   margin-bottom: 20px;

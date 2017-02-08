@@ -1,3 +1,4 @@
+/*tabs li*/
 .nav {
   margin-bottom: 0;
   padding-left: 0;
@@ -77,7 +78,7 @@
   display: block;
 }
 
-//TABS
+/*TABS*/
 
 .nav-tabs {
   border: none;
@@ -110,12 +111,7 @@
     cursor: pointer;
     @include regular-text(400, 1.250em);
     outline: none;
-    padding: {
-      top: 19px;
-      bottom: 20px;
-      left: 30px;
-      right: 30px;
-    }
+    padding: 19px 30px 20px;
     z-index: 2;
     position: relative;
     margin-right: 14px;

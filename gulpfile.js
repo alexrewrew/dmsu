@@ -57,7 +57,7 @@ gulp.task('rigger', function () {
 //мініфікація js
 gulp.task('compress', function () {
     return gulp.src('app/js/main.js')
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -69,7 +69,7 @@ gulp.task('minify-css', function () {
             cascade: false
         }))
         .pipe(csscomb())
-        .pipe(cleanCSS())
+        // .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -105,7 +105,7 @@ gulp.task('video', function() {
 })
 
 //build
-gulp.task('build', ['fonts', 'video', 'imagemin', 'compress', 'minify-css', 'minify-html'], function () {
+gulp.task('build', ['fonts', 'video', 'imagemin', 'minify-css', 'compress'/*, 'minify-html', */], function () {
 });
 
 

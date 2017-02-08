@@ -154,7 +154,7 @@ input {
 
 }
 
-//search result
+/*search result*/
 .search-form-main {
   position: relative;
   top: -15px;
@@ -240,8 +240,39 @@ select {
 }
 
 /*chosen selection*/
+.selection-container {
+  &:after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 40px;
+    top: 43%;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $text;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 2;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+.selection-container.selection-container-active {
+  &:after {
+    transform: rotate(-180deg);
+  }
+}
 
-.selection-container-single .selection-single { //main select style
+.selection-container-single .selection-single div {
+  display: none;
+}
+
+.selection-container-single .selection-single {
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -249,7 +280,7 @@ select {
   outline: none;
 }
 
-.selection-container .selection-drop { //collapsed style
+.selection-container .selection-drop {
   background: $white;
   border: 0;
   border-radius: 0;
@@ -260,7 +291,7 @@ select {
 
 .selection-container-active.selection-with-drop {
   background: $white;
-  .selection-single { //collapsed main style
+  .selection-single {
     background: $white;
     border: 0;
     border-radius: 0;
@@ -308,46 +339,6 @@ select {
 }
 
 /*language select*/
-
-/*.link-lang {
-  margin-left: 4px;
-  select {
-    background: transparent;
-    &:focus {
-      outline: none;
-    }
-  }
-  .selection-container {
-    padding: 0;
-    .selection-drop {
-      padding-bottom: 0;
-    }
-  }
-  .selection-container-active.selection-with-drop {
-    background: $white;
-    .selection-drop {
-      background: $b-gray;
-    }
-  }
-  .selection-container .selection-results li.result-selected, .selection-container .selection-results li.highlighted {
-    background: $white;
-    color: $text;
-  }
-  .selection-container .selection-results {
-    padding: {
-      left: 0;
-      right: 0;
-    }
-    margin: {
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    li {
-      padding: 5px 8px;
-    }
-  }
-}*/
 
 .selection-container-single.selection-container-single-nosearch .selection-search {
   display: none;

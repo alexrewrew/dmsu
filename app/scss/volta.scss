@@ -38,7 +38,7 @@
 @import 'partials/menu';
 @import 'partials/navigation';
 
-// SEARCH SERVICES
+/* SEARCH SERVICES */
 .search-row {
   padding-left: 29px;
   padding-right: 29px;
@@ -51,7 +51,7 @@
   }
 }
 
- //Services boxes
+/* Services boxes */
 .mobile-logo {
   display: none;
   padding: 26px 0 17px;
@@ -95,7 +95,7 @@
   }
 }
 
- //404 services
+/* 404 services*/
 .error404-container {
   padding-bottom: 100px;
   .search-row {
@@ -106,7 +106,7 @@
   }
 }
 
- //PAGE HEADERS
+ /*PAGE HEADERS*/
 .head-row {
   padding-left: 36px;
   padding-top: 21px;
@@ -149,6 +149,7 @@
   }
 }
 
+/* breadcrumbs */
 .breadcrumbs {
   padding: 0;
   margin: 0;
@@ -211,7 +212,7 @@
   }
 }
 
-//print icon
+/*print icon*/
 .print-icon {
   display: none;
   width: 29px;
@@ -235,7 +236,7 @@
   }
 }
 
-//VIEW ALL
+/*VIEW ALL*/
 .view-all {
   @include regular-text(600, 1em);
   padding-right: 13px;
@@ -286,15 +287,14 @@
       border-bottom: 2px solid $yellow;
     }
   }
-
 }
 
-//SERVICES CONTAINER
+/*SERVICES CONTAINER*/
 .services {
   padding: 144px 38px 45px 50px;
 }
 
-//SERVICE ITEMS
+/*SERVICE ITEMS*/
 .service-item {
   position: relative;
   background: transparent;
@@ -328,7 +328,7 @@
   }
 }
 
-//ICON SPRITE
+/*ICON SPRITE*/
 .sprite-top {
   position: absolute;
   top: 26px;
@@ -337,7 +337,7 @@
   @include transition;
 }
 
-// NEWS
+/* NEWS*/
 .important-item {
   background: transparent;
   @include transition;
@@ -391,7 +391,7 @@
   }
 }
 
-//EVENTS
+/*EVENTS*/
 .event-item {
   padding: {
     left: 30px;
@@ -439,7 +439,7 @@
   line-height: 0.7;
 }
 
-//news width
+/*news width*/
 .item-width {
   padding-bottom: 56px;
   .important-item {
@@ -469,7 +469,7 @@
   }
 }
 
- //TAB CONTENT
+/* TAB CONTENT*/
 .tab-pane {
   padding-top: 33px;
 }
@@ -567,7 +567,7 @@
   background: $white;
 }
 
-//no answer
+/*no answer*/
 .no-answer {
   color: $blue;
   .fa-chevron-right {
@@ -583,7 +583,7 @@
   }
 }
 
-//FOOTER
+/*FOOTER*/
 footer {
   max-height: 379px;
   padding: {
@@ -723,11 +723,10 @@ footer {
   }
 }
 
- //FOOTER LINKS
+/* FOOTER LINKS*/
 .footer-links {
   margin: 0;
   padding: 0;
-
   li {
     float: left;
     width: 48%;
@@ -752,8 +751,7 @@ footer {
   }
 }
 
-//FOOTER DROP-UP
-
+/*FOOTER DROP-UP*/
 .dropdown-footer-block {
   background: $c-gray;
   position: absolute;
@@ -801,7 +799,7 @@ footer {
   }
 }
 
- //BOTTOM MENU
+ /*BOTTOM MENU*/
 .navigation-bottom {
   background: $e-gray;
 }
@@ -838,7 +836,7 @@ footer {
   }
 }
 
-//SEARCH
+/*SEARCH*/
 .search-result {
   background: transparent;
   @include transition;
@@ -884,7 +882,7 @@ footer {
   }
 }
 
-//SERVICES RESULT
+/*SERVICES RESULT*/
 .search-result.services-item {
   border-bottom: 2px solid $yellow;
   font-size: 1.125em;
@@ -897,7 +895,7 @@ footer {
   }
 }
 
-//PAGINATION
+/*PAGINATION*/
 .pagination {
   text-align: center;
   padding-top: 64px;
@@ -937,7 +935,7 @@ footer {
   }
 }
 
-//services list
+/*services list*/
 article.indent .services-list {
   margin: 0;
   padding: 0;
@@ -983,7 +981,7 @@ article.indent .services-list {
   }
 }
 
- //ICONS
+ /*ICONS*/
 .fa-chevron-right {
   font-size: 18px;
   position: relative;
