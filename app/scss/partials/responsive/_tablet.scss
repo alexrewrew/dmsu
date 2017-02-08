@@ -1,4 +1,5 @@
 @media (min-width: 992px) and (max-width: 1199px) {
+
   .container .navbar-header {
     margin-left: 15px;
   }
@@ -22,6 +23,9 @@
   }
   .primary-nav .secondary-nav, .primary-nav .nav-gallery {
     width: 145%;
+  }
+  .go-back {
+    display: none;
   }
    //SERVICES
   .service-item {

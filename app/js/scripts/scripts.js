@@ -36,8 +36,13 @@ $(document).ready(function () {
             slide: 'li',
             swipeToSlide: true
         });
+
         
         $("body").append($("#navigation"));
+    }
+
+    if (window.matchMedia('(max-width: 1200px)').matches) {
+        $('.display-nav').remove();
     }
 
     if (window.matchMedia('(min-width: 768px)').matches) {
@@ -130,8 +135,39 @@ $(document).ready(function () {
         image: {
             verticalFit: true
         }
-
     });
+
+    /**/
+
+    $('.authorities a').hover(function () {
+        var reg1 = $(this).attr('data-region');
+        $(this).toggleClass('region-authority');
+        $(this).find('.auto-text').toggle();
+        $(this).find('.auto-link').toggle();
+        $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
+
+    })
+    $('#ukraine-map g').hover(function () {
+        var reg2 = $(this).attr('data-region');
+        $(this).toggleClass('region-map');
+        /*$(this).find('.auto-text').toggle();
+        $(this).find('.auto-link').toggle();*/
+        $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
+    })
+
+
+
+
+
+    // $('#krym').hover(function () {
+    //     $('#krym-svg .st0').toggleClass('region-map');
+    // })
+    // $('#krym-svg').hover(function () {
+    //     $('#krym').toggleClass('region-authority');
+    // })
+
+    /**/
+
 
     
 });
