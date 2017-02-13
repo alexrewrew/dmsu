@@ -9,14 +9,17 @@ textarea {
   margin: 0;
   line-height: inherit;
 }
+
 button {
   overflow: visible;
   @include transition;
 }
+
 button,
 select {
   text-transform: none;
 }
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -24,18 +27,22 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
+
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
+
 input {
   line-height: normal;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -43,30 +50,35 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
+
 input[type="search"] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 textarea {
   overflow: auto;
 }
+
 optgroup {
   font-weight: bold;
 }
+
 [role="button"] {
   cursor: pointer;
 }
-
 
 /*input styles*/
 input {
@@ -95,7 +107,8 @@ input {
     cursor: pointer;
     outline: none;
     z-index: 2;
-    color: $icon;font-size: 18px;
+    color: $icon;
+    font-size: 18px;
     &:hover {
       color: $blue;
     }
@@ -168,12 +181,7 @@ input {
     margin-bottom: 43px;
     color: $text;
     width: 100%;
-    padding: {
-      left: 17px;
-      right: 50px;
-      bottom: 18px;
-      top: 15px;
-    }
+    padding: 15px 50px 18px 17px;
   }
   button {
     position: absolute;
@@ -200,12 +208,7 @@ select {
   box-shadow: none;
   outline: none;
   color: $text;
-  padding: {
-    top: 17px;
-    left: 25px;
-    right: 35px;
-    bottom: 17px;
-  }
+  padding: 17px 35px 17px 25px;
   line-height: 1.14;
   width: 100%;
   font-size: 1.125em;
@@ -237,109 +240,4 @@ select {
     opacity: 1;
     display: none;
   }
-}
-
-/*chosen selection*/
-.selection-container {
-  &:after {
-    content: "";
-    position: absolute;
-    left: auto;
-    right: 40px;
-    top: 43%;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid $text;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    z-index: 2;
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-}
-.selection-container.selection-container-active {
-  &:after {
-    transform: rotate(-180deg);
-  }
-}
-
-.selection-container-single .selection-single div {
-  display: none;
-}
-
-.selection-container-single .selection-single {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  outline: none;
-}
-
-.selection-container .selection-drop {
-  background: $white;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  padding-bottom: 15px;
-  display: none;
-}
-
-.selection-container-active.selection-with-drop {
-  background: $white;
-  .selection-single {
-    background: $white;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .selection-drop {
-    background: $white;
-  }
-}
-
-.selection-container .selection-results li.active-result {
-  color: $select;
-  padding: {
-    top: 12px;
-    left: 30px;
-    right: 30px;
-    bottom: 12px;
-  }
-  line-height: 1.3;
-}
-
-.selection-container .selection-results li.result-selected, .selection-container .selection-results li.highlighted {
-  background: $white;
-  color: $text;
-  cursor: pointer;
-}
-
-.selection-container .selection-results li.result-selected {
-  display: none;
-}
-
-.selection-container .selection-results {
-  padding: {
-    left: 0;
-    right: 0;
-  }
-  margin: {
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  li {
-    padding-left: 8px;
-  }
-}
-
-/*language select*/
-
-.selection-container-single.selection-container-single-nosearch .selection-search {
-  display: none;
 }

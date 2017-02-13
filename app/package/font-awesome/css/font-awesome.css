@@ -56,3 +56,6 @@
 .fa-caret-right:before {
     content: "\f0da";
 }
+.fa-refresh:before {
+    content: "\f021";
+}

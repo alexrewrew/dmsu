@@ -650,6 +650,12 @@
           }
           a.region-authority {
             border-bottom: 1px solid $white;
+            .auto-text {
+              display: none;
+            }
+            .auto-link {
+              display: block;
+            }
           }
         }
       }

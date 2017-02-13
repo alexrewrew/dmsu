@@ -30,7 +30,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  article.article-tab {
+  article.article-tab, .article-tab {
     padding-left: 0;
     padding-right: 0;
   }
@@ -388,6 +388,8 @@
 
   .img-container {
     width: 75px;
+    display: block;
+    padding: 0;
     img {
       width: auto;
       height: 75px;
@@ -493,7 +495,6 @@
   }
 
   /*SLIDERS*/
-
   .slider-list {
     overflow-y: visible;
     margin-right: -15px;
@@ -663,5 +664,19 @@
       opacity: 1;
       right: 15px;
     }
+  }
+  /* map-box */
+  .map-box-left, .map-box-right {
+    width: 100%;
+    padding: {
+      right:0;
+      bottom:15px;
+    }
+  }
+  .map-box-right {
+    text-align: right;
+  }
+  .map-frame {
+    height: 300px;
   }
 }

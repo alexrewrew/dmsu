@@ -85,11 +85,10 @@ h3 {
 }
 
 h4 {
-  @include regular-text(700, 1.250em);
+  @include regular-text(600, 1.250em);
   color: $white;
   margin-top: 0;
   margin-bottom: 15px;
-  font-weight: 600;
 }
 
 h5 {
@@ -107,7 +106,10 @@ p {
 
 .bold-text {
   font-weight: 700;
-  font-size: 1.15em;
+  font-size: 1.125em;
+}
+.big-text {
+  font-size: 1.125em;
 }
 
 .red-text {

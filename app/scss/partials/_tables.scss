@@ -24,7 +24,7 @@ td {
     right: 11px;
   }
   vertical-align: top;
-  a{
+  a {
     display: block;
     &:hover {
       color: $yellow;
@@ -45,6 +45,14 @@ th {
 .table-spacer {
   width: 100%;
   height: 59px;
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:before {
+    content: '';
+    display: table;
+  }
 }
 
 .chief-table {
@@ -72,11 +80,10 @@ th {
     border-right: 30px solid $a-gray;
     font-size: 1.111em;
   }
-  th:last-child, td:last-child{
+  th:last-child, td:last-child {
     border-right: none;
   }
 }
-
 
 .table-surname {
   font-weight: 600;
@@ -96,5 +103,22 @@ th {
 .quoter-cols {
   th, td {
     width: 25%;
+  }
+}
+
+.tab-graph {
+  caption {
+    @include regular-text(700, 1.250em);
+    line-height: 1.2;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    color: $text;
+  }
+}
+
+.graph-table {
+  margin-bottom: 0;
+  td {
+    width: 50%;
   }
 }
