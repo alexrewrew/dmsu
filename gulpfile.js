@@ -69,7 +69,7 @@ gulp.task('minify-css', function () {
             cascade: false
         }))
         .pipe(csscomb())
-        // .pipe(cleanCSS())
+        .pipe(cleanCSS())
         .pipe(gulp.dest('dist/css'));
 });
 
