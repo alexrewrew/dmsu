@@ -136,3 +136,16 @@
     display: none;
   }
 }
+
+.ie-icon {
+  .icon-mobile {
+    display: block;
+  }
+  .icon-show {
+    display: none;
+    @include transition;
+  }
+  .icon-hide {
+    display: none;
+  }
+}

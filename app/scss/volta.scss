@@ -108,7 +108,7 @@
 }
 
 .filter-indent {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .filter-links {
@@ -125,12 +125,7 @@
       display: inline-block;
       background: $b-gray;
       text-align: center;
-      padding: {
-        top: 10px;
-        Bottom: 13px;
-        left: 27px;
-        right: 27px;
-      }
+      padding: 10px 27px 13px;
       margin: 0;
       &:hover {
         background: $yellow;
@@ -781,7 +776,6 @@ footer {
         height: 62px;
         font-weight: 600;
         transition: all 0.4s ease;
-        padding: 18px 20px;
         color: $white;
         padding: 10px 20px;
         font-size: 0.875em;

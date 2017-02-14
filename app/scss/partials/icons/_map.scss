@@ -138,3 +138,15 @@
     opacity: 1;
   }
 }
+
+.ie-icon {
+  #planet {
+    display: none;
+  }
+  .nav-map:hover .planet-image {
+    opacity: 1;
+  }
+  .nav-map.selected .planet-image {
+    opacity: 1;
+  }
+}

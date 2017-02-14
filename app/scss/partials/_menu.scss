@@ -131,7 +131,6 @@
   background: #2e3233;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -177,9 +176,9 @@
   -o-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform, opacity;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  /*-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;*/
   @include transition;
 }
 
@@ -478,7 +477,7 @@
   }
 
   .primary-nav > li > a.nav-map {
-    padding: 2px 18px 0px 8px;
+    padding: 2px 18px 0 8px;
     .icon-text {
       display: none;
     }
@@ -541,7 +540,7 @@
     height: auto;
     width: 33.3333%;
     float: left;
-    overflow: hidden;
+    /*overflow: hidden;*/
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -648,6 +647,7 @@
               }
             }
           }
+
           a.region-authority {
             border-bottom: 1px solid $white;
             .auto-text {

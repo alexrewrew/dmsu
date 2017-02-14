@@ -534,7 +534,7 @@ hr {
   margin-left: 8.33333333%; }
 
 .mobile-offset-0 {
-  margin-left: 0%; }
+  margin-left: 0; }
 
 @media (min-width: 768px) {
   .portrait-1, .portrait-2, .portrait-3, .portrait-4, .portrait-5, .portrait-6, .portrait-7, .portrait-8, .portrait-9, .portrait-10, .portrait-11, .portrait-12 {
@@ -640,7 +640,7 @@ hr {
   .portrait-offset-1 {
     margin-left: 8.33333333%; }
   .portrait-offset-0 {
-    margin-left: 0%; } }
+    margin-left: 0; } }
 
 @media (min-width: 992px) {
   .tablet-1, .tablet-2, .tablet-3, .tablet-4, .tablet-5, .tablet-6, .tablet-7, .tablet-8, .tablet-9, .tablet-10, .tablet-11, .tablet-12 {
@@ -746,7 +746,7 @@ hr {
   .tablet-offset-1 {
     margin-left: 8.33333333%; }
   .tablet-offset-0 {
-    margin-left: 0%; } }
+    margin-left: 0; } }
 
 @media (min-width: 1200px) {
   .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .display-7, .display-8, .display-9, .display-10, .display-11, .display-12 {
@@ -852,7 +852,7 @@ hr {
   .display-offset-1 {
     margin-left: 8.33333333%; }
   .display-offset-0 {
-    margin-left: 0%; } }
+    margin-left: 0; } }
 
 .fade {
   opacity: 0;
@@ -1389,7 +1389,6 @@ tbody.collapse.in {
   cursor: zoom-out; }
 
 .mfp-zoom {
-  cursor: pointer;
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;
   cursor: zoom-in; }
@@ -1836,6 +1835,20 @@ img.mfp-img {
     transition: all 0.4s ease; }
   .icon-hide {
     display: none; } }
+
+.ie-icon .icon-mobile {
+  display: block; }
+
+.ie-icon .icon-show {
+  display: none;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+.ie-icon .icon-hide {
+  display: none; }
 
 /*ICON 2 STYLE*/
 .icon2-st0 {
@@ -2915,6 +2928,15 @@ img.mfp-img {
   .nav-map.selected .planet-image {
     opacity: 1; } }
 
+.ie-icon #planet {
+  display: none; }
+
+.ie-icon .nav-map:hover .planet-image {
+  opacity: 1; }
+
+.ie-icon .nav-map.selected .planet-image {
+  opacity: 1; }
+
 #ukraine-map {
   width: 545px;
   height: 368px; }
@@ -3102,7 +3124,6 @@ ol {
       background: #efaf03;
       border-radius: 50%;
       color: #fff;
-      width: 1.2em;
       text-align: center;
       display: inline-block;
       position: absolute;
@@ -3889,7 +3910,6 @@ input {
     padding: 15px 50px 18px 17px; }
   .search-form-main button {
     position: absolute;
-    right: 0;
     color: #0096ff;
     font-size: 24px;
     right: 17px;
@@ -4147,7 +4167,6 @@ select {
   background: #2e3233;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -4189,9 +4208,9 @@ select {
   -o-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform, opacity;
-  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  /*-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;*/
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
@@ -4453,7 +4472,7 @@ select {
       display: block;
       opacity: 1; }
   .primary-nav > li > a.nav-map {
-    padding: 2px 18px 0px 8px; }
+    padding: 2px 18px 0 8px; }
     .primary-nav > li > a.nav-map .icon-text {
       display: none; }
     .primary-nav > li > a.nav-map:hover {
@@ -4501,7 +4520,7 @@ select {
     height: auto;
     width: 33.3333%;
     float: left;
-    overflow: hidden;
+    /*overflow: hidden;*/
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; }
@@ -4769,7 +4788,6 @@ select {
   display: none;
   margin: 0;
   padding: 0;
-  position: static;
   list-style: none;
   position: absolute;
   height: 45px;
@@ -4882,7 +4900,7 @@ select {
   padding-top: 21px; }
 
 .filter-indent {
-  padding-bottom: 0px; }
+  padding-bottom: 0; }
 
 .filter-links {
   padding: 0;
@@ -4898,10 +4916,7 @@ select {
       display: inline-block;
       background: #e0e0e0;
       text-align: center;
-      padding-top: 10px;
-      padding-Bottom: 13px;
-      padding-left: 27px;
-      padding-right: 27px;
+      padding: 10px 27px 13px;
       margin: 0; }
       .filter-links li a:hover {
         background: #efaf03;
@@ -5477,7 +5492,6 @@ footer {
         height: 62px;
         font-weight: 600;
         transition: all 0.4s ease;
-        padding: 18px 20px;
         color: #fff;
         padding: 10px 20px;
         font-size: 0.875em;

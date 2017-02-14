@@ -1,5 +1,25 @@
 $(document).ready(function () {
-    $("select").on('selection:showing_dropdown', function() {
+
+
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie > 0) {
+        $('body').addClass('ie-icon');
+    }
+
+    if (trident > 0) {
+        $('body').addClass('ie-icon');
+    }
+
+    if (edge > 0) {
+        $('body').addClass('ie-icon');
+    }
+
+    $("select").on('selection:showing_dropdown', function () {
         $(this).next('.selection-container').addClass("selection-container-active");
         $(this).next('.selection-container').children('.selection-drop').slideDown(300);
     }).on('selection:hiding_dropdown', function () {
@@ -37,7 +57,7 @@ $(document).ready(function () {
             swipeToSlide: true
         });
 
-        
+
         $("body").append($("#navigation"));
     }
 
@@ -49,7 +69,7 @@ $(document).ready(function () {
         $("select").selection({disable_search: true, width: "100%", scroll_to_highlighted: false});
         $(".back-blue").append($("#navigation"));
     }
-    
+
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -128,8 +148,8 @@ $(document).ready(function () {
     $('.gallery > a').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
-        gallery:{
-            enabled:true
+        gallery: {
+            enabled: true
         },
         mainClass: 'mfp-img-mobile',
         image: {
@@ -142,17 +162,15 @@ $(document).ready(function () {
     $('.authorities a').hover(function () {
         var reg1 = $(this).attr('data-region');
         $(this).toggleClass('region-authority');
-        $(this).find('.auto-text').toggle();
-        $(this).find('.auto-link').toggle();
         $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
-
     })
+
     $('#ukraine-map g').hover(function () {
         var reg2 = $(this).attr('data-region');
         $(this).toggleClass('region-map');
         $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
     })
-    
+
     $('#ukraine-map g').click(function () {
         var reg3 = $(this).attr('data-region');
         var reg4 = $('.authorities a[data-region=' + reg3 + ']').attr('href');
