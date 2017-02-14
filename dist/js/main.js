@@ -16937,11 +16937,9 @@ $(document).ready(function () {
     $('.authorities a').hover(function () {
         var reg1 = $(this).attr('data-region');
         $(this).toggleClass('region-authority');
-        $(this).find('.auto-text').toggle();
-        $(this).find('.auto-link').toggle();
         $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
-
     })
+
     $('#ukraine-map g').hover(function () {
         var reg2 = $(this).attr('data-region');
         $(this).toggleClass('region-map');
