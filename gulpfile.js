@@ -65,7 +65,7 @@ gulp.task('compress', function () {
 gulp.task('minify-css', function () {
     return gulp.src('app/css/volta.css')
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ['last 30 versions'],
             cascade: false
         }))
         .pipe(csscomb())
