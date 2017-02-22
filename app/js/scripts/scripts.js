@@ -158,7 +158,6 @@ $(document).ready(function () {
     });
 
     /**/
-
     $('.authorities a').hover(function () {
         var reg1 = $(this).attr('data-region');
         $(this).toggleClass('region-authority');
