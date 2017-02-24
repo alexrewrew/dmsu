@@ -175,6 +175,136 @@ $(document).ready(function () {
         var reg4 = $('.authorities a[data-region=' + reg3 + ']').attr('href');
         window.location = reg4;
     })
+
+    /**/
+    $('#help').click(function () {
+        $('#help-panel').slideToggle();
+    })
+
+    /**/
+    $('.radio').iCheck({
+        checkboxClass: 'icheckbox_square-orange',
+        radioClass: 'iradio_square-orange',
+        increaseArea: '20%' // optional
+    });
+
+    /**/
+    /*if ($('.service-big-form .row').hasClass('disabled-step')) {
+        $('select').attr('disabled');
+    }*/
+
+    /* transliterate validation */
+
+    //code
+
+    /*!function (e) {
+        var
+            t = {
+                "А": "A",
+                "а": "a",
+                "Б": "B",
+                "б": "b",
+                "В": "V",
+                "в": "v",
+                "Г": "H",
+                "г": "h",
+                "Ґ": "G",
+                "ґ": "g",
+                "Д": "D",
+                "д": "d",
+                "Е": "E",
+                "е": "e",
+                "Є": "Ye",
+                "є": "ie",
+                "Ж": "Zh",
+                "ж": "zh",
+                "З": "Z",
+                "з": "z",
+                "И": "Y",
+                "и": "y",
+                "І": "I",
+                "і": "i",
+                "Ї": "Yi",
+                "ї": "i",
+                "Й": "Y",
+                "й": "i",
+                "К": "K",
+                "к": "k",
+                "Л": "L",
+                "л": "l",
+                "М": "M",
+                "м": "m",
+                "Н": "N",
+                "н": "n",
+                "О": "O",
+                "о": "o",
+                "П": "P",
+                "п": "p",
+                "Р": "R",
+                "р": "r",
+                "С": "S",
+                "с": "s",
+                "Т": "T",
+                "т": "t",
+                "У": "U",
+                "у": "u",
+                "Ф": "F",
+                "ф": "f",
+                "Х": "Kh",
+                "х": "kh",
+                "Ц": "Ts",
+                "ц": "ts",
+                "Ч": "Ch",
+                "ч": "ch",
+                "Ш": "Sh",
+                "ш": "sh",
+                "Щ": "Shch",
+                "щ": "shch",
+                "Ю": "Yu",
+                "ю": "iu",
+                "Я": "Ya",
+                "я": "ia",
+                " ": " ",
+                "зг": "zgh",
+                "Зг": "Zgh",
+                "-": "-"
+            },
+            a = function (a) {
+                a = e.trim(a).split("");
+                var n = [], r = !1;
+                return e(a).each(function (e, i) {
+                    return r ? void(r = !1) : (
+                        i = 0 == e || a.hasOwnProperty(e) && " " == a[e - 1] || "-" == a[e - 1] ? i.toUpperCase() : i.toLowerCase(),
+                        -1 != ["З", "з"].indexOf(i) && a.hasOwnProperty(e + 1) && "г" == a[e + 1] && (i += "г", r = !0),
+                            void(t.hasOwnProperty(i) && n.push(t[i]))
+                    )
+                }),
+                    n.join("").toUpperCase()
+            },
+            n = function () {
+                var t = e('input[name="name"]').val(), n = a(t);
+                e(".firstName").text(n), e(".firstNameUkr").text(t.toUpperCase())
+            },
+            r = function () {
+                var t = e('input[name="name2"]').val(), n = a(t);
+                e(".lastName").text(n), e(".lastNameUkr").text(t.toUpperCase())
+            };
+        e('input[name="name"]').on("keyup", n),
+            e('input[name="name2"]').on("keyup", r),
+            e("#clear").click(
+                function () {
+                    e('input[name="name"]').val(""),
+                        e(".firstName").text(""),
+                        e(".lastName").text(""),
+                        e('input[name="name2"]').val(""),
+                        e(".firstNameUkr").text(""),
+                        e(".lastNameUkr").text("")
+                }
+            )
+    }(jQuery);*/
+
+    /**/
+
 });
 
 

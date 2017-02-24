@@ -106,6 +106,12 @@ th {
   }
 }
 
+.tripple-cols {
+  th, td {
+    width: 33.33333333%;
+  }
+}
+
 .tab-graph {
   caption {
     @include regular-text(700, 1.250em);
@@ -120,5 +126,28 @@ th {
   margin-bottom: 0;
   td {
     width: 50%;
+  }
+}
+
+.service-table {
+  th {
+    padding: {
+      top:21px;
+      bottom:22px;
+      left:30px;
+      right:30px;
+    }
+    font-weight: 700;
+    color: $f-gray;
+    background: $a-gray;
+  }
+  td {
+    padding: {
+      top:27px;
+      bottom:30px;
+      left:30px;
+      right:30px;
+    }
+    border-bottom: 1px solid $a-gray;
   }
 }

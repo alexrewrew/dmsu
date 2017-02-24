@@ -16,10 +16,11 @@
           font-size: 19px;
           position: relative;
           top: 2px;
-          padding: 0 1px;
+          padding: 0 3px;
           &:hover {
             color: $blue;
           }
+
         }
       }
     }
@@ -102,6 +103,7 @@
       font-weight: 600;
       line-height: 1.18;
       color: $white;
+      text-transform: uppercase;
       &:hover {
         opacity: .5;
       }

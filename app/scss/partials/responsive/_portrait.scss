@@ -31,9 +31,12 @@
   .primary-nav > li > a {
     font-size: .750em;
     margin: {
-      left: 3px;
-      right: 3px;
+      left: 2px;
+      right: 2px;
     }
+  }
+  .has-children > a::before {
+    right: -8%;
   }
   .primary-nav > li.nav-number > a {
     margin: 25px 4px;
@@ -137,5 +140,29 @@
   .nav-map .planet-image, .nav-map:hover .planet-image {
     opacity: 1;
     width: 82%;
+  }
+  /* SERVICE ITEM */
+  .service-icon-col {
+    padding-right: 0;
+  }
+  .service-icon {
+    width: 50px;
+    margin-top: 6px;
+  }
+  .card-container .card-mask .bold-field {
+    margin-bottom: 1%;
+  }
+  .card-container .card-mask-foreign .mask-row {
+    margin-bottom: 2.5%;
+  }
+  .gray-row p {
+    font-size: .75em;
+  }
+  .card-container .card-mask {
+    font-size: .7em;
+  }
+  .card-container .card-mask-foreign {
+    left:36%;
+    top:28%;
   }
 }

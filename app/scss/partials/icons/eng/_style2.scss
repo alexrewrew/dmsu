@@ -1,0 +1,74 @@
+/*icon 2*/
+.ico2-en-1 {
+    fill: none;
+    stroke: #f2b81b;
+}
+
+.ico2-en-1, .ico2-en-2, .ico2-en-3 {
+    stroke-linecap: round;
+    stroke-width: 1.5px;
+}
+
+.ico2-en-1, .ico2-en-3 {
+    stroke-linejoin: round;
+}
+
+.ico2-en-2, .ico2-en-3 {
+    fill: #fff;
+    stroke: #010101;
+}
+
+.ico2-en-2 {
+    stroke-miterlimit: 10;
+}
+
+@keyframes inMap {
+    40%, 60% {
+        -webkit-transform: translateY(-33px) scale(0.2);
+        -o-transform: translateY(-33px) scale(0.2);
+        transform: translateY(-33px) scale(0.2);
+        -ms-transform: translateY(-33px) scale(0.2);
+        -moz-transform: translateY(-33px) scale(0.2);
+    }
+}
+
+@keyframes inMapLine {
+    20% {
+        stroke-width: 2.5px;
+    }
+    40%, 60% {
+        stroke-width: 5px;
+    }
+}
+
+.user-map {
+    -webkit-transform-origin: 30px 50px;
+    -moz-transform-origin: 30px 50px;
+    -o-transform-origin: 30px 50px;
+    -ms-transform-origin: 30px 50px;
+    transform-origin: 30px 50px;
+}
+
+.service-item2.eng-item:hover .user-map {
+    -webkit-animation: inMap 2s forwards;
+    -moz-animation: inMap 2s forwards;
+    -o-animation: inMap 2s forwards;
+    -ms-animation: inMap 2s forwards;
+    animation: inMap 2s forwards;
+}
+
+.service-item2.eng-item:hover .user-map > circle {
+    -webkit-animation: inMapLine 2s forwards;
+    -moz-animation: inMapLine 2s forwards;
+    -o-animation: inMapLine 2s forwards;
+    -ms-animation: inMapLine 2s forwards;
+    animation: inMapLine 2s forwards;
+}
+
+.service-item2.eng-item:hover .user-map > path {
+    -webkit-animation: inMapLine 2s forwards;
+    -moz-animation: inMapLine 2s forwards;
+    -o-animation: inMapLine 2s forwards;
+    -ms-animation: inMapLine 2s forwards;
+    animation: inMapLine 2s forwards;
+}

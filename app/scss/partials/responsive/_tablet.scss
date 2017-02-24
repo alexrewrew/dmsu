@@ -97,4 +97,19 @@
   .nav-map.selected .planet-image, .nav-map:hover .planet-image {
     opacity: 1;
   }
+
+  /* SERVICE ITEM */
+  .service-icon-col {
+    padding-right: 0;
+  }
+  .service-icon {
+    width: 60px;
+    margin-top: 6px;
+  }
+  .card-container .card-mask .bold-field {
+    margin-bottom: 1%;
+  }
+  .card-container .card-mask-foreign .mask-row {
+    margin-bottom: 2.5%;
+  }
 }

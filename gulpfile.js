@@ -11,24 +11,21 @@ var clean = require('gulp-clean'); //очищення папки dist
 var csscomb = require('gulp-csscomb'); //компановка css
 var rimraf = require('rimraf');
 var imagemin = require('gulp-imagemin');
-var scsslint = require('gulp-scss-lint');
 
 
 // Завдання для компіляції sass
 gulp.task('sass', function () {
     return gulp.src('app/scss/volta.scss') //пошук файлів з розширенням scss
         .pipe(sass().on('error', sass.logError)) //вивід помилок
+        .pipe(autoprefixer({
+            browsers: ['last 40 versions'],
+            cascade: false
+        }))
+
         .pipe(gulp.dest('app/css')) //вивід зкомпільованого файлу до теки css
         .pipe(browserSync.reload({ // перезавантажувати синхронізатор при кожній зміні
             stream: true
         }))
-});
-
-//lint для sass
-gulp.task('lint', function () {
-    return gulp.src('app/scss/volta.scss')
-        .pipe(scsslint())
-        .pipe(gulp.dest('app/reports'))
 });
 
 //завдання для browser-sync
@@ -42,14 +39,14 @@ gulp.task('browserSync', function () {
 
 //конкатинація js
 gulp.task('scripts', function () {
-    return gulp.src(['app/package/jquery/dist/jquery.js', 'app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/js/scripts/menu.js', 'app/package/magnific-popup/dist/jquery.magnific-popup.js', 'app/js/scripts/scripts.js'])
+    return gulp.src(['app/package/jquery/dist/jquery.js', 'app/js/scripts/bootstrap.js', 'app/package/chosen/chosen.jquery.js', 'app/package/slick-carousel/slick/slick.js', 'app/package/iCheck/icheck.js', 'app/js/scripts/menu.js', 'app/package/magnific-popup/dist/jquery.magnific-popup.js', 'app/js/scripts/scripts.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('app/js'));
 });
 
 //конкатинація html
 gulp.task('rigger', function () {
-    gulp.src(['app/html/*.html', '!app/html/footer.html', '!app/html/header.html'])
+    gulp.src(['app/html/*.html', '!app/html/footer.html', '!app/html/header.html', '!app/html/footer-eng.html', '!app/html/header-eng.html'])
         .pipe(rigger())
         .pipe(gulp.dest('app/'));
 });
@@ -64,12 +61,8 @@ gulp.task('compress', function () {
 //мініфікація, комбінування та автопрефікси для css
 gulp.task('minify-css', function () {
     return gulp.src('app/css/volta.css')
-        .pipe(autoprefixer({
-            browsers: ['last 30 versions'],
-            cascade: false
-        }))
-        .pipe(csscomb())
         .pipe(cleanCSS())
+        .pipe(csscomb())
         .pipe(gulp.dest('dist/css'));
 });
 

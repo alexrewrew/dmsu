@@ -1,0 +1,61 @@
+/*icon 4*/
+.ico4-en-0 {
+    fill: none;
+    stroke: #010101;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.ico4-en-1 {
+    fill: #FFFFFF;
+    stroke: #F2B81B;
+    stroke-width: 1.5;
+    stroke-miterlimit: 10;
+}
+
+.ico4-en-2 {
+    fill: #FFFFFF;
+    stroke: #010101;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ico4-en-3 {
+    fill: #FFFFFF;
+    stroke: #010101;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+.ico4-en-4 {
+    fill: #010101;
+}
+
+.ico4-en-5 {
+    fill: none;
+    stroke: #F2B81B;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+}
+
+@keyframes letter {
+    40%, 60% {
+        -webkit-transform: translateY(15px);
+        -o-transform: translateY(15px);
+        transform: translateY(15px);
+        -ms-transform: translateY(15px);
+        -moz-transform: translateY(15px);
+    }
+}
+
+.service-item5.eng-item:hover .letter {
+    -webkit-animation: letter 2s forwards;
+    -moz-animation: letter 2s forwards;
+    -o-animation: letter 2s forwards;
+    -ms-animation: letter 2s forwards;
+    animation: letter 2s forwards;
+}

@@ -1,0 +1,80 @@
+/*icon 4*/
+.ico5-en-1, .ico5-en-2, .ico5-en-3 {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+.ico5-en-1, .ico5-en-2 {
+    stroke: #010101;
+    stroke-linecap: round;
+}
+
+.ico5-en-1 {
+    stroke-miterlimit: 10;
+}
+
+.ico5-en-2, .ico5-en-3 {
+    stroke-linejoin: round;
+}
+
+.ico5-en-3 {
+    stroke: #f2b81b;
+}
+
+.people {
+    -webkit-transform-origin: 23px 20px;
+    -moz-transform-origin: 23px 20px;
+    -o-transform-origin: 23px 20px;
+    -ms-transform-origin: 23px 20px;
+    transform-origin: 23px 20px;
+}
+
+@keyframes peopleScale {
+    25%, 75% {
+        -webkit-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+    }
+    50%, 100% {
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -ms-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+
+@keyframes peopleScaleLine {
+    25%, 75% {
+        stroke-width: 1.8px;
+    }
+    50%, 100% {
+        stroke-width: 1.5px;
+    }
+}
+
+.service-item3.eng-item:hover .people {
+    -webkit-animation: peopleScale 2s forwards;
+    -moz-animation: peopleScale 2s forwards;
+    -o-animation: peopleScale 2s forwards;
+    -ms-animation: peopleScale 2s forwards;
+    animation: peopleScale 2s forwards;
+}
+
+.service-item3.eng-item:hover .people > circle {
+    -webkit-animation: peopleScaleLine 2s forwards;
+    -moz-animation: peopleScaleLine 2s forwards;
+    -o-animation: peopleScaleLine 2s forwards;
+    -ms-animation: peopleScaleLine 2s forwards;
+    animation: peopleScaleLine 2s forwards;
+}
+
+.service-item3.eng-item:hover .people > path {
+    -webkit-animation: peopleScaleLine 2s forwards;
+    -moz-animation: peopleScaleLine 2s forwards;
+    -o-animation: peopleScaleLine 2s forwards;
+    -ms-animation: peopleScaleLine 2s forwards;
+    animation: peopleScaleLine 2s forwards;
+}

@@ -26,6 +26,7 @@
     "chosen": "^1.6.2",
     "elusive-icons": "*",
     "font-awesome": "^4.7.0",
-    "magnific-popup": "Magnific-Popup#^1.1.0"
+    "magnific-popup": "Magnific-Popup#^1.1.0",
+    "iCheck": "icheck#^1.0.2"
   }
 }

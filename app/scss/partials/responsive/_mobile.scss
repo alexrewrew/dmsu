@@ -165,6 +165,11 @@
   }
   .primary-nav > li.mobile-social {
     display: block;
+    a {
+      padding-left: 17px;
+      padding-right: 17px;
+
+    }
   }
   .header-buttons {
     display: block;
@@ -224,18 +229,6 @@
     padding-right: 0;
   }
   /*breadcrumbs*/
-  .breadcrumbs {
-    max-width: 100%;
-    li {
-      max-width: 33.33333333%;
-      a {
-        max-width: 100%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow-x: hidden;
-      }
-    }
-  }
   .breadcrumbs.right-panel {
     margin-right: 0;
     margin-left: 10px;
@@ -678,5 +671,65 @@
   }
   .map-frame {
     height: 300px;
+  }
+  /* SERVICE-ITEM */
+  .service-content-indent {
+    padding-top: 0;
+  }
+
+  /* FORMS */
+  form.inline-input input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  article.indent .blue-button {
+    margin-top: 0;
+  }
+  .card-container img {
+    margin-bottom: 30px;
+  }
+  .gray-row p {
+    margin-bottom: 15px;
+  }
+  .card-container .img-fix {
+    margin: 0;
+    width: 100%;
+  }
+  .card-container .card-mask {
+    top:20%;
+    line-height: 0.9;
+    font-size: 0.75em;
+  }
+  .card-container .card-mask .bold-field {
+    margin-bottom:3%;
+  }
+  .card-container .card-mask-foreign {
+    top:29%;
+    left:30.5%;
+  }
+  .card-container .card-mask-foreign .mask-row {
+    margin-bottom: 2%;
+  }
+  .card-container {
+    max-width: 290px;
+  }
+  /**/
+  .service-icon {
+    position: static;
+  }
+  .service-big-form .row .step:before {
+    left: calc(50% - 2px);
+  }
+  /**/
+  .icheckbox_square-orange, .iradio_square-orange {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  input {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 15px;
   }
 }

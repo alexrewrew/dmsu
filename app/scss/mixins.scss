@@ -14,20 +14,10 @@
   transform: $translate;
 }
 
-@mixin regular-text {
-  font: {
-    family: $font;
-    style: normal;
-    stretch: normal;
-  }
-}
-
 @mixin regular-text($weight, $size) {
   font: {
     family: $font;
     weight: $weight;
     size: $size;
-    style: normal;
-    stretch: normal;
   }
 }

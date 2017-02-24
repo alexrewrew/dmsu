@@ -18,6 +18,8 @@
 @import '../package/slick-carousel/slick/slick-theme';
 //popup
 @import "../package/magnific-popup/dist/magnific-popup";
+//popup
+@import "../package/iCheck/skins/square/orange";
 //icon animate
 @import 'partials/icons/icons';
 @import 'partials/icons/icon1';
@@ -27,6 +29,13 @@
 @import 'partials/icons/logo';
 @import 'partials/icons/map';
 @import "partials/ukraine";
+/* eng icons*/
+@import 'partials/icons/eng/style1';
+@import 'partials/icons/eng/style2';
+@import 'partials/icons/eng/style3';
+@import 'partials/icons/eng/style4';
+@import 'partials/icons/eng/style5';
+/* end of eng icons*/
 //typography
 @import 'partials/typography';
 @import 'partials/tables';
@@ -37,7 +46,6 @@
 //menu
 @import 'partials/menu';
 @import 'partials/navigation';
-
 
 /* SEARCH SERVICES */
 .search-row {
@@ -204,26 +212,37 @@
 }
 
 /*print icon*/
-.print-icon {
-  display: none;
-  width: 29px;
-  height: 29px;
-  color: $blue;
-  background: $crumbs;
-  text-align: center;
-  border-radius: 50%;
-  padding-top: 4px;
-  @include transition;
-  cursor: pointer;
+.icon-panel {
   position: absolute;
+  display: none;
   bottom: 45px;
   right: 37px;
-  i {
-    transition: none;
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    display: inline-block;
+    a {
+      padding-top: 4px;
+      border-radius: 50%;
+      display: block;
+      width: 29px;
+      height: 29px;
+      color: $blue;
+      background: $crumbs;
+      text-align: center;
+      &:hover {
+        background: transparent;
+        color: $white;
+      }
+    }
   }
-  &:hover {
-    background: transparent;
-    color: $white;
+}
+
+#help-panel {
+  display: none;
+  .video-big {
+    margin-top: 0;
   }
 }
 
@@ -317,6 +336,47 @@
   }
   p {
     padding-right: 25px;
+  }
+}
+
+.service-item.eng-item {
+  min-height: 262px;
+  img {
+    height: 99px;
+    top: 24px;
+  }
+  .icon-hide {
+    top: 49px;
+    left: 33px;
+    height: 100px;
+  }
+}
+
+.service-item.eng-item.service-item1 {
+  .icon-hide {
+    height: 106px;
+    left: 32px;
+    top:50px;
+  }
+}
+
+.service-item.eng-item.service-item3 {
+  .icon-hide {
+    top: 50px;
+    left: 32px;
+    height: 105px;
+  }
+}
+
+.service-item.eng-item.service-item4 {
+  .icon-hide {
+    height: 108px;
+  }
+}
+.service-item.eng-item.service-item5 {
+  .icon-hide {
+    left: 32px;
+    height: 104px;
   }
 }
 
@@ -633,7 +693,7 @@ footer {
     margin-right: 7px;
     a {
       color: $white;
-      font-size: 1.500em;
+      font-size: 2em;
 
       &:hover {
         color: $yellow;
@@ -972,6 +1032,230 @@ article.indent .services-list {
   }
 }
 
+/* service item page*/
+.service-icon {
+  width: 80px;
+  position: absolute;
+}
+
+.service-section {
+  background: $white;
+}
+
+.service-header-indent {
+  padding-left: 50px;
+  padding-bottom: 18px;
+}
+
+.service-content-indent {
+  padding-top: 0;
+}
+
+article.service-result-indent {
+  padding-top: 0;
+  padding-left: 8.7%;
+  padding-right: 8.7%;
+  h2 {
+    color: $blue;
+  }
+}
+
+.gray-text {
+  color: $c-gray;
+}
+
+.help-text {
+  font-size: 1.125em;
+}
+
+.gray-row {
+  padding-left: 15px;
+  padding-right: 15px;
+  div {
+    padding: 0;
+
+  }
+  p {
+    color: $f-gray;
+    background: $a-gray;
+    margin-bottom: 33px;
+    font-weight: 700;
+    padding: {
+      top: 21px;
+      bottom: 21px;
+      left: 30px;
+      right: 30px;
+    }
+  }
+}
+
+.card-container {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .img-fix {
+    margin-left: 30px;
+    width: calc(100% - 30px);
+  }
+  .card-mask {
+    position: absolute;
+    top: 22%;
+    left: 43%;
+    right: 0;
+    bottom: 0;
+    font-size: 0.875em;
+    line-height: 1;
+    text-transform: uppercase;
+    .bold-field {
+      font-weight: 700;
+      margin-bottom: 4%;
+    }
+  }
+  .card-mask-foreign {
+    top: 28.7%;
+    left: 34.5%;
+    .mask-row {
+      margin-bottom: 4%;
+      div {
+        display: inline;
+      }
+    }
+  }
+}
+
+/* SERVICE FORM */
+
+.service-big-form {
+  .row {
+    padding-bottom: 28px;
+    select {
+      background: $a-gray;
+    }
+    .selection-container {
+      background: $a-gray;
+      margin-bottom: 30px;
+    }
+    .selection-container-active.selection-with-drop .selection-single {
+      background: $a-gray;
+    }
+    .selection-container.selection-with-drop .selection-drop {
+      background: $a-gray;
+    }
+    .selection-container .selection-results {
+      background: $a-gray;
+    }
+    .selection-container .selection-results li.active-result {
+      color: $black-text;
+    }
+    .selection-container .selection-results li.highlighted {
+      background: $a-gray;
+      color: $yellow;
+    }
+
+    ul {
+      li {
+        &:before {
+          display: none;
+        }
+      }
+    }
+    .step {
+      color: $yellow;
+      font-size: 2.625em;
+      font-weight: 700;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 2px;
+
+        background: $yellow;
+        position: absolute;
+
+        left: calc(31% - 2px);
+
+        top: -95px;
+        height: 72px;
+      }
+    }
+    .step.bigstep1 {
+      &:before {
+        top: -373px;
+        height: 350px;
+      }
+    }
+    .step.first-step {
+      &:before {
+        display: none;
+      }
+    }
+    .blue-button {
+      margin-top: 0;
+    }
+
+  }
+  .row.disabled-step {
+    opacity: .3;
+    .step {
+      color: #e4e4e4;
+      &:before {
+        background: #e4e4e4;
+      }
+    }
+    .blue-button {
+      opacity: .5;
+      &:hover {
+        background: $blue;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.gray-block {
+  padding: {
+    left: 30px;
+    right: 30px;
+    top: 22px;
+    bottom: 23px;
+  }
+  background: $a-gray;
+  color: $black-text;
+  @include transition;
+}
+
+/**/
+.passport-choise {
+  text-decoration: none;
+  img {
+    width: 100%;
+    opacity: .5;
+    @include transition;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+    .gray-block {
+      background: $yellow;
+    }
+  }
+}
+
+.passport-choise.checked-passport {
+  cursor: default;
+  img {
+    opacity: 1;
+  }
+  .gray-block {
+    background: $yellow;
+  }
+}
+
+/* transliterate */
+
 /*MAP*/
 .map-box-left {
   float: left;
@@ -984,6 +1268,7 @@ article.indent .services-list {
   font-size: 2em;
   padding-top: 8px;
 }
+
 .map-frame {
   width: 100%;
   height: 532px;

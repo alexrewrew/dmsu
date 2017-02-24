@@ -1,0 +1,117 @@
+/*icon 1*/
+.ico1-en-1 {
+    fill: #010101;
+}
+
+.ico1-en-2, .ico1-en-3, .ico1-en-4 {
+    fill: none;
+    stroke-width: 1.5px;
+}
+
+.ico1-en-2 {
+    stroke: #010101;
+    stroke-linejoin: round;
+}
+
+.ico1-en-2, .ico1-en-4 {
+    stroke-linecap: round;
+}
+
+.ico1-en-3, .ico1-en-4 {
+    stroke: #f2b81b;
+    stroke-miterlimit: 10;
+}
+
+.ico1-en-5 {
+    fill: #FFF;
+}
+
+.stamp {
+    opacity: 0;
+}
+
+@keyframes getStamp {
+    20%, 40% {
+        -webkit-transform: translateX(-31px) scale(0.63);
+        -o-transform: translateX(-31px) scale(0.63);
+        transform: translateX(-31px) scale(0.63);
+        -ms-transform: translateX(-31px) scale(0.63);
+        -moz-transform: translateX(-31px) scale(0.63);
+    }
+    40%, 60% {
+        -webkit-transform: translateX(0) scale(1);
+        -o-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+        -ms-transform: translateX(0) scale(1);
+        -moz-transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes rotatePassport {
+    60% {
+        -webkit-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    100% {
+        -webkit-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+    }
+}
+
+@keyframes showStamp {
+    20%, 100% {
+        opacity: 0;
+    }
+    30%, 60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+}
+
+.stamp-get {
+    -webkit-transform-origin: 47px 42px;
+    -moz-transform-origin: 47px 42px;
+    -o-transform-origin: 47px 42px;
+    -ms-transform-origin: 47px 42px;
+    transform-origin: 47px 42px;
+}
+
+.passport {
+    -webkit-transform-origin: 21.25px 20px;
+    -moz-transform-origin: 21.25px 20px;
+    -o-transform-origin: 21.25px 20px;
+    -ms-transform-origin: 21.25px 20px;
+    transform-origin: 21.25px 20px;
+}
+
+.service-item1:hover .stamp-get {
+    -webkit-animation: getStamp 2s forwards;
+    -moz-animation: getStamp 2s forwards;
+    -o-animation: getStamp 2s forwards;
+    -ms-animation: getStamp 2s forwards;
+    animation: getStamp 2s forwards;
+}
+
+.service-item1:hover .stamp {
+    -webkit-animation: showStamp 2s forwards;
+    -moz-animation: showStamp 2s forwards;
+    -o-animation: showStamp 2s forwards;
+    -ms-animation: showStamp 2s forwards;
+    animation: showStamp 2s forwards;
+}
+
+.service-item1:hover .passport {
+    -webkit-animation: rotatePassport 2s;
+    -moz-animation: rotatePassport 2s;
+    -o-animation: rotatePassport 2s;
+    -ms-animation: rotatePassport 2s;
+    animation: rotatePassport 2s;
+}

@@ -2,3 +2,47 @@
   width: 545px;
   height: 368px;
 }
+
+/* FIX for Crimea and Sevastopol */
+
+#ukraine-map g[data-region="1"].region-map {
+  fill: $white;
+  cursor: default;
+  g, .st0.region-map, .st0 {
+    fill: $white;
+    cursor: default;
+  }
+  g .st0 {
+    fill: $white;
+    stroke: transparent;
+    cursor: default;
+  }
+}
+
+#ukraine-map g[data-region="27"].region-map {
+  fill: #0096ff;
+  stroke: transparent;
+  cursor: default;
+  g, .st0, .st0.region-map, circle.st0 {
+    fill: #0096ff;
+    stroke: transparent;
+    cursor: default;
+  }
+  g .st0 {
+    fill: #0096ff;
+    stroke: transparent;
+    cursor: default;
+  }
+}
+
+.primary-nav .secondary-nav.display-nav li a svg g[data-region="27"] .st0.region-map {
+  fill: #0096ff;
+  stroke: transparent;
+  cursor: default;
+}
+
+.primary-nav .secondary-nav.display-nav li a svg g[data-region="1"] .st0.region-map {
+  fill: $white;
+  stroke: transparent;
+  cursor: default;
+}

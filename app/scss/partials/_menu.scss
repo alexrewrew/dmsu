@@ -523,6 +523,19 @@
       bottom: 10px;
     }
   }
+
+  .primary-nav .secondary-nav.small-nav {
+    width: 35%;
+    left: 0;
+    padding-top: 10px;
+    li {
+      width: 100%;
+      a {
+        height: auto;
+      }
+    }
+  }
+
   .primary-nav .secondary-nav::after {
     clear: both;
     content: "";
@@ -566,7 +579,7 @@
             @include transition;
             &:hover {
               fill: $yellow;
-              stroke: $white;
+              stroke: transparent;
               cursor: pointer;
             }
           }
@@ -693,7 +706,7 @@
   }
 
   .primary-nav .secondary-nav a:hover {
-    opacity: .5;
+    opacity: .8;
     background: rgba(255, 255, 255, 0.2);
   }
   .primary-nav .secondary-nav ul {
