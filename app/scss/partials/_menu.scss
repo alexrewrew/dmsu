@@ -610,7 +610,7 @@
         position: absolute;
         bottom: 0;
         right: 14px;
-        left: 40px;
+        left: 25px;
         height: 80px;
         background: rgba(255, 255, 255, 0);
         background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 149, 255, 1) 100%);
@@ -625,17 +625,91 @@
         overflow-y: scroll;
         max-height: 420px;
         padding-bottom: 80px;
+        padding-left: 25px;
+        li.right-map {
+          width: 100%;display: block;
+          height:90px;
+          @include transition;
+          color: $white;
+          cursor: pointer;
+          &:hover {
+            background: $white;
+            color: $black-text;
+          }
+
+          span {
+            display: block;
+            width: 100%;
+          }
+          .right-visible {
+            display: block;
+          }
+
+          .right-invisible {
+            display: none;
+            a {
+              display: block;
+            }
+          }
+          div {
+            float: left;
+            padding:13px 15px 0;
+            &:first-child {
+              width: 35%;
+              font-weight: 600;
+            }
+            &:last-child {
+              width: 65%;
+            }
+          }
+        }
+        li.right-map.region-authority {
+          background: $white;
+          color: $black-text;
+          cursor: default;
+          .right-visible {
+            display: none;
+          }
+          .right-invisible {
+            display: block;
+            a {
+              color: $blue-hover;
+              font-weight: 700;
+              font-size: 1em;
+              cursor: pointer;
+              i {
+                font-size: 12px;
+                @include transition;
+              }
+              &:hover {
+                color: $yellow;
+                i {
+                  @include transform(translateX(24px));
+                }
+              }
+            }
+          }
+        }
+      }
+      /*ul {
+        list-style: none;
+        overflow-y: scroll;
+        max-height: 420px;
+        padding-bottom: 80px;
+        padding-left: 25px;
         li {
           width: 100%;
           a {
-            padding: 13px 0 12px;
+            padding: 13px 15px 12px;
             font-size: 1.125em;
             width: 95%;
             cursor: pointer;
             color: $white;
-            border-bottom: 1px solid transparent;
+            !*border-bottom: 1px solid transparent;*!
             &:hover {
-              border-bottom: 1px solid $white;
+              !*border-bottom: 1px solid $white;*!
+              background: $white;
+              color: $black-text;
             }
             span {
               display: block;
@@ -657,11 +731,15 @@
                 i {
                   font-size: 12px;
                 }
+                a {
+                  display: inline;
+                }
               }
             }
           }
           a.region-authority {
-            border-bottom: 1px solid $white;
+            background: $white;
+            color: $black-text;
             .auto-text {
               display: none;
             }
@@ -670,7 +748,7 @@
             }
           }
         }
-      }
+      }*/
     }
   }
 

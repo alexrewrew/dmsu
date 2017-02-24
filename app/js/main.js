@@ -17443,28 +17443,91 @@ $(document).ready(function () {
     });
 
     /**/
-    $('.authorities a').hover(function () {
-        var reg1 = $(this).attr('data-region');
-        $(this).toggleClass('region-authority');
-        $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
-    })
 
-    $('#ukraine-map g').hover(function () {
-        var reg2 = $(this).attr('data-region');
-        $(this).toggleClass('region-map');
-        $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
-    })
+    /*$('.authorities a').hover(function () {
+     var reg1 = $(this).attr('data-region');
+     /!*$(this).toggleClass('region-authority');*!/
+     $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
+     })*/
+    /*$('.right-map').click(function () {
+     $('.right-map').removeClass('region-authority');
+     $('#ukraine-map g .st0').removeClass('region-map');
+     $(this).toggleClass('region-authority');
+     var reg1 = $(this).attr('data-region');
+     $('#ukraine-map g[data-region=' + reg1 + '] .st0').toggleClass('region-map');
+     })*/
+    //
+    // $('#ukraine-map g').hover(function () {
+    //     var reg2 = $(this).attr('data-region');
+    //     $(this).toggleClass('region-map');
+    //     $('.authorities a[data-region=' + reg2 + ']').toggleClass('region-authority');
+    // })
+    //
 
-    $('#ukraine-map g').click(function () {
-        var reg3 = $(this).attr('data-region');
-        var reg4 = $('.authorities a[data-region=' + reg3 + ']').attr('href');
-        window.location = reg4;
-    })
 
     /**/
     $('#help').click(function () {
         $('#help-panel').slideToggle();
     })
+
+    /**/
+    $('.right-map').click(function () {
+        var reg1 = $(this).attr('data-region');
+
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+
+        $('#ukraine-map g[data-region=' + reg1 + '] .st0').addClass('region-map');
+        $(this).addClass('region-authority');
+    })
+
+
+
+    $('#ukraine-map g').click(function () {
+        var reg2 = $(this).attr('data-region');
+
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+
+        $('.right-map[data-region=' + reg2 + ']').addClass('region-authority');
+        $('#ukraine-map g[data-region=' + reg2 + '] .st0').addClass('region-map');
+    })
+
+    /**/
+    $('.right-map[data-region="38"]').click(function () {
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+        $('#ukraine-map g[data-region="38"] .st0').removeClass('region-map');
+        $(this).removeClass('region-authority');
+    })
+
+    $('.right-map[data-region="37"]').click(function () {
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+        $('#ukraine-map g[data-region="37"] .st0').removeClass('region-map');
+        $(this).removeClass('region-authority');
+    })
+
+    $('#ukraine-map g[data-region="37"]').click(function () {
+
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+        $('.right-map[data-region="37"]').removeClass('region-authority');
+        $('#ukraine-map g[data-region="37"] .st0').removeClass('region-map');
+    })
+
+    $('#ukraine-map g[data-region="38"]').click(function () {
+
+        $('#ukraine-map .st0').removeClass('region-map');
+        $('.right-map').removeClass('region-authority');
+        $('.right-map[data-region="38"]').removeClass('region-authority');
+        $('#ukraine-map g[data-region="38"] .st0').removeClass('region-map');
+    })
+
+    /**/
+
+
+
 
     /**/
     $('.radio').iCheck({
@@ -17475,118 +17538,118 @@ $(document).ready(function () {
 
     /**/
     /*if ($('.service-big-form .row').hasClass('disabled-step')) {
-        $('select').attr('disabled');
-    }*/
+     $('select').attr('disabled');
+     }*/
 
     /* transliterate validation */
 
     //code
 
     /*!function (e) {
-        var
-            t = {
-                "А": "A",
-                "а": "a",
-                "Б": "B",
-                "б": "b",
-                "В": "V",
-                "в": "v",
-                "Г": "H",
-                "г": "h",
-                "Ґ": "G",
-                "ґ": "g",
-                "Д": "D",
-                "д": "d",
-                "Е": "E",
-                "е": "e",
-                "Є": "Ye",
-                "є": "ie",
-                "Ж": "Zh",
-                "ж": "zh",
-                "З": "Z",
-                "з": "z",
-                "И": "Y",
-                "и": "y",
-                "І": "I",
-                "і": "i",
-                "Ї": "Yi",
-                "ї": "i",
-                "Й": "Y",
-                "й": "i",
-                "К": "K",
-                "к": "k",
-                "Л": "L",
-                "л": "l",
-                "М": "M",
-                "м": "m",
-                "Н": "N",
-                "н": "n",
-                "О": "O",
-                "о": "o",
-                "П": "P",
-                "п": "p",
-                "Р": "R",
-                "р": "r",
-                "С": "S",
-                "с": "s",
-                "Т": "T",
-                "т": "t",
-                "У": "U",
-                "у": "u",
-                "Ф": "F",
-                "ф": "f",
-                "Х": "Kh",
-                "х": "kh",
-                "Ц": "Ts",
-                "ц": "ts",
-                "Ч": "Ch",
-                "ч": "ch",
-                "Ш": "Sh",
-                "ш": "sh",
-                "Щ": "Shch",
-                "щ": "shch",
-                "Ю": "Yu",
-                "ю": "iu",
-                "Я": "Ya",
-                "я": "ia",
-                " ": " ",
-                "зг": "zgh",
-                "Зг": "Zgh",
-                "-": "-"
-            },
-            a = function (a) {
-                a = e.trim(a).split("");
-                var n = [], r = !1;
-                return e(a).each(function (e, i) {
-                    return r ? void(r = !1) : (
-                        i = 0 == e || a.hasOwnProperty(e) && " " == a[e - 1] || "-" == a[e - 1] ? i.toUpperCase() : i.toLowerCase(),
-                        -1 != ["З", "з"].indexOf(i) && a.hasOwnProperty(e + 1) && "г" == a[e + 1] && (i += "г", r = !0),
-                            void(t.hasOwnProperty(i) && n.push(t[i]))
-                    )
-                }),
-                    n.join("").toUpperCase()
-            },
-            n = function () {
-                var t = e('input[name="name"]').val(), n = a(t);
-                e(".firstName").text(n), e(".firstNameUkr").text(t.toUpperCase())
-            },
-            r = function () {
-                var t = e('input[name="name2"]').val(), n = a(t);
-                e(".lastName").text(n), e(".lastNameUkr").text(t.toUpperCase())
-            };
-        e('input[name="name"]').on("keyup", n),
-            e('input[name="name2"]').on("keyup", r),
-            e("#clear").click(
-                function () {
-                    e('input[name="name"]').val(""),
-                        e(".firstName").text(""),
-                        e(".lastName").text(""),
-                        e('input[name="name2"]').val(""),
-                        e(".firstNameUkr").text(""),
-                        e(".lastNameUkr").text("")
-                }
-            )
-    }(jQuery);*/
+     var
+     t = {
+     "А": "A",
+     "а": "a",
+     "Б": "B",
+     "б": "b",
+     "В": "V",
+     "в": "v",
+     "Г": "H",
+     "г": "h",
+     "Ґ": "G",
+     "ґ": "g",
+     "Д": "D",
+     "д": "d",
+     "Е": "E",
+     "е": "e",
+     "Є": "Ye",
+     "є": "ie",
+     "Ж": "Zh",
+     "ж": "zh",
+     "З": "Z",
+     "з": "z",
+     "И": "Y",
+     "и": "y",
+     "І": "I",
+     "і": "i",
+     "Ї": "Yi",
+     "ї": "i",
+     "Й": "Y",
+     "й": "i",
+     "К": "K",
+     "к": "k",
+     "Л": "L",
+     "л": "l",
+     "М": "M",
+     "м": "m",
+     "Н": "N",
+     "н": "n",
+     "О": "O",
+     "о": "o",
+     "П": "P",
+     "п": "p",
+     "Р": "R",
+     "р": "r",
+     "С": "S",
+     "с": "s",
+     "Т": "T",
+     "т": "t",
+     "У": "U",
+     "у": "u",
+     "Ф": "F",
+     "ф": "f",
+     "Х": "Kh",
+     "х": "kh",
+     "Ц": "Ts",
+     "ц": "ts",
+     "Ч": "Ch",
+     "ч": "ch",
+     "Ш": "Sh",
+     "ш": "sh",
+     "Щ": "Shch",
+     "щ": "shch",
+     "Ю": "Yu",
+     "ю": "iu",
+     "Я": "Ya",
+     "я": "ia",
+     " ": " ",
+     "зг": "zgh",
+     "Зг": "Zgh",
+     "-": "-"
+     },
+     a = function (a) {
+     a = e.trim(a).split("");
+     var n = [], r = !1;
+     return e(a).each(function (e, i) {
+     return r ? void(r = !1) : (
+     i = 0 == e || a.hasOwnProperty(e) && " " == a[e - 1] || "-" == a[e - 1] ? i.toUpperCase() : i.toLowerCase(),
+     -1 != ["З", "з"].indexOf(i) && a.hasOwnProperty(e + 1) && "г" == a[e + 1] && (i += "г", r = !0),
+     void(t.hasOwnProperty(i) && n.push(t[i]))
+     )
+     }),
+     n.join("").toUpperCase()
+     },
+     n = function () {
+     var t = e('input[name="name"]').val(), n = a(t);
+     e(".firstName").text(n), e(".firstNameUkr").text(t.toUpperCase())
+     },
+     r = function () {
+     var t = e('input[name="name2"]').val(), n = a(t);
+     e(".lastName").text(n), e(".lastNameUkr").text(t.toUpperCase())
+     };
+     e('input[name="name"]').on("keyup", n),
+     e('input[name="name2"]').on("keyup", r),
+     e("#clear").click(
+     function () {
+     e('input[name="name"]').val(""),
+     e(".firstName").text(""),
+     e(".lastName").text(""),
+     e('input[name="name2"]').val(""),
+     e(".firstNameUkr").text(""),
+     e(".lastNameUkr").text("")
+     }
+     )
+     }(jQuery);*/
 
     /**/
 

@@ -3190,37 +3190,12 @@ img.mfp-img {
   height: 368px; }
 
 /* FIX for Crimea and Sevastopol */
-#ukraine-map g[data-region="1"].region-map {
+.primary-nav .secondary-nav.display-nav li a svg g[data-region="38"] .st0:hover {
   fill: #fff;
   cursor: default; }
-  #ukraine-map g[data-region="1"].region-map g, #ukraine-map g[data-region="1"].region-map .st0.region-map, #ukraine-map g[data-region="1"].region-map .st0 {
-    fill: #fff;
-    cursor: default; }
-  #ukraine-map g[data-region="1"].region-map g .st0 {
-    fill: #fff;
-    stroke: transparent;
-    cursor: default; }
 
-#ukraine-map g[data-region="27"].region-map {
+.primary-nav .secondary-nav.display-nav li a svg g[data-region="37"] .st0:hover {
   fill: #0096ff;
-  stroke: transparent;
-  cursor: default; }
-  #ukraine-map g[data-region="27"].region-map g, #ukraine-map g[data-region="27"].region-map .st0, #ukraine-map g[data-region="27"].region-map .st0.region-map, #ukraine-map g[data-region="27"].region-map circle.st0 {
-    fill: #0096ff;
-    stroke: transparent;
-    cursor: default; }
-  #ukraine-map g[data-region="27"].region-map g .st0 {
-    fill: #0096ff;
-    stroke: transparent;
-    cursor: default; }
-
-.primary-nav .secondary-nav.display-nav li a svg g[data-region="27"] .st0.region-map {
-  fill: #0096ff;
-  stroke: transparent;
-  cursor: default; }
-
-.primary-nav .secondary-nav.display-nav li a svg g[data-region="1"] .st0.region-map {
-  fill: #fff;
   stroke: transparent;
   cursor: default; }
 
@@ -5789,14 +5764,72 @@ label {
           stroke: #fff;
           cursor: pointer; }
     .primary-nav .secondary-nav.display-nav .authorities {
-      position: relative; }
+      position: relative;
+      /*ul {
+        list-style: none;
+        overflow-y: scroll;
+        max-height: 420px;
+        padding-bottom: 80px;
+        padding-left: 25px;
+        li {
+          width: 100%;
+          a {
+            padding: 13px 15px 12px;
+            font-size: 1.125em;
+            width: 95%;
+            cursor: pointer;
+            color: $white;
+            !*border-bottom: 1px solid transparent;*!
+            &:hover {
+              !*border-bottom: 1px solid $white;*!
+              background: $white;
+              color: $black-text;
+            }
+            span {
+              display: block;
+              float: left;
+              &:first-child {
+                width: 40%;
+                font-weight: 600;
+              }
+              &:last-child {
+                width: 60%;
+              }
+              .auto-text, .auto-link {
+                display: block;
+                width: 100%;
+                font-weight: 400;
+              }
+              .auto-link {
+                display: none;
+                i {
+                  font-size: 12px;
+                }
+                a {
+                  display: inline;
+                }
+              }
+            }
+          }
+          a.region-authority {
+            background: $white;
+            color: $black-text;
+            .auto-text {
+              display: none;
+            }
+            .auto-link {
+              display: block;
+            }
+          }
+        }
+      }*/ }
       .primary-nav .secondary-nav.display-nav .authorities:after {
         content: "";
         display: block;
         position: absolute;
         bottom: 0;
         right: 14px;
-        left: 40px;
+        left: 25px;
         height: 80px;
         background: rgba(255, 255, 255, 0);
         background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #0095ff 100%);
@@ -5809,40 +5842,65 @@ label {
         list-style: none;
         overflow-y: scroll;
         max-height: 420px;
-        padding-bottom: 80px; }
-        .primary-nav .secondary-nav.display-nav .authorities ul li {
-          width: 100%; }
-          .primary-nav .secondary-nav.display-nav .authorities ul li a {
-            padding: 13px 0 12px;
-            font-size: 1.125em;
-            width: 95%;
-            cursor: pointer;
-            color: #fff;
-            border-bottom: 1px solid transparent; }
-            .primary-nav .secondary-nav.display-nav .authorities ul li a:hover {
-              border-bottom: 1px solid #fff; }
-            .primary-nav .secondary-nav.display-nav .authorities ul li a span {
-              display: block;
-              float: left; }
-              .primary-nav .secondary-nav.display-nav .authorities ul li a span:first-child {
-                width: 40%;
-                font-weight: 600; }
-              .primary-nav .secondary-nav.display-nav .authorities ul li a span:last-child {
-                width: 60%; }
-              .primary-nav .secondary-nav.display-nav .authorities ul li a span .auto-text, .primary-nav .secondary-nav.display-nav .authorities ul li a span .auto-link {
-                display: block;
-                width: 100%;
-                font-weight: 400; }
-              .primary-nav .secondary-nav.display-nav .authorities ul li a span .auto-link {
-                display: none; }
-                .primary-nav .secondary-nav.display-nav .authorities ul li a span .auto-link i {
-                  font-size: 12px; }
-          .primary-nav .secondary-nav.display-nav .authorities ul li a.region-authority {
-            border-bottom: 1px solid #fff; }
-            .primary-nav .secondary-nav.display-nav .authorities ul li a.region-authority .auto-text {
-              display: none; }
-            .primary-nav .secondary-nav.display-nav .authorities ul li a.region-authority .auto-link {
+        padding-bottom: 80px;
+        padding-left: 25px; }
+        .primary-nav .secondary-nav.display-nav .authorities ul li.right-map {
+          width: 100%;
+          display: block;
+          height: 90px;
+          -webkit-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+          color: #fff;
+          cursor: pointer; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map:hover {
+            background: #fff;
+            color: #161616; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map span {
+            display: block;
+            width: 100%; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map .right-visible {
+            display: block; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map .right-invisible {
+            display: none; }
+            .primary-nav .secondary-nav.display-nav .authorities ul li.right-map .right-invisible a {
               display: block; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map div {
+            float: left;
+            padding: 13px 15px 0; }
+            .primary-nav .secondary-nav.display-nav .authorities ul li.right-map div:first-child {
+              width: 35%;
+              font-weight: 600; }
+            .primary-nav .secondary-nav.display-nav .authorities ul li.right-map div:last-child {
+              width: 65%; }
+        .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority {
+          background: #fff;
+          color: #161616;
+          cursor: default; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-visible {
+            display: none; }
+          .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-invisible {
+            display: block; }
+            .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-invisible a {
+              color: #0096ff;
+              font-weight: 700;
+              font-size: 1em;
+              cursor: pointer; }
+              .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-invisible a i {
+                font-size: 12px;
+                -webkit-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;
+                -o-transition: all 0.4s ease;
+                transition: all 0.4s ease; }
+              .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-invisible a:hover {
+                color: #efaf03; }
+                .primary-nav .secondary-nav.display-nav .authorities ul li.right-map.region-authority .right-invisible a:hover i {
+                  -webkit-transform: translateX(24px);
+                  -moz-transform: translateX(24px);
+                  -ms-transform: translateX(24px);
+                  -o-transform: translateX(24px);
+                  transform: translateX(24px); }
   .primary-nav .secondary-nav > li:nth-child(4n+2) {
     margin-right: 0;
     border-right: none; }
