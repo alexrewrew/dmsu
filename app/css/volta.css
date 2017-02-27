@@ -5116,6 +5116,23 @@ label {
 .icheckbox_square-orange, .iradio_square-orange {
   margin-right: 30px; }
 
+/*service items*/
+.service-section-hide {
+  display: none; }
+
+.error-validation {
+  border: 3px solid red; }
+
+.error-validation-text {
+  color: red !important;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
+.row[data-show='1'], .row[data-show='2'], .step-check-3, .step-check-4, .step-check-5 {
+  display: none; }
+
 /*BUTTON STYLES*/
 .button-regular {
   background: #efaf03;

@@ -197,9 +197,9 @@ $(document).ready(function () {
     });
 
 
-    jQuery.fn.scrollTo = function(elem, speed) {
+    jQuery.fn.scrollTo = function (elem, speed) {
         $(this).animate({
-            scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+            scrollTop: $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
         }, speed == undefined ? 1000 : speed);
         return this;
     };
@@ -249,8 +249,6 @@ $(document).ready(function () {
     /**/
 
 
-
-
     /**/
     $('.radio').iCheck({
         checkboxClass: 'icheckbox_square-orange',
@@ -258,123 +256,329 @@ $(document).ready(function () {
         increaseArea: '20%' // optional
     });
 
-    /**/
-    /*if ($('.service-big-form .row').hasClass('disabled-step')) {
-     $('select').attr('disabled');
-     }*/
-
     /* transliterate validation */
 
-    //code
+    $(".trans-form input").on('input', function () {
+        if ($(this).val() != "") {
+            var regexp = /^([А-Яа-яЇїІіЄєҐґ\s\-`']+)$/;
+            if (!regexp.test($(this).val())) {
+                $(this).addClass("error-validation");
+                $(".text-servise-error").addClass("error-validation-text");
+            } else {
+                $(this).removeClass("error-validation");
+                $(".text-servise-error").removeClass("error-validation-text");
+            }
+        } else {
+            $(this).removeClass("error-validation");
+            $(".text-servise-error").removeClass("error-validation-text");
+        }
 
-    /*!function (e) {
-     var
-     t = {
-     "А": "A",
-     "а": "a",
-     "Б": "B",
-     "б": "b",
-     "В": "V",
-     "в": "v",
-     "Г": "H",
-     "г": "h",
-     "Ґ": "G",
-     "ґ": "g",
-     "Д": "D",
-     "д": "d",
-     "Е": "E",
-     "е": "e",
-     "Є": "Ye",
-     "є": "ie",
-     "Ж": "Zh",
-     "ж": "zh",
-     "З": "Z",
-     "з": "z",
-     "И": "Y",
-     "и": "y",
-     "І": "I",
-     "і": "i",
-     "Ї": "Yi",
-     "ї": "i",
-     "Й": "Y",
-     "й": "i",
-     "К": "K",
-     "к": "k",
-     "Л": "L",
-     "л": "l",
-     "М": "M",
-     "м": "m",
-     "Н": "N",
-     "н": "n",
-     "О": "O",
-     "о": "o",
-     "П": "P",
-     "п": "p",
-     "Р": "R",
-     "р": "r",
-     "С": "S",
-     "с": "s",
-     "Т": "T",
-     "т": "t",
-     "У": "U",
-     "у": "u",
-     "Ф": "F",
-     "ф": "f",
-     "Х": "Kh",
-     "х": "kh",
-     "Ц": "Ts",
-     "ц": "ts",
-     "Ч": "Ch",
-     "ч": "ch",
-     "Ш": "Sh",
-     "ш": "sh",
-     "Щ": "Shch",
-     "щ": "shch",
-     "Ю": "Yu",
-     "ю": "iu",
-     "Я": "Ya",
-     "я": "ia",
-     " ": " ",
-     "зг": "zgh",
-     "Зг": "Zgh",
-     "-": "-"
-     },
-     a = function (a) {
-     a = e.trim(a).split("");
-     var n = [], r = !1;
-     return e(a).each(function (e, i) {
-     return r ? void(r = !1) : (
-     i = 0 == e || a.hasOwnProperty(e) && " " == a[e - 1] || "-" == a[e - 1] ? i.toUpperCase() : i.toLowerCase(),
-     -1 != ["З", "з"].indexOf(i) && a.hasOwnProperty(e + 1) && "г" == a[e + 1] && (i += "г", r = !0),
-     void(t.hasOwnProperty(i) && n.push(t[i]))
-     )
-     }),
-     n.join("").toUpperCase()
-     },
-     n = function () {
-     var t = e('input[name="name"]').val(), n = a(t);
-     e(".firstName").text(n), e(".firstNameUkr").text(t.toUpperCase())
-     },
-     r = function () {
-     var t = e('input[name="name2"]').val(), n = a(t);
-     e(".lastName").text(n), e(".lastNameUkr").text(t.toUpperCase())
-     };
-     e('input[name="name"]').on("keyup", n),
-     e('input[name="name2"]').on("keyup", r),
-     e("#clear").click(
-     function () {
-     e('input[name="name"]').val(""),
-     e(".firstName").text(""),
-     e(".lastName").text(""),
-     e('input[name="name2"]').val(""),
-     e(".firstNameUkr").text(""),
-     e(".lastNameUkr").text("")
-     }
-     )
-     }(jQuery);*/
+        if ($(".trans-form input[name='surname']").val() != "" && $(".trans-form input[name='name']").val() != "" && $(".error-validation").length == 0) {
+            $(".form-step").removeClass("disabled-step");
+        } else {
+            $(".form-step").addClass("disabled-step");
+        }
+    });
 
-    /**/
+    $(".trans-form").submit(function (e) {
+        if ($(".disabled-step").length == 0) {
+            var name = $(".trans-form input[name='name']").val();
+            var surname = $(".trans-form input[name='surname']").val();
+            var data = transliterate(name, surname);
 
+            $(".name-surname").html(data[3] + " " + data[2]);
+
+            $("#firstNameUkr").html(data[3]);
+            $("#firstNameEng").html(data[1]);
+            $("#lastNameUkr").html(data[2]);
+            $("#lastNameEng").html(data[0]);
+
+            $("#firstNameUkr2").html(data[3]);
+            $("#firstNameEng2").html(data[1]);
+            $("#lastNameUk2r").html(data[2]);
+            $("#lastNameEng2").html(data[0]);
+
+            $(".service-section-hide").show();
+        }
+        e.preventDefault();
+    });
+
+    var transliterate = function (name, surname) {
+        var t = new Array(
+            ["зг", "zgh"],
+            ["Зг", "Zgh"],
+            ["А", "A"],
+            ["а", "a"],
+            ["Б", "B"],
+            ["б", "b"],
+            ["В", "V"],
+            ["в", "v"],
+            ["Г", "H"],
+            ["г", "h"],
+            ["Ґ", "G"],
+            ["ґ", "g"],
+            ["Д", "D"],
+            ["д", "d"],
+            ["Е", "E"],
+            ["е", "e"],
+            ["Є", "Ye"],
+            ["є", "ie"],
+            ["Ж", "Zh"],
+            ["ж", "zh"],
+            ["З", "Z"],
+            ["з", "z"],
+            ["И", "Y"],
+            ["и", "y"],
+            ["І", "I"],
+            ["і", "i"],
+            ["Ї", "Yi"],
+            ["ї", "i"],
+            ["Й", "Y"],
+            ["й", "i"],
+            ["К", "K"],
+            ["к", "k"],
+            ["Л", "L"],
+            ["л", "l"],
+            ["М", "M"],
+            ["м", "m"],
+            ["Н", "N"],
+            ["н", "n"],
+            ["О", "O"],
+            ["о", "o"],
+            ["П", "P"],
+            ["п", "p"],
+            ["Р", "R"],
+            ["р", "r"],
+            ["С", "S"],
+            ["с", "s"],
+            ["Т", "T"],
+            ["т", "t"],
+            ["У", "U"],
+            ["у", "u"],
+            ["Ф", "F"],
+            ["ф", "f"],
+            ["Х", "Kh"],
+            ["х", "kh"],
+            ["Ц", "Ts"],
+            ["ц", "ts"],
+            ["Ч", "Ch"],
+            ["ч", "ch"],
+            ["Ш", "Sh"],
+            ["ш", "sh"],
+            ["Щ", "Shch"],
+            ["щ", "shch"],
+            ["Ю", "Yu"],
+            ["ю", "iu"],
+            ["Я", "Ya"],
+            ["я", "ia"],
+            [" ", " "],
+            ["-", "-"],
+            ["'", ""]
+        );
+
+        name = name.trim().replace(/\s+/g, ' ');
+        surname = surname.trim().replace(/\s+/g, ' ');
+
+        var arr = name.split(' ');
+        var result = [];
+        $.each(arr, function (i) {
+            var text = arr[i][0].toUpperCase() + arr[i].slice(1);
+            result.push(text);
+        });
+        name = result.join(" ");
+
+        arr = surname.split(' ');
+        result = [];
+        $.each(arr, function (i) {
+            var text = arr[i][0].toUpperCase() + arr[i].slice(1);
+            result.push(text);
+        });
+        surname = result.join(" ");
+
+        var newName = "";
+        for (i = 0; i < name.length; i++) {
+            for (j = 0; j < t.length; j++) {
+                if (name[i] == t[j][0]) {
+                    newName += t[j][1];
+                }
+            }
+        }
+
+        var newSurmame = "";
+        for (var i = 0; i < surname.length; i++) {
+            for (var j = 0; j < t.length; j++) {
+                if (surname[i] == t[j][0]) {
+                    newSurmame += t[j][1];
+                }
+            }
+        }
+
+        newName = newName.toUpperCase();
+        newSurmame = newSurmame.toUpperCase();
+
+        return [newName, newSurmame, name, surname];
+    };
+
+    /* registrations validation */
+
+    $(".region").change(function () {
+        if ($(this).val() != "") {
+            $(".form-step1").removeClass("disabled-step");
+            $(".form-step2").addClass("disabled-step");
+            $(".city").removeAttr("disabled");
+            $('.city').val("");
+            $('.city').trigger('selection:updated');
+        } else {
+            $(".form-step1").addClass("disabled-step");
+            $(".form-step2").addClass("disabled-step");
+            $(".city").attr("disabled", true);
+            $('.city').val("");
+            $('.city').trigger('selection:updated');
+        }
+    });
+
+    $(".city").change(function () {
+        if ($(this).val() != "") {
+            $(".form-step2").removeClass("disabled-step");
+        } else {
+            $(".form-step2").addClass("disabled-step");
+        }
+    });
+
+    /* check passport validation */
+
+    $(".passport-choise-block").mouseout(function () {
+        $(this).find(".passport-choise").addClass("checked-passport");
+    });
+
+    $(".passport-choise-block").mouseleave(function () {
+        if (!$(this).hasClass("active-first-step")) {
+            $(this).find(".passport-choise").removeClass("checked-passport");
+        }
+    });
+
+    $(".passport-choise-block").click(function () {
+        $(".active-first-step").removeClass("active-first-step");
+        $(".checked-passport").removeClass("checked-passport");
+        $(this).addClass("active-first-step");
+        $(this).find(".passport-choise").removeClass("checked-passport");
+        
+        if ($(this).attr("data-step") == 1) {
+            $(".row[data-show='1']").show();
+            $(".row[data-show='1'] input").iCheck('uncheck');
+            $(".step-check-3").show();
+            $(".step-check-3").addClass("disabled-step");
+            $(".step-check-3 input[name='book-id']").iCheck('uncheck');
+            $(".step-check-3-pass").addClass("disabled-step");
+            $(".step-check-3-pass input").val("");
+            $(".step-check-4").show();
+            $(".step-check-4").addClass("disabled-step");
+            $(".step-check-5").show();
+            $(".step-check-5").addClass("disabled-step");
+            $(".step-check-3-pass input").attr("disabled", true);
+            $(".row[data-show='2']").hide();
+            $(".error-validation").removeClass("error-validation");
+            $(".step-check-33-pass").addClass("disabled-step");
+            $(".step-check-33-pass input").attr("disabled", true);
+            $(".step-check-33-pass input").val("");
+            $(".row[data-show='2'] input").iCheck('uncheck');
+        } else {
+            $(".row[data-show='2']").show();
+            $(".row[data-show='1'] input").iCheck('uncheck');
+            $(".step-check-3").show();
+            $(".step-check-3").addClass("disabled-step");
+            $(".step-check-3 input[name='book-id']").iCheck('uncheck');
+            $(".step-check-3-pass").addClass("disabled-step");
+            $(".step-check-3-pass input").val("");
+            $(".step-check-4").show();
+            $(".step-check-4").addClass("disabled-step");
+            $(".step-check-5").show();
+            $(".step-check-5").addClass("disabled-step");
+            $(".step-check-3-pass input").attr("disabled", true);
+            $(".row[data-show='1']").hide();
+            $(".error-validation").removeClass("error-validation");
+            $(".step-check-33-pass").addClass("disabled-step");
+            $(".step-check-33-pass input").attr("disabled", true);
+            $(".step-check-33-pass input").val("");
+            $(".row[data-show='2'] input").iCheck('uncheck');
+        }
+    });
+
+    $(document).on("ifChanged", ".row[data-show='1'] input", function () {
+        $(".step-check-3").removeClass("disabled-step");
+        $(".step-check-3 input[name='book-id']").removeAttr("disabled");
+        $('.radio').iCheck({
+            checkboxClass: 'icheckbox_square-orange',
+            radioClass: 'iradio_square-orange',
+            increaseArea: '20%' // optional
+        });
+    });
+
+    $(document).on("ifChanged", ".row[data-show='2'] input", function () {
+        $(".step-check-33-pass").removeClass("disabled-step");
+        $(".step-check-33-pass input").removeAttr("disabled");
+    });
+
+    $(".step-check-33-pass input[name='number-step']").on('input', function () {
+        this.value = this.value.replace(/[^\d,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 6) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
+    });
+
+    $(".step-check-33-pass input").on('input', function () {
+        if ($(".step-check-33-pass input[name='set-step']").val() != "" && $(".step-check-33-pass input[name='number-step']").val() != "" && $(".error-validation").length == 0) {
+            $(".step-check-3").removeClass("disabled-step");
+            $(".step-check-3 input[name='book-id']").removeAttr("disabled");
+            $('.radio').iCheck({
+                checkboxClass: 'icheckbox_square-orange',
+                radioClass: 'iradio_square-orange',
+                increaseArea: '20%' // optional
+            });
+        }
+    });
+
+    $(document).on("ifChanged", ".step-check-3 input[name='book-id']", function () {
+        $(".step-check-3-pass").removeClass("disabled-step");
+        $(".step-check-3-pass input").removeAttr("disabled");
+    });
+
+    $(".step-check-3-pass input[name='number']").on('input', function () {
+        this.value = this.value.replace(/[^\d,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 6) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
+    });
+
+    $(".step-check-3-pass input[name='set']").on('input', function () {
+        this.value = this.value.replace(/[^А-ЯЇІЄҐ,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 2) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
+    });
+
+    $(".step-check-3-pass input").on('input', function () {
+        if ($(".step-check-3-pass input[name='set']").val() != "" && $(".step-check-3-pass input[name='number']").val() != "" && $(".error-validation").length == 0) {
+            $(".step-check-4").removeClass("disabled-step");
+            //if captcha is true
+            $(".step-check-5").removeClass("disabled-step");
+        } else {
+            $(".step-check-4").addClass("disabled-step");
+            $(".step-check-5").addClass("disabled-step");
+        }
+    });
 });
 
 

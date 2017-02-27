@@ -56,13 +56,13 @@
     </div>
     <article class="container indent service-content-indent">
         <div class="row">
-            <div class="mobile-12"><p class="gray-text">Введіть прізвище та ім'я українськими літерами так,<br>
+            <div class="mobile-12"><p class="gray-text text-servise-error">Введіть прізвище та ім'я українськими літерами так,<br>
                 як написано у Вашому паспорті громадянина України:</p>
-                <form action="" class="service-big-form inline-input">
+                <form action="" class="service-big-form inline-input trans-form">
                     <div class="row">
-                        <div class="mobile-12"><input type="text" placeholder="Введіть прізвище" name="name">
-                            <input type="text" placeholder="Введіть ім’я" name="name2"></div>
-                    </div><div class="row disabled-step">
+                        <div class="mobile-12"><input type="text" placeholder="Введіть прізвище" name="surname">
+                            <input type="text" placeholder="Введіть ім’я" name="name"></div>
+                    </div><div class="row disabled-step form-step">
                         <div class="mobile-12"><button class="button-regular blue-button" type="submit">Перевірити</button></div>
                     </div>
 
@@ -72,7 +72,7 @@
     </article>
 </section>
 
-<section class="container-fluid service-section">
+<section class="container-fluid service-section service-section-hide">
     <div class="container indent service-header-indent">
         <div class="row">
             <div class="mobile-12"><h2>Результати транслітерації</h2></div>
@@ -81,7 +81,7 @@
     <article class="container indent service-result-indent">
         <div class="row">
             <div class="mobile-12">
-                <h2>Іванов Олександр</h2>
+                <h2 class="name-surname"></h2>
             </div>
         </div>
         <div class="row gray-row">
