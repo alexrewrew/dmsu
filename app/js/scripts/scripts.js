@@ -183,30 +183,37 @@ $(document).ready(function () {
     /**/
     $('#help').click(function () {
         $('#help-panel').slideToggle();
-    })
+    });
 
     /**/
     $('.right-map').click(function () {
-        var reg1 = $(this).attr('data-region');
+        var reg = $(this).attr('data-region');
 
         $('#ukraine-map .st0').removeClass('region-map');
         $('.right-map').removeClass('region-authority');
 
-        $('#ukraine-map g[data-region=' + reg1 + '] .st0').addClass('region-map');
+        $('#ukraine-map g[data-region=' + reg + '] .st0').addClass('region-map');
         $(this).addClass('region-authority');
-    })
+    });
 
 
+    jQuery.fn.scrollTo = function(elem, speed) {
+        $(this).animate({
+            scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+        }, speed == undefined ? 1000 : speed);
+        return this;
+    };
 
     $('#ukraine-map g').click(function () {
-        var reg2 = $(this).attr('data-region');
+        var reg = $(this).attr('data-region');
 
         $('#ukraine-map .st0').removeClass('region-map');
         $('.right-map').removeClass('region-authority');
 
-        $('.right-map[data-region=' + reg2 + ']').addClass('region-authority');
-        $('#ukraine-map g[data-region=' + reg2 + '] .st0').addClass('region-map');
-    })
+        $('.right-map[data-region=' + reg + ']').addClass('region-authority');
+        $('#ukraine-map g[data-region=' + reg + '] .st0').addClass('region-map');
+        $('.authorities > ul').scrollTo('.right-map[data-region=' + reg + ']', 500);
+    });
 
     /**/
     $('.right-map[data-region="38"]').click(function () {
@@ -214,14 +221,14 @@ $(document).ready(function () {
         $('.right-map').removeClass('region-authority');
         $('#ukraine-map g[data-region="38"] .st0').removeClass('region-map');
         $(this).removeClass('region-authority');
-    })
+    });
 
     $('.right-map[data-region="37"]').click(function () {
         $('#ukraine-map .st0').removeClass('region-map');
         $('.right-map').removeClass('region-authority');
         $('#ukraine-map g[data-region="37"] .st0').removeClass('region-map');
         $(this).removeClass('region-authority');
-    })
+    });
 
     $('#ukraine-map g[data-region="37"]').click(function () {
 
@@ -229,7 +236,7 @@ $(document).ready(function () {
         $('.right-map').removeClass('region-authority');
         $('.right-map[data-region="37"]').removeClass('region-authority');
         $('#ukraine-map g[data-region="37"] .st0').removeClass('region-map');
-    })
+    });
 
     $('#ukraine-map g[data-region="38"]').click(function () {
 
@@ -237,7 +244,7 @@ $(document).ready(function () {
         $('.right-map').removeClass('region-authority');
         $('.right-map[data-region="38"]').removeClass('region-authority');
         $('#ukraine-map g[data-region="38"] .st0').removeClass('region-map');
-    })
+    });
 
     /**/
 
