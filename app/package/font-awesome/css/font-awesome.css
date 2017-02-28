@@ -82,3 +82,6 @@
 .fa-check:before {
     content: "\f00c";
 }
+.fa-check-circle:before {
+    content: "\f058";
+}

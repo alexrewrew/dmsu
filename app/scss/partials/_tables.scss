@@ -132,10 +132,10 @@ th {
 .service-table {
   th {
     padding: {
-      top:21px;
-      bottom:22px;
-      left:30px;
-      right:30px;
+      top: 21px;
+      bottom: 22px;
+      left: 30px;
+      right: 30px;
     }
     font-weight: 700;
     color: $f-gray;
@@ -143,11 +143,29 @@ th {
   }
   td {
     padding: {
-      top:27px;
-      bottom:30px;
-      left:30px;
-      right:30px;
+      top: 27px;
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
     }
     border-bottom: 1px solid $a-gray;
+  }
+}
+
+.bills-table {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  tr {
+    border-bottom: 1px solid #d5d5d5;
+  }
+  th {
+    font-weight: bold;
+    width: 25%;
+    background: $a-gray;
+    color: $f-gray;
+    padding: 20px;
+  }
+  td {
+    padding: 20px;
   }
 }

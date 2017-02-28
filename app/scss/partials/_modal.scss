@@ -1,10 +1,11 @@
-.white-popup-block {
-  background: #FFF;
-  padding: 20px 30px;
+.blue-popup-block {
+  background: $blue;
+  padding: 30px;
   text-align: left;
   max-width: 650px;
   margin: 40px auto;
   position: relative;
+  text-align: center;
 }
 
 .mfp-container {
@@ -27,4 +28,48 @@
   margin: 0 auto;
   text-align: left;
   z-index: 1045;
+
+  p {
+    color: $white;
+  }
+  h3 {
+    color: $white;
+    margin-bottom: 20px;
+  }
+  i {
+    font-size: 30px;
+  }
+  input {
+    border-color: #53b8ff;
+    background: #028ff1;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    margin-bottom: 30px;
+    color:$white;
+    &:focus {
+      border-color: $white;
+    }
+  }
+  input::-webkit-input-placeholder {color:rgba(255,255,255,.8);}
+  input::-moz-placeholder          {color:rgba(255,255,255,.8);}/* Firefox 19+ */
+  input:-moz-placeholder           {color:rgba(255,255,255,.8);}/* Firefox 18- */
+  input:-ms-input-placeholder      {color:rgba(255,255,255,.8);}
+  .button-regular {
+    background: $white;
+    color:$black-text;
+  }
+}
+
+/**/
+
+.mfp-bg {
+  opacity: .3;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: $white;
+  opacity: 1;
+  &:hover {
+    opacity: .5;
+  }
 }
