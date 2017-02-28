@@ -95,15 +95,29 @@ input {
   }
 }
 
-form.inline-input {
+
+.inline-input {
   input {
-    margin-right: 26px;
-    width: calc(50% - 16px);
+    margin-right: 23px;
+    width: calc(50% - 14px);
     &:nth-child(2) {
       margin-right: 0;
     }
   }
+}
 
+textarea {
+  padding: 21px 33px 22px;
+  outline: none;
+  border:solid 3px $a-gray;
+  width: 99.5%;
+  @include transition;
+  resize: none;
+  min-height: 200px;
+  margin-top: 15px;
+  &:focus {
+    border-color: $yellow;
+  }
 }
 
 /*search input*/

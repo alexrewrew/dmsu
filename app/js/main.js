@@ -17532,10 +17532,19 @@ $(document).ready(function () {
     });
 
     /**/
-
+    $(function () {
+        $('.popup-modal').magnificPopup({
+            type: 'inline',
+            preloader: false
+        });
+        $(document).on('click', '.popup-modal-dismiss', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
+    });
 
     /**/
-    $('.radio').iCheck({
+    $('.radio, .check').iCheck({
         checkboxClass: 'icheckbox_square-orange',
         radioClass: 'iradio_square-orange',
         increaseArea: '20%' // optional
@@ -17747,7 +17756,7 @@ $(document).ready(function () {
         $(".checked-passport").removeClass("checked-passport");
         $(this).addClass("active-first-step");
         $(this).find(".passport-choise").removeClass("checked-passport");
-        
+
         if ($(this).attr("data-step") == 1) {
             $(".row[data-show='1']").show();
             $(".row[data-show='1'] input").iCheck('uncheck');

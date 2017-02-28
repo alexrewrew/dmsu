@@ -74,3 +74,11 @@
 .fa-question:before {
     content: "\f128";
 }
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+    content: "\f00d";
+}
+.fa-check:before {
+    content: "\f00c";
+}

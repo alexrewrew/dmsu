@@ -13,6 +13,8 @@
 @import 'grid';
 //tabs
 @import 'partials/tabs';
+//tabs
+@import 'partials/modal';
 //slider
 @import '../package/slick-carousel/slick/slick';
 @import '../package/slick-carousel/slick/slick-theme';
@@ -197,15 +199,23 @@
   margin-right: 15px;
   li {
     border: none;
+    &:after {
+      display: none;
+    }
     a {
-      cursor: default;
       &:hover {
-        color: $crumbs;
+        color: $white;
       }
       i {
         margin-left: 6px;
         margin-right: 6px;
         font-size: 19px;
+      }
+    }
+    a.news-date {
+      cursor: default;
+      &:hover {
+        color: $crumbs;
       }
     }
   }
@@ -234,6 +244,13 @@
       &:hover {
         background: transparent;
         color: $white;
+      }
+    }
+    a#help {
+      background: $yellow;
+      &:hover {
+        background: $white;
+        color: $blue;
       }
     }
   }
@@ -933,6 +950,7 @@ footer {
   }
 }
 
+
 /*SERVICES RESULT*/
 .search-result.services-item {
   border-bottom: 2px solid $yellow;
@@ -1252,6 +1270,16 @@ article.service-result-indent {
   .gray-block {
     background: $yellow;
   }
+}
+
+/* RESULT STATEMENT */
+.service-result-success {
+  color: $success;
+  font-size: 1.625em;
+}
+.service-result-unsuccessful {
+  color: $red;
+  font-size: 1.625em;
 }
 
 /* transliterate */
