@@ -1073,6 +1073,7 @@ article.service-result-indent {
   padding-top: 0;
   padding-left: 8.7%;
   padding-right: 8.7%;
+  padding-bottom: 100px;
   h2 {
     color: $blue;
   }
@@ -1195,12 +1196,79 @@ article.service-result-indent {
 
         top: -95px;
         height: 72px;
+        @include transition;
+      }
+    }
+    .step.smallstep1 {
+      &:before {
+        top: -43px;
+        height: 20px;
+      }
+    }
+    .step.smallstep2 {
+      &:before {
+        top: -83px;
+        height: 60px;
       }
     }
     .step.bigstep1 {
       &:before {
         top: -373px;
         height: 350px;
+      }
+    }
+    .step.bigstep2 {
+      &:before {
+        top: -203px;
+        height: 180px;
+      }
+    }
+    .step.bigstep3 {
+      &:before {
+        top: -183px;
+        height: 170px;
+      }
+    }
+    .step.bigstep4 {
+      &:before {
+        top: -300px;
+        height: 277px;
+      }
+    }
+    .step.bigstep5 {
+      &:before {
+        top: -163px;
+        height: 150px;
+      }
+    }
+    .step.bigstep6 {
+      &:before {
+        top: -291px;
+        height: 268px;
+      }
+    }
+    .step.bigstep7 {
+      &:before {
+        top: -246px;
+        height: 223px;
+      }
+    }
+    .step.bigstep8 {
+      &:before {
+        top: -336px;
+        height: 313px;
+      }
+    }
+    .step.bigstep9 {
+      &:before {
+        top: -276px;
+        height: 253px;
+      }
+    }
+    .step.bigstep10 {
+      &:before {
+        top: -359px;
+        height: 326px;
       }
     }
     .step.first-step {
@@ -1211,6 +1279,7 @@ article.service-result-indent {
     .blue-button {
       margin-top: 0;
     }
+
 
   }
   .row.disabled-step {
@@ -1306,6 +1375,120 @@ article.service-result-indent {
   }
   .gray-block {
     background: $yellow;
+  }
+}
+
+/* DATE CHOICE */
+.calendar {
+  background: $a-gray;
+  padding: 28px 20px 50px;
+  margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  h2 {
+    color: $blue-hover;
+    margin-bottom: 16px;
+    margin-left: 10px;
+  }
+}
+
+.month-choice {
+  float: left;
+}
+
+.days-choice {
+  .week-days {
+    border-bottom: 2px solid $white;
+    li {
+      margin-bottom: 15px;
+      a {
+        cursor: default;
+        color: $c-gray;
+        &:hover {
+          color: $c-gray;
+          background: transparent;
+        }
+      }
+    }
+  }
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  a {
+    text-decoration: none;
+    font-weight: 400;
+    color: $black-text;
+    font-size: 1.25em;
+    display: block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 7px;
+    &:hover {
+      background: $yellow;
+      color: $black-text;
+    }
+  }
+  a.chosen-date {
+    background: $yellow;
+    color: $white;
+    cursor: default;
+  }
+  a.disabled-date {
+    color: $c-gray;
+    cursor: default;
+    &:hover {
+      background: transparent;
+      color: $c-gray;
+    }
+  }
+  a.weekend-date {
+    color: $red;
+    cursor: default;
+    &:hover {
+      background: transparent;
+      color: $red;
+    }
+  }
+}
+
+.time-row {
+  background: $a-gray;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 32px 12px 0 32px !important;
+  margin-bottom: 15px;
+}
+.time-list {
+  li {
+    display: inline-block;
+    width: 13.821%;
+    margin-right: 20px;
+    margin-bottom: 20px !important;
+    a {
+      text-decoration: none;
+      background: $white;
+      display: block;
+      text-align: center;
+      color:$black-text;
+      font-weight: 400;
+      padding: 25px 0;
+      font-size: 1.125em;
+      &:hover {
+        background: $yellow;
+        color: $black-text;
+      }
+    }
+    a.chosen-date {
+      background: $yellow;
+      color: $white;
+      cursor: default;
+    }
   }
 }
 

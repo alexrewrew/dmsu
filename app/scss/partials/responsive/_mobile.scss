@@ -181,8 +181,8 @@
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-top: 6px solid $white;
-    transform:rotate(-90deg);
-    right:10%;
+    transform: rotate(-90deg);
+    right: 10%;
   }
   .go-back a {
     padding-left: 40px !important;
@@ -234,7 +234,7 @@
     margin-left: 10px;
     float: left;
     li {
-      a{
+      a {
         padding-left: 5px;
         padding-right: 15px;
       }
@@ -314,7 +314,7 @@
     opacity: 1;
   }
 
-   /*404 services*/
+  /*404 services*/
   .error404-container {
     padding-bottom: 50px;
     margin-left: -15px;
@@ -459,7 +459,7 @@
     padding-right: 20px;
   }
 
-   /*button up*/
+  /*button up*/
   .button-up {
     bottom: 15px;
     right: 15px;
@@ -506,7 +506,7 @@
     }
   }
 
-   /*FOOTER*/
+  /*FOOTER*/
   footer {
     margin-top: 58px;
     max-height: inherit;
@@ -662,8 +662,8 @@
   .map-box-left, .map-box-right {
     width: 100%;
     padding: {
-      right:0;
-      bottom:15px;
+      right: 0;
+      bottom: 15px;
     }
   }
   .map-box-right {
@@ -700,16 +700,16 @@
     width: 100%;
   }
   .card-container .card-mask {
-    top:20%;
+    top: 20%;
     line-height: 0.9;
     font-size: 0.75em;
   }
   .card-container .card-mask .bold-field {
-    margin-bottom:3%;
+    margin-bottom: 3%;
   }
   .card-container .card-mask-foreign {
-    top:29%;
-    left:30.5%;
+    top: 29%;
+    left: 30.5%;
   }
   .card-container .card-mask-foreign .mask-row {
     margin-bottom: 2%;
@@ -734,5 +734,86 @@
   }
   p {
     margin-bottom: 15px;
+  }
+  /**/
+  article.indent.sign-indent {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .passport-choise .gray-block.text-block span img {
+    margin-bottom: 15px;
+    max-width: none;
+  }
+  .select-margin {
+    margin-bottom: 15px;
+  }
+  .week-days {
+    display: none;
+  }
+  .time-list li {
+    width: 38%;
+  }
+  .half-label {
+    width: 100%;
+  }
+  .passport-choise img {
+    margin-bottom: 30px;
+  }
+  /* lines */
+  .service-big-form {
+    .row {
+      .step:before {
+        top: -65px;
+        height: 42px;
+      }
+      .step.bigstep1:before {
+        top: -623px;
+        height: 600px;
+      }
+      .step.bigstep2:before {
+        top: -273px;
+        height: 250px;
+      }
+      .step.bigstep3:before {
+        top: -553px;
+        height: 530px;
+      }
+      .step.bigstep4:before {
+        top: -503px;
+        height: 480px;
+      }
+      .step.bigstep5:before {
+        top: -203px;
+        height: 190px;
+      }
+      .step.bigstep6:before {
+        top: -761px;
+        height: 748px;
+      }
+      .step.bigstep7:before {
+        top: -426px;
+        height: 403px;
+      }
+      .step.bigstep8:before {
+        top: -626px;
+        height: 603px;
+      }
+      .step.bigstep9:before {
+        top: -466px;
+        height: 443px;
+      }
+      .step.bigstep10:before {
+        top: -509px;
+        height: 486px;
+      }
+      .step.smallstep1:before {
+        top: -34px;
+        height: 20px;
+      }
+      .step.smallstep2:before {
+        top: -183px;
+        height: 160px;
+      }
+    }
   }
 }

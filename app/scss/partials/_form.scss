@@ -279,7 +279,11 @@ label {
   margin-bottom: 25px;
   margin-top: 12px;
   cursor: pointer;
+}
 
+.half-label {
+  float:left;
+  width: 50%;
 }
 
 .icheckbox_square-orange, .iradio_square-orange {
