@@ -18152,8 +18152,9 @@ $(document).ready(function () {
 
     $(".days-choice .dating").mouseover(function () {
         if (!$('.zap-step-date').hasClass("disabled-step")) {
-            if (!$(this).hasClass("disabled-date") && !$(this).hasClass("weekend-date"))
+            if (!$(this).hasClass("disabled-date") && !$(this).hasClass("weekend-date")) {
                 $(this).addClass("chosen-date-hover");
+            }
         }
     });
 
@@ -18162,23 +18163,26 @@ $(document).ready(function () {
     });
 
     $(".days-choice .dating").click(function (e) {
-        $(".chosen-date").removeClass("chosen-date");
-        $(this).addClass("chosen-date");
-        $(".zap-step-time").removeClass("disabled-step");
+        if (!$('.zap-step-date').hasClass("disabled-step")) {
+            if (!$(this).hasClass("disabled-date") && !$(this).hasClass("weekend-date")) {
+                $(".chosen-date").removeClass("chosen-date");
+                $(this).addClass("chosen-date");
+                $(".zap-step-time").removeClass("disabled-step");
 
-        $(".chosen-time").removeClass("chosen-time");
+                $(".chosen-time").removeClass("chosen-time");
 
-        $(".zap-step-am").addClass("disabled-step");
-        $(".unzp").attr("disabled", true);
-        $(".unzp").iCheck('uncheck');
+                $(".zap-step-am").addClass("disabled-step");
+                $(".unzp").attr("disabled", true);
+                $(".unzp").iCheck('uncheck');
 
-        $(".zap-step-dani").addClass("disabled-step");
-        $(".zap-step-dani input").attr("disabled", true);
-        $(".zap-step-dani input").val("");
+                $(".zap-step-dani").addClass("disabled-step");
+                $(".zap-step-dani input").attr("disabled", true);
+                $(".zap-step-dani input").val("");
 
-        $(".zap-step-captha").addClass("disabled-step");
-        $(".zap-step-send").addClass("disabled-step");
-
+                $(".zap-step-captha").addClass("disabled-step");
+                $(".zap-step-send").addClass("disabled-step");
+            }
+        }
         e.preventDefault();
     });
 
