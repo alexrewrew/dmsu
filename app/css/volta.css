@@ -8310,14 +8310,15 @@ article.service-result-indent {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   padding-top: 7px; }
-  .days-choice a:hover {
-    background: #efaf03;
-    color: #161616; }
 
 .days-choice a.chosen-date {
   background: #efaf03;
   color: #fff;
   cursor: default; }
+
+.days-choice a.chosen-date-hover {
+  background: #efaf03;
+  color: #161616; }
 
 .days-choice a.disabled-date {
   color: #a2a2a2;
@@ -8357,7 +8358,7 @@ article.service-result-indent {
     .time-list li a:hover {
       background: #efaf03;
       color: #161616; }
-  .time-list li a.chosen-date {
+  .time-list li a.chosen-time {
     background: #efaf03;
     color: #fff;
     cursor: default; }

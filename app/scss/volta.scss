@@ -1452,15 +1452,15 @@ article.service-result-indent {
     text-align: center;
     border-radius: 50%;
     padding-top: 7px;
-    &:hover {
-      background: $yellow;
-      color: $black-text;
-    }
   }
   a.chosen-date {
     background: $yellow;
     color: $white;
     cursor: default;
+  }
+  a.chosen-date-hover {
+    background: $yellow;
+    color: $black-text;
   }
   a.disabled-date {
     color: $c-gray;
@@ -1507,7 +1507,7 @@ article.service-result-indent {
         color: $black-text;
       }
     }
-    a.chosen-date {
+    a.chosen-time {
       background: $yellow;
       color: $white;
       cursor: default;

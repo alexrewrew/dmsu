@@ -17873,6 +17873,368 @@ $(document).ready(function () {
             $(".step-check-5").addClass("disabled-step");
         }
     });
+
+    /* el pryimalnia validation */
+    $(".tema-sel").change(function () {
+        if ($(this).val() != "") {
+            $(".sub-tema-sel").removeAttr("disabled");
+            $(".sub-tema-block").removeClass("disabled-step");
+            $('.sub-tema-sel').trigger('selection:updated');
+        } else {
+            $(".sub-tema-block").addClass("disabled-step");
+            $(".sub-tema-sel").attr("disabled", true);
+            $('.sub-tema-sel').val("");
+            $('.sub-tema-sel').trigger('selection:updated');
+
+            $(".sub-sub-tema-block").addClass("disabled-step");
+            $(".sub-sub-tema-sel").attr("disabled", true);
+            $('.sub-sub-tema-sel').val("");
+            $('.sub-sub-tema-sel').trigger('selection:updated');
+
+            $(".form-step-tema").addClass("disabled-step");
+            $(".form-step-tema input").attr("disabled", true);
+            $(".form-step-tema input").val("");
+            $(".form-step-tema textarea").attr("disabled", true);
+            $(".form-step-tema textarea").val("");
+
+            $(".captha-step-tema").addClass("disabled-step");
+            $(".send-step-tema").addClass("disabled-step");
+        }
+    });
+
+    $(".sub-tema-sel").change(function () {
+        if ($(this).val() != "") {
+            $(".sub-sub-tema-sel").removeAttr("disabled");
+            $(".sub-sub-tema-block").removeClass("disabled-step");
+            $('.sub-sub-tema-sel').trigger('selection:updated');
+        } else {
+            $(".sub-sub-tema-block").addClass("disabled-step");
+            $(".sub-sub-tema-sel").attr("disabled", true);
+            $('.sub-sub-tema-sel').val("");
+            $('.sub-sub-tema-sel').trigger('selection:updated');
+
+            $(".form-step-tema").addClass("disabled-step");
+            $(".form-step-tema input").attr("disabled", true);
+            $(".form-step-tema input").val("");
+            $(".form-step-tema textarea").attr("disabled", true);
+            $(".form-step-tema textarea").val("");
+
+            $(".captha-step-tema").addClass("disabled-step");
+            $(".send-step-tema").addClass("disabled-step");
+        }
+    });
+
+    $(".sub-sub-tema-sel").change(function () {
+        if ($(this).val() != "") {
+            $(".form-step-tema").removeClass("disabled-step");
+            $(".form-step-tema input").removeAttr("disabled");
+            $(".form-step-tema textarea").removeAttr("disabled");
+        } else {
+            $(".form-step-tema").addClass("disabled-step");
+            $(".form-step-tema input").attr("disabled", true);
+            $(".form-step-tema input").val("");
+            $(".form-step-tema textarea").attr("disabled", true);
+            $(".form-step-tema textarea").val("");
+
+            $(".captha-step-tema").addClass("disabled-step");
+            $(".send-step-tema").addClass("disabled-step");
+        }
+    });
+
+    $(".form-step-tema textarea").on('input', function () {
+        if ($(".form-step-tema textarea").val() != "" && $(".form-step-tema input[type='text']").val() != "" && $(".form-step-tema input[type='email']").val() != "") {
+            $(".captha-step-tema").removeClass("disabled-step");
+            //if captha is true
+            $(".send-step-tema").removeClass("disabled-step");
+        } else {
+            $(".captha-step-tema").addClass("disabled-step");
+            $(".send-step-tema").addClass("disabled-step");
+        }
+    });
+
+    /* el rekvizity validation */
+    $(".rekv-posluga").change(function () {
+        if ($(this).val() != "") {
+            $(".rekv-time-block").removeClass("disabled-step");
+            $(".rekv-time").removeAttr("disabled");
+            $('.radio').iCheck({
+                checkboxClass: 'icheckbox_square-orange',
+                radioClass: 'iradio_square-orange',
+                increaseArea: '20%' // optional
+            });
+        } else {
+            $(".rekv-time-block").addClass("disabled-step");
+            $(".rekv-time").attr("disabled", true);
+            $(".rekv-time").iCheck('uncheck');
+
+            $(".rekv-obl-block").addClass("disabled-step");
+            $(".rekv-obl").attr("disabled", true);
+            $('.rekv-obl').val("");
+            $('.rekv-obl').trigger('selection:updated');
+
+            $(".rekv-pidrozdil-block").addClass("disabled-step");
+            $(".rekv-pidrozdil").attr("disabled", true);
+            $('.rekv-pidrozdil').val("");
+            $('.rekv-pidrozdil').trigger('selection:updated');
+
+            $(".rekv-name-block").addClass("disabled-step");
+            $(".rekv-name").attr("disabled", true);
+            $('.rekv-name').val("");
+
+            $(".rekv-send-block").addClass("disabled-step");
+        }
+    });
+
+    $(document).on("ifChanged", ".rekv-time", function () {
+        $(".rekv-obl-block").removeClass("disabled-step");
+        $(".rekv-obl").removeAttr("disabled");
+        $('.rekv-obl').trigger('selection:updated');
+    });
+
+    $(".rekv-obl").change(function () {
+        if ($(this).val() != "") {
+            $(".rekv-pidrozdil-block").removeClass("disabled-step");
+            $(".rekv-pidrozdil").removeAttr("disabled");
+            $('.rekv-pidrozdil').trigger('selection:updated');
+        } else {
+            $(".rekv-pidrozdil-block").addClass("disabled-step");
+            $(".rekv-pidrozdil").attr("disabled", true);
+            $('.rekv-pidrozdil').val("");
+            $('.rekv-pidrozdil').trigger('selection:updated');
+
+            $(".rekv-name-block").addClass("disabled-step");
+            $(".rekv-name").attr("disabled", true);
+            $('.rekv-name').val("");
+
+            $(".rekv-send-block").addClass("disabled-step");
+        }
+    });
+
+    $(".rekv-pidrozdil").change(function () {
+        if ($(this).val() != "") {
+            $(".rekv-name-block").removeClass("disabled-step");
+            $(".rekv-name").removeAttr("disabled");
+        } else {
+            $(".rekv-name-block").addClass("disabled-step");
+            $(".rekv-name").attr("disabled", true);
+            $('.rekv-name').val("");
+
+            $(".rekv-send-block").addClass("disabled-step");
+        }
+    });
+
+    $(".rekv-name").on('input', function () {
+        if ($(this).val() != "") {
+            $(".rekv-send-block").removeClass("disabled-step");
+        } else {
+            $(".rekv-send-block").addClass("disabled-step");
+        }
+    });
+
+    /* zapys validation */
+    $(".passport-choise").click(function () {
+        if (!$(this).hasClass("popup-modal")) {
+            $(".checked-passport").removeClass("checked-passport");
+            $(this).addClass("checked-passport");
+
+            $(".zap-step-reg").removeClass("disabled-step");
+            $(".zap-step-reg-city").removeAttr("disabled");
+            $(".zap-step-reg-pidrozdil").removeAttr("disabled");
+            $('.zap-step-reg-city').trigger('selection:updated');
+            $('.zap-step-reg-pidrozdil').trigger('selection:updated');
+
+            $('.zap-step-reg-city').val("");
+            $('.zap-step-reg-city').trigger('selection:updated');
+            $('.zap-step-reg-pidrozdil').val("");
+            $('.zap-step-reg-pidrozdil').trigger('selection:updated');
+
+            $('.zap-step-date').addClass("disabled-step");
+            $(".chosen-date").removeClass("chosen-date");
+
+            $(".zap-step-time").addClass("disabled-step");
+            $(".chosen-time").removeClass("chosen-time");
+
+            $(".zap-step-am").addClass("disabled-step");
+            $(".unzp").attr("disabled", true);
+            $(".unzp").iCheck('uncheck');
+
+            $(".zap-step-dani").addClass("disabled-step");
+            $(".zap-step-dani input").attr("disabled", true);
+            $(".zap-step-dani input").val("");
+
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+    });
+
+    $(".okay-passport").click(function (e) {
+        $(".checked-passport").removeClass("checked-passport");
+        $(".passport-choise.popup-modal").addClass("checked-passport");
+        var magnificPopup = $.magnificPopup.instance;
+        magnificPopup.close();
+
+        $(".zap-step-reg").removeClass("disabled-step");
+        $(".zap-step-reg-city").removeAttr("disabled");
+        $(".zap-step-reg-pidrozdil").removeAttr("disabled");
+        $('.zap-step-reg-city').trigger('selection:updated');
+        $('.zap-step-reg-pidrozdil').trigger('selection:updated');
+
+        $('.zap-step-reg-city').val("");
+        $('.zap-step-reg-city').trigger('selection:updated');
+        $('.zap-step-reg-pidrozdil').val("");
+        $('.zap-step-reg-pidrozdil').trigger('selection:updated');
+
+        $('.zap-step-date').addClass("disabled-step");
+        $(".chosen-date").removeClass("chosen-date");
+
+        $(".zap-step-time").addClass("disabled-step");
+        $(".chosen-time").removeClass("chosen-time");
+
+        $(".zap-step-am").addClass("disabled-step");
+        $(".unzp").attr("disabled", true);
+        $(".unzp").iCheck('uncheck');
+
+        $(".zap-step-dani").addClass("disabled-step");
+        $(".zap-step-dani input").attr("disabled", true);
+        $(".zap-step-dani input").val("");
+
+        $(".zap-step-captha").addClass("disabled-step");
+        $(".zap-step-send").addClass("disabled-step");
+
+        e.preventDefault();
+    });
+
+    $('.zap-step-reg-city').change(function () {
+        if ($('.zap-step-reg-city').val() != "" && $('.zap-step-reg-pidrozdil').val() != "") {
+            $('.zap-step-date').removeClass("disabled-step");
+        } else {
+            $('.zap-step-date').addClass("disabled-step");
+            $(".chosen-date").removeClass("chosen-date");
+            $(".zap-step-time").addClass("disabled-step");
+            $(".chosen-time").removeClass("chosen-time");
+
+            $(".zap-step-am").addClass("disabled-step");
+            $(".unzp").attr("disabled", true);
+            $(".unzp").iCheck('uncheck');
+
+            $(".zap-step-dani").addClass("disabled-step");
+            $(".zap-step-dani input").attr("disabled", true);
+            $(".zap-step-dani input").val("");
+
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+    });
+
+    $('.zap-step-reg-pidrozdil').change(function () {
+        if ($('.zap-step-reg-city').val() != "" && $('.zap-step-reg-pidrozdil').val() != "") {
+            $('.zap-step-date').removeClass("disabled-step");
+        } else {
+            $('.zap-step-date').addClass("disabled-step");
+            $('.zap-step-date').addClass("disabled-step");
+
+            $(".chosen-date").removeClass("chosen-date");
+            $(".zap-step-time").addClass("disabled-step");
+            $(".chosen-time").removeClass("chosen-time");
+
+            $(".zap-step-am").addClass("disabled-step");
+            $(".unzp").attr("disabled", true);
+            $(".unzp").iCheck('uncheck');
+
+            $(".zap-step-dani").addClass("disabled-step");
+            $(".zap-step-dani input").attr("disabled", true);
+            $(".zap-step-dani input").val("");
+
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+    });
+
+    $(".days-choice .dating").mouseover(function () {
+        if (!$('.zap-step-date').hasClass("disabled-step")) {
+            if (!$(this).hasClass("disabled-date") && !$(this).hasClass("weekend-date"))
+                $(this).addClass("chosen-date-hover");
+        }
+    });
+
+    $(".days-choice .dating").mouseleave(function () {
+        $(".chosen-date-hover").removeClass("chosen-date-hover");
+    });
+
+    $(".days-choice .dating").click(function (e) {
+        $(".chosen-date").removeClass("chosen-date");
+        $(this).addClass("chosen-date");
+        $(".zap-step-time").removeClass("disabled-step");
+
+        $(".chosen-time").removeClass("chosen-time");
+
+        $(".zap-step-am").addClass("disabled-step");
+        $(".unzp").attr("disabled", true);
+        $(".unzp").iCheck('uncheck');
+
+        $(".zap-step-dani").addClass("disabled-step");
+        $(".zap-step-dani input").attr("disabled", true);
+        $(".zap-step-dani input").val("");
+
+        $(".zap-step-captha").addClass("disabled-step");
+        $(".zap-step-send").addClass("disabled-step");
+
+        e.preventDefault();
+    });
+
+    $(".time-list a").click(function (e) {
+        if (!$(".zap-step-time").hasClass("disabled-step")) {
+            $(".chosen-time").removeClass("chosen-time");
+            $(this).addClass("chosen-time");
+
+            $(".zap-step-am").removeClass("disabled-step");
+            $(".unzp").removeAttr("disabled");
+            $('.radio').iCheck({
+                checkboxClass: 'icheckbox_square-orange',
+                radioClass: 'iradio_square-orange',
+                increaseArea: '20%' // optional
+            });
+
+            $(".zap-step-dani").addClass("disabled-step");
+            $(".zap-step-dani input").attr("disabled", true);
+            $(".zap-step-dani input").val("");
+
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+        e.preventDefault();
+    });
+
+    $(document).on("ifChanged", ".unzp", function () {
+        $(".zap-step-dani").removeClass("disabled-step");
+        $(".zap-step-dani input").removeAttr("disabled");
+        $(".zap-step-dani input").val("");
+
+        $(".zap-step-captha").addClass("disabled-step");
+        $(".zap-step-send").addClass("disabled-step");
+    });
+
+    $(".zap-step-dani input[type='tel']").on('input', function () {
+        if ($(".zap-step-dani input[type='tel']").val() != "" && $(".zap-step-dani input[type='email']").val() != "") {
+            $(".zap-step-captha").removeClass("disabled-step");
+            //if captha true
+            $(".zap-step-send").removeClass("disabled-step");
+        } else {
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+    });
+
+    $(".zap-step-dani input[type='email']").on('input', function () {
+        if ($(".zap-step-dani input[type='tel']").val() != "" && $(".zap-step-dani input[type='email']").val() != "") {
+            $(".zap-step-captha").removeClass("disabled-step");
+            //if captha true
+            $(".zap-step-send").removeClass("disabled-step");
+        } else {
+            $(".zap-step-captha").addClass("disabled-step");
+            $(".zap-step-send").addClass("disabled-step");
+        }
+    });
 });
 
 
