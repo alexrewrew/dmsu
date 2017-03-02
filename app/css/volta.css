@@ -9008,7 +9008,16 @@ article.indent.bills-indent {
     height: 20px; }
   .service-big-form .row .step.smallstep2:before {
     top: -183px;
-    height: 160px; } }
+    height: 160px; }
+  /**/
+  .big-popup {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .white-button {
+    width: 100%;
+    max-width: none; }
+  .non-confirm {
+    margin-bottom: 15px; } }
 
 /* TABLET PORTRAIT*/
 @media (min-width: 768px) and (max-width: 991px) {
@@ -9118,7 +9127,9 @@ article.indent.bills-indent {
     font-size: .7em; }
   .card-container .card-mask-foreign {
     left: 36%;
-    top: 28%; } }
+    top: 28%; }
+  .big-popup {
+    max-width: 700px; } }
 
 /*TABLET*/
 @media (min-width: 992px) and (max-width: 1199px) {
