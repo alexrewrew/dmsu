@@ -313,10 +313,19 @@
   padding-right: 0;
   @include transition;
   a {
-    color: $blue-black;
-    border-bottom: 2px solid $blue-black;
+    color: $white;
+    width: 100%;
+    //border-bottom: 2px solid $blue-black;
+    display: inline-block;
+    background: $blue;
+    padding: 18px 0 20px 0;
     &:hover {
-      border-bottom: 2px solid $yellow;
+      //border-bottom: 2px solid $yellow;
+      background: $yellow;
+      color: $white;
+      i{
+        color: $white;
+      }
     }
   }
 }

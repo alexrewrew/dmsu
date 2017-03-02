@@ -7362,10 +7362,16 @@ label {
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .view-all-mobile a {
-    color: #212fba;
-    border-bottom: 2px solid #212fba; }
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    background: #0183de;
+    padding: 18px 0 20px 0; }
     .view-all-mobile a:hover {
-      border-bottom: 2px solid #efaf03; }
+      background: #efaf03;
+      color: #fff; }
+      .view-all-mobile a:hover i {
+        color: #fff; }
 
 /*SERVICES CONTAINER*/
 .services {
