@@ -1762,6 +1762,14 @@ img.mfp-img {
   position: relative;
   text-align: center; }
 
+.big-popup {
+  max-width: 900px;
+  padding-left: 13%;
+  padding-right: 13%; }
+  .big-popup p {
+    text-align: left;
+    margin-bottom: 20px; }
+
 .mfp-container {
   text-align: center;
   position: absolute;
@@ -6149,6 +6157,39 @@ label {
   .blue-button:hover {
     background: #efaf03;
     color: #fff; }
+
+.white-button {
+  background: #fff;
+  color: #161616;
+  text-decoration: none;
+  max-width: 200px;
+  display: block;
+  padding: 11px 0 13px 0; }
+  .white-button:hover {
+    background: #efaf03;
+    color: #fff; }
+
+.non-confirm {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.25em;
+  padding: 11px 0 13px 0; }
+  .non-confirm i {
+    font-size: 18px;
+    margin-right: 15px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .non-confirm:hover {
+    color: #efaf03; }
+    .non-confirm:hover i {
+      -webkit-transform: translateX(-38px);
+      -moz-transform: translateX(-38px);
+      -ms-transform: translateX(-38px);
+      -o-transform: translateX(-38px);
+      transform: translateX(-38px); }
 
 /* BUTTON UP */
 .button-up {
