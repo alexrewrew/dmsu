@@ -5602,11 +5602,15 @@ input[type=search]::-webkit-search-decoration
 {
     -webkit-transition: all .4s ease                            ;-moz-transition: all .4s ease;-o-transition: all .4s ease;
 }.view-all-mobile a
-{
-    color: #212fba;border-bottom: 2px solid #212fba;
+{display: inline-block;width: 100%;padding: 18px 0 20px;
+
+    color: #fff;background: #0183de;
 }.view-all-mobile a:hover
+{color: #fff;
+    background: #efaf03;
+}.view-all-mobile a:hover i
 {
-    border-bottom: 2px solid #efaf03;
+    color: #fff;
 }.services
 {
     padding: 144px 38px 45px 50px;
