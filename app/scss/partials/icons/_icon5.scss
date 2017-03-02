@@ -1,0 +1,109 @@
+/*icon 1*/
+.ico1-s-1 {
+    fill: #010101;
+}
+
+.ico1-s-2 {
+    fill: #f2b81b;
+}
+
+.b-en {
+    opacity: 0;
+}
+
+.c-rus {
+    opacity: 0;
+}
+
+@keyframes moveLin {
+    50%, 60% {
+        -webkit-transform: translateX(80px);
+        -o-transform: translateX(80px);
+        transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        -moz-transform: translateX(80px);
+    }
+    10%, 90% {
+        -webkit-transform: translateX(0);
+        -o-transform: translateX(0);
+        transform: translateX(0);
+        -ms-transform: translateX(0);
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes b-rus {
+    45%, 60% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
+
+@keyframes b-en {
+    45%, 60% {
+        opacity: 1;
+    }
+    10%, 90% {
+        opacity: 0;
+    }
+}
+
+@keyframes c-rus {
+    25%, 75% {
+        opacity: 0;
+    }
+    40%, 65% {
+        opacity: 1;
+    }
+}
+
+@keyframes c-en {
+    25%, 75% {
+        opacity: 1;
+    }
+    40%, 65% {
+        opacity: 0;
+    }
+}
+
+.service-item5:hover .linz {
+    -webkit-animation: moveLin 2s forwards;
+    -moz-animation: moveLin 2s forwards;
+    -o-animation: moveLin 2s forwards;
+    -ms-animation: moveLin 2s forwards;
+    animation: moveLin 2s forwards;
+}
+
+.service-item5:hover .b-rus {
+    -webkit-animation: b-rus 2s forwards;
+    -moz-animation: b-rus 2s forwards;
+    -o-animation: b-rus 2s forwards;
+    -ms-animation: b-rus 2s forwards;
+    animation: b-rus 2s forwards;
+}
+
+.service-item5:hover .b-en {
+    -webkit-animation: b-en 2s forwards;
+    -moz-animation: b-en 2s forwards;
+    -o-animation: b-en 2s forwards;
+    -ms-animation: b-en 2s forwards;
+    animation: b-en 2s forwards;
+}
+
+.service-item5:hover .c-rus {
+    -webkit-animation: c-rus 2s forwards;
+    -moz-animation: c-rus 2s forwards;
+    -o-animation: c-rus 2s forwards;
+    -ms-animation: c-rus 2s forwards;
+    animation: c-rus 2s forwards;
+}
+
+.service-item5:hover .c-en {
+    -webkit-animation: c-en 2s forwards;
+    -moz-animation: c-en 2s forwards;
+    -o-animation: c-en 2s forwards;
+    -ms-animation: c-en 2s forwards;
+    animation: c-en 2s forwards;
+}

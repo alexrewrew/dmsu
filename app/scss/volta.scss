@@ -28,6 +28,10 @@
 @import 'partials/icons/icon2';
 @import 'partials/icons/icon3';
 @import 'partials/icons/icon4';
+@import 'partials/icons/icon5';
+@import 'partials/icons/icon6';
+@import 'partials/icons/icon7';
+@import 'partials/icons/icon8';
 @import 'partials/icons/logo';
 @import 'partials/icons/map';
 @import "partials/ukraine";
@@ -396,6 +400,25 @@
     left: 32px;
     height: 104px;
   }
+}
+
+.service-item.service-item5 {
+  .icon-hide {
+    height: 89px;
+    top:23px;
+  }
+}
+.service-item.service-item6 {
+  .icon-hide {    height: 62px;
+    top: 37px;}
+}
+.service-item.service-item7 {
+  .icon-hide {    height: 62px;
+    top: 37px;}
+}
+.service-item.service-item8 {
+  .icon-hide {    height: 58px;
+    top: 41px;}
 }
 
 /*ICON SPRITE*/
