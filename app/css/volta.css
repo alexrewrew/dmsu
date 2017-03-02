@@ -1804,7 +1804,8 @@ img.mfp-img {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
     margin-bottom: 30px;
-    color: #fff; }
+    color: #fff;
+    max-width: 400px; }
     .mfp-content input:focus {
       border-color: #fff; }
   .mfp-content input::-webkit-input-placeholder {
