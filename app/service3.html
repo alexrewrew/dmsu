@@ -1509,6 +1509,7 @@
         <div class="row">
             <div class="mobile-12"><h2 class="black-text">Інструкція з використання сервісом</h2></div>
         </div>
+        <div class="close-help"><i class="fa fa-times"></i></div>
     </div>
     <article class="container indent service-content-indent">
         <div class="row">
@@ -1600,10 +1601,14 @@
                                                                    disabled></div>
                         <div class="portrait-7"><p>Номер</p><input type="text" name="number-step" maxlength="6"
                                                                    placeholder="6 цифр" disabled></div>
-                        <div class="mobile-12"><p class="gray-text">
-                            <br>* Серія паспорта або свідоцтва про народження, великими українськими літерами, наприклад
-                            1-АА
-                        </p></div>
+                        <!--<div class="mobile-12"><p class="gray-text">-->
+                            <!--<br>* Серія паспорта або свідоцтва про народження, великими українськими літерами, наприклад-->
+                            <!--1-АА-->
+                        <!--</p></div>-->
+                    </div>
+                    <div class="row disabled-step step-check-33-pass">
+                        <div class="portrait-12"><p>Номер</p><input type="text" name="number-step" maxlength="9"
+                                                                   placeholder="9 цифр" disabled></div>
                     </div>
                 </div>
             </div>
@@ -1614,6 +1619,9 @@
                 <div class="mobile-10 portrait-11">
                     <p class="gray-block">Введіть дані паспорта громадянина України, на підставі якого здійснювалось
                         оформлення</p>
+                    <!--new-->
+                    <p class="gray-block">Введіть дані паспорта громадянина України, законного представника (одного з батьків), який(а) підписував(ла) заяву-анкету</p>
+                    <!-- end new -->
 
                 </div>
                 <div class="mobile-offset-2 mobile-10 portrait-offset-1 portrait-11 tablet-5">
@@ -1621,12 +1629,18 @@
                     <label><input type="radio" class="radio" name="book-id" disabled>книжечки</label>
                     <label><input type="radio" class="radio" name="book-id" disabled>картки (ID)</label></div>
                 <div class="mobile-offset-2 mobile-10 portrait-offset-1 portrait-11 tablet-offset-0 tablet-6">
+                    <!--<div class="row step-check-3-pass disabled-step">-->
+                        <!--<div class="portrait-5"><p>Серія паспорта</p><input type="text" name="set" placeholder="АВ"-->
+                                                                            <!--maxlength="2" disabled></div>-->
+                        <!--<div class="portrait-7"><p>Номер паспорта</p><input type="text" name="number" maxlength="6"-->
+                                                                            <!--placeholder="6 цифр" disabled></div>-->
+                    <!--</div>-->
+                    <!--new-->
                     <div class="row step-check-3-pass disabled-step">
-                        <div class="portrait-5"><p>Серія паспорта</p><input type="text" name="set" placeholder="АВ"
-                                                                            maxlength="2" disabled></div>
-                        <div class="portrait-7"><p>Номер паспорта</p><input type="text" name="number" maxlength="6"
-                                                                            placeholder="6 цифр" disabled></div>
+                        <div class="portrait-12"><p>Номер паспорта</p><input type="text" name="number" maxlength="9"
+                                                                            placeholder="9 цифр" disabled></div>
                     </div>
+                    <!-- end new -->
                 </div>
             </div>
 

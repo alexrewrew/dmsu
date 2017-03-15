@@ -7314,6 +7314,30 @@ label {
   #help-panel .video-big {
     margin-top: 0; }
 
+.service-header-indent {
+  position: relative; }
+
+.close-help {
+  background: #efaf03;
+  padding-top: 4px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  width: 29px;
+  height: 29px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 35px;
+  top: 75px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .close-help:hover {
+    background: #0183de; }
+
 /*VIEW ALL*/
 .view-all {
   font-family: "Proxima Nova", sans-serif;

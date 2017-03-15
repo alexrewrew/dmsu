@@ -184,6 +184,9 @@ $(document).ready(function () {
     $('#help').click(function () {
         $('#help-panel').slideToggle();
     });
+    $('.close-help').click(function () {
+        $('#help-panel').slideUp();
+    });
 
     /**/
     $('.right-map').click(function () {

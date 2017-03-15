@@ -267,6 +267,29 @@
   }
 }
 
+.service-header-indent {
+  position: relative;
+}
+
+.close-help {
+  background: $yellow;
+  padding-top: 4px;
+  border-radius: 50%;
+  display: block;
+  width: 29px;
+  height: 29px;
+  color: $white;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 35px;
+  top:75px;
+  @include transition();
+  &:hover {
+    background: $blue;
+  }
+}
+
 /*VIEW ALL*/
 .view-all {
   @include regular-text(600, 1em);
