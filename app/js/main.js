@@ -17830,6 +17830,9 @@ $(document).ready(function () {
         if (to == 'id') {
             $(".step-check-33-pass-n").removeClass("disabled-step");
             $(".step-check-33-pass-n").css("display", "block");
+        } else if (to == 'sv') {
+            $(".step-check-33-pass-s").removeClass("disabled-step");
+            $(".step-check-33-pass-s").css("display", "block");
         } else {
             $(".step-check-33-pass-b").removeClass("disabled-step");
             $(".step-check-33-pass-b").css("display", "block");
@@ -17837,6 +17840,17 @@ $(document).ready(function () {
         $(".step-check-33-pass input").removeAttr("disabled");
         $(".step-check-4").addClass("disabled-step");
         $(".step-check-5").addClass("disabled-step");
+    });
+
+    $(".step-check-3-pass input[name='set-step']").on('input', function () {
+        this.value = this.value.replace(/[^А-ЯЇІЄҐ,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 2) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
     });
 
     $(".step-check-33-pass input[name='number-step']").on('input', function () {
@@ -17862,7 +17876,7 @@ $(document).ready(function () {
     });
 
     $(".step-check-33-pass input").on('input', function () {
-        if (($(".step-check-33-pass input[name='set-step']").val() != "" && $(".step-check-33-pass input[name='number-step']").val() != "" && $(".error-validation").length == 0) || ($(".step-check-33-pass input[name='number-step9']").val() != "" && $(".error-validation").length == 0)) {
+        if (($(".step-check-33-pass input[name='set-step']").val() != "" && $(".step-check-33-pass input[name='number-step']").val() != "" && $(".error-validation").length == 0) || ($(".step-check-33-pass input[name='number-step9']").val() != "" && $(".error-validation").length == 0) || ($(".step-check-33-pass input[name='sets']").val() != "" && $(".step-check-33-pass input[name='numbers']").val() != "" && $(".error-validation").length == 0)) {
             $(".step-check-4").removeClass("disabled-step");
             //if captcha is true
             $(".step-check-5").removeClass("disabled-step");
