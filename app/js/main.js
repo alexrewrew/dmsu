@@ -17777,12 +17777,16 @@ $(document).ready(function () {
             $(".error-validation").removeClass("error-validation");
             $(".step-check-33-pass").addClass("disabled-step");
             $(".step-check-33-pass input").attr("disabled", true);
+            $(".step-check-3 input[name='book-id']").attr("disabled", true);
             $(".step-check-33-pass input").val("");
             $(".row[data-show='2'] input").iCheck('uncheck');
+            $(".step-check-4 .step").html("4");
         } else {
+            $(".step-check-3 input[name='book-id']").attr("disabled", true);
+            $(".step-check-3").css("display", "none");
             $(".row[data-show='2']").show();
             $(".row[data-show='1'] input").iCheck('uncheck');
-            $(".step-check-3").show();
+            $(".step-check-4 .step").html("3");
             $(".step-check-3").addClass("disabled-step");
             $(".step-check-3 input[name='book-id']").iCheck('uncheck');
             $(".step-check-3-pass").addClass("disabled-step");
@@ -17802,6 +17806,13 @@ $(document).ready(function () {
     });
 
     $(document).on("ifChanged", ".row[data-show='1'] input", function () {
+        var to = $(this).attr('data-to');
+        $(".shows").css("display", "none");
+        if (to == "adult") {
+            $(".adult-show").css("display", "block");
+        } else {
+            $(".child-show").css("display", "block");
+        }
         $(".step-check-3").removeClass("disabled-step");
         $(".step-check-3 input[name='book-id']").removeAttr("disabled");
         $('.radio').iCheck({
@@ -17809,11 +17820,23 @@ $(document).ready(function () {
             radioClass: 'iradio_square-orange',
             increaseArea: '20%' // optional
         });
+        $(".step-check-3 input[name='book-id']").iCheck('uncheck');
     });
 
     $(document).on("ifChanged", ".row[data-show='2'] input", function () {
-        $(".step-check-33-pass").removeClass("disabled-step");
+        var to = $(this).attr("data-to");
+        $(".step-check-33-pass").css("display", "none");
+        $(".step-check-33-pass input").val("");
+        if (to == 'id') {
+            $(".step-check-33-pass-n").removeClass("disabled-step");
+            $(".step-check-33-pass-n").css("display", "block");
+        } else {
+            $(".step-check-33-pass-b").removeClass("disabled-step");
+            $(".step-check-33-pass-b").css("display", "block");
+        }
         $(".step-check-33-pass input").removeAttr("disabled");
+        $(".step-check-4").addClass("disabled-step");
+        $(".step-check-5").addClass("disabled-step");
     });
 
     $(".step-check-33-pass input[name='number-step']").on('input', function () {
@@ -17827,27 +17850,60 @@ $(document).ready(function () {
         }
     });
 
+    $(".step-check-33-pass input[name='number-step9']").on('input', function () {
+        this.value = this.value.replace(/[^\d,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 9) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
+    });
+
     $(".step-check-33-pass input").on('input', function () {
-        if ($(".step-check-33-pass input[name='set-step']").val() != "" && $(".step-check-33-pass input[name='number-step']").val() != "" && $(".error-validation").length == 0) {
-            $(".step-check-3").removeClass("disabled-step");
-            $(".step-check-3 input[name='book-id']").removeAttr("disabled");
-            $('.radio').iCheck({
-                checkboxClass: 'icheckbox_square-orange',
-                radioClass: 'iradio_square-orange',
-                increaseArea: '20%' // optional
-            });
+        if (($(".step-check-33-pass input[name='set-step']").val() != "" && $(".step-check-33-pass input[name='number-step']").val() != "" && $(".error-validation").length == 0) || ($(".step-check-33-pass input[name='number-step9']").val() != "" && $(".error-validation").length == 0)) {
+            $(".step-check-4").removeClass("disabled-step");
+            //if captcha is true
+            $(".step-check-5").removeClass("disabled-step");
+        } else {
+            $(".step-check-4").addClass("disabled-step");
+            $(".step-check-5").addClass("disabled-step");
         }
     });
 
     $(document).on("ifChanged", ".step-check-3 input[name='book-id']", function () {
         $(".step-check-3-pass").removeClass("disabled-step");
         $(".step-check-3-pass input").removeAttr("disabled");
+        var toTo = $(this).attr('data-to');
+        $(".book-id-hide").css("display", "none");
+        if (toTo == "book") {
+            $(".book-passport-show").css("display", "block");
+        } else {
+            $(".id-passport-show").css("display", "block");
+        }
+        $(".step-check-3-pass input[name='number']").val("");
+        $(".step-check-3-pass input[name='number9']").val("");
+        $(".step-check-3-pass input[name='set']").val("");
+        $(".step-check-4").addClass("disabled-step");
+        $(".step-check-5").addClass("disabled-step");
     });
 
     $(".step-check-3-pass input[name='number']").on('input', function () {
         this.value = this.value.replace(/[^\d,]/g, '');
         if ($(this).val() != "") {
             if ($(this).val().length != 6) {
+                $(this).addClass("error-validation");
+            } else {
+                $(this).removeClass("error-validation");
+            }
+        }
+    });
+
+    $(".step-check-3-pass input[name='number9']").on('input', function () {
+        this.value = this.value.replace(/[^\d,]/g, '');
+        if ($(this).val() != "") {
+            if ($(this).val().length != 9) {
                 $(this).addClass("error-validation");
             } else {
                 $(this).removeClass("error-validation");
@@ -17867,7 +17923,7 @@ $(document).ready(function () {
     });
 
     $(".step-check-3-pass input").on('input', function () {
-        if ($(".step-check-3-pass input[name='set']").val() != "" && $(".step-check-3-pass input[name='number']").val() != "" && $(".error-validation").length == 0) {
+        if (($(".step-check-3-pass input[name='set']").val() != "" && $(".step-check-3-pass input[name='number']").val() != "" && $(".error-validation").length == 0) || ($(".step-check-3-pass input[name='number9']").val() != "" && $(".error-validation").length == 0)) {
             $(".step-check-4").removeClass("disabled-step");
             //if captcha is true
             $(".step-check-5").removeClass("disabled-step");
