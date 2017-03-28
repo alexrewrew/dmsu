@@ -6859,7 +6859,8 @@ label {
         overflow-y: scroll;
         max-height: 420px;
         padding-bottom: 80px;
-        padding-left: 25px; }
+        padding-left: 25px;
+        padding-right: 15px; }
         .primary-nav .secondary-nav.display-nav .authorities ul li.right-map {
           width: 100%;
           display: block;
