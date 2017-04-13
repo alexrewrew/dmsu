@@ -1,7 +1,8 @@
 /*MENU STYLES*/
 
 .navigation-top {
-  background: $b-gray;
+  //background: $b-gray;
+  background: #0068b1;
   padding: 4px 15px;
   text-align: right;
   ul {
@@ -12,13 +13,13 @@
     &:nth-child(2) {
       li {
         a {
-          color: $icon;
+          color: #69c1ff;
           font-size: 19px;
           position: relative;
           top: 2px;
           padding: 0 3px;
           &:hover {
-            color: $blue;
+            color: $white;
           }
 
         }
@@ -30,7 +31,7 @@
         a {
           @include regular-text(600, .875em);
           padding: 5px 9px 4px 9px;
-          color: $blue-hover;
+          color:#69c1ff;
           &:hover {
             background: $blue;
             color: $white;

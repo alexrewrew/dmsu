@@ -5939,7 +5939,7 @@ textarea {
     cursor: pointer;
     outline: none;
     z-index: 2;
-    color: #606060;
+    color: #fff;
     font-size: 18px; }
     .search-relative button:hover {
       color: #0183de; }
@@ -6985,7 +6985,7 @@ label {
 
 /*MENU STYLES*/
 .navigation-top {
-  background: #e0e0e0;
+  background: #0068b1;
   padding: 4px 15px;
   text-align: right; }
   .navigation-top ul {
@@ -6994,13 +6994,13 @@ label {
     padding: 0;
     display: inline-block; }
     .navigation-top ul:nth-child(2) li a {
-      color: #606060;
+      color: #69c1ff;
       font-size: 19px;
       position: relative;
       top: 2px;
       padding: 0 3px; }
       .navigation-top ul:nth-child(2) li a:hover {
-        color: #0183de; }
+        color: #fff; }
     .navigation-top ul:nth-child(3) {
       margin-left: 28px; }
       .navigation-top ul:nth-child(3) li a {
@@ -7008,7 +7008,7 @@ label {
         font-weight: 600;
         font-size: 0.875em;
         padding: 5px 9px 4px 9px;
-        color: #0096ff; }
+        color: #69c1ff; }
         .navigation-top ul:nth-child(3) li a:hover {
           background: #0183de;
           color: #fff; }

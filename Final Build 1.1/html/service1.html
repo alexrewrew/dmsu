@@ -1,0 +1,144 @@
+//= header.html
+<header>
+    <div class="container">
+        <div class="row head-row">
+            <div class="row mobile-logo">
+                <div class="mobile-4">
+                    <a href="index.html"><img src="img/logo/logo-dmsu.svg" onerror="this.src='img/logo/logo-dmsu.png'"
+                                              alt=""></a></div>
+                <div class="mobile-8 padding-left-fix">
+                    <a href="index.html" class="mobile-head">Державна міграційна<br> служба України</a>
+                </div>
+            </div>
+            <div class="portrait-1 service-icon-col"><img src="img/icons/services/5/service5.svg" alt="" title=""
+                                       onerror="this.src='img/icons/services/5/service5.png'" class="service-icon">
+            </div>
+            <div class="portrait-11"><h1>Перевірка транслітерації</h1>
+            </div>
+            <div class="row">
+                <div class="portrait-offset-1 portrait-11">
+                    <ul class="breadcrumbs">
+                        <li><a href="" title="" alt="">Сервіси</a></li>
+                        <li><a href="" title="" alt="">Перевірка транслітерації</a></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="icon-panel">
+                <li><a alt="" title="" id="help"><i class="fa fa-question"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="container-fluid service-section" id="help-panel">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Інструкція з використання сервісом</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent">
+        <div class="row">
+            <div class="mobile-12">
+                <video controls class="video-big">
+                    <source src="video/Ukraine_My_Home.mp4" type="video/mp4">
+                    Будь-ласка, оновіть браузер
+                </video>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="container-fluid service-section">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Перевірка написання ім'я та прізвища латинськими літерами</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent">
+        <div class="row">
+            <div class="mobile-12"><p class="gray-text text-servise-error">Введіть прізвище та ім'я українськими літерами так,<br>
+                як написано у Вашому паспорті громадянина України:</p>
+                <form action="" class="service-big-form inline-input trans-form">
+                    <div class="row">
+                        <div class="mobile-12"><input type="text" placeholder="Введіть прізвище" name="surname">
+                            <input type="text" placeholder="Введіть ім’я" name="name"></div>
+                    </div><div class="row disabled-step form-step">
+                        <div class="mobile-12"><button class="button-regular blue-button" type="submit">Перевірити</button></div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="container-fluid service-section service-section-hide">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Результати транслітерації</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-result-indent">
+        <div class="row">
+            <div class="mobile-12">
+                <h2 class="name-surname"></h2>
+            </div>
+        </div>
+        <div class="row gray-row">
+            <div class="portrait-5"><p>Паспорт громадянина України<br>
+                у формі картки (ID)</p>
+
+                <div class="card-container">
+                    <img src="img/passport/idcard.png" title="" alt="">
+                    <div class="card-mask">
+                        <div id="firstNameUkr">Максим</div>
+                        <div id="firstNameEng" class="bold-field">Maxym</div>
+                        <div id="lastNameUkr">Коваль</div>
+                        <div id="lastNameEng" class="bold-field">Koval</div>
+                    </div>
+                </div>
+            </div>
+            <div class="portrait-7"><p>Паспорт громадянина України<br>
+                для виїзду за кордон</p>
+
+                <div class="card-container">
+                    <img src="img/passport/foreignpass.png" title="" alt="" class="img-fix">
+                    <div class="card-mask card-mask-foreign">
+                        <div class="mask-row">
+                            <div id="firstNameUkr2">Максим</div>
+                            <span>/</span>
+                            <div id="firstNameEng2" class="bold-field">Maxym</div>
+                        </div>
+
+                        <div class="mask-row">
+                            <div id="lastNameUk2r">Коваль</div>
+                            <span>/</span>
+                            <div id="lastNameEng2" class="bold-field">Koval</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<!---->
+
+<section class="container-fluid">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Додаткова інформація</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent">
+        <div class="row">
+            <div class="mobile-12"><p class="help-text">На цій сторінці Ви можете перевірити, як буде виглядати
+                транслітерація Вашого прізвища та ім'я у паспорті громадянина України у формі картки та у паспорті
+                громадянина України для виїзду за кордон. Правила транслітерації регламентуються <a href="" alt=""
+                                                                                                    title="">Постановою
+                    Кабінету міністрів України від 27 січня 2010 р. N 55 (зі змінами)</a> .</p></div>
+        </div>
+    </article>
+</section>
+
+//= footer.html
