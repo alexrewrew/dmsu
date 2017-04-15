@@ -1,0 +1,223 @@
+//= header.html
+<header>
+    <div class="container">
+        <div class="row head-row">
+            <div class="row mobile-logo">
+                <div class="mobile-4">
+                    <a href="index.html"><img src="img/logo/logo-dmsu.svg" onerror="this.src='img/logo/logo-dmsu.png'" alt=""></a>
+                </div>
+                <div class="mobile-8 padding-left-fix">
+                    <a href="index.html" class="mobile-head">Державна міграційна<br> служба України</a>
+                </div>
+            </div>
+            <div class="portrait-1 service-icon-col">
+                <img src="img/icons/services/7/service7.svg" alt="" title="" onerror="this.src='img/icons/services/7/service7.png'" class="service-icon">
+            </div>
+            <div class="portrait-11">
+                <h1>Перевірка стану оформлення закордонного паспорта та паспорта у формі картки</h1>
+            </div>
+            <div class="row">
+                <div class="portrait-offset-1 portrait-11">
+                    <ul class="breadcrumbs">
+                        <li><a href="" title="" alt="">Сервіси</a></li>
+                        <li>
+                            <a href="" title="" alt="">Перевірка стану оформлення закордонного паспорта та паспорта у формі картки</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="icon-panel">
+                <li><a alt="" title="" id="help"><i class="fa fa-question"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="container-fluid service-section" id="help-panel">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Інструкція з використання сервісом</h2></div>
+        </div>
+        <div class="close-help"><i class="fa fa-times"></i></div>
+    </div>
+    <article class="container indent service-content-indent">
+        <div class="row">
+            <div class="mobile-12">
+                <video controls class="video-big">
+                    <source src="video/Ukraine_My_Home.mp4" type="video/mp4">
+                    Будь-ласка, оновіть браузер
+                </video>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section class="container-fluid service-section">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Результат перевірка стану оформлення паспорта:</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent service-result-success">
+        <div class="row">
+            <div class="mobile-2 portrait-1"><p class="step first-step"><i class="fa fa-check"></i></p></div>
+            <div class="mobile-10 portrait-11">Здійснюється перевірка даних. Документи прийнято 21.02.2017</div>
+        </div>
+    </article>
+    <article class="container indent service-content-indent service-result-unsuccessful">
+        <div class="row">
+            <div class="mobile-2 portrait-1"><p class="step first-step"><i class="fa fa-times"></i></p></div>
+            <div class="mobile-10 portrait-11">Інформація не знайдена</div>
+        </div>
+    </article>
+</section>
+
+<section class="container-fluid service-section">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Перевірка стану оформлення паспорта</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent">
+        <form action="" class="service-big-form">
+            <div class="row">
+                <div class="mobile-2 portrait-1"><p class="step first-step">1</p></div>
+                <div class="mobile-10 portrait-11">
+                    <h2>Оберіть послугу</h2>
+                    <div class="row">
+                        <div class="portrait-6 passport-choise-block" data-step="1">
+                            <a alt="" title="" class="passport-choise">
+                                <p class="gray-block">Перевірити стан оформлення паспорта для виїзду за кордон</p>
+                                <img src="img/passport/passcheck1.png" alt="" title=""> </a>
+                        </div>
+                        <div class="portrait-6 passport-choise-block" data-step="2">
+                            <a alt="" title="" class="passport-choise">
+                                <p class="gray-block">Перевірити стан оформлення паспорта для виїзду за кордон</p>
+                                <img src="img/passport/passcheck2.png" alt="" title=""> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" data-show="1">
+                <div class="mobile-2 portrait-1"><p class="step bigstep1">2</p></div>
+                <div class="mobile-10 portrait-11">
+                    <h2>Введіть дані для перевірки</h2>
+                    <p class="gray-block">Для кого оформлювався паспорт?</p>
+                    <label><input type="radio" class="radio" name="child-adult" data-to="adult">Для дорослого</label>
+                    <label><input type="radio" class="radio" name="child-adult" data-to="child">Для дитини </label>
+                </div>
+            </div>
+
+
+            <div class="row" data-show="2">
+                <div class="mobile-2 portrait-1"><p class="step bigstep1">2</p></div>
+                <div class="mobile-10 portrait-11">
+                    <p class="gray-block">Для перевірки стану оформлення паспорта у формі картки, будь ласка, введіть серію та номер документа, на підставі якого здійснено оформлення.</p>
+
+                </div>
+                <div class="mobile-offset-2 portrait-offset-1 portrait-11 display-6">
+                    <p>Паспорт оформлюється на підставі:</p>
+                    <label><input type="radio" class="radio" data-to="sv" name="pass-choice">Свідоцтва про народження
+                    </label>
+                    <label><input type="radio" class="radio" data-to="book" name="pass-choice">Паспорта громадянина України (книжечка)</label>
+                    <label><input type="radio" class="radio" data-to="id" name="pass-choice">Паспорта громадянина України (картки)</label>
+                </div>
+                <div class="mobile-offset-2 portrait-offset-1 portrait-11 display-offset-0 display-5">
+                    <div class="row disabled-step step-check-33-pass step-check-33-pass-b">
+                        <div class="portrait-5"><p>Серія</p>
+                            <input type="text" name="set-step" placeholder="АВ" disabled></div>
+                        <div class="portrait-7"><p>Номер</p>
+                            <input type="text" name="number-step" maxlength="6" placeholder="6 цифр" disabled></div>
+                    </div>
+                    <!---->
+                    <div class="row disabled-step step-check-33-pass step-check-33-pass-s" style="display:none;">
+                        <div class="portrait-5"><p>Серія</p>
+                            <input type="text" name="sets" placeholder="1-ББ" disabled></div>
+                        <div class="portrait-7"><p>Номер</p>
+                            <input type="text" name="numbers" placeholder="" disabled></div>
+                    </div>
+                    <!---->
+                    <div class="row disabled-step step-check-33-pass step-check-33-pass-n" style="display:none;">
+                        <div class="portrait-12"><p>Номер</p>
+                            <input type="text" name="number-step9" maxlength="9" placeholder="9 цифр" disabled></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row disabled-step step-check-3">
+                <div class="mobile-2 portrait-1"><p class="step bigstep2">3</p></div>
+                <div class="mobile-10 portrait-11">
+                    <p class="gray-block adult-show shows">Введіть дані паспорта громадянина України, на підставі якого здійснювалось оформлення</p>
+                    <!--new-->
+                    <p class="gray-block child-show shows" style="display: none;">Введіть дані паспорта громадянина України, законного представника (одного з батьків), який(а) підписував(ла) заяву-анкету</p>
+                    <!-- end new -->
+
+                </div>
+                <div class="mobile-offset-2 mobile-10 portrait-offset-1 portrait-11 tablet-5">
+                    <p>Паспорт громадянина України у формі:</p>
+                    <label><input type="radio" class="radio" data-to="book" name="book-id" disabled>книжечки</label>
+                    <label><input type="radio" class="radio" data-to="id" name="book-id" disabled>картки (ID)</label>
+                </div>
+                <div class="mobile-offset-2 mobile-10 portrait-offset-1 portrait-11 tablet-offset-0 tablet-6">
+                    <div class="row step-check-3-pass disabled-step book-passport-show book-id-hide">
+                        <div class="portrait-5"><p>Серія паспорта</p>
+                            <input type="text" name="set" placeholder="АВ" maxlength="2" disabled></div>
+                        <div class="portrait-7"><p>Номер паспорта</p>
+                            <input type="text" name="number" maxlength="6" placeholder="6 цифр" disabled></div>
+                    </div>
+                    <!--new-->
+                    <div class="row step-check-3-pass disabled-step id-passport-show book-id-hide" style="display: none;">
+                        <div class="portrait-12"><p>Номер паспорта</p>
+                            <input type="text" name="number9" maxlength="9" placeholder="9 цифр" disabled></div>
+                    </div>
+                    <!-- end new -->
+                </div>
+            </div>
+
+            </div>
+            <div class="row disabled-step step-check-4">
+                <div class="mobile-2 portrait-1"><p class="step bigstep3">4</p></div>
+                <div class="mobile-10 portrait-11">
+                    <p class="cptch">CAPTCHA</p>
+                </div>
+            </div>
+            <div class="row disabled-step step-check-5">
+                <div class="mobile-12">
+                    <button class="button-regular blue-button" type="submit">Знайти</button>
+                </div>
+            </div>
+        </form>
+    </article>
+</section>
+
+<!---->
+
+<section class="container-fluid">
+    <div class="container indent service-header-indent">
+        <div class="row">
+            <div class="mobile-12"><h2 class="black-text">Додаткова інформація</h2></div>
+        </div>
+    </div>
+    <article class="container indent service-content-indent">
+        <div class="row">
+            <div class="mobile-12">
+                <p class="help-text">Результат пошуку буде виведено вверху сторінки, після введення серії та номеру документа, підтвердження капчі, та натискання кнопки "Пошук" (сторінка при цьому перезавантажиться). </p>
+                <p class="red-text bold-text">Увага! База даних, за якою здійснюється перевірка стану оформлення документів на сайті, оновлюється один раз на добу, внаслідок чого можлива затримка у відображені даних (перевірку стану можна здійснювати лише на наступний день після подачі заяви до територіального підрозділу ДМС).</p>
+                <p>Для розгляду питання щодо некоректно відображеного стану виготовлення паспорта, прохання звертатись на електронну адресу відповідного територіального органу (<a href="" alt="" title="">перелік електроних скриньок</a>) із зазначенням своїх контактних даних:
+                </p>
+                <ul>
+                    <li>прізвище, імя, по-батькові заявника (і дитини, якщо паспорт для виїзду за кордон оформлювався для неї);
+                    </li>
+                    <li>серія та номер паспорту громадянина України (для перевірки стану оформлення паспорта громадянина України для виїзду за кордон) або серія та номер свідоцтва про народження (для перевірки стану оформлення паспорта громадянина України у вигляді картки);
+                    </li>
+                    <li>область, місто, район подання документів;</li>
+                    <li>дата подання заяви на отримання документів;</li>
+                    <li>контактний телефон.</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</section>
+
+//= footer.html
